@@ -38,8 +38,6 @@ jQuery11(function(){
 		return 0;
 	});
     
-    // test 
-
     // 기존 DOM 업데이트
     for(let i = 0, l = list.length; i < l; i++){
 		$(list[i]).html(arr_brand_list[i].html);
@@ -321,44 +319,25 @@ let brandToggle = function(){
     $('html').addClass('no-scroll');
 }
 
-// 검색 완료 후 검색창 정리 (브랜드명 제거)
+// 검색 완료 후 검색창 정리
 setTimeout(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const tempKeyword = urlParams.get('temp_keyword');
     const brandParam = urlParams.get('brand');
-    const currentKeyword = urlParams.get('keyword');
-    
-    // 검색창에서 브랜드명 제거하여 순수 검색어만 표시
-    if (currentKeyword) {
-        let cleanKeyword = currentKeyword;
-        
-        // URL에 brand 파라미터가 있으면 해당 브랜드명을 검색어에서 제거
-        if (brandParam) {
-            const decodedBrand = decodeURIComponent(brandParam);
-            cleanKeyword = currentKeyword.replace(decodedBrand, '').trim();
-        }
-        
-        // 전역 변수에 브랜드가 있으면 해당 브랜드명도 제거
-        if (window.selectedHeaderBrand) {
-            cleanKeyword = cleanKeyword.replace(window.selectedHeaderBrand, '').trim();
-        }
-        
-        // 검색창에 순수 검색어만 설정
-        $('.keyword, #keyword').val(decodeURIComponent(cleanKeyword));
-    }
     
     if (tempKeyword) {
         $('.keyword').val(decodeURIComponent(tempKeyword));
     }
     
-    // 브랜드 선택 항상 초기화 (지속성 방지)
-    setTimeout(function() {
-        $('.brandSelect').val('');
+    if (brandParam) {
+        const decodedBrand = decodeURIComponent(brandParam);
+        $('.brandSelect').val(decodedBrand);
+        
+        // 헤더 드롭다운도 같은 값으로 설정
         let headerSelect = document.querySelector('.headerBrandSelect');
         if (headerSelect) {
-            headerSelect.value = '';
+            headerSelect.value = decodedBrand;
+            window.selectedHeaderBrand = decodedBrand;
         }
-        window.selectedHeaderBrand = '';
-        console.log('브랜드 선택 초기화 완료');
-    }, 1000);
+    }
 }, 100);
