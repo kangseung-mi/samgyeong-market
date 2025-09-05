@@ -46,54 +46,8 @@ jQuery11(function(){
         $('.wp-brand-list.summary').append(list[i].outerHTML);
 	}
     
-    // 드롭다운 생성 함수 추가
+    // 👇 드롭다운 생성 함수 수정 (구조 정리)
     function createBrandDropdown() {
-
-// 헤더 드롭다운 재시도 함수 추가
-function retryHeaderDropdown() {
-    let attempts = 0;
-    const maxAttempts = 10;
-    
-    const checkAndCreate = function() {
-        attempts++;
-        console.log(`헤더 드롭다운 시도 ${attempts}/${maxAttempts}`);
-        
-        // 헤더 드롭다운이 존재하고 옵션이 없는 경우에만 재생성
-        if ($('.headerBrandSelect').length > 0 && $('.headerBrandSelect option').length <= 1) {
-            console.log('헤더 드롭다운 발견! 옵션 생성 중...');
-            
-            // 헤더 드롭다운만 따로 처리
-            let headerSelect = $('.headerBrandSelect');
-            headerSelect.empty();
-            headerSelect.append('<option value="">전체 브랜드</option>');
-            
-            for(let i = 0; i < arr_brand_list.length; i++) {
-                let brandName = arr_brand_list[i].name;
-                if (brandName && brandName.trim() !== '') {
-                    let option = $('<option></option>').attr('value', brandName).text(brandName);
-                    headerSelect.append(option);
-                }
-            }
-            
-            console.log('헤더 드롭다운 완성:', $('.headerBrandSelect option').length, '개 옵션');
-            return; // 성공하면 종료
-        }
-        
-        // 아직 없으면 재시도
-        if (attempts < maxAttempts) {
-            setTimeout(checkAndCreate, 300); // 0.3초 후 재시도
-        } else {
-            console.log('헤더 드롭다운을 찾을 수 없거나 이미 생성됨');
-        }
-    };
-    
-    // 0.5초 후부터 시작 (헤더 로딩 시간 고려)
-    setTimeout(checkAndCreate, 500);
-}
-
-// 재시도 함수 실행
-retryHeaderDropdown();
-
         // 기존 검색 페이지용 + 헤더용 모두 선택
         let brandSelect = $('.brandSelect, .headerBrandSelect');
   		if (brandSelect.length > 0) {
@@ -108,59 +62,65 @@ retryHeaderDropdown();
             		brandSelect.append(option);
                 }
             }
-    // 디버깅 로그
+            // 디버깅 로그
             console.log('브랜드 드롭다운 생성:', $('.brandSelect option').length, '/', $('.headerBrandSelect option').length);
         }    
     }
-    // 드롭다운 생성 실행
+    
+    // 👇 헤더 드롭다운 재시도 함수 (독립적으로 분리)
+    function retryHeaderDropdown() {
+        let attempts = 0;
+        const maxAttempts = 10;
+        
+        const checkAndCreate = function() {
+            attempts++;
+            console.log(`헤더 드롭다운 시도 ${attempts}/${maxAttempts}`);
+            
+            // 헤더 드롭다운이 존재하고 옵션이 부족한 경우에만 재생성
+            if ($('.headerBrandSelect').length > 0 && $('.headerBrandSelect option').length <= 1) {
+                console.log('헤더 드롭다운 발견! 옵션 생성 중...');
+                
+                // 헤더 드롭다운만 따로 처리
+                let headerSelect = $('.headerBrandSelect');
+                headerSelect.empty();
+                headerSelect.append('<option value="">전체 브랜드</option>');
+                
+                for(let i = 0; i < arr_brand_list.length; i++) {
+                    let brandName = arr_brand_list[i].name;
+                    if (brandName && brandName.trim() !== '') {
+                        let option = $('<option></option>').attr('value', brandName).text(brandName);
+                        headerSelect.append(option);
+                    }
+                }
+                
+                console.log('✅ 헤더 드롭다운 완성:', $('.headerBrandSelect option').length, '개 옵션');
+                return; // 성공하면 종료
+            }
+            
+            // 아직 없으면 재시도
+            if (attempts < maxAttempts) {
+                setTimeout(checkAndCreate, 300); // 0.3초 후 재시도
+            } else {
+                console.log('헤더 드롭다운을 찾을 수 없거나 이미 생성됨');
+            }
+        };
+        
+        // 0.5초 후부터 시작 (헤더 로딩 시간 고려)
+        setTimeout(checkAndCreate, 500);
+    }
+    
+    // 👇 실행 순서 정리
+    // 1. 일단 즉시 드롭다운 생성 시도
     createBrandDropdown();
     
-    // 브랜드 선택 이벤트 추가
-    // $('.brandSelect').on('change', function() {
-    //     let selectedBand = $(this).val();
-    //     let keywordInput = $('.keyword');
-        
-    //     if (selectrdBrand && selectedBrand !== '') {
-    //         let currentkeyword = keywordInput.val().trim();
-    //         if (currentkeyword === '') {
-    //             keywordInput.val(selectedBrand);
-    //             } else {
-    //                 keywordInput.val(selectedBrand + ' ' + currenrkeyword);
-    //                 }
-    //         }
-    //     });
+    // 2. 헤더 드롭다운 재시도 (별도 실행)
+    retryHeaderDropdown();
     
-    // 검색 폼 제출 시에만 브랜드명 추가
-	// $('.searchField').on('submit', function() {
-    //     let selectedBrand = $('.brandSelect').val();
-    //     let keywordInput = $('.keyword');
-    // 	let currentKeyword = keywordInput.val().trim();
-    // 	if (selectedBrand && selectedBrand !== '') {
-    //     	if (currentKeyword === '') {
-    //         	keywordInput.val(selectedBrand);
-    //     	} else {
-    //         	keywordInput.val(selectedBrand + ' ' + currentKeyword);
-    //     	}
-    // 	}
-	// });
-    
-// 브랜드 선택 시 즉시 검색창에 반영하는 방식 (폼 제출 이벤트 사용 안함)
-// 아무 이벤트도 넣지 않음 - 폼은 기본 동작 그대로 실행
-    
-    
-    
-
-	// 검색 페이지용 브랜드 선택 이벤트 - 즉시 검색창에 반영
-    /*
-    let selectedBrand;
-    $('.brandSelect').on('change', function() {
-        selectedBrand = $(this).val();
-    });
-    */
-    
+    // 브랜드 선택 이벤트
     let selectedHeaderBrand;
     $('.headerBrandSelect').on('change', function () {
         selectedHeaderBrand = $(this).val();
+        console.log('✅ 헤더에서 브랜드 선택됨:', selectedHeaderBrand);
     })
     
     $('#header .all-brand-list .close').on('click', function(){
@@ -168,8 +128,6 @@ retryHeaderDropdown();
         $('#header .top-area').removeClass('all-brand--expand');
         $('html').removeClass('no-scroll');
     });
-    
-   
 
 	$('.searchField').on('submit', function(e) {
         e.preventDefault();
@@ -191,15 +149,19 @@ retryHeaderDropdown();
     $('#searchBarForm').on('submit', function(e) {
         e.preventDefault();
         
-        const $keyword=$(this).find('#keyword')
+        const $keyword = $(this).find('#keyword');
         
-        console.log($keyword, 'keyword')
+        console.log('✅ 헤더 검색 실행');
+        console.log('키워드 입력 필드:', $keyword.length);
+        console.log('선택된 브랜드:', selectedHeaderBrand);
         
-        //let selectedBrand = $('.brandSelect').val();
         let userKeyword = $keyword.val().trim();
         let combinedKeyword = selectedHeaderBrand && selectedHeaderBrand !== '' 
             ? (userKeyword ? selectedHeaderBrand + ' ' + userKeyword : selectedHeaderBrand)
             : userKeyword;
+            
+        console.log('최종 검색 키워드:', combinedKeyword);
+        
         // 숨겨진 필드에 합친 키워드 설정
         $('input[name="header_combined_keyword"]').val(combinedKeyword);
         // 키워드 필드 이름 변경하여 원본 보존
@@ -208,9 +170,6 @@ retryHeaderDropdown();
         // 폼 제출
         this.submit();
     });
-    
-    
-    
 });
 
 let brandToggle = function(){
@@ -219,17 +178,7 @@ let brandToggle = function(){
     $('html').addClass('no-scroll');
 }
 
-
-
 // 검색 완료 후 검색창 정리
-/* setTimeout(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const tempKeyword = urlParams.get('temp_keyword');
-    if (tempKeyword) {
-        $('.keyword').val(decodeURIComponent(tempKeyword));
-    }
-}, 100);
-*/
 setTimeout(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const tempKeyword = urlParams.get('temp_keyword');
@@ -246,6 +195,3 @@ setTimeout(function() {
         $('.headerBrandSelect').val(decodedBrand);
     }
 }, 100);
-
-
-
