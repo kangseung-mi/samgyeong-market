@@ -1,0 +1,25 @@
+.best_review_border_wrapper {margin:0 auto; width:1260px; border:1px solid #eee;box-sizing:border-box; position:relative; height: 625px; margin-bottom:40px;}    
+.best_review_border_wrapper .bx-controls-direction a {position:absolute; top:50%; display:inline-block; color:#fff; width:40px; height:40px; margin-top:-20px; line-height:40px; text-align:center; background-color:#000; opacity:0.5; z-index:10; border-radius:50%;}
+.best_review_border_wrapper .bx-prev{left:-20px;}
+.best_review_border_wrapper .bx-next{right:-20px;}
+ best_review_border .main_review_img .best_02 {background: url("/_wg/img/board/product/best_review_ico_02.png") no-repeat;}
+.best_review_border .bx-viewport {border-left:1px solid #eee}
+.best_review_border {}
+.best_review_border:after{ content: " ";visibility: hidden;display: block;height: 0;clear: both; }
+.best_review_border .best_review_column {border-right:1px solid #eee; width:33.33%; height:625px; overflow:hidden; box-sizing:border-box; float:left;}
+.best_review_border .best_review_column:nth-child(3n+3) {border-right:0;}
+.best_review_border .best_border {width:280px; height:500px; overflow:hidden; margin:50px auto 0;}
+.best_review_border .main_review_img {width:280px; height:340px; overflow:hidden; position:relative; border-radius: 6px 6px 0 0;}
+.best_review_border .main_review_img .review_photo {width:100%; height:100%; overflow:hidden; position:relative; border-radius: 6px 6px 0 0;}
+.best_review_border .main_review_img .review_photo img {position:absolute; left:50%; top:50%; transform: translate(-50%,-50%)}
+.best_review_border .main_review_info {border:1px solid #eee; border-top:0; height: 160px; overflow:hidden; position:relative; border-radius:0 0 6px 6px; box-sizing:border-box; }   
+.best_review_border .subject { font-size: 13px; font-weight: bold; padding: 6px 10px 6px; max-width: 90%; display: inline-block;}
+.best_review_border .content { font-size: 12px; width: 90%; line-height: 16px;  height: 32px; margin: 0 10px 6px; overflow: hidden; display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; position: relative; overflow: hidden; text-overflow: ellipsis;}
+ 
+.best_review_border .writer { position: relative; width: 93%; margin: 6px 8px 6px; text-align: right; color: #aaa; font-size: 11px; }    
+.best_review_border .prd_info { border-top: 1px #bebebe dotted; padding: 6px 0;  margin: 0 8px; height: 35px; position: relative;}
+.best_review_border .prd_info .prd_name { padding-left: 44px; }    
+.best_review_border .prd_info .prd_img {position: absolute; top: 10px; left: 2px; width: 35px; height: 35px; background: #f9f9f9; overflow: hidden; border-radius: 50%; }
+.best_review_border .prd_info .prd_img img {width: 35px;height: 35px;}   
+.best_review_border .prd_info .photo_grade {vertical-align: middle;display: inline-block;padding: 3px 0 0 43px;}
+.best_review_border .best_review_border .main_review_img .best_02 { background: url(/_wg/img/board/product/best_review_ico_02.png) no-repeat; position: absolute; right: 12px; bottom: 12px; width: 50px; height: 50px; z-index: 20; }

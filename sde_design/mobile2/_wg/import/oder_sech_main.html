@@ -1,0 +1,90 @@
+<!--로그인 전 이면 로그인 화면으로 넘긴다.-->
+ <div module="Layout_statelogoff">
+	 
+<!--------------------------------------------------------------------------------------------------------------------------------------
+
+    ### SNS 로그인연동 관리 설정방법 ###
+    
+    • http://service-api.echosting.cafe24.com/Shopboard/index.php?url=BoardView&no=340502&bbs_no=12
+    • 위의 링크를 보시고 해당 페이지에서 발금방법 보기를 클릭후 보시고 설정해주시면 되겠습니다.
+
+--------------------------------------------------------------------------------------------------------------------------------------->
+
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>로그인</strong></li>
+    </ol>
+</div>
+
+<div module="member_login">
+    <!--@css(/_wg/css/login.css)-->
+    
+    <div class="login">
+        <div class="titleArea">
+            <h3>LOGIN</h3>
+            <span>WELCOM BACK</span>
+        </div>
+        <fieldset>
+            <legend>회원로그인</legend>
+            <label class="id">{$form.member_id}</label>
+            <label class="password">{$form.member_passwd}</label>
+            <a href="#none" onclick="{$action_func_login}" class="loginBtn -mov"><img src="/_wg/img/btn_login.gif" alt="로그인" />로그인</a>
+            <p class="security">
+                {$form.member_check_save_id}
+                {$form.member_check_secret_connect}
+            </p>
+            <ul>
+                <li><a href="/member/id/find_id.html">아이디찾기</a></li>
+                <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
+                <li><a href="/member/join.html">회원가입</a></li>
+            </ul>
+            <div class="snsArea">
+                <li class="{$display_naver|display} -mov">
+                    <a href="#none" onclick="{$naver_func_login}"><img src="/_wg/img/btn_login_naver.gif" alt="네이버 로그인" /></a>
+                </li>
+                <li class="{$display_facebook|display} -mov">
+                    <a href="#none" onclick="{$facebook_func_login}"><img src="/_wg/img/btn_login_facebook.gif" alt="페이스북 로그인" /></a>
+                </li>
+                <li class="{$display_kakao|display} -mov">
+                    <a href="#none" onclick="{$kakao_func_login}"><img src="/_wg/img/btn_login_kakao.gif" alt="카카오톡 로그인" /></a>
+                </li>
+                <li class="{$display_google|display} -mov">
+                    <a href="#none" onclick="{$google_func_login}"><img src="/_wg/img/btn_login_google.gif" alt="구글 로그인" /></a>
+                </li>
+            </div>
+            <p class="link {$display_nomember|display}" id="noMemberWrap">
+                <a href="{$returnUrl}" onclick="{$action_nomember_order}"><img src="/_wg/img/btn_nomember.gif" alt="비회원구매" /></a>
+                * 비회원님도 상품구매가 가능하나 다양한 회원혜택에서 제외됩니다.
+            </p>
+        </fieldset>
+    </div>
+</div>
+
+<div module="MyShop_OrderHistoryNologin">
+    <!--
+        $orderDetailUrl = /myshop/order/detail.html
+    -->
+    <div class="login">
+        <div class="titleArea">
+            <h4>비회원주문조회</h4>
+            <span>NON-MEMBER LOGIN</span>
+        </div>
+        <p class="info">비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
+        <ul>
+            <li>{$form.order_name}</li>
+            <li class="number">{$form.order_id}</li>
+            <li>{$form.order_password}</li>
+        </ul>
+        <p class="button"><input type="image" src="/_wg/img/btn_nomember_login.gif" alt="로그인"></p>
+     </div>
+</div>
+                    
+ </div>
+<!--로그인 상태면 주문조회 를 보여준다.-->
+<div module="Layout_stateLogon">
+	
+</div>
+
+ 

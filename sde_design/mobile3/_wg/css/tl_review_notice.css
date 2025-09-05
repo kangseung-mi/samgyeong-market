@@ -1,0 +1,91 @@
+.review_notice_box {
+    border: 1px #eaeaea solid;
+    padding: 40px 0 50px;
+    margin-bottom: 40px;
+}
+
+.review_notice_box .title h2 {
+    width: 88%;
+    margin: 0px auto;
+    padding: 0;
+    font-size: 16px;
+    color: #272823;
+    font-family: Roboto Condensed, Arial, sans-serif;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.review_notice_box .title span {
+    width: 260px;
+    margin: 6px auto 20px;
+    padding: 11px 0 0;
+    display: block;
+    font-size: 11px;
+    color: #9c9c9c;
+    font-weight: normal;
+    border-top: 1px dotted #ccc;
+    text-align: center;
+}
+
+.review_notice_box .line {
+    background: #FFF;
+    width: 90%;
+    padding: 5px 10px;
+    margin: auto;
+    position: relative;
+}
+
+.review_notice_box .notice_line_deco {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 3px;
+    background: #333;
+}
+
+.review_notice_box .notice_line {
+    padding: 14px 10px 15px;
+    border-top: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.review_notice_box .notice_line.first {
+    border-top: 1px solid #eee;
+}
+
+.review_notice_box .notice_line .check {
+    width: 30px;
+    padding: 0 0 10px 5px;
+    text-align: left;
+    display: none;
+}
+
+.review_notice_box .notice_line .notice_right {
+    font-size: 11px;
+    width: 39%;
+    text-align: right;
+    float: right;
+}
+
+.review_notice_box .notice_line .subject {
+    padding-left: 15px;
+    border-left: 0;
+    background: url(/_wg/img/ico_notice.png) 0px 52% no-repeat;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.review_notice_box .btn-toggle {
+    color: blue;
+    margin-top: 30px;
+}
+
+.review_notice_box .btn-toggle a {
+    color: blue;
+}
+
+.review_notice_box .clear {
+    clear: both;
+}

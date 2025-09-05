@@ -1,0 +1,66 @@
+
+    /* 공통 */
+    .sale_list { position:relative; width:100%; max-width:1260px; margin:0 auto 80px; }
+    .sale_list:after { content:""; display:block; *zoom:1; clear:both; }
+
+    /* 타이틀 */
+    .sale_list h2 { display:inline-block; position:relative; left:50%; min-width:20%; margin:0 auto 40px; padding:15px 20px; border-bottom:1px solid #1e1e1e; text-align:center; font-size:25px; color:#1e1e1e; transform:translate(-50%, 0); }
+    .sale_list h2 span { display:block; margin:0 0 3px; text-align:center; font-size:16px; font-weight:normal; color:#888; }
+    .sale_list h2 strong { color:#dd2537; }
+    .sale_list h2 img { width:100%; }
+    .sale_list h2 .titImg { font-size:0; }
+
+	/* 리스트 */
+    .sale_list img { vertical-align:middle; }
+    .sale_list a[href^='/product/detail.html'] > img { border:0; }
+
+    .sale_list ul.prdList { display:table; position:relative; width:100%; font-size:0; line-height:0; letter-spacing:0; text-align:center; }
+    .sale_list ul.prdList > li { position:relative; display:inline-block; *display:inline; *zoom:1; width:48%; line-height:17px; margin:5px .6% 2%; border:1px solid #eee; color:#333; vertical-align:top; font-size:12px; }
+    .sale_list ul.prdList > li:hover { border:1px solid #ccc; }
+
+    .sale_list ul.prdList .thumbnail { position:relative; float:left; width:50%; }
+    .sale_list ul.prdList .thumbnail a { display:block; font-size:0; }
+    .sale_list ul.prdList .thumbnail a img { width:100%; font-size:0; }
+
+    .sale_list ul.prdList .description { position:relative; float:right; width:45%; padding:5% 2% 0; text-align:left; }
+    .sale_list ul.prdList .description ul li { max-height:48px; margin:0 0 5px; overflow:hidden; word-break:break-all; }
+
+    .sale_list ul.prdList .description .name { display:block; line-height:22px; margin:0 50px 5px 0; font-size:15px; text-align:left; letter-spacing:-0.05em; }
+    .sale_list ul.prdList .description .name a:hover { text-decoration:none; }
+
+    .sale_list ul.prdList .description .status { margin:0; padding:0; line-height:0; *zoom:1; }
+    .sale_list ul.prdList .description .status:after { content:""; display:block; clear:both; }
+
+    /* 컬러칩 */
+    .sale_list .prdList .description .chips { display:inline-block; *display:inline; *zoom:1; width:15px; height:5px; margin:5px 2px 8px; vertical-align:top; }
+    .sale_list .prdList .description .chips:first-child { margin:5px -1px 8px; }
+
+    /* 아이콘 */
+    .sale_list .prdList .description .icon { margin:10px 0; vertical-align:middle; }
+    .sale_list .prdList .description .icon:after { content:""; display:block; clear:both; }
+    .sale_list .prdList .description .icon img { margin:0 7px 0 0; }
+
+    .sale_list ul.prdList .description .mileage { display:block; }
+    
+    .xans-product-listitem li { text-align:left; }
+
+    /* module="product_ListItem" */
+    .sale_list .xans-product-listitem { margin:0; }
+    .sale_list .xans-product-listitem li .title { font-weight:normal; vertical-align:top; }
+    .sale_list .xans-product-listitem li .title span { vertical-align:top; }
+    
+    /* 할인기간 레이어 */
+    .sale_list .discountPeriod { display:inline-block; z-index:10; position:relative; width:55px; height:19px; vertical-align:middle; *zoom:1; *display:inline; }
+    .sale_list .discountPeriod .edge { position:absolute; left:50%; top:-6px; width:10px; height:6px; margin:0 0 0 -5px; font-size:0; line-height:0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_tip_edge.gif") no-repeat 0 0; }
+    .sale_list .layerDiscountPeriod { display:none; position:absolute; left:50%; top:26px; width:247px; margin:0 0 0 -124px; border:1px solid #565960; font-size:12px; background-color:#fff; }
+    .sale_list .layerDiscountPeriod strong.title { display:block; margin:0 0 12px; padding:0 35px 0 0; font-weight:bold; color:#2e2e2e; }
+    .sale_list .layerDiscountPeriod .content { padding:9px 10px 12px 14px; font-family:Verdana, "돋움", Dotum, sans-serif; }
+    .sale_list .layerDiscountPeriod .content p { margin:2px 0 0; font-size:11px; color:#000; line-height:16px; color:#757575; letter-spacing:-1px; }
+    .sale_list .layerDiscountPeriod .content p strong { font-weight:normal; font-size:12px; color:#2e2e2e; }
+    .sale_list .layerDiscountPeriod .content p strong span { font-size:11px; }
+    .sale_list .layerDiscountPeriod .close { position:absolute; right:14px; top:14px; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:960px) {
+    	.sale_list ul.prdList > li { width:92%; margin:0 4% 5%; }
+	}

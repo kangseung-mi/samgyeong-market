@@ -1,0 +1,245 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/_wp/js/prod.list.js)-->
+<div module="Product_menupackage">
+    <!--@css(/css/module/product/menuPackage.css)-->
+     <div id="titleArea" module="product_headcategory">
+        <h2>{$title_text_or_image}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+        </span>
+        <div class="funcArea">
+            <span class="likeButton {$disp_likecate_class}"><button type="button">{$disp_likecate_icon}<strong>{$disp_likecate_count}</strong></button></span>
+			<button type="button" id="ec-product-searchdata-mobile-button" class="btnSearchdata">상세검색</button>
+        </div>
+    </div>
+
+	<!--@import(/product/shoppQ/searchConditionData.html)-->
+
+    <ul class="menuCategory">
+        <li module="product_displaysubcategory" style="display:{$display};" class="{$selected}">
+            <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+            <ul module="product_children">
+                <li class="{$selected}">
+                    <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <div module="product_children" class="subCategory">
+                            <ul>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                            <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/product/btn_category_close.png" alt="" class="icoClose" />
+                        </div>
+                    </div>
+                </li>
+                <li class="{$selected}">
+                    <a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <div module="product_children" class="subCategory">
+                            <ul>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                                <li class="{$selected}"><a href="/product/list.html?{$param_cate_no}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            </ul>
+                            <img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/product/btn_category_close.png" alt="" class="icoClose" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p class="banner" module="product_headcategory">{$top_image1_tag_mobile}{$top_image2_tag_mobile}{$top_image3_tag_mobile}</p>
+</div>
+
+
+<div module="product_listrecommend" class="ec-base-product">
+    <!--@css(/css/module/product/listrecommend_swipe.css)-->
+    <!--
+        $count = 8
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $line = 1
+        $grid = 2
+        $swipe = yes
+    -->
+    <h2>추천 상품</h2>
+    <ul class="prdList grid2">
+         <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+				<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+         <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+			<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+    </ul>
+</div>
+
+
+<div module="product_listnew" class="ec-base-product">
+    <!--@css(/css/module/product/listnew_swipe.css)-->
+    <!--
+        $count = 8
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $line = 1
+        $grid = 2
+        $swipe = yes
+    -->
+    <h2>신상품</h2>
+    <ul class="prdList grid2">
+         <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+				<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+         <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+			<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+    </ul>
+</div>
+
+
+<div module="product_normalmenu">
+    <!--@css(/css/module/product/normalmenu.css)-->
+    <!--@js(/js/module/product/normalmenu.js)-->
+    <div class="sort">
+        <select id="selArray" name="selArray" module="product_Orderby">
+            <option value="{$param}">{$sort_name}</option>
+            <option value="{$param}">{$sort_name}</option>
+        </select>
+    </div>
+    <ul class="gridType">
+		<li class="g0"><a href="javascript:;"></a></li><!--
+        <li class="g1"><a href="javascript:;"></a></li> -->
+        <li class="g2 selected"><a href="javascript:;"></a></li>
+        <!-- <li class="g3"><a href="javascript:;"></a></li>
+        <li class="g4"></li> -->
+    </ul>
+	<p class="prdCount">총 {$total_count}개</p>
+</div>
+
+
+<div class="ec-base-product typeThumb" module="product_listnormal">
+    <!--@js(/js/module/product/listnormal.js)-->
+    <!--
+        $count = 20
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $moreview = yes
+        $cache = yes
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <ul class="prdList grid2">
+         <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+				<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+		<li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div>
+				<div class="iconarea">
+					<span class="ico1 {$basket_icon|display}">{$basket_icon}</span>
+					<span class="ico2 {$list_wish_icon|display}">{$list_wish_icon}</span>
+				</div>
+            </div>
+            <div class="description">
+				<div class="name {$product_name_display|display}"><a href="/product/detail.html{$param}">{$product_name}</a></div>
+				<ul module="product_ListItem" class="spec">
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+					<li class="{$item_display|display} {$column_name}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+				</ul>
+				<span class="discount_rate {$product_custom|display}" data-prod-custom="{$product_custom}" data-prod-price="{$product_price}"></span>
+				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</div>
+			</div>
+        </li>
+    </ul>
+</div>
+
+<div module="product_listmore" class="ec-base-paginate typeMoreview">
+    <a href="#none" onclick="{$more_action}" class="btnMore">
+        상품 더보기<!-- (<span id="more_current_page">{$current_page}</span>/<span id="more_total_page">{$total_page}</span>)<span class="icoMore"></span> -->
+		<span class="icoMore"></span>
+    </a>
+</div>
+
+
+<!--@import(/product/shoppQ/searchData_typeSlide.html)-->

@@ -1,0 +1,9 @@
+.jq_lister_guide_co {
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+.jq_lister_cell {
+    width:90%;
+}

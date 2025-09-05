@@ -1,0 +1,17 @@
+
+	.instagram_wrap { width:100%; max-width:1260px; margin:40px auto 10px; padding:10px 0 0; border-top:1px solid #eee; background-image:url('/_wg/img/insta_blank.jpg'); background-size:auto; background-repeat:no-repeat; background-position:center; text-align:center; }
+	#instagramWidgetManual { display:inline-block; position:relative; width:96%; max-width:1000px; height:auto; margin-right:2%; margin-left:2%; overflow:hidden; }
+	#instagramWidgetManual iframe { background:#fff; }
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:839px) {
+		#instagramWidgetManual { height:480px; }
+	}
+	/* 스마트폰 가로 + 테블릿 세로 */
+	@media all and (min-width:840px) and (max-width:996px) {
+		#instagramWidgetManual { height:750px; }
+	}
+	/* 테블릿 가로 + 데스크탑 */
+	@media all and (min-width:997px) {
+		#instagramWidgetManual { height:590px; }
+	}

@@ -1,0 +1,10 @@
+    
+    .main_section_03_wrap { display:block; margin:0 0 50px; padding:40px 0; }
+    .main_section_03 { position:relatvie; display:block; width:1260px; margin:0 auto; }
+    .main_section_03 ul { font-size:0; line-height:0; letter-spacing:-4px; }
+    .main_section_03 ul li { display:inline-block; *display:inline; *zoom:1; }
+    
+    /* 1265px 이하 */
+    @media all and (max-width:1265px){
+        .main_section_03 { width:980px; }
+    }

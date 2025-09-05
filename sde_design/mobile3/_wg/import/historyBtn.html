@@ -1,0 +1,9 @@
+<button onclick="history.go(-1)" value="BACK" class="historyBtn"><i class="xi-angle-left"></i></button>
+
+	/** BACK 버튼 **/
+	.historyBtn { display:none; position:absolute; z-index:1; top:-6px; left:15px; width:21px; height:21px; background:none; border:0; }
+	.historyBtn i { font-size:21px; }
+    /* 스마트폰 세로 ~ 테블릿 세로 */
+    @media all and (max-width:960px) {
+		.historyBtn { display:block; }
+    }

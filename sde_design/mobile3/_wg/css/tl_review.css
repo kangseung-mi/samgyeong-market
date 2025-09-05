@@ -1,0 +1,38 @@
+.photo_list {border-top: 1px solid #ddd; padding-bottom:10px;}
+.photo_used_box { position:relative; width:100%; padding-right: 200px; box-sizing:border-box;}    
+.photo_used_box .right-box{position:absolute; right:0px; width:150px; padding-top:20px;}
+.photo_used_box .right-box .line { padding-bottom: 20px;}
+.photo_used_box .right-box .line.solid {border-bottom:1px solid #ddd; margin-bottom:20px;}
+.photo_used_box .right-box .line .t {font-weight:bold; color:#ACACAC; display:block;}
+.photo-subject {color:#ACACAC; padding:20px 0;}
+.photo_used_box .review_display {height:0; overflow:hidden; opacity:0;}
+.photo_used_box.more .review_display{ height:auto; overflow:none; opacity:1;transition:all 0.5s;}
+.photo_used_box .review_opener {height:auto; overflow:none; opacity:1; transition:all 0.5s;}
+.photo_used_box.more .review_opener {height:0; overflow:hidden; opacity:0;}
+.photo_used_box .photo_title_file {padding:10px;}   
+.photo_used_box .photo_title_file .image-box {width:120px; height:120px; overflow:hidden;display:inline-block; margin-right:10px;}
+.photo_used_box .photo_title_file .image-box img {width:100%;margin-top:50%;transform: translatey(-50%);}
+.photo_used_box .comment_count {display:inline-block;}
+.board h3  { padding-left: 6px; margin: 15px 0; text-align: left; width: 260px; border-left: 3px #ddd solid; line-height: 10px; font-size: 12px; font-family: Arial; color: #444; letter-spacing: 0.5px; }
+
+.vote_click .vote_no {
+    display:inline-block;
+    background: url(/_wg/img/board/product/bg_reply_count.png) 0 center no-repeat;
+    color: #FFF;
+    font-size: 11px;
+    padding: 0px 5px 0 9px;
+    min-width: 15px;
+    text-align: center;
+    height: 24px;
+    line-height:24px;
+}
+
+.fancybox-wrap .fancybox-skin {
+	background-color:transparent;    
+}
+
+.fancybox-wrap.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}

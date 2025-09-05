@@ -1,0 +1,8 @@
+.JS_anchor { height:50px; }
+.JS_anchor .d_fixed{position:relative}
+.JS_anchor .d_fixed.on{position:fixed;top:100px}
+.JS_anchor ul{background:#666666;width:1000px;height:50px}
+.JS_anchor ul li{float:left;padding:0 10px;line-height:50px}
+.JS_anchor ul li a{color:#ffffff;text-decoration:none}
+.JS_anchor ul li a:hover{text-decoration:underline}
+.JS_anchor ul li.on a{color:#00ffff}

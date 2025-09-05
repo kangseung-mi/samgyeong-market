@@ -1,0 +1,326 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/board/review/css/review.list.css)-->
+<!--@js(/board/review/js/__review.list.js)-->
+<!--@js(/board/review/js/list.js)-->
+
+<div module="board_title_4">
+	<div class="path">
+		<span>현재 위치</span>
+		<ol>
+			<li><a href="/">홈</a></li>
+			<li title="현재 위치"><strong>{$board_name}</strong></li>
+		</ol>
+	</div>
+
+	<div class="titleArea">
+		<h2>{$board_title} {$board_adult_icon}</h2>
+		<p>{$board_info}</p>
+	</div>
+	<p class="imgArea">{$board_top_image}</p>
+</div>
+
+<!-- 공지글 -->
+<div  class="border-notice-list" module="board_notice_4">
+	<div class="ec-base-table typeList">
+        <table border="1" summary="">
+			<colgroup module="board_listheader_4">
+				<col style="width:70px;" />
+				<col style="width:auto;" class="{$config.is_category|display}" />
+				<col style="width:auto;" />
+				<col style="width:75px;" />
+				<col style="width:105px;" class="{$config.use_date|display}" />
+				<col style="width:55px;" class="{$config.use_cnt|display}" />
+			</colgroup>
+			<tbody  class="center">
+				<!--
+					$count = 20
+					$product_name_cut = 30
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<tr class="{$block_target_class}" {$block_data_attr}>
+					<td >{$notice_icon}</td>
+					<td class="{$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak">
+						<span class="{$spread_display|display}">
+							<a href="#none" onclick="{$action_content_spread}"><img src="//img.echosting.cafe24.com/skin/base/board/btn_unfold.gif" alt="내용 보기" /></a>
+						</span>
+						<strong>{$icon_re} <a href="/board/review/read_notice.html{$param_read}" class="{$block_content_class}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="txtEm">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="">{$hit_count}</span></td>
+				</tr>
+				<tr class="{$block_target_class}" {$block_data_attr}>
+					<td>{$notice_icon}</td>
+					<td class="{$category_display|display}">{$category_name}</td>
+					<td class="subject left txtBreak">
+						<span class="{$spread_display|display}">
+							<a href="#none" onclick="{$action_content_spread}"><img src="//img.echosting.cafe24.com/skin/base/board/btn_unfold.gif" alt="내용 보기" /></a>
+						</span>
+						<strong>{$icon_re} <a href="/board/review/read_notice.html{$param_read}" class="{$block_content_class}">{$subject}</a> {$icon_lock}{$icon_new}{$icon_hit}{$icon_file}<span class="txtEm">{$comment_count}</span></strong>
+					</td>
+					<td>{$member_icon}{$writer}</td>
+					<td class="{$date_display|display}"><span class="">{$write_date}</span></td>
+					<td class="{$hit_display|display}"><span class="">{$hit_count}</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--//-->
+
+
+<!-- 고정글 -->
+<div class="border-fixed-list" module="board_fixed_4">
+	<div class="section-title">
+		<h2>베스트 포토리뷰</h2>
+	</div>
+	<div class="board-review">
+		<div class="wpReview">
+			<ul  class="review-list grid4">
+				<!--
+					$count = 4
+					$login_page_url = /member/login.html
+					$deny_access_url = /index.html
+				-->
+				<li class="item effect-scale {$block_target_class}" data-idx="{$idx}" {$block_data_attr}>
+					<div class="box">
+						<div class="best"><span></span></div>
+						<div class="img img-bx-wrap">
+							<a href="{$link_product_detail}" class="open-review {$block_content_class}">
+								<p style="background-image:url({$image_big_src});"></p>
+								<p style="background-image:url({$img_src|replace:/gallery/,/});"><img src="/board/review/img/noimage.gif" data-src="" data-attach="" class="thumb" /></p>
+							</a>
+						</div>
+						<div class="cont cont-left">
+							<div class="checkbox">{$checkbox}</div>
+							<ul class="prod-wrap">
+								<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+								<li>
+									<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+									<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+								</li>
+							</ul>
+                            <p class="subject ellipsis open-review {$block_content_class}">{$subject}</p>
+                            <p class="desc ellipsis open-review {$block_content_class}">{$content|striptag}</p>
+						</div>
+						<div class="cont cont-right">
+							<p class="writer">{$writer}</p>
+							<p class="comment">{$comment_count}</p>
+							<p class="date {$date_display|display}">{$write_date}</p>
+							<ul class="prod-wrap">
+								<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+								<li>
+									<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+									<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+								</li>
+							</ul>
+							<ul class="vote-wrap">
+								<li class="voteTxt">이 리뷰가 도움 되었나요?</li>
+								<li><a href="javascript:;" onclick="ListReview.voteUp({$idx})" class="btnNormal btnVote">추천</a><span class="voteCount" id="wp-vote-{$idx}">{$vote}</span></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="item effect-scale {$block_target_class}" data-idx="{$idx}" {$block_data_attr}>
+					<div class="box">
+						<div class="best"><span></span></div>
+						<div class="img img-bx-wrap">
+							<a href="{$link_product_detail}" class="open-review {$block_content_class}">
+								<p style="background-image:url({$image_big_src});"></p>
+								<p style="background-image:url({$img_src|replace:/gallery/,/});"><img src="/board/review/img/noimage.gif" data-src="" data-attach="" class="thumb" /></p>
+							</a>
+						</div>
+						<div class="cont cont-left">
+							<div class="checkbox">{$checkbox}</div>
+							<ul class="prod-wrap">
+								<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+								<li>
+									<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+									<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+								</li>
+							</ul>
+							<p class="subject ellipsis open-review {$block_content_class}">{$subject}</p>
+                            <p class="desc ellipsis open-review {$block_content_class}">{$content|striptag}</p>
+						</div>
+						<div class="cont cont-right">
+							<p class="writer">{$writer}</p>
+							<p class="comment">{$comment_count}</p>
+							<p class="date {$date_display|display}">{$write_date}</p>
+							<ul class="prod-wrap">
+								<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+								<li>
+									<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+									<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+								</li>
+							</ul>
+							<ul class="vote-wrap">
+								<li class="voteTxt">이 리뷰가 도움 되었나요?</li>
+								<li><a href="javascript:;" onclick="ListReview.voteUp({$idx})" class="btnNormal btnVote">추천</a><span class="voteCount" id="wp-vote-{$idx}">{$vote}</span></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--//-->
+
+<div module="board_search_4">
+    <fieldset class="boardSearch">
+        <p class="category {$form.product_category_selector_display|display}"><span class="first"><img src="/board/review/img/ico_menu.png" alt=""/> 카테고리선택</span>{$form.product_category_selector}</p>
+        <p class="formSearch"><span class="first"><img src="/board/review/img/ico_search.png" alt=""/> 상품검색</span>
+		<select id="search_date" name="search_date" fw-filter="" fw-label="" fw-msg="" style="display:none;">
+			<option value="week" >일주일</option>
+			<option value="month">한달</option>
+			<option value="month3">세달</option>
+			<option value="all" selected>전체</option>
+			</select>
+		<select id="search_key" name="search_key" fw-filter="" fw-label="" fw-msg="" style="display:none;">
+			<option value="subject">제목</option>
+			<option value="content">내용</option>
+			<option value="writer_name">글쓴이</option>
+			<option value="member_id">아이디</option>
+			<option value="nick_name">별명</option>
+			<option value="product" selected>상품정보</option>
+		</select>
+		{$form.search}
+		<a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a></p>
+    </fieldset>
+</div>
+
+
+<div class="board-review">
+	<div class="wpReview" module="Board_ListPackage_4">
+		<dl class="gridType" data-target="#listReview">
+			<dd class="g0"><a href="javascript:;"></a></dd>
+			<dd class="g4 selected"><a href="javascript:;"></a></dd>
+		</dl>
+		<ul module="board_list_4" id="listReview" class="review-list gall grid4" data-cache-name="board_review">
+			<!--
+				$count = 20
+				$product_name_cut = 30
+				$login_page_url = /member/login.html
+				$deny_access_url = /index.html
+			-->
+			<li class="item effect-scale {$block_target_class}" data-idx="{$idx}" {$block_data_attr}>
+				<div class="box">
+					<div class="img img-bx-wrap">
+						<a href="{$link_product_detail}" class="open-review {$block_content_class}">
+							<p style="background-image:url({$image_big_src});"></p>
+							<p style="background-image:url({$img_src|replace:/gallery/,/});"><img src="/board/review/img/noimage.gif" data-src="" data-attach="" class="thumb" /></p>
+						</a>
+					</div>
+					<div class="cont cont-left">
+						<div class="checkbox">{$checkbox}</div>
+						<ul class="prod-wrap">
+							<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+							<li>
+								<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+								<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+							</li>
+						</ul>
+						<p class="subject ellipsis open-review {$block_content_class}">{$subject}</p>
+						<p class="desc ellipsis open-review {$block_content_class}">{$content|striptag}</p>
+					</div>
+					<div class="cont cont-right">
+						<p class="writer">{$writer}</p>
+						<p class="comment">{$comment_count}</p>
+						<p class="date {$date_display|display}">{$write_date}</p>
+						<ul class="prod-wrap">
+							<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+							<li>
+								<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+								<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+							</li>
+						</ul>
+                        <ul class="vote-wrap">
+                            <li class="voteTxt">이 리뷰가 도움 되었나요?</li>
+                            <li><a href="javascript:;" onclick="ListReview.voteUp({$idx})" class="btnNormal btnVote">추천</a><span class="voteCount" id="wp-vote-{$idx}">{$vote}</span></li>
+                        </ul>
+					</div>
+				</div>
+			</li>
+			<li class="item effect-scale {$block_target_class}" data-idx="{$idx}" {$block_data_attr}>
+				<div class="box">
+					<div class="img img-bx-wrap">
+						<a href="{$link_product_detail}" class="open-review {$block_content_class}">
+							<p style="background-image:url({$image_big_src});"></p>
+							<p style="background-image:url({$img_src|replace:/gallery/,/});"><img src="/board/review/img/noimage.gif" data-src="" data-attach="" class="thumb" /></p>
+						</a>
+					</div>
+					<div class="cont cont-left">
+						<div class="checkbox">{$checkbox}</div>
+						<ul class="prod-wrap">
+							<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+							<li>
+								<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+								<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+							</li>
+						</ul>
+						<p class="subject ellipsis open-review {$block_content_class}">{$subject}</p>
+						<p class="desc ellipsis open-review {$block_content_class}">{$content|striptag}</p>
+					</div>
+					<div class="cont cont-right">
+						<p class="writer">{$writer}</p>
+						<p class="comment">{$comment_count}</p>
+						<p class="date {$date_display|display}">{$write_date}</p>
+						<ul class="prod-wrap">
+							<li><a href="{$link_product_detail}"><img src="/board/review/img/noimage.gif" data-src="{$image_medium_src}" class="prod-thumb" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" /></a></li>
+							<li>
+								<span class="name"><a href="{$link_product_detail}">{$product_name}</a></span>
+								<span class="rate{$point_count} rate {$point_display}">({$point_count}.0)</span>
+							</li>
+						</ul>
+                        <ul class="vote-wrap">
+                            <li class="voteTxt">이 리뷰가 도움 되었나요?</li>
+                            <li><a href="javascript:;" onclick="ListReview.voteUp({$idx})" class="btnNormal btnVote">추천</a><span class="voteCount" id="wp-vote-{$idx}">{$vote}</span></li>
+                        </ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="btn-review-more">
+			<a class="btnNormal sizeL" id="wpMore" href="javascript:;">더보기 +</a>
+		</div>
+	</div>
+	<!-- <div class="pop-review-bg open-review">
+		<div class="review-loading"></div>
+	</div> -->
+    <!-- <div module="board_ButtonList_4" class="ec-base-button typeBG {$write_display|display}">
+        <span class="gRight">
+            <a href="/board/product/write.html{$param_write}" class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a>
+        </span>
+    </div> -->
+</div>
+
+<div module="board_paging_4" class="ec-base-paginate">
+    <a href="{$param_prev}" class="prev"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}" class="next"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+</div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_4">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+        {$board_catemove_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_category_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$category_move}</a>
+    </p>
+</div>
+
+<div module="board_function_4">
+    <!--@css(/css/module/board/function.css)-->
+    <p>
+        {$board_function_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_article_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$article_move}</a>
+        <a href="#none" class="btnNormal" onclick="{$action_article_copy}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif" alt="" /> {$article_copy}</a>
+        {$board_function_help}
+    </p>
+</div>

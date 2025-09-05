@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+    <!--[if IE 9 ]>    <html class="ie9" lang="en"> <![endif]-->
+    
+  <meta charset="utf-8">
+
+  <title>VuAll</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <style type="text/css">
+	html {
+		background-color:#FFF
+	}
+	body {
+		margin:0;
+		padding:0;
+	}
+	#container {
+        width: 912px;
+        margin: 20px auto;
+		
+    }
+  </style>
+
+  <!-- load css files and fonts -->
+  <link rel="stylesheet" href="vuAll/reset.css">
+  <link rel="stylesheet" href="vuAll/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <!-- load css files and fonts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="vuAll/jquery.easing.1.3.js"></script>
+  <script src="vuAll/slackBlur.min.js"></script>
+  <script src="vuAll/vuAll.min.js"></script>
+  <!-- Initiate slider instances -->
+  <script type="text/javascript">
+	jQuery(function($){
+		$.easing.def = "easeInOutExpo";
+		
+		$('.vuAll_container').vuAll({		
+			textAreaPadding: 20, //Adjust the padding of the text area
+			textBgBlur: 20, //Adjust the amount of blur added to the text area background
+            autoRotate: true, //Set auto rotate of the slides to true or false
+            rotationInterval: 4, //Set the number of seconds between each slide rotation
+			borderSize: 2 //The size of the border around the images
+		});
+		
+		$('.vuAll_container2').vuAll({		
+			textAreaPadding: 20,
+			textBgBlur: 20,
+            autoRotate: false,
+			borderSize: 1
+		});
+	});	
+  </script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <h1>Restaurant</h1>
+  
+  <!-- start instance of slider - Copy from here -->
+  <div class="vuAll_container">
+		
+	<div class="vuAll_item">
+		<img src="images/1.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+        <div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Starters</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum sit amet, consectetur adipiscing elit, suspendisse metus justo</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View All Starters</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/2.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Pizzas</span></div>
+           <div class="vuAll_copy">Cras rhoncus ante vel dolor accumsan rutrum. Nam condimentum facilisis tristique. Donec at nunc arcu. Proin eu mi vitae nulla sagittis tempor nec augue.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View All Pizzas</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/3.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Wines</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum dolor sit amet, consectetur elit.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Wine List</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/2.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Main Courses</span></div>
+           <div class="vuAll_copy">Cras rhoncus ante vel dolor accumsan rutrum. Nam condimentum facilisis tristique. Donec at nunc arcu. Proin eu mi vitae nulla sagittis tempor nec augue.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Main Courses</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/3.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Coffees</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum dolor sit amet, consectetur elit.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Coffee List</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/1.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">Desserts</span></div>
+           <div class="vuAll_copy">Cras rhoncus ante vel dolor accumsan rutrum. Nam condimentum facilisis tristique. Donec at nunc arcu.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View All Desserts</a></div>
+        </div>
+	</div>
+
+  </div>
+  <!-- end instance of slider - Copy up to here -->
+  
+
+  <h1>Fashion</h1>
+  
+  <!-- start instance of slider - Copy from here -->
+  <div class="vuAll_container2">
+		
+	<div class="vuAll_item">
+		<img src="images/7.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+        <div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">2009</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum sit amet, consectetur adipiscing elit, suspendisse metus.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Collection</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/7.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">2010</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum sit amet, consectetur adipiscing elit, suspendisse metus.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Collection</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/7.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">2011</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum sit amet, consectetur adipiscing elit, suspendisse metus.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Collection</a></div>
+        </div>
+	</div>
+	
+	<div class="vuAll_item">
+		<img src="images/7.jpg" alt="" />
+        <div class="blurMask"><canvas></canvas></div>
+		<div class="vuAll_textArea">
+		   <div class="vuAll_heading"><span class="headSize">2012</span></div>
+           <div class="vuAll_copy">A creative banner rotator by LGLab. Lorem ipsum sit amet, consectetur adipiscing elit, suspendisse metus.</div>
+           <div class="vuAll_button"><a href="http://codecanyon.net/user/LGLab" target="_blank">View Collection</a></div>
+        </div>
+	</div>
+	
+  </div>
+  <!-- end instance of slider - Copy up to here -->
+
+ </div><!-- end container -->
+        
+
+</body>
+</html>

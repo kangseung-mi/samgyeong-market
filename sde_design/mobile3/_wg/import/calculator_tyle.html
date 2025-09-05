@@ -1,0 +1,57 @@
+<script language="javascript">
+function good() {
+    var twidth=eval(document.seetline.width.value);
+    var theight=eval(document.seetline.height.value);
+    var tfwidth=eval(document.seetline.fwidth.value);
+    var tresult=Math.ceil(((twidth*theight)/tfwidth));
+    alert(""+" 타일은 "+tresult+"장 정도 소요될 것으로 예상됩니다.");
+}
+</script>
+
+<style>
+    .calculator_tyle { width:935px; margin:0 auto 20px; }
+    
+    .calculator_tyle .tit { display:block; margin:0 0 15px; font-size:20px; font-weight:bold; }
+    .calculator_tyle .tit i { top:4px; font-size:24px; }
+    .calculator_tyle .tit span { padding:0 0 0 10px; font-size:12px; font-weight:normal; }
+    
+    .calculator { padding:0; border:1px solid #ddd; }
+    
+    .calculator_tyle span { margin:0 5px 0 0; }
+    .calculator_tyle div { display:inline-block; line-height:60px; font-size:16px; }
+    .calculator_tyle input { width:80px; }
+    
+    .calculator_tyle .tyle { padding:0 20px; border-right:1px solid #ddd; }
+    .calculator_tyle .size { padding:0 0 0 20px; }
+    .calculator_tyle .confirm { float:right; }
+    .calculator_tyle .confirm a { display:block; height:30px; line-height:40px; padding:15px 17px; background:#333; color:#fff; text-align:center; font-size:30px; }
+    .calculator_tyle .confirm a:hover { background:#666; }
+</style>
+
+<div class="calculator_tyle">
+    <h2 class="tit">
+        <i class="xi-calculator"></i> 타일계산기 <span>타일의 크기와 시공면적을 입력하시면 필요한 타일의 개수를 확인하실 수 있습니다.</span>
+    </h2>
+    <form class="calculator" name="seetline">
+        <div class="tyle">
+            <span>타일크기선택</span>
+            <select name="fwidth">
+              <option value="112.5">타일크기 7.5cm x 15cm</option>
+              <option value="200">타일크기 10cm x 20cm</option>
+              <option value="300">타일크기 10cm x 30cm</option>
+              <option value="400">타일크기 10cm x 40cm</option>
+              <option value="100">타일크기 10cm x 10cm</option>
+              <option value="225">타일크기 15cm x 15cm</option>
+              <option value="400" selected="">타일크기 20cm x 20cm</option>
+              <option value="900">타일크기 30cm x 30cm</option>
+              <option value="346">육각타일 20cm x 23cm</option>
+            </select>
+        </div>
+        <div class="size">
+            <span>시공할 가로길이</span> <input name="width"> cm <strong>*</strong> <span>시공할 세로길이</span> <input name="height"> cm
+        </div>
+        <div class="confirm">
+            <a href="#none" onclick="good()" class="-mov"><i class="xi-calculator"></i></a>
+        </div>
+    </form>
+</div>

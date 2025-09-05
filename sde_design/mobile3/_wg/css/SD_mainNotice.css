@@ -1,0 +1,48 @@
+
+    .SD_mainNotice { position:relative; float:right; width:98%; height:200px; margin:0 0 0 2%; overflow:hidden; }
+
+	/* 타이틀 */
+    .SD_mainNotice h4 { display:block; height:35px; line-height:35px; margin:0 0 5px; border-bottom:1px solid #eee; font-size:13px; color:#333; }
+
+	/* 더보기 */
+    .SD_mainNotice .more { position:absolute; top:9px; right:5px; }
+    .SD_mainNotice .more i { font-size:14px; color:#999; }
+    .SD_mainNotice .more:hover i { color:#111; }
+
+    .SD_mainNotice li { display:block; width:100%; height:24px; line-height:24px; margin:0; }
+    .SD_mainNotice li a { display:inline-block; width:71%; margin:0 0 0 4%; color:#555; font-size:11px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+    .SD_mainNotice li a:hover { color:#111; text-decoration:none; }
+
+	/* 날짜 */
+    .SD_mainNotice li .date { display:inline-block; float:right; width:22%; margin:0 2% 0 0; font-size:9px; color:#aaa; text-align:right; }
+
+    .SD_mainNotice li i { top:3px; margin:0 5px 0 0; font-size:16px; }
+
+
+
+	/* 일반글 롤링 */
+    .JS_mainNotice { position:relative; }
+    .JS_mainNotice .DB_mask { position:relative; height:120px; overflow:hidden; }
+    .JS_mainNotice .DB_mask .DB_imgSet { position:absolute; top:0px; left:0; width:100%; height:100%; }
+    .JS_mainNotice .DB_mask .DB_imgSet li .num_ico { position:relative; top:3px; float:left; width:17px; height:17px; line-height:17px; margin:0 5px 0 0; background:rgba(0,0,0,.07); font-size:10px; color:#666; text-align:center; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .JS_mainNotice .DB_mask .DB_imgSet li:hover .num_ico { background:rgba(0,0,0,.8); color:#fff; }
+
+    /* 화살표 */
+    .JS_mainNotice .DB_dir { position:absolute; z-index:10; top:0; right:0; width:19px; height:0; cursor:pointer; opacity:0; -webkit-opacity:0; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .JS_mainNotice:hover .DB_dir { opacity:1; -webkit-opacity:1; }
+
+    .JS_mainNotice .arrow { position:absolute; width:19px; height:19px; font-size:0; transition:all .3s ease; -webkit-transition:all .3s ease; }
+
+    .JS_mainNotice .DB_prevBtn { top:-5px; background:url('/_wg/img/_arrow/arrowVLW_15.gif') no-repeat 50% 50% rgba(0,0,0,.5); }
+    .JS_mainNotice:hover .DB_prevBtn { top:0px; }
+    .JS_mainNotice .DB_prevBtn:hover { background:url('/_wg/img/_arrow/arrowVLW_15.gif') no-repeat 50% 50% rgba(0,0,0,.8); }
+
+    .JS_mainNotice .DB_nextBtn { top:14px; background:url('/_wg/img/_arrow/arrowVRW_15.gif') no-repeat 50% 50% rgba(0,0,0,.5); }
+    .JS_mainNotice:hover .DB_nextBtn { top:19px; }
+    .JS_mainNotice .DB_nextBtn:hover { background:url('/_wg/img/_arrow/arrowVRW_15.gif') no-repeat 50% 50% rgba(0,0,0,.8); }
+
+    /* 1285px 이하 */
+    @media all and (max-width:1285px){
+    	.SD_mainNotice { height:155px; }
+        .JS_mainNotice .DB_mask { height:75px; }
+    }

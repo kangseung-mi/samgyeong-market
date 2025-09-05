@@ -1,0 +1,158 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Project_Package">
+    <!--@css(/css/module/product/project_package.css)-->
+    <div class="path" module="project_head">
+        <span>현재 위치</span>
+        <ol>
+            <li><a href="/">홈</a></li>
+            <li title="현재 위치"><strong>기획전</strong></li>
+        </ol>
+    </div>
+
+    <div class="title" module="product_headcategory">
+        <p class="banner">{$top_image_tag}</p>
+        <h2>{$title_text_or_image}</h2>
+    </div>
+
+
+    <ul class="menuCategory">
+        <li module="product_projectcategory" style="display:{$display};">
+            <a href="#{$cate_id}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+        </li>
+    </ul>
+
+    <div module="project_list">
+        <!--
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <h3><span id="{$cate_id}">{$category_name}</span></h3>
+
+        <div module="project_productlist" class="ec-base-product">
+            <ul class="prdList grid4">
+                <li class="item DB_rate" id="anchorBoxId_{$product_no}" data-price="{$product_custom}^{$product_price}">
+                    <div class="thumbnail">
+                        <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span><!-- 체크박스 -->
+                        <div class="dc_rate md sColor -mov"><span class="sale">{$prd_price_sale}</span><div class="per"></div></div><!-- 할인률 -->
+                        <div class="-likeButton {$disp_likeprd_class} -mov"><button type="button" class="-mov">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div><!-- 좋아요 -->
+                        <div class="list_button -mov">
+                            <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/_btn/list_blank.png"></a></span><!-- 새창보기 -->
+                            <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                            <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                            <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        </div>
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                            <span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span><!-- 꾸미기 아이콘 -->
+
+                            <!-- 추가이미지 -->
+                            <div class="add_thumb">
+                                <img src="{$image_medium}" id="{$image_medium_id}" class="off" alt="{$seo_alt_tag}" />
+                                <div class="d_thumb">
+                                    <ul class="img">
+                                        <li><img src="{$image_medium}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src1}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src2}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src3}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src4}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src5}" alt="{$seo_alt_tag}" /></li>
+                                    </ul>
+                                    <ul class="btn"></ul>
+                                    <span class="arrow prev">이전</span>
+                                    <span class="arrow next">다음</span>
+                                </div>
+                            </div><!-- //추가이미지 -->
+
+                        </a>
+                    </div>
+                    <div class="description">
+                        <!-- 컬러칩 -->
+                        <p class="color {$colorchip_display|display}">
+                            <div module="project_Colorchip" class="colorChip">
+                                <span class="chips" style="background-color:{$color}"></span>
+                                <span class="chips" style="background-color:{$color}"></span>
+                            </div>
+                        </p>
+                        <p class="name">
+                            <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a>
+                            <div class="line -mov"></div>
+                        </p>
+                        <ul module="project_ListItem" class="spec">
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        </ul>
+                        <div class="status">
+                            <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div><!-- 아이콘 -->
+                        </div>
+                        <div class="list_button mo"><!-- 모바일용 -->
+                            <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"></a></span><!-- 새창보기 -->
+                            <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                            <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                            <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        </div>
+                    </div>
+                </li>
+                <li class="item DB_rate" id="anchorBoxId_{$product_no}" data-price="{$product_custom}^{$product_price}">
+                    <div class="thumbnail">
+                        <span class="chk"><input type="checkbox" class="{$product_compare_class} {$product_compare_display|display}" /></span><!-- 체크박스 -->
+                        <div class="dc_rate md sColor -mov"><span class="sale">{$prd_price_sale}</span><div class="per"></div></div><!-- 할인률 -->
+                        <div class="-likeButton {$disp_likeprd_class} -mov"><button type="button" class="-mov">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></div><!-- 좋아요 -->
+                        <div class="list_button -mov">
+                            <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"><img src="/_wg/img/_btn/list_blank.png"></a></span><!-- 새창보기 -->
+                            <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                            <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                            <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        </div>
+                        <a href="/product/detail.html{$param}" name="anchorBoxName_{$product_no}">
+                            <span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span><!-- 꾸미기 아이콘 -->
+
+                            <!-- 추가이미지 -->
+                            <div class="add_thumb">
+                                <img src="{$image_medium}" id="{$image_medium_id}" class="off" alt="{$seo_alt_tag}" />
+                                <div class="d_thumb">
+                                    <ul class="img">
+                                        <li><img src="{$image_medium}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src1}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src2}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src3}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src4}" alt="{$seo_alt_tag}" /></li>
+                                        <li><img class="lazy" data-src="{$add_image_src5}" alt="{$seo_alt_tag}" /></li>
+                                    </ul>
+                                    <ul class="btn"></ul>
+                                    <span class="arrow prev">이전</span>
+                                    <span class="arrow next">다음</span>
+                                </div>
+                            </div><!-- //추가이미지 -->
+
+                        </a>
+                    </div>
+                    <div class="description">
+                        <!-- 컬러칩 -->
+                        <p class="color {$colorchip_display|display}">
+                            <div module="project_Colorchip" class="colorChip">
+                                <span class="chips" style="background-color:{$color}"></span>
+                                <span class="chips" style="background-color:{$color}"></span>
+                            </div>
+                        </p>
+                        <p class="name">
+                            <a href="/product/detail.html{$param}" class="{$product_name_display|display}"><span class="title {$product_name_title_display|display}">{$product_name_title} :</span> {$product_name}</a>
+                            <div class="line -mov"></div>
+                        </p>
+                        <ul module="project_ListItem" class="spec">
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        </ul>
+                        <div class="status">
+                            <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</div><!-- 아이콘 -->
+                        </div>
+                        <div class="list_button mo"><!-- 모바일용 -->
+                            <span class="zoom"><a href="/product/detail.html{$param}" target="_blank"></a></span><!-- 새창보기 -->
+                            <span class="basket">{$basket_icon}</span><!-- 장바구니 -->
+                            <span class="option">{$option_preview_icon}</span><!-- 옵션보기 -->
+                            <span class="wish">{$list_wish_icon}</span><!-- 관심상품 -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

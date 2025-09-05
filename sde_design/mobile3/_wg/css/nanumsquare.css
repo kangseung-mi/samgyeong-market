@@ -1,0 +1,27 @@
+/*
+ * 나눔스퀘어
+ */
+
+@font-face {
+    font-family: 'nanum-square-r';
+    src: url('/_wg/library/font/nanumsquarer.eot');
+    src: url('/_wg/library/font/nanumsquarer.eot?#iefix') format('embedded-opentype'),
+         url('/_wg/library/font/nanumsquarer.woff2') format('woff2'),
+         url('/_wg/library/font/nanumsquarer.woff') format('woff'),
+         url('/_wg/library/font/nanumsquarer.ttf') format('truetype'),
+         url('/_wg/library/font/nanumsquarer.svg#nanumsquarerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanum-square-b';
+    src: url('/_wg/library/font/nanumsquareb.eot');
+    src: url('/_wg/library/font/nanumsquareb.eot?#iefix') format('embedded-opentype'),
+         url('/_wg/library/font/nanumsquareb.woff2') format('woff2'),
+         url('/_wg/library/font/nanumsquareb.woff') format('woff'),
+         url('/_wg/library/font/nanumsquareb.ttf') format('truetype'),
+         url('/_wg/library/font/nanumsquareb.svg#nanumsquarebregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

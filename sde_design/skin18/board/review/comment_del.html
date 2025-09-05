@@ -1,0 +1,19 @@
+<!--@layout(/layout/basic/review.html)-->
+
+<div module="board_CommentDeletePackage_4">
+    <!--@css(/css/module/board/commentDeletePackage.css)-->
+    <div module="Board_CommentDel_4" class="ec-base-box typeThin">
+        <div class="commentDel">
+            <h3 class="boxTitle">댓글삭제</h3>
+            <fieldset>
+                <legend>댓글삭제</legend>
+                <p class="info">댓글 등록 시 입력한 <strong class="txtEm">비밀번호를 입력하여 주십시요.</strong></p>
+                <p class="password"><label for="comment_password">비밀번호</label> {$form.comment_password}</p>
+                <div class="ec-base-button gColumn">
+                    <button type="submit" class="btnEm sizeM">확인</button>
+                    <a href="javascript:;" onclick="history.back(-1);" class="btnNormal sizeM">취소</a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>

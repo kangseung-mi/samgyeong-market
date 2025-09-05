@@ -1,0 +1,9 @@
+
+    .panelMenu { width:200px; margin:0 0 20px; }
+    .panelMenu:after { content:""; display:block; *zoom:1; clear:both; }
+
+    .panelMenu li { float:left; width:50%; height:28px; margin-bottom:1px; }
+    .panelMenu li:nth-child(even) { margin-left:-1px; }
+    .panelMenu li a { display:block; line-height:28px; border:1px solid #dfdfdf; font-size:11px; color:#333; text-indent:15px; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .panelMenu li a:hover { background:#f4f4f4; text-decoration:none; font-weight:bold; }
+    .panelMenu li a i { display:none; top:2px; margin:0 3px 0 0; font-size:13px; color:#777; }

@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!-- <div id="titleArea">
+    <h2>비회원 주문조회</h2>
+</div> -->
+
+<div module="MyShop_OrderHistoryNologin" id="{$order_history_nologin_id}">
+    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+    <!--
+        $orderDetailUrl = /myshop/order/list.html
+    -->
+	<div class="boxTitle">
+		<h2>로그인</h2>
+	</div>
+    <div class="ec-base-tab gMerge">
+        <ul>
+            <li>
+                <a href="#member">회원 로그인</a>
+            </li>
+            <li class="selected">
+                <a href="#noMember">비회원 로그인</a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="loginHeader">
+        <div class="keyboard">
+            <button type="button" class="btnKey korean" title="korean">한글자판</button>
+            <button type="button" class="btnKey special" title="special">특수문자</button>
+        </div>
+        <div class="view">
+            <div class="korean"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard.png" alt="" width="254"></div>
+            <div class="special"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/img_keyboard_special.png" alt="" width="254"></div>
+        </div>
+    </div> -->
+    <fieldset>
+        <div class="formBox">
+            <div class="form">
+                {$form.order_name}
+                {$form.order_id}
+                {$form.order_password}
+            </div>
+			<p class="ec-base-help">비회원인 경우 주문번호로 주문조회만 가능합니다.</p>
+            <div class="ec-base-button gFull">
+                <button type="button" class="btnSubmit bt_typeA" onclick="$('#historyNoLoginForm').submit();">조회</button>
+                <a href="/member/agreement.html" class="btnEm bt_typeB">회원가입</a>
+            </div>
+        </div>
+    </fieldset>
+</div>

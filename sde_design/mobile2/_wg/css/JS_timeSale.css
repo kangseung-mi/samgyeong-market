@@ -1,0 +1,50 @@
+
+/** 상품 리스트 **/
+
+    .ec-base-product.JS_timeSale { margin:0 auto 60px; }
+
+	/* 타이틀 */
+    .ec-base-product.JS_timeSale h2 .text { padding:60px 0; }
+    .ec-base-product.JS_timeSale h2 span { display:block; font-size:18px; font-weight:400; color:#999; }
+    .ec-base-product.JS_timeSale h2 { display:block; margin:0 0 40px; background:url('/_wg/img/_bg/bg_slash_w_20.png') #222; vertical-align:middle; text-align:center; font-size:50px; color:#fff; }
+    .ec-base-product.JS_timeSale h2 img { width:100%; }
+    .ec-base-product.JS_timeSale h2 p { line-height:17px; margin:30px 0 -40px; font-size:11px; font-weight:normal; }
+
+    /* 타이머 */
+    .ec-base-product.JS_timeSale .timer { display:block; margin:0 0 20px; text-align:center; font-size:12px; }
+
+	/* 시간 */
+	.ec-base-product.JS_timeSale .timer span { display:inline-block; height:25px; line-height:22px; margin:0 -3px 0 3px; padding:0 0 0 5px; background:url('/_wg/img/JS_timeSale/bg.png') no-repeat; background-position:100% top; background-size:56px; font-size:13px; letter-spacing:.77em; color:#fff; }
+    .ec-base-product.JS_timeSale .timer .day { }
+    .ec-base-product.JS_timeSale .timer .hour { }
+    .ec-base-product.JS_timeSale .timer .minute { }
+    .ec-base-product.JS_timeSale .timer .second { }
+
+	/* 진행상태(타임세일앞 텍스트) */
+	.ec-base-product.JS_timeSale span.state { line-height:24px; margin:0 6px 0 0; padding:0 7px; border-radius:4px; font-weight:bold; color:#333; letter-spacing:0; }
+    .ec-base-product.JS_timeSale .ready .state { background:#eee; } /* 준비중 */
+	.ec-base-product.JS_timeSale .ing .state { } /* 진행중 - /_wg/css/wg.css 에서 설정 */
+	.ec-base-product.JS_timeSale .on .state { width:80%; height:35px; line-height:35px; margin:-5px 0 -5px; background:#eee; } /* 종료 */
+
+	/** 클릭방지 **/
+    /* 준비중 */
+    .ec-base-product.JS_timeSale li .ready { display:none; position:absolute; z-index:19; width:99.5%; height:90%; margin:-5px 0 0 1px; background:url('/_wg/img/_bg/bg_opacity_w_50.png'); }
+    .ec-base-product.JS_timeSale li.ready .ready { display:block; }
+
+    /* 종료 */
+    .ec-base-product.JS_timeSale li .time_out { display:none; position:absolute; z-index:19; width:99.5%; height:90%; margin:-5px 0 0 1px; background:url('/_wg/img/_bg/bg_opacity_w_50.png'); }
+    .ec-base-product.JS_timeSale li.on .time_out { display:block; }
+
+    /* 리스트 */
+    .ec-base-product.JS_timeSale .prdList > li { position:relative; width:32.39%; margin:0 0 30px -1px; padding:20px 0; background:url('/_wg/img/JS_timeSale/grid_line.gif') repeat-y; border-right:1px solid #eee; }
+    .ec-base-product.JS_timeSale .prdList .thumbnail { position:relative; top:0; left:0; width:90.16%; margin:0 auto 15px; font-size:0; line-height:0; outline:1px solid #eee; }
+    .ec-base-product.JS_timeSale .prdList .thumbnail img { width:100%; max-width:100%; }
+    .ec-base-product.JS_timeSale .prdList .description { position:relative; width:90%; margin:0 auto; padding:0; }
+
+    /* 할인율 */
+    .ec-base-product.JS_timeSale .dc_rate.time { top:-4px; right:-4px; width:60px; height:60px; line-height:60px; background:#90173c/* 아이콘 배경색상 */; font-size:20px; color:#fff; cursor:pointer; }
+    .ec-base-product.JS_timeSale .dc_rate.time i { margin-left:2px; font-size:14px; }
+
+	/* 더보기 */
+	.ec-base-product.JS_timeSale .-btn { display:block; width:400px; margin:0 auto !important; text-align:center; opacity:0; }
+	.ec-base-product.JS_timeSale:hover .-btn { opacity:1; }

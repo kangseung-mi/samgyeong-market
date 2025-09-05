@@ -1,0 +1,10 @@
+.animate-not-support{display:none;position:fixed;bottom:0;left:0;padding:10px 0;width:100%;background:#272727;text-align:center;z-index:100;border-top:2px solid #da2c2c;}
+.animate-not-support,
+.animate-not-support a{color:#fff;}
+.animate-not-support a{font-weight:bold;text-decoration:underline;}
+.animate-not-support .close-msg{text-decoration:none;}
+@media not all, (prefers-reduced-motion: reduce) {
+    .animate-not-support {
+        display: block;
+    }
+}

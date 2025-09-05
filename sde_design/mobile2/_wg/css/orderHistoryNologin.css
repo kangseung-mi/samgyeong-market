@@ -1,0 +1,14 @@
+
+    .xans-myshop-orderhistorynologin { position:relative; width:400px; margin:40px auto 50px; overflow:hidden; }
+    .xans-myshop-orderhistorynologin h3 { margin:0 0 10px; }
+    .xans-myshop-orderhistorynologin p.info { display:block; font-size:11px; color:#999; margin:0 0 10px; }
+    .xans-myshop-orderhistorynologin input { width:321px; height:45px!important; margin:0 0 10px; padding:2px 2px 2px 75px!important; border:1px solid #ddd; color:#333; font-size:14px!important; line-height:45px!important; letter-spacing:0.08em; font-weight:normal; 
+        transition:all .5s ease; -webkit-transition:all .5s ease;
+    }
+    .xans-myshop-orderhistorynologin input[type="submit"] { width:100%; }
+    .xans-myshop-orderhistorynologin input:focus { border:1px solid #333; }
+    .xans-myshop-orderhistorynologin #order_name { background:url('/_wg/img/login_ico_name.png') 7px 11px no-repeat #fff; }
+    .xans-myshop-orderhistorynologin #order_id1 { width:120px; margin:0 10px 10px 0; background:url('/_wg/img/login_ico_number.png') 7px 11px no-repeat #fff; }
+    .xans-myshop-orderhistorynologin #order_id2 { width:156px; margin:0 0 10px 10px; padding:2px 2px 2px 15px!important; }
+    .xans-myshop-orderhistorynologin #order_password { background:url('/_wg/img/login_ico_pw2.png') 7px 11px no-repeat #fff; }
+    .xans-myshop-orderhistorynologin .button input[type="image"] { display:block; width:400px!important; height:60px!important; margin:10px 0 0; padding:0!important; border:none; }

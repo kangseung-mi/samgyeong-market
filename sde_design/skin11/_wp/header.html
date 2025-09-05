@@ -1,0 +1,149 @@
+<!-- 상단 영역 -->
+<!--
+	#상단 공통 영역입니다.
+	- 이 영역에 대한 스타일은 "/_wp/css/layout.css"에 정의되어 있습니다.
+-->
+
+<div id="header">
+	<!--@import(/_wp/topbanner.html)-->
+	<div class="top-area">
+		<div class="logo-wrap">
+			<div class="site-wrap">
+				<!-- 상단 로고 -->
+				<div class="logo-img">
+					<div class="vertical">
+						<!--@import(/_wp/header_logo.html)-->
+					</div>
+				</div>
+				<!-- // -->
+				<div class="top-member">
+					<div class="vertical">
+						<div class="log">
+                            <!-- 상단 로그인 전 -->
+                            <a module="Layout_statelogoff" href="/member/login.html">로그인</a>
+                            <a module="Layout_statelogoff" href="/member/join_member.html">회원가입<span class="bb">3,000원</span></a>
+                            <!--//-->
+							<!-- 상단 로그인 후 -->
+                            <a module="Layout_stateLogon" href="{$action_logout}" class="log">로그아웃</a>
+                            <a module="Layout_stateLogon" href="/myshop/index.html">마이페이지</a>
+                            <!--//-->
+                            <a href="/myshop/order/list.html">주문조회</a>
+						</div>
+						<!-- 멀티쇼핑몰 -->
+						<div class="multishop">
+							<div module="Layout_multishopList" class="list">
+								<button type="button" class="toggle"><span>{$shop_name} {$current_language}<!-- <img src="//img.cafe24.com/img/common/global/{$current_language_code}_32x24.png" alt="" /> --></span></button>
+								<ul module="Layout_multishopListitem">
+									<li class="{$selected_class}">
+										<a href="//{$shop_domain}/">
+											<span class="name">{$shop_name}<!-- <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" /> --></span>
+										</a>
+									</li>
+									<li class="{$selected_class}">
+										<a href="//{$shop_domain}/">
+											<span class="name">{$shop_name}<!-- <img src="//img.cafe24.com/img/common/global/{$language}_32x24.png" alt="" /> --></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div><!--//-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cate-wrap">
+			<div class="inner">
+				<div class="site-wrap">
+					<div class="float-left">
+                        <!-- 스크롤 시 로고 -->
+						<h1 class="logo-img">
+							<div class="vertical">
+								<!--@import(/_wp/header_logo.html)-->
+							</div>
+						</h1>
+                        <!-- // -->
+						<!--상단  카테고리 -->
+						<div class="bs"><a href="/shopinfo/company.html">브랜드스토리</a></div>
+                        <div id="category" module="Layout_category" class="cate-override">
+                            <ul>
+                                <li data-param="{$param}">
+                                    <a href="/{$design_page_url}{$param}">{$name}</a>
+                                    <div class="sub-category"></div>
+                                </li>
+                                <li data-param="{$param}">
+                                    <a href="/{$design_page_url}{$param}">{$name}</a>
+                                    <div class="sub-category"></div>
+                                </li>
+							</ul>
+						</div>
+						<!-- // -->
+						<!-- 기획전 -->
+						<div class="project bs" module="layout_project">
+							<a href="javascript:;">기획전</a>
+							<ul class="sub-list">
+								<li>
+									<a href="{$link_product_project}">{$category_text|cut 25}</a>
+								</li>
+								<li >
+									<a href="{$link_product_project}">{$category_text|cut 25}</a>
+								</li>
+							</ul>
+						</div>
+						<!-- // -->
+						<!-- 타임세일-->
+						<div class="bs pt"><a href="/timesale/">타임세일</a></div>
+						<!--//-->
+						<!-- 리뷰 -->
+						<div class="bs pt"><a href="/board/review/list.html?board_no=4">리뷰</a></div>
+						<!--//-->
+						<!-- 이벤트 -->
+						<div class="bs"><a href="/board/gallery/list.html?board_no=8">이벤트</a></div>
+						<!--//-->
+						<!-- 제휴문의 -->
+						<div class="bs"><a href="/inquiry/">제휴문의</a></div>
+						<!--//-->
+						<!-- 커뮤니티 -->
+						<div class="bs">
+							<a href="javascript:;">커뮤니티</a>
+							<div class="sub-list boardlink">
+								<ul module="Layout_BoardInfo">
+									<li><a href="{$board_list_url}" >{$board_name}</a></li>
+									<li><a href="{$board_list_url}" >{$board_name}</a></li>
+									<li><a href="{$board_list_url}" >{$board_name}</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- // -->
+					</div>
+					<div class="float-right">
+						<!-- 장바구니 -->
+						<div class="bt-basket" module="Layout_orderBasketcount">
+							<a href="/order/basket.html">장바구니 <span class="count">{$basket_count}</span></a>
+						</div>
+						<!-- // -->
+						<!-- 검색-->
+						<div module="Layout_SearchHeader">
+							<!--
+								$product_page=/product/detail.html
+								$category_page=/product/list.html
+							-->
+							<fieldset>{$form.keyword}<input class="bt-search" type="image" src="/web/upload/wp/167417/ico_search_svg.svg" alt="검색" onclick="{$action_search_submit}" /><ul class="autoDrop" id="{$search_auto_id}"></ul></fieldset>
+							<div class="search-dropbox">
+								<div module="search_hotkeyword">
+									<h5>추천 검색어</h5>
+									<p>
+										<a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+										<a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

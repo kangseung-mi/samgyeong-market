@@ -1,0 +1,22 @@
+.xans-board-search { padding:20px 0 20px 10px; color:#2e2e2e; font-size:12px;  text-align:center; margin:50px 0 0;}
+
+.xans-board-search #search_date,
+.xans-board-search #search_key { font-size:14px; width:100px; height:38px;}
+.xans-board-search #search { width: 280px; height: 38px; line-height: 34px;box-sizing: border-box;padding: 0 40px 0 10px;font-size: 15px; }
+.xans-board-search #search + [class^='btn'][class*='Fix']{padding: 0;height: 38px;line-height: 36px;font-size: 13px;}
+.xans-board-search .boardSearch { display:block; }
+.xans-board-search p { margin:0 0 5px; }
+/*.xans-board-search p.category:before { content:"상품분류"; }
+.xans-board-search p:before { content:"검색어"; }*/
+.xans-board-search .category select { width:150px; height:36px;margin:0 2px;}
+.xans-board-search .category select#product_category_depth1 {  }
+.xans-board-search .category .selectbox{margin:1px 2px;}
+.xans-board-search .selectbox{margin:0px;}
+.xans-board-search select { width:72px; font-size:15px;  }
+.xans-board-search select#search_date {  }
+.xans-board-search input { width:162px; }
+.xans-board-search .boardSearch img { vertical-align:middle; }
+
+
+
+

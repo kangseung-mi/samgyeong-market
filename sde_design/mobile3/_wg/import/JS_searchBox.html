@@ -1,0 +1,53 @@
+<!--@css(/_wg/css/SD_headerSearch.css)-->
+
+<div id="JS_searchBox">
+    <ul class="SD_headerSearch">
+        <li>
+            <div module="Layout_SearchHeader" class="search_form">
+                <!--
+                    $product_page=/product/detail.html
+                    $category_page=/product/list.html
+                -->
+                <h2>SMART SEARCH</h2>
+                <fieldset class="-mov">
+                    <legend>검색</legend>
+                    {$form.keyword}<input type="image" onclick="{$action_search_submit}" src="/_wg/img/search_btn.png" alt="검색" /></fieldset>
+
+                <!-- 가격대검색 -->
+                <div class="price" module="search_form">
+                    <h4><i class="xi-angle-right-thin"></i> 판매가격대</h4>
+                    {$form.product_price1} ~ {$form.product_price2} 원
+                </div>
+                
+                <!-- 검색정렬기준 -->
+                <div class="order" module="search_form">
+                    <h4><i class="xi-angle-right-thin"></i> 검색정렬기준</h4>
+                    {$form.order_by}
+                </div>
+
+            </div>
+            
+            <!-- 핫키워드(인기검색어 - 상점관리 > 운영관리 > 상품검색조건설정 에서 수정이 가능합니다. ) -->
+            <div module="search_hotkeyword" class="serch_keyword">
+                <h4><i class="xi-check-thin"></i> 인기검색어</h4>
+                <ul>
+                    <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+                    <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+                </ul>
+            </div>
+            
+            <!-- 브랜드 -->
+            <div id="brand_list" class="v2">
+                <!-- 브랜드 초성 -->
+                <!--@import(/_wg/import/brand_btn.html)-->
+                
+                <ul class="DB_list scrollbar_box">
+                    <!-- 브랜드 목록 -->
+                    <!--@import(/_wg/import/brand_list.html)-->
+                </ul>
+            </div>
+
+        </li>
+    </ul>
+</div>
+<div id="d_lightBox"></div><!--라이트박스-->

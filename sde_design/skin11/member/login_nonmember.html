@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비회원 주문조회</strong></li>
+    </ol>
+</div>
+
+ <!-- <div class="titleArea">
+    <h2>비회원 주문조회</h2>
+</div> -->
+
+<div class="login_wrap">
+	<div class="login-align">
+		<div module="MyShop_OrderHistoryNologin">
+			<!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+			<!--
+				$orderDetailUrl = /myshop/order/list.html
+			-->
+			<h3 class="boxTitle">비회원 주문조회</h3>
+			<div class="nonmemberlogin">
+				<ul>
+					<li><input id="order_name" name="order_name" fw-filter="isFill" fw-label="주문자명" fw-msg="" class="inputTypeText" placeholder="주문자명" value="" type="text"></li>
+					<li><input id="order_id" name="order_id" maxlength="18" fw-filter="isOrderid&amp;isFill" fw-label="주문번호" fw-msg="" value="" type="text" placeholder="주문번호 (하이픈(-)포함)" title="주문번호 (하이픈(-)포함)"></li>
+					<li><input id="order_password" name="order_password" fw-filter="isFill" fw-label="비회원주문 비밀번호" fw-msg="" value="" type="password" placeholder="비회원 주문 패스워드"></li>
+				</ul>
+				<!-- <dl class="ec-base-desc gBlank20">
+					<dt>{$form_label.order_name}</dt><dd>{$form.order_name}</dd>
+					<dt>{$form_label.order_id}</dt><dd>{$form.order_id}</dd>
+					<dt>{$form_label.order_password}</dt><dd>{$form.order_password}</dd>
+				</dl>-->
+				<p class="btnNologin"><button type="submit" class="btnNormal sizeM">조회</button></p>
+			</div>
+			<p class="txt">- 비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다. </p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,107 @@
+.타임세일 {
+    display: none;
+}
+
+.wp-timer {
+    text-align: center;
+    margin: 0 14px;
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    display: block;
+}
+
+.wp-timer .ready--state,.wp-timer .end--state,.wp-timer.wp--wait .state,.wp-timer.wp--running .state {
+    font-size: 13px;
+}
+
+.wp-timer .ready--state {
+    color: #222;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+	line-height: 38px;
+    height: 38px;
+	border-radius: 5px;
+}
+
+.wp-timer .end--state {
+    color: #969696;
+    background: #f2f2f2;
+    box-sizing: border-box;
+	line-height: 38px;
+    height: 38px;
+	border-radius: 5px;
+
+}
+
+.wp-timer.wp--wait .state:before,
+.wp-timer.wp--running .state:before {
+    content: "";
+    background: url(/timesale/img/ico_clock_000.png) no-repeat left center;
+    width: 17px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px 5px 0 0;
+}
+.wp-timer.wp--wait {
+   background: #ffffff;
+    color: #000;
+    line-height: 38px;
+    height: 38px;
+    border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.wp-timer.wp--wait .state {
+    display: inline-block;
+}
+
+.wp-timer.wp--wait .wp-time {
+    display: inline-block;
+    font-family: 'Noto Sans KR','arial';
+    font-size: 14px;
+    font-weight: bold;
+    background: #f1f1f1;
+    height: 18px;
+    line-height: 18px;
+    padding: 3px 4px;
+    border-radius: 5px;
+}
+
+.wp-timer.wp--wait .day.wp-time,.wp-timer.wp--wait .hour.wp-time {
+    margin-left: 5px;
+}
+
+.wp-timer.wp--running {
+    background: #fff;
+    color: #000;
+    line-height: 38px;
+    height: 38px;
+	border-radius: 5px;
+	border:1px solid #4abdb5;
+
+}
+
+.wp-timer.wp--running .state {
+    display: inline-block; font-weight:bold;
+}
+
+.wp-timer.wp--running .wp-time {
+    display: inline-block;
+    font-family: 'Noto Sans KR','arial';
+    font-size: 14px;
+    font-weight: bold;
+    background: #f1f1f1;
+    height: 18px;
+    line-height: 18px;
+    padding: 3px 4px;
+    border-radius: 5px;
+    color: #111;
+}
+
+.wp-timer.wp--running .day.wp-time,.wp-timer.wp--running .hour.wp-time {
+    margin-left: 5px;
+}

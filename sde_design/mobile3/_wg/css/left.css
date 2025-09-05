@@ -1,0 +1,102 @@
+
+	/* 상단배경 */
+	background: linear-gradient(137deg, #fff6b7, #f77c99, #6578f2, #c2ffd8);
+	background-size: 800% 800%;
+
+	-webkit-animation: Ani_topBg 7s ease infinite;
+	-moz-animation: Ani_topBg 7s ease infinite;
+	-o-animation: Ani_topBg 7s ease infinite;
+	animation: Ani_topBg 7s ease infinite;
+
+	@-webkit-keyframes Ani_topBg {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+	}
+	@-moz-keyframes Ani_topBg {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+	}
+	@-o-keyframes Ani_topBg {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+	}
+	@keyframes Ani_topBg {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+	}
+
+	.topBg { display:flex; width:100%; height:88px; margin:0 0 20px; line-height:24px; border-radius:7px; background:linear-gradient(-45deg, #333, #555, #000, #222); background-size:400% 400%; animation:Ani_topBg 15s ease infinite; font-size:19px; font-weight:bold; color:#fff; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+
+
+
+/** 고객센터 **/
+	#left h4 { padding:10px 0 20px; font-size:15px; }
+	#left .oper_time h4 { display:none; }
+
+
+/** 콜센터 **/
+	#left .oper_time { margin:0 0 15px; padding:0 10px 15px; border-bottom:1px solid #e1e1e1; font-size:12px; line-height:17px; }
+	#left .oper_time .phone { line-height:25px; margin:0 0 10px; font-family:'Oswald'; font-size:23px; letter-spacing:.02em; }
+	#left .oper_time .phone img { position:relative; top:-2px; width:14px; }
+	#left .oper_time strong { padding-right:10px; color:#333; }
+    #left .oper_time .right { margin:10px 0 0; vertical-align:top; letter-spacing:0; }
+    #left .oper_time .right a:first-child { display:none; }
+    #left .oper_time .right a { width:100%; margin:0 auto 5px; }
+
+
+/** 상담버튼 **/
+    #left .counselBtn { display:block; margin:0 0 10px; padding:0 10px 10px; border-bottom:1px solid #e1e1e1; }
+    #left .counselBtn a { margin:0 0 5px; font-size:12px; text-align:left; }
+    #left .counselBtn img { width:17px; height:17px; margin:-2px 0 0; }
+    #left .counselBtn .formQNA { }
+
+
+
+/** FAQ **/
+    .JS_faq { position:relative; z-index:10; margin:0 0 5px; padding:0 10px 10px; border-bottom:1px solid #e1e1e1; }
+
+    .JS_faq more { position:absolute; top:12px; right:14px; }
+
+    .JS_faq li { position:relative; }
+    .JS_faq a { display:block; color:#333; font-size:12px; white-space:nowrap; text-decoration:none; transition:all .3s ease; }
+    .JS_faq a:hover { color:#000; font-weight:bold; text-decoration:none; }
+
+        /* 1depth */
+        .JS_faq > li:first-child { border-top:none; }
+        .JS_faq > li { display:block; position:relative; border-top:1px solid rgba(0,0,0,.05); }
+        .JS_faq > li > a { line-height:35px; padding:0 0 0 5px; color:#333; font-size:12px; white-space:nowrap; text-decoration:none; transition:all .3s ease; }
+        .JS_faq > li.on > a,
+        .JS_faq > li.fix > a { color:#111; font-weight:bold; }
+        .JS_faq > li.arrow > a { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 95% 50%; }
+        .JS_faq > li.on.arrow > a { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 97% 50%; }
+        .JS_faq > li > a i { top:2px; margin:0 5px 0 0; font-size:16px; }
+
+        /* 2depth */
+        .JS_faq > li > ul { display:none; position:absolute; top:-10px; left:100%; min-width:100px; padding:10px; border:1px solid #ddd; background:#fff; }
+        .JS_faq > li > ul > li > a { height:30px; line-height:30px; padding:0 10px 0 0; border-bottom:1px solid #eee; color:#333; text-indent:5px; white-space:nowrap; }
+        .JS_faq > li > ul > li > a:hover,
+        .JS_faq > li > ul > li.on > a { background:rgba(0,0,0,.05); }
+        .JS_faq > li > ul > li.arrow { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 95% 50%; }
+        .JS_faq > li > ul > li.on.arrow { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 97% 50%; }
+
+        /* 3depth */
+        .JS_faq > li > ul > li > ul { display:none; position:absolute; top:-8px; left:100%; padding:7px 0; border:1px solid #ddd; background:#fff; }
+        .JS_faq > li > ul > li > ul > li a { height:30px; line-height:30px; padding:0 10px 0 0; border-bottom:1px solid #eee; color:#333; text-indent:5px; white-space:nowrap; }
+        .JS_faq > li > ul > li > ul > li a:hover,
+        .JS_faq > li > ul > li > ul > li.on a { background-color:rgba(0,0,0,.05); }
+        .JS_faq > li > ul > li > ul > li.arrow { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 95% 50%; }
+        .JS_faq > li > ul > li > ul > li.on.arrow { background:url('/_wg/img/_dot/dotB_3.png') no-repeat 97% 50%; }
+
+
+
+/** 좌측메뉴 **/
+    .leftMenu { position:relative; z-index:10; margin:0; padding:0 10px 5px; }
+    .leftMenu li:first-child { border-top:none; }
+    .leftMenu li { position:relative; border-top:1px solid rgba(0,0,0,.05); }
+    .leftMenu a { display:block; line-height:35px; padding:0 0 0 5px; color:#333; font-size:12px; white-space:nowrap; text-decoration:none; transition:all .3s ease; }
+    .leftMenu a:hover { color:#000; font-weight:bold; text-decoration:none; }
+    .leftMenu a i { top:2px; margin:0 5px 0 0; font-size:16px; }

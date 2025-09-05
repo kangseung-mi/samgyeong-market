@@ -1,0 +1,22 @@
+
+/** 브랜드 **/
+    .categorySub.brand { position:absolute; left:50px; top:0; }
+    .categorySub.brand > li { float:left; }
+    .categorySub.brand > li > a { display:block; position:relative; z-index:3; width:30px; background:url('/_wg/img/_bar/bar_b_10.png') no-repeat right 50% !important; background-size:1px 15px !important; }
+    .categorySub.brand > li > a:hover,
+    .categorySub.brand > li.on > a,
+    .categorySub.brand > li.fix > a { background-image:url('/_wg/img/_bar/bar_b_10.png') no-repeat; background-position:right 50%; background-size:1px 15px !important; }
+    .categorySub.brand > li a i { line-height:49px; font-size:22px; color:#111; }
+    .categorySub.brand > li a:hover i { color:#555; }
+
+
+    .categorySub.brand > li > ul { display:none; position:absolute; z-index:1; top:50px; left:-52px; width:1240px; min-height:110px; padding:15px 5px 15px 15px; border:1px solid rgba(0,0,0,.1); background:#fff; }
+    .categorySub.brand h2 { display:block; line-height:25px; margin:0 12px 15px 0; padding:0 0 10px; border-bottom:1px solid #eee; font-size:18px; font-weight:normal; }
+    .categorySub.brand .brand_list { position:relative; margin:20px 0 0; }
+
+
+    /* 1285px 이하 */
+    @media all and (max-width:1285px){
+        .categorySub.brand > li > ul { width:958px; }
+        .categorySub.brand .brand_list .DB_btn > li a { width:18px; height:18px; line-height:18px; font-size:11px; }
+    }

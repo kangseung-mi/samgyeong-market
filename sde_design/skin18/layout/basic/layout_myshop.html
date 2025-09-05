@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- PG크로스브라우징필수내용 -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- // PG크로스브라우징필수내용 -->
+
+    <title>기본 레이아웃</title>
+    <!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+    <!--css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-tab.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-desc.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/basic.js)-->
+    <!--@js(/js/common.js)-->
+    <!--@js(/js/module/layout/quick_view.js)-->
+
+	<!--@import(/_wp/common_lib.html)-->
+	<!--@js(/_wp/js/myshop/menu.js)-->
+</head>
+<body>
+<div id="wrapper" class="loading" style="visibility:hidden;opacity:0;">
+	<div id="skipNavigation">
+		<p><a href="#category">전체상품목록 바로가기</a></p>
+		<p><a href="#contents">본문 바로가기</a></p>
+	</div>
+
+	<!--@import(/_wp/header.html)-->
+
+	<div id="wrap">
+		<div id="container">
+			<div id="contents" class="site-wrap">
+
+				<div class="mypage_leftmenu_wrap" module="Layout_shoppingInfo" id="myshopMenuList">
+
+					<!-- <div module="myshop_asyncbenefit" class="menulist_0">
+						<div class="m_name">{$member_name}님</div>
+						<div class="m_group">{$group_name} 회원</div>
+					</div> -->
+
+					<div class="menulist_1">
+						<h3 class="tlt">마이페이지 </h3>
+						<ul>
+							<li class="menu1">
+								<a href="/myshop/order/list.html">주문내역조회</a>
+							</li>
+							<li class="menu2">
+								<a href="/myshop/wish_list.html">관심상품</a>
+							</li>
+							<li class="menu3">
+								<a href="/myshop/recent_view_product.html">최근본상품</a>
+							</li>
+							<li class="menu4 {$myLike_display|display}">
+								<a href="{$myLike_href}">좋아요 상품</a>
+							</li>
+						</ul>
+					</div>
+					<div class="menulist_2">
+						<ul>
+							<li class="menu5">
+								<a href="/myshop/modify.html">회원정보수정</a>
+							</li>
+							<li class="menu6" module="myshop_main">
+								<a href="/myshop/coupon/coupon.html">쿠폰 <span class="count {$coupon_count_display|display}">({$coupon_count})</span></a>
+							</li>
+							<li class="menu7">
+								<a href="/myshop/mileage/historyList.html">{$mileage_name}</a>
+							</li>
+							<li class="menu8 {$deposit_display|display}">
+							   <a href="/myshop/deposits/historyList.html">{$deposit_name}</a>
+							</li>
+							<li class="menu9">
+								<a href="/myshop/board_list.html">게시물 관리</a>
+							</li>
+							<li class="menu10">
+								<a href="/myshop/addr/list.html">배송 주소록 관리</a>
+							</li>
+							<li module="Myshop_InquiryDash" class="menu11">
+								<a href="/board/inquiry/list.html">대량구매 문의 관리</a>
+							</li>
+							<li class="menu12 {$regular_delivery_display|display}">
+								<a href="/myshop/regular_delivery.html">정기배송 관리</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mypage_cont_wrap">
+				<!--@contents-->
+				</div>
+			</div><hr class="layout" />
+		</div><hr class="layout" />
+	</div><hr class="layout" />
+
+	<!--@import(/_wp/footer.html)-->
+</div>
+<!--@import(/_wp/loading.html)-->
+
+<!-- 결제를 위한 필수 영역 -->
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다." /></span>
+                <span><img src="//img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt="" /></span>
+            </p>
+            <p class="txt">
+                본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br />
+                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- // 결제를 위한 필수 영역 -->
+
+<div module="Layout_multishopShipping">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <div class="dimmed"></div>
+    <div class="worldshipLayer ec-base-layer">
+        <div class="header">
+            <h3>WORLD SHIPPING</h3>
+        </div>
+        <div class="content">
+            <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+            <div class="select">
+                <select module="Layout_multishopShippingCountrylist">
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                    <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                </select>
+            </div>
+            <div class="select">
+                <select module="Layout_multishopShippingLanguagelist">
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                    <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                </select>
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/link/btn_go.gif" alt="GO" /></a>
+        </div>
+        <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" width="13" height="13" alt="close" /></a>
+    </div>
+</div>
+
+<div module="Layout_conversionPc">
+    <!--@css(/css/module/layout/conversionpc.css)-->
+    <a href="{$mobile_url}">모바일 화면보기</a>
+</div>
+
+
+</body>
+</html>

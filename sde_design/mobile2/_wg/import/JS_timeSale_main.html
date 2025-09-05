@@ -1,0 +1,25 @@
+<!-- 타임세일 리스트 -->
+<!--@css(/_wg/css/JS_timeSale.css)-->
+<div module="product_listmain_15" class="ec-base-product JS_timeSale main -frame move-page">
+    <!--
+        $count = 3
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="text move-tit">{$category_title_text}<p>- 본 타임세일 이벤트는 조기 종료될 수 있습니다 -<br>- 준비중/종료된 타임세일은 클릭되지 않습니다 -</p></div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid3">
+        <li class="item box1" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box2" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box3" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+    </ul>
+    <a href="/_wg/import/JS_timeSale.html" class="-btn -black -mov">타임세일상품 더보기</a>
+</div>

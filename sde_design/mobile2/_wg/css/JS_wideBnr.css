@@ -1,0 +1,21 @@
+
+    .JS_wideBnr { position:relative; width:100%; height:250px/*높이*/; margin:0 0 70px; overflow:hidden; }
+    .JS_wideBnr .img { position:relative; width:100%; height:100%; }
+    .JS_wideBnr .img li { position:absolute; top:0; left:50%!important; width:2000px; margin-left:-1000px; }
+    .JS_wideBnr .img li:first-child { left:0; }
+    .JS_wideBnr .img li img { width:100%; }
+
+    /* 페이지 버튼 */
+    .JS_wideBnr .jsBtn { left:50%; width:1260px; margin:0 0 0 -630px; }
+
+    /* 화살표 */
+    .JS_wideBnr .jsDir { top:45px !important; left:50%; width:1260px; margin:0 0 0 -630px; }
+    .JS_wideBnr:hover .jsDir { top:50px !important; }
+
+	/* 버튼과 화살표는 /_wg/cssjsBtn.css 에서 수정이 가능합니다. */
+
+    /* 1285px 이하 */
+    @media all and (max-width:1285px){
+        .JS_wideBnr .btn { width:980px; margin:0 0 0 -490px; }
+        .JS_wideBnr .DB_dir { width:980px; margin:0 0 0 -490px; }
+    }

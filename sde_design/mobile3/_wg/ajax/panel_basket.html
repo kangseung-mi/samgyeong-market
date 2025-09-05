@@ -1,0 +1,48 @@
+<div class="loadhtml">
+
+	<div fix id="p_box" ax="main">
+		<ul>
+			<li>
+				<h1 class="titlebox"><em></em>장바구니<span ax="boxclose"></span></h1>
+				<div class="scrollbar_box cat_wrap">
+					<!-- 장바구니 비어있을 때 -->
+					<div class="-panelempty" module="Order_Empty">
+						<p>장바구니가 비어 있습니다.</p>
+					</div>
+					<table class="-panel-tablebox" module="Order_NormNormal">
+						<caption>일반상품 (기본배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_SuppNormal">
+						<caption>일반상품 (업체기본배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_NormIndividual">
+						<caption>일반상품 (개별배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_NormOversea">
+						<caption>일반상품 (해외배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_InstNormal">
+						<caption>무이자상품 (기본배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_InstIndividual">
+						<caption>무이자상품 (개별배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+					<table class="-panel-tablebox" module="Order_InstOversea">
+						<caption>무이자상품 (해외배송)</caption>
+						<!--@import(/_wg/ajax/panel_basket_inc.html)-->
+					</table>
+				</div>
+			</li>
+			<p class="-panelBtn">
+				<a href="/order/basket.html" class="-btn -black">장바구니 바로가기</a>
+			</p>
+		</ul>
+	</div>
+
+</div>

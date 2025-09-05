@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>OpenAPI Map Test - Draggable Marker 테스트 </title>
+<style>v\:* { behavior: url(#default#VML); }</style>
+<!-- prevent IE6 flickering -->
+<script type="text/javascript">
+try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {}
+</script>
+<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=0c10bbcf6415fddd0dabd4510973c4d0"></script>
+</head>
+<body>
+<div id = "Map"></div>//지도의 사이즈 를 설정 합니다.
+<script type="text/javascript">
+    var oPoint = new nhn.api.map.LatLng(35.1541279, 129.119499);
+    nhn.api.map.setDefaultPoint('LatLng');
+    oMap = new nhn.api.map.Map('Map', {
+    center : oPoint,
+    level : 13, // - 초기 줌 레벨은 10이다.
+    enableWheelZoom : true,
+    enableDragPan : true,
+    enableDblClickZoom : false,
+    mapMode : 0,
+    activateTrafficMap : false,
+    activateBicycleMap : false,
+    activateRealtyMap : true,
+    minMaxLevel : [ 1, 14 ],
+    size : new nhn.api.map.Size(800, 800)
+    });
+    
+    var oSlider = new nhn.api.map.ZoomControl();
+    oMap.addControl(oSlider);
+    oSlider.setPosition({
+            top : 10,
+            left : 10
+    });
+    
+    var oMapTypeBtn = new nhn.api.map.MapTypeBtn();
+    oMap.addControl(oMapTypeBtn);
+    oMapTypeBtn.setPosition({
+            top : 10,
+            right : 80
+    });
+    
+    var oThemeMapBtn = new nhn.api.map.ThemeMapBtn();
+    oThemeMapBtn.setPosition({
+            top : 10,
+            right : 10
+    });
+    oMap.addControl(oThemeMapBtn);
+
+    var trafficButton = new nhn.api.map.TrafficMapBtn(); // - 실시간 교통지도 버튼 선언
+    trafficButton.setPosition({
+            top:10, 
+            right:150
+    }); // - 실시간 교통지도 버튼 위치 지정
+    oMap.addControl(trafficButton);
+
+    var oSize = new nhn.api.map.Size(28, 37);
+    var oOffset = new nhn.api.map.Size(14, 37);
+    var oIcon = new nhn.api.map.Icon('http://static.naver.com/maps2/icons/pin_spot2.png', oSize, oOffset);
+    
+    var oInfoWnd = new nhn.api.map.InfoWindow();
+    oInfoWnd.setVisible(false);
+    oMap.addOverlay(oInfoWnd);
+
+    oInfoWnd.setPosition({
+            top : 20,
+            left :20
+    });
+
+    // - Draggable Marker 의 경우 Icon 인자는 Sprite Icon이 된다.
+    // - 따라서 Sprite Icon 을 사용하기 위해 기본적으로 사용되는 값을 지정한다.
+    // - Sprite Icon 을 사용하기 위해서 상세한 내용은 레퍼런스 페이지의 nhn.api.map.SpriteIcon 객체를 참조하면 된다.
+    
+    var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '마커옆에 떠 있는 설명 을 이곳에 적어주세요 ' });  //마커 생성 
+    oMarker1.setPoint(oPoint); //마커 표시할 좌표 선택
+    oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
+    var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
+    oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
+    oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기 
+
+  </script>
+ </body>
+</html>

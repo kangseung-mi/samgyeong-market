@@ -1,0 +1,219 @@
+.xans-member-join > h3 { padding:50px 0 10px; font-size:16px; color:#2e2e2e; }
+.xans-member-join ul.grid li { margin:5px 0 0; }
+.xans-member-join p.txtDesc,
+.xans-member-join ul.txtDesc li { position:relative; padding:0 0 0 9px; margin:3px 0 0; line-height:1.4; }
+.xans-member-join p.txtDesc:before,
+.xans-member-join ul.txtDesc li:before { position:absolute; top:7px; left:0; display:block; content:""; width:4px; height:1px; background:currentColor; }
+.xans-member-join .required { margin:-25px 0 10px; color:#353535; text-align:right; }
+.xans-member-join .required img { vertical-align:middle; }
+.xans-member-join .displaynone + .required { margin-top:0; }
+
+.xans-member-join .ec-base-table .interest { line-height:25px; }
+.xans-member-join .ec-base-table .interest label { padding:0 15px 0 2px; }
+
+.xans-member-join .ec-base-table .error { color:#f00; display:block;}
+
+/* 인증번호 */
+.xans-member-join .verify { position:relative; display:inline-block; width:146px; height:24px; vertical-align:top; }
+.xans-member-join .verify .time { position:absolute; top:2px; right:6px; color:#f76560; }
+.xans-member-join .verify #verify_sms_number { width:100%; height:100%; padding:2px 38px 2px 4px; box-sizing:border-box; }
+.xans-member-join .verify #verify_sms_number:disabled { padding-right:4px; }
+
+.xans-member-join .ec-base-box.gStrong { position:relative; z-index:2; }
+.xans-member-join .ec-base-box.gStrong p { font-size:14px; color:#353535; line-height:22px; }
+.xans-member-join .ec-base-box + .ec-base-box { margin-top:-1px; }
+.xans-member-join .ec-base-box .ec-base-chk input { width:100%; height:100%; }
+
+.xans-member-join .agreeArea { color:#747474; line-height:20px; }
+.xans-member-join .agreeArea h3 { margin:0 0 10px; font-size:12px; color:#353535; }
+.xans-member-join .agreeArea .content { overflow:auto; height:110px; padding:20px; border:1px solid #d5d5d5; background:#fff; }
+.xans-member-join .agreeArea .content p { padding:0 0 17px; }
+.xans-member-join .agreeArea .check { padding:7px 0 0 0; color:#202020; font-size:12px; }
+.xans-member-join .agreeArea .check li span { display:inline-block; min-width:170px; }
+.xans-member-join .agreeArea input.ec-base-chk { vertical-align:middle; }
+
+/* INPUT SIZE */
+.xans-member-join #bssn1,
+.xans-member-join #bssn2 { width:185px; }
+.xans-member-join #hint_answer { width:500px; }
+.xans-member-join #phone1,
+.xans-member-join #mobile1 { width:60px; margin:0 4px 0 0; }
+.xans-member-join #phone2,
+.xans-member-join #phone3,
+.xans-member-join #mobile2,
+.xans-member-join #mobile3 { width:50px; margin:0 4px; }
+.xans-member-join #email1 { margin-right:4px; }
+.xans-member-join #email2 { margin:0 4px; }
+.xans-member-join #birth_year,
+.xans-member-join #marry_year,
+.xans-member-join #partner_year { width:60px; margin:0 4px 0 0; }
+.xans-member-join #birth_month,
+.xans-member-join #marry_month,
+.xans-member-join #partner_month,
+.xans-member-join #birth_day,
+.xans-member-join #marry_day,
+.xans-member-join #partner_day { width:30px; margin:0 4px 0 0; }
+.xans-member-join #bank_code { width:240px; }
+.xans-member-join #c_bank_account_no { width:230px; }
+
+.xans-member-join #job,
+.xans-member-join #job_class,
+.xans-member-join #school,
+.xans-member-join #region,
+.xans-member-join #internet,
+.xans-member-join #child,
+.xans-member-join #car,
+.xans-member-join #earning { width:200px; }
+
+.xans-member-join #add1,
+.xans-member-join #add2,
+.xans-member-join #add3,
+.xans-member-join #add4,
+.xans-member-join #add5,
+.xans-member-join #add6,
+.xans-member-join #add7,
+.xans-member-join #add8,
+.xans-member-join #add9 { width:500px; }
+
+#realNameAuth p span { display:inline-block; width:80px; }
+
+/* 툴팁 */
+.xans-member-join #emailMsg{display:block; margin-top:5px; }
+.xans-member-join .eTooltip { position:relative; margin-bottom:5px;}
+.xans-member-join .ec-base-tooltip.typeUpper { left:25px; bottom:50px; width:390px; z-index: 10;}
+.xans-member-join .ec-base-tooltip.typeUpper .edge { left:20%; }
+
+
+#mobileWrap{margin-top:10px}
+#mobileWrap [class^='btn'] { height: 35px; line-height: 35px;}
+
+
+
+/* 회원가입 폼 */
+.xans-member-join {position: relative; margin:0 auto; max-width:900px;}
+
+.xans-member-join .member_type_wrap{padding:20px 0;}
+.xans-member-join .member_type_wrap ul{}
+.xans-member-join .member_type_wrap ul li{display:inline-block; vertical-align:middle; font-size:14px;}
+.xans-member-join .member_type_wrap input[type=radio],
+.xans-member-join .member_type_wrap input[type=checkbox] {margin: 0 5px 0 10px;}
+.xans-member-join .member_type_wrap input[type=radio]:first-child{margin-left:0;}
+
+.xans-member-join .line{ height: 1px; background: #dbdbdb; margin-top: -1px; position: relative; z-index: 1; }
+
+.xans-member-join .ec-base-table.typeWrite table{border:0; margin:0; }
+.xans-member-join .ec-base-table.typeWrite table:before{content:none;}
+.xans-member-join .ec-base-table.typeWrite th{background:#fff; border:0; border-right:0; border-left:0; vertical-align: top;width:200px; font-size:15px; border-bottom: 1px solid #f4f4f4; padding:20px 0;}
+.xans-member-join .ec-base-table.typeWrite td{border:0; border-bottom: 1px solid #f4f4f4;font-size:14px; padding:12px 0;}
+.xans-member-join .ec-base-table.typeWrite td .bx{position: relative; width: 500px; display: inline-block; margin-right: 10px;}
+.xans-member-join .ec-base-table.typeWrite td .bx > label{display: block; position: absolute; top: 0; left: 0;height: 45px;line-height:45px; width: 500px; padding:0 14px; box-sizing:border-box; font-size:15px; color:#adadad; z-index:10;}
+.xans-member-join .ec-base-table.typeWrite td .txt_info{font-size:13px; color:#adadad; padding:5px 0 0;}
+.xans-member-join .ec-base-table .txtWarn{font-size:13px; }
+.xans-member-join .ec-base-table .txtInfo,
+.xans-member-join .ec-base-table .txtInfo li{font-size:13px; color:#adadad;}
+.xans-member-join .ec-base-table.typeWrite td .txt_info.lifetime ul{}
+.xans-member-join .ec-base-table.typeWrite td .txt_info.lifetime ul li:first-child{margin-top:3px;}
+.xans-member-join .ec-base-table.typeWrite td .txt_info.lifetime ul li{margin-top:20px; line-height: 20px;}
+.xans-member-join .ec-base-table.typeWrite td .txt_info.lifetime ul li .tlt{color:#222; font-weight:bold; display:block; }
+.xans-member-join .ec-base-table.typeWrite td .txt_info.lifetime ul li .txt{color:#2a2a2a; }
+.xans-member-join .ec-base-table.typeWrite td .ec-address{margin:-2px 0;}
+.xans-member-join .ec-base-table.typeWrite td .ec-address > li{border:0;padding: 4px 0; }
+.xans-member-join .ec-base-table.typeWrite td .ec-address .ec-address-zipcode #postcode1{width: 383px;}
+.xans-member-join .ec-base-table.typeWrite td .ec-address > li input[type="text"]{width:500px;}
+.xans-member-join .ec-base-table.typeWrite td .ec-address [class^='btnBasic'],
+.xans-member-join .ec-base-table.typeWrite td .ec-address a[class^='btnBasic']{ width:110px; height: 45px;  line-height: 43px; padding: 0 10px; }
+
+
+.xans-member-join .ec-base-table.typeWrite #businessAuth [class^='btnBasic'],
+.xans-member-join .ec-base-table.typeWrite #businessAuth a[class^='btnBasic']{background:#adadad; color:#fff; border:0; width:110px; height: 45px;  line-height: 43px; padding: 0 10px;  font-size: 15px; margin-left: 3px;}
+.xans-member-join .ec-base-table.typeWrite #foreignerAuth [class^='btnBasic'],
+.xans-member-join .ec-base-table.typeWrite #foreignerAuth a[class^='btnBasic']{background:#adadad; color:#fff; border:0; width:110px; height: 45px;  line-height: 43px; padding: 0 10px;  font-size: 15px; margin-left: 3px;}
+
+.xans-member-join .ec-base-table.typeWrite .ico_required{ color: #0c94f5; display: inline-block; vertical-align: middle; margin-top: 4px; line-height: 0;}
+
+.xans-member-join input[type=text],
+.xans-member-join input[type=password]{width:500px; height:45px; line-height:45px; border:1px solid #dbdbdb; padding:0 11px; box-sizing:border-box; font-size:14px;}
+.xans-member-join input[type="radio"] {
+	-webkit-appearance: none;appearance: none;display: inline-block;*display: inline;*zoom:1;overflow: hidden;width: 23px;height: 23px;margin: 0;padding: 0;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background: url('/web/upload/wp/167417/p__radiobox.png') no-repeat center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;outline:0;
+}
+.xans-member-join input[type="radio"]:checked { background-image: url('/web/upload/wp/167417/p__radiobox_checked.png');}
+.xans-member-join input[type=text],
+.xans-member-join input[type=password]{width:500px; height:45px; line-height:45px; border:1px solid #dbdbdb; padding:0 14px; box-sizing:border-box; font-size:15px;}
+.xans-member-join input[type="radio"] {
+	-webkit-appearance: none;appearance: none;display: inline-block;*display: inline;*zoom:1;overflow: hidden;width: 23px;height: 23px;margin: 0;padding: 0;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;background: url('/web/upload/wp/167417/p__radiobox.png') no-repeat center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;outline:0;
+}
+
+.xans-member-join .ec-base-table.typeWrite td input[type=radio] + label,
+.xans-member-join .ec-base-table.typeWrite td input[type=checkbox] + label{margin: 0 20px 0 5px;}
+
+.xans-member-join select{height: 45px; padding:0 10px; }
+.xans-member-join #citizenship{width: 500px;}
+.xans-member-join #phone1,
+.xans-member-join #mobile1,
+.xans-member-join #phone2,
+.xans-member-join #phone3,
+.xans-member-join #mobile2,
+.xans-member-join #mobile3 { width:156px; }
+.xans-member-join #phone3{margin-right:0; }
+.xans-member-join #birth_year,
+.xans-member-join #marry_year,
+.xans-member-join #partner_year { width:130px; margin:0 4px 0 0; }
+.xans-member-join #birth_month,
+.xans-member-join #marry_month,
+.xans-member-join #partner_month,
+.xans-member-join #birth_day,
+.xans-member-join #marry_day,
+.xans-member-join #partner_day { width:130px; margin:0 4px 0 0; }
+.xans-member-join #birth_month,
+.xans-member-join #birth_day{margin-left:10px;}
+
+/* 외국인회원 */
+#foreignerAuth input[type=text],
+#foreignerAuth input[type=password]{width:200px;}
+#foreignerAuth ul.grid li{display: inline-block; margin-right:40px;}
+
+/* 버튼스타일 */
+.xans-member-join [class^='btnNormal'], .xans-member-join a[class^='btnNormal']{ height: 45px; line-height: 43px; padding: 0 10px; font-size: 14px; }
+.xans-member-join [class^='btnBasic'], .xans-member-join a[class^='btnBasic']{ height: 45px; line-height: 43px; padding: 0 10px; font-size: 14px; }
+
+/* 동의*/
+.agree_wrap{margin-top:70px;}
+.agree_wrap .ec-base-box{padding: 0; border: 0; margin: 0; color: #222;}
+.agree_wrap .ec-base-box strong{font-weight:bold; font-size:16px;}
+.agree_wrap .ec-base-box{padding:20px 0;}
+.agree_wrap .ec-base-box.agree_all { font-size:14px; color:#2a2a2a; border-bottom: 1px solid #f4f4f4; display:block; }
+.agree_wrap .ec-base-box.agree_all label{cursor: pointer;}
+.agree_wrap .ec-base-box.agreeArea{border-bottom: 1px solid #f4f4f4; padding: 0; }
+.agree_wrap .ec-base-box.agreeArea h3{display: block; margin: 0; padding: 20px 0; font-size: 14px; font-weight: normal; cursor: pointer; position: relative;}
+.agree_wrap .ec-base-box.agreeArea h3 .check_bx{font-size: 0; display: inline-block; vertical-align: middle;}
+.agree_wrap .ec-base-box.agreeArea h3 .check_bx > span{font-size:14px; display: inline-block; vertical-align: middle; margin-right: 30px;}
+.agree_wrap .ec-base-box.agreeArea h3 .more_view{position: absolute; top: 20px; right: 0; border-bottom: 1px solid #adadad; color:#adadad;}
+.agree_wrap .ec-base-box.agreeArea.selected h3 .more_view{}
+.agree_wrap .ec-base-box.agreeArea .content{display:none; border: 0; padding: 0; color: #adadad; margin: 0 0 20px; height: 100px;    background: #f9f9f9;    padding: 20px;}
+.agree_wrap .ec-base-box.agreeArea.selected .content{display:block;}
+.agree_wrap .ec-base-box.agreeArea.selected .content *{font-size: 13px;}
+.agree_wrap .ec-base-box.agreeArea .content p{padding:0; font-size: 13px;}
+.agree_wrap .ec-base-box.agreeArea .check_bx input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;overflow: hidden;
+    width: 23px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+    background: url("/web/upload/wp/167417/p__check.png") no-repeat 0 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	outline:0;
+}
+
+.agree_wrap .ec-base-box.agreeArea .check_bx input[type="checkbox"]:checked { background-position:-34px 0; }
+
+/* 회원가입 버튼 */
+.xans-member-join .ec-base-button {margin:80px 0 0;}
+.xans-member-join .bt_typeA{width:233px;height:66px;line-height:66px; padding:0;}
+
+#idMsg{display:block;}

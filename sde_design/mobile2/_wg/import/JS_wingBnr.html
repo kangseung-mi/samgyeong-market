@@ -1,0 +1,26 @@
+
+JS에 추가
+// jquery.DB_quickBanner.min.js
+!(function(a){a.fn.DB_quickBanner=function(d){var b={scrollTop:!1,moveSpeed:500,webStandard:!0};a.extend(b,d);return this.each(function(){var d=a(this),g=a(window),c=0,e=a(this).position().top,f=0;(function(){g.scroll(function(){c=b.webStandard?a(document).scrollTop():document.body.scrollTop;f=b.scrollTop?c>e?c:e:c+e;d.stop().animate({top:f},b.moveSpeed)})})()})}})(jQuery);
+
+	//날개배너
+    $('.JS_wingBnr').DB_quickBanner({
+        scrollTop:true,                      //스크롤이후 상단에 붙이기(부모기준)
+        moveSpeed:1000
+    });
+
+
+
+<div class="JS_wingBnr_wrap">
+    
+    <!-- 좌측 날개 배너 -->
+	<div class="JS_wingBnr left">
+        <a href="#none"><img src="http://placehold.it/100x200/ddd/" alt="" /></a>
+    </div>
+    
+    <!-- 우측 날개 배너 -->
+	<div class="JS_wingBnr right">
+        <a href="#none"><img src="http://placehold.it/100x200/ddd/" alt="" /></a>
+	</div>
+    
+</div>

@@ -1,0 +1,17 @@
+
+	#_cPack { position:relative; width:100%; max-width:1260px; margin:0 auto; z-index:300; }
+	#_cPack li { display:block; position:relative; cursor:pointer; transition:all .2s ease; }
+
+    /** 팝업 **/
+    ._cPack.popup { display:none; top:51%; width:100%; height:0; opacity:0; transition:opacity .4s, top .3s .5s ease; }
+    ._cPack.popup.on { opacity:1; top:50%; }
+    ._cPack.popup .cp001 { position:absolute; top:50%; left:50%; width:85vw; max-width:800px; height:75vh; background:rgba(0,0,0,1); transform:translate(-50%, -50%); overflow:hidden; }
+    ._cPack.popup .scrollbar_box { height:100%; }
+
+    /* 닫기버튼 */
+    ._cPack.popup .p-close { position:absolute; z-index:10; top:17px; right:17px; width:27px; height:27px; background:url('/_wg/img/_btn/btn_x_b_19.gif') no-repeat center; transition:all .3s ease-in-out; }
+    ._cPack.popup .p-close:hover { opacity:.5; }
+
+	/* 팝업내용 */
+    ._cPack.popup #p_box { padding:20px 0 0; }
+    ._cPack.popup .scrollbar_box { height:280px; margin:0 7px !important; } /* .scrollbar_box 를 포함 */

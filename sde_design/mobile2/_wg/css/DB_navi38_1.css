@@ -1,0 +1,40 @@
+
+    /* 상단 메뉴 */
+    #DB_navi38_1 { position:relative; float:left; z-index:10; }
+    #DB_navi38_1 a { text-decoration:none; }
+
+    #DB_navi38_1 .DB_main { position:relative; float:left; background:url("/_wg/img/header_nav_bar.gif") 0 16px no-repeat; }
+    #DB_navi38_1 .DB_main:first-child { background:none; }
+    #DB_navi38_1 .DB_main > a { display:block; height:38px; padding:0 8px 0 10px; border-top:1px solid #fff; font-size:10px; line-height:37px; color:#333/*마우스아웃 메뉴컬러*/; letter-spacing:0.08em; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    #DB_navi38_1 .DB_main > a:hover { border-top:1px solid #111; color:#000; }
+    #DB_navi38_1 .DB_main.DB_select > a { border-top:1px solid #111; font-weight:bold; color:#000; }
+    #DB_navi38_1 .DB_main .count { margin:0 0 0 3px; padding:3px 5px; background:#555; border-radius:4px; text-align:center; color:#fff; font-size:10px; font-weight:400; }
+    
+    #DB_navi38_1 .DB_main .DB_sub { display:none; position:absolute; top:37px/*서브위치*/; width:90px; left:50%; margin-left:-35px; padding:7px 0 5px 7px; border:1px solid #ddd; background:#fff; font-size:11px; font-weight:normal; text-align:left; }
+    #DB_navi38_1 .DB_main .DB_sub a { position:relative; display:block; height:20px; padding:0 3px 0 14px; line-height:20px; background:url('/_wg/img/dot.gif') 5px 10px no-repeat; color:#333; font-size:11px; font-weight:normal; }
+    #DB_navi38_1 .DB_main .DB_sub a:hover { color:#999; }
+    
+    /* 비표준인경우 li의 간격조정
+    #DB_navi38_1 .DB_main .DB_sub ul li{font-size:0}
+    #DB_navi38_1 .DB_main .DB_sub ul li a{color:#333333;display:block;padding:3px;font-size:12px}
+    */
+    
+    #DB_navi38_1 .DB_main .DB_sub .arrow { position:absolute; z-index:2; top:-7px; left:30px; width:13px; height:7px; background:url('/_wg/img/DB_navi38_1/arrow.gif') no-repeat; }
+    
+    /* 1280px 이하 */
+    @media all and (max-width:1285px){
+        #DB_navi38_1 .DB_main a { font-size:10px; }
+    }
+    
+    /* 멀티쇼핑몰 */
+	.multishop { display:inline-block; position:relative; font-size:11px; }
+    .multishop.DB_main img { position:relative; top:12px; margin:0 5px 0 0; }
+	.multishop > .DB_sub { z-index:10; display:block; cursor:pointer; width:150px!important; }
+    .multishop > .DB_sub a { background:none!important; }
+	.multishop > .DB_sub > p { display:inline-block; }
+	.multishop > .DB_sub > ul > li > a { color:#ccc; display:block; padding:20px; background:#fff!important; }
+	.multishop > .DB_sub > ul > li > a img { top:4px!important; }
+	.multishop > .DB_sub > ul > li > a .name { display:inline-block; width:70px; }
+	.multishop > .DB_sub > ul > li > a .unit { display:inline-block; width:25px; font-size:10px; }
+	.multishop > .DB_sub > ul > li > a:hover { color:#333; font-weight:700; }
+	.multishop > .DB_sub > ul > li.selected > a { color:#333; }

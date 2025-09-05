@@ -1,0 +1,61 @@
+<div class="loadhtml">
+
+	<div fix id="p_box" ax="main">
+		<ul>
+			<li>
+				<h1 class="titlebox"><em></em>상품 검색하기<span ax="boxclose"></span></h1>
+				<div class="scrollbar_box">
+					<ul class="serch" module="search_form">
+						<li>
+							<span class="l_title"><i class="fa xi-check-min"></i>상품분류</span>
+							<span class="right">
+								{$form.category_no}
+							</span>
+						</li>
+						<li>
+							<span class="l_title"><i class="fa xi-check-min"></i>검색조건</span>
+							<span class="right">
+								{$form.search_type}
+								{$form.keyword}
+							</span>
+						</li>
+						<li module="search_hotkeyword">
+							<span class="l_title"><i class="fa xi-check-min"></i>인기검색어</span>
+							<span class="right">
+									<a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+									<a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+									<a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+									<a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a> 
+									<a href="{$hot_keyword_url}" class="-btn -line -xs">{$hot_keyword_name}</a>
+							</span>
+						</li>
+						<li>
+							<span class="l_title"><i class="fa xi-check-min"></i>판매가격대</span>
+							<span class="right">
+								{$form.product_price1} ~ {$form.product_price2}
+							</span>
+						</li>
+						<li>
+							<span class="l_title"><i class="fa xi-check-min"></i>정렬기준</span>
+							<span class="right">
+								{$form.order_by}
+							</span>
+						</li>
+                        <!--
+						<li>
+							<span class="l_title"><i class="fa xi-check-min"></i>컬러검색</span>
+							<span class="right">-->
+                                <!-- 컬러검색 -->
+                                <!--@import(/_wg/import/SD_searchColor.html) -->
+							<!--</span>
+						</li>-->
+						<li class="btn_wrap">
+							<button class="button -btn -black">검색</button>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+    
+</div>

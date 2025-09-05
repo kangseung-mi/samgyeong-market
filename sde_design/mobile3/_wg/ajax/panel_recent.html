@@ -1,0 +1,56 @@
+<div class="loadhtml">
+
+	<div fix id="p_box" ax="main">
+		<ul>
+			<li>
+				<h1 class="titlebox"><em></em>최근 본 상품<span ax="boxclose"></span></h1>
+				<div class="scrollbar_box sc_box" module="product_recentlist">
+					<div class="-panelempty {$empty_display|display}">
+						<p>최근 본 상품 내역이 없습니다.</p>
+					</div>
+					<table class="-panel-tablebox" module="product_listitem">
+						<!--
+							$count = 100
+						-->
+						<caption>최근 본 상품</caption>
+						<colgroup>
+							<col style="width:60px;" />
+							<col />
+							<col style="width:80px;" />
+						</colgroup>
+						<tbody >
+							<tr>
+								<th><a href="{$link_product_detail}"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" class="-maximg item_img" /></a></th>
+								<td class="zm_wrap">
+									<a href="{$link_product_detail}">{$product_name}</a>
+									<p>{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}</p>
+								</td>
+								<td class="zm_wrap">
+									<p class="{$strike_custom_price} {$custom_price_display|display}">{$product_custom}</p>
+									<p class="{$discount}">{$price}</p>
+									<p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+								</td>
+							</tr>
+							<tr>
+								<th><a href="{$link_product_detail}"><img src="{$image_tiny}"   onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" class="-maximg item_img" /></a></th>
+								<td class="zm_wrap">
+									<a href="{$link_product_detail}">{$product_name}</a>
+									<p>{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons}</p>
+								</td>
+								<td class="zm_wrap">
+									<p class="{$strike_custom_price} {$custom_price_display|display}">{$product_custom}</p>
+									<p class="{$discount}">{$price}</p>
+									<p class="{$product_sale_price_display|display}">{$product_sale_price}</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+			<p class="-panelBtn">
+				<a href="/product/recent_view_product.html" class="-btn -black">최근 본 상품 전체보기</a>
+			</p>
+		</ul>
+	</div>
+
+</div>

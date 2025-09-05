@@ -1,0 +1,116 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/_wp/js/member/login.js)-->
+<!-- 로그인 -->
+<div class="login_wrap">
+	<div class="login-align">
+
+		<div module="member_login">
+			<!--@css(/css/module/member/login.css)-->
+			<!--
+				$defaultReturnUrl = /index.html
+				$forbidIpUrl = member/adminFail.html
+			-->
+			<div class="login">
+				<h3 class="boxTitle">일반 로그인</h3>
+				<fieldset>
+					<legend>회원로그인</legend>
+					<span title="{$login_id_type_text}"><label class="id ePlaceholder"
+							title="아이디 또는 이메일">{$form.member_id}</label></span>
+					<label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+					<a href="#none" class="btnLogin" onclick="{$action_func_login}">로그인</a>
+					<span class="security">보안로그인</span>
+					<span class="checkid"><span class="ec-base-chk"><input id="member_check_save_id0"
+								name="check_save_id" fw-filter="" fw-label="아이디저장" fw-msg="" value="T"
+								type="checkbox"><em class="checkbox"></em></span><label for="member_check_save_id0">아이디
+							저장</label></span>
+					<!-- {$form.member_check_secret_connect} -->
+					<ul class="find">
+						<li class="txt_join"><a href="/member/join_member.html">회원가입</a></li>
+						<li><a href="/member/id/find_id.html">아이디찾기</a></li>
+						<li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
+					</ul>
+					<div class="clear"></div>
+					<div class="{$display_nomember|display}" id="noMemberWrap">
+						<a href="{$returnUrl}" class="btnEm" onclick="{$action_nomember_order}">비회원으로 구매</a>
+					</div>
+					<div class="snsArea">
+						<ul>
+							<li class="kakao {$display_kakao|display}">
+								<a href="#none" onclick="{$kakao_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 로그인</a>
+							</li>
+							<li class="naver {$display_naver|display}">
+								<a href="#none" onclick="{$naver_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 로그인</a>
+							</li>
+							<li class="google {$display_google|display}">
+								<a href="#none" onclick="{$google_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_03.png" alt="google 로그인" /> 구글로 로그인</a>
+							</li>
+							<li class="facebook {$display_facebook|display}">
+								<a href="#none" onclick="{$facebook_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로
+									로그인 </a>
+							</li>
+							<li class="line {$display_line|display}">
+								<a href="#none" onclick="{$line_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_05.png" alt="LINE 로그인" /> LINE으로 로그인</a>
+							</li>
+							<li class="apple {$display_apple|display}">
+								<a href="#none" onclick="{$apple_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_06.png" alt="Apple로 로그인" /> Apple로
+									로그인</a>
+							</li>
+							<li class="yahoo {$display_yahoojp|display}">
+								<a href="#none" onclick="{$yahoo_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_07.png" alt="Yahoo! 로그인" /> Yahoo!
+									로그인</a>
+							</li>
+
+							<!-- 샘플몰에서만 노출 -->
+							<li class="kakao dp_sample">
+								<a href="#none" onclick="{$kakao_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 로그인</a>
+							</li>
+							<li class="naver dp_sample">
+								<a href="#none" onclick="{$naver_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 로그인</a>
+							</li>
+							<li class="facebook dp_sample">
+								<a href="#none" onclick="{$facebook_func_login}"><img
+										src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로
+									로그인</a>
+							</li><!--//-->
+						</ul>
+					</div>
+					<div class="nonmember">
+						<a href="/member/login_nonmember.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html">비회원
+							주문배송조회 &gt;</a>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!--//-->
+
+<!----- ↓ 킵그로우 싱크 추가소스 ------->
+<div module="MyShop_OrderHistoryNologin" class="ec-base-box typeThin hannah">
+	<!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+	<!--
+        $orderDetailUrl = /myshop/order/list.html
+    -->
+	<h3 class="boxTitle">비회원 로그인</h3>
+	<p>비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
+	<dl class="ec-base-desc gBlank20">
+		<dt>{$form_label.order_name}</dt>
+		<dd>{$form.order_name}</dd>
+		<dt>{$form_label.order_id}</dt>
+		<dd>{$form.order_id}</dd>
+		<dt>{$form_label.order_password}</dt>
+		<dd>{$form.order_password}</dd>
+	</dl>
+	<p class="ec-base-button gColumn"><button type="submit" class="btnNormal sizeM">조회</button></p>
+</div>
+<!----- 킵그로우 싱크 추가소스 끝 ------->

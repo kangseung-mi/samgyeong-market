@@ -1,0 +1,11 @@
+    
+    .DB_banner4_notice { position:relative; float:left; width:30%; margin-bottom:5px; font-family:'Nanum Gothic'; }
+    
+    .DB_banner4_notice .DB_mask { position:relative; display:inline-block; *display:inline; top:6px; width:70%; height:20px; overflow:hidden; }
+    .DB_banner4_notice .DB_mask .DB_imgSet { position:absolute; top:0px; left:0; width:100%; height:25px; }
+    .DB_banner4_notice .DB_mask .DB_imgSet li { display:block; width:95%; height:20px/*이미지사이공간포함*/!important; line-height:20px; overflow:hidden; font-size:11px; }
+    .DB_banner4_notice .DB_mask .DB_imgSet li a { color:#555; }
+    .DB_banner4_notice .DB_mask .DB_imgSet li a:hover { color:#999; text-decoration:none; }
+    
+    .DB_banner4_notice .DB_prevBtn { position:absolute; top:12px; right:14px; cursor:pointer; display:none; }
+    .DB_banner4_notice .DB_nextBtn { position:absolute; top:12px; right:0px; cursor:pointer; display:none; }

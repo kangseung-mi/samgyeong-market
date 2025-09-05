@@ -1,0 +1,33 @@
+    
+    .JS_topBnr { display:none; position:relative; width:100%; z-index:2; margin:0 0 -1px; border-bottom:1px solid rgba(0,0,0,0.05); overflow:hidden; }
+
+    .position_center { position:absolute; z-index:10; top:-5px; left:50%; width:0; height:0; margin-left:650px; opacity:0; transition:all .3s ease; }
+    .JS_topBnr:hover .position_center { top:0px; opacity:1; }
+
+	/* 닫기버튼 */
+    .JS_topBnr .close { position:absolute; z-index:5; right:20px; width:27px; height:27px; background:url('/_wg/img/_btn/btn_x_w_11.gif') no-repeat center rgba(0,0,0,.8); cursor:pointer; }
+
+	/* 체크박스 */
+    .JS_topBnr .checkbox { display:none; }
+
+  
+    /* 롤링 배너 */
+    .JS_topBnr_roll { position:relative; width:100%; height:100px/*높이*/; overflow:hidden; }
+    .JS_topBnr_roll .img { position:relative; width:100%; height:100%; }
+    .JS_topBnr_roll .img li { position:absolute; top:0; left:50%!important; width:2000px; height:100%; margin-left:-1000px; }
+    .JS_topBnr_roll .img li:first-child { z-index:1; left:0; }
+    .JS_topBnr_roll .img li img { width:100%; }
+
+    /* 페이지 버튼 */
+    .JS_topBnr_roll .jsBtn { position:absolute; z-index:3; bottom:15px; left:50%; width:1260px; line-height:0; margin:0 0 0 -620px; text-align:left; letter-spacing:-4px; font-size:0; opacity:0; transition:opacity .3s 8s ease; }
+
+    /* 화살표 */
+    .JS_topBnr_roll .jsDir { position:absolute; z-index:10; left:50%; top:0; width:1260px; margin:0 0 0 -620px; height:0; cursor:pointer; opacity:0; transition:all .3s ease; }
+
+	/* 버튼과 화살표는 /_wg/cssjsBtn.css 에서 수정이 가능합니다. */
+
+    /* 1285px 이하 */
+    @media all and (max-width:1285px){
+        .JS_topBnr_roll .btn { width:980px; margin:0 0 0 -490px; }
+        .JS_topBnr_roll .DB_dir { width:980px; margin:0 0 0 -490px; }
+    }

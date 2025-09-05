@@ -1,0 +1,24 @@
+
+    .JS_brandLogo { position:relative; width:1227px; margin:0 0 10px; overflow:hidden; }
+
+    .JS_brandLogo .DB_mask { position:relative; display:block; height:100px; padding:1px 0; overflow:hidden; }
+    .JS_brandLogo .DB_imgSet { position:absolute; left:1px; }
+    .JS_brandLogo .DB_imgSet > li { display:inline-block; *display:inline; *zoom:1; width:160px; margin-right:17px; outline:1px solid #eee; }
+    .JS_brandLogo .DB_imgSet > li a { display:block; }
+    .JS_brandLogo .DB_imgSet > li .thumbnail { display:block; }
+    .JS_brandLogo .DB_imgSet > li img { width:100%; }
+    .JS_brandLogo .DB_imgSet > li a span { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6); filter:alpha(opacity=0); opacity:0; -webkit-opacity:0; vertical-align:middle; text-align:center; line-height:100px; font-size:13px; letter-spacing:0; color:#fff; text-decoration:none; transition:all .15s ease; -webkit-transition:all .15s ease; }
+    .JS_brandLogo .DB_imgSet > li:hover a span { filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0; }
+
+    .JS_brandLogo .arrow { display:block; position:absolute; z-index:10; top:35px; width:30px; height:30px; text-indent:-9999px; cursor:pointer; opacity:0; transition:0.3s; }
+    .JS_brandLogo:hover .arrow { opacity:1; transition:0.3s;  }
+    .JS_brandLogo .DB_prevBtn { left:5px; background:url('/_wg/img/_arrow/arrowLW_21.gif') no-repeat 50% 50% rgba(0,0,0,.2); margin-left:-4px; }
+    .JS_brandLogo .DB_nextBtn { right:8px; background:url('/_wg/img/_arrow/arrowRW_21.gif') no-repeat 50% 50% rgba(0,0,0,.2); margin-right:-4px; }
+
+    /* 1280px 이하 */
+    @media all and (max-width:1285px){
+        .JS_brandLogo { width:951px; }
+        .JS_brandLogo .DB_imgSet > li { width:144px; margin-right:17px; }
+        .JS_brandLogo .arrow { top:30px; }
+        .JS_brandLogo .DB_nextBtn { right:5px; }
+    }

@@ -1,0 +1,167 @@
+<!--@layout(/layout/basic/main.html)-->
+
+<!----------------------------------------------------------------------------------------------------------------------------------------
+
+    ### 본 디자인의 저작권은 디자인웹굿에 있으며 디자인을 무단 [ 이전/양도/대여/재판매/템플릿제작 ] 은 법적책임을 지게됩니다. ####
+
+    ### 해당 카피라이터 삭제를 금합니다. 삭제하시면 문의에 대한 답변이 불가합니다. ####
+
+    ### 이미지경로 - FTP접속 후 /sde_design/스킨번호(skin번호)/_wg/img/
+    
+    ### 언어 - 한국어
+
+    ### 버젼 SKIN423_M49
+
+    ### 업데이트 202203
+
+----------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- cp500 (메인 슬라이드배너) -->
+<!--@import(/_wg/_cPack/cp500/dom.html)-->
+
+<!-- cp560 (메인분류메뉴) -->
+<!--@import(/_wg/_cPack/cp560/dom.html)-->
+
+<!-- cp301 (슬라이드배너 / 유튜브 / 공지사항) -->
+<!--@import(/_wg/_cPack/cp301/dom.html)-->
+
+<!-- cp303 (WEEKLY HOT ITEMS / 슬라이드배너) -->
+<!--@import(/_wg/_cPack/cp303/dom.html)-->
+
+<!-- cp520 (탭롤링 베스트) -->
+<!--@import(/_wg/_cPack/cp520/dom.html)-->
+
+<!-- 타임세일 -->
+<!--@import(/_wg/_cPack/cp574/dom_main.html)-->
+
+<!-- cp530 (추천상품 MD's PICK) -->
+<!--@import(/_wg/_cPack/cp530/dom.html)-->
+
+<!-- 추천상품 (Recommended items) -->
+<div module="product_listmain_1" class="ec-base-product move-page">
+    <!--
+        $count = 28
+            ※ 노출시킬 상품의 갯수를 숫자로 설정할 수 있으며, 설정하지 않을경우, 최대 200개로 자동제한됩니다.
+            ※ 상품 노출갯수가 많으면 쇼핑몰에 부하가 발생할 수 있습니다.
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추천상품 (Recommended items) -->
+
+<!-- cp515 (슬라이드 배너) -->
+<!--@import(/_wg/_cPack/cp515/dom.html)-->
+
+<!-- 신상품 (New arrivals) -->
+<div module="product_listmain_2" class="ec-base-product move-page">
+    <!--
+        $count = 27
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid3">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //신상품 (New arrivals) -->
+
+<!-- cp508 (와이드 슬라이드배너) -->
+<!--@import(/_wg/_cPack/cp508/dom.html)-->
+
+<!-- 추가카테고리1 (ETC 1) -->
+<div module="product_listmain_3" class="ec-base-product move-page">
+    <!--
+        $count = 25
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리1 (ETC 1) -->
+
+<!-- 추가카테고리2 (ETC 2) -->
+<div module="product_listmain_4" class="ec-base-product move-page">
+    <!--
+        $count = 28
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리2 (ETC 2) -->
+
+<!-- 추가카테고리3 (ETC 3) -->
+<div module="product_listmain_7" class="ec-base-product move-page">
+    <!--
+        $count = 28
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리3 (ETC 3) -->
+
+<!-- 추가카테고리4 (ETC 4) -->
+<div module="product_listmain_8" class="ec-base-product move-page">
+    <!--
+        $count = 28
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리4 (ETC 4) -->
+
+<!-- 추가카테고리5 (ETC 5) -->
+<div module="product_listmain_9" class="ec-base-product move-page">
+    <!--
+        $count = 28
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="move-tit">{$category_title_text}</div>
+        <div style="display: {$category_title_img_display};" class="titImg move-tit"><img src="{$category_title_img}" alt="{$category_title_text}" />{$category_title_text}</div>
+    </h2>
+    <ul class="prdList grid4">
+        <!--@import(/_wg/import/prdList.html)-->
+    </ul>
+</div><!-- //추가카테고리5 (ETC 5) -->
+
+<!-- 추가카테고리6 (세일) -->
+<!--@import(/_wg/import/sale_list.html)-->
+
+<!-- 포토리뷰 -->
+<!--@import(/_wg/_cPack/cp576/dom_main.html)-->
+
+<!--@define(cmc_log)-->

@@ -1,0 +1,21 @@
+/* 비회원 글쓰기 */
+.wp-input-form-wrap{ margin: 0 auto;}
+.guest-input-list {margin: 10px auto 10px;clear: both;font-size:0;text-align:left;}
+.guest-input-list li {display: inline-block;vertical-align: middle;padding-right: 5px;font-size: 12px;box-sizing: border-box;}
+.guest-input-list li:nth-child(1) {width: 200px;}
+.guest-input-list li:nth-child(2) { width: 200px;}
+.guest-input-list li:nth-child(3) { width: 330px;}
+.guest-input-list li:nth-child(4) {width: 470px;}
+.guest-input-list li .block {vertical-align: middle;}
+.guest-input-list li .title {color: #888;font-weight: normal;}
+.guest-input-list li input {border: 0;font-size: 12px;color:#000;background: #f1f1f1;border-radius: 4px;}
+.guest-input-list li:nth-child(1) input{width: 110px;}
+.guest-input-list li:nth-child(2) input{width: 120px;}
+.guest-input-list li.captcha input {width: 135px;}
+.guest-input-list li input:focus {outline: 0;}
+.guest-input-list li img {vertical-align: middle;}
+.guest-input-list li.email {padding-right: 0;}
+.guest-input-list li.email .block input{width: 130px;margin-left: 4px;margin-right: 4px;}
+.wp-privacy{margin: 10px auto 10px;}#privacy_agreement{width:100%;height:45px;box-sizing:border-box; border:1px solid #eee; color:#888; font-size: 12px;}
+.wp-agreement{line-height: 2;font-size: 13px;color: #999;text-align: center;}
+

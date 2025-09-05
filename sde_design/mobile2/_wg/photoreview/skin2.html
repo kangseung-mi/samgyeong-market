@@ -1,0 +1,47 @@
+<div class="prdReview_bg">
+    <div class="tle">
+        <h2>NEW PHOTO REVIEW</h2>
+        <span>고객님들의 소중한 포토 리뷰 ( 최근 1년이내 )</span>
+    </div>
+    <div module="photoreview_display" class="photoreview_skin2">
+        <!--@css(/_wg/photoreview/lister.css)-->
+        <!--@css(/_wg/photoreview/skin2.css)-->
+        <!--@js(/_wg/photoreview/lister.js)-->
+        <!--@js(/_wg/photoreview/skin2.js)-->
+        <!-- 
+           $count=5
+		   $paging_cnt=5
+           $size=228
+           $point=show
+           $board_no=4
+        -->
+        <div class="lister_wrap">
+            <dl>
+                <dt><a href="#none" rel="{$no}"><img src="{$rhimg}" alt="" /></a></dt>
+                <dd>
+                    <p class="overflow_txt">{$rsub}</p>
+                    <p class="date">{$rdate}</p>
+                    <p class="post"><span class="lt">{$rwriter}</span> <span class="rt">평점 : {$rpoint}점</span></p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#none" rel="{$no}"><img src="{$rhimg}" alt="" /></a></dt>
+                <dd>
+                    <p class="overflow_txt">{$rsub}</p>
+                    <p class="date">{$rdate}</p>
+                    <p class="post"><span class="lt">{$rwriter}</span> <span class="rt">평점 : {$rpoint}점</span></p>
+                </dd>
+            </dl>
+        </div>
+        <p class="more"><a href="#none"><strong>더보기</strong></a></p>
+        
+        <!--@import(/_wg/photoreview/detail.html)-->
+        
+    </div>
+    
+    
+    <div class="photo_review_border">         
+        <a href="/product/detail_review_write.html?board_no=4&product_no={$product_no}" class="review_pop_width"><img class="review_write_01" src="/_wg/img/review_write_01.gif"><img class="review_write_02" src="/_wg/img/rreview_write_02.gif"></a>
+    </div>
+    
+</div>

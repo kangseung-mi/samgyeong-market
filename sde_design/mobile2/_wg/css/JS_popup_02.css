@@ -1,0 +1,24 @@
+
+/** 팝업 04 **/
+    /* 버튼 */
+    #btn-popup04 { position:relative; z-index:1; width:80px; height:80px; margin-left:10px; cursor:pointer; vertical-align:bottom; transition:all .3s 1s ease-in-out; }
+    #btn-popup04.on { opacity:0; transform:scale(0,0); }
+    /* 박스 */
+    #popup04-box { display:none; position:fixed; left:90px; bottom:10px; width:500px; height:500px; background-color:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.2); opacity:0; overflow:hidden; transition:opacity .3s, left .3s .2s ease-in-out; }
+    #popup04-box.on { left:100px; opacity:1; }
+    /* 닫기버튼 */
+    #popup04-box .p-close { position:absolute; z-index:10; top:0px; right:0; width:27px; height:27px; background:url('/_wg/img/_btn/btn_x_w_11.gif') no-repeat center rgba(0,0,0,.8); cursor:pointer; opacity:0; transition:all .3s ease-in-out; }
+    #popup04-box:hover .p-close { opacity:1; }
+
+    
+    /* 슬라이드배너 */
+    .roll { position:relative; width:500px; height:500px; background:rgba(255,255,255,.95); overflow:hidden; }
+    .roll .img { position:relative; height:100%; }
+    .roll .img li { position:absolute; width:100%; height:100%; left:100%; }
+    .roll .img li:first-child { z-index:1; left:0; }
+    .roll .img li img { width:100%; }
+    /* 텍스트버튼 */
+    .roll .btn { position:absolute; z-index:3; bottom:0; width:100%; height:30px; background:rgba(0,0,0,.4); text-align:center; letter-spacing:-4px; font-size:0; }
+    .roll .btn li { position:relative; bottom:0; display:inline-block; *display:inline; *zoom:1; line-height:30px; padding:0 20px; color:#ccc/*메뉴색상*/; font-size:12px/*메뉴사이즈*/; cursor:pointer; letter-spacing:0; transition:all .2s ease-in-out; }
+    .roll .btn li span { position:absolute; left:0; top:0; width:0; height:2px; background:rgba(255,255,255,.4); text-indent:-9999px; } /*타이머*/
+    .roll .btn li.on { z-index:1; background:rgba(0,0,0,.6)/*버튼배경색(마우스오버)*/; color:#fff/*메뉴색상(마우스오버)*/; }

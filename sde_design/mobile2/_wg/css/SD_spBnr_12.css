@@ -1,0 +1,10 @@
+
+    .SD_spBnr_12 { position:relative; display:block; width:100%; height:450px; margin:0 auto 40px; overflow:hidden; }
+    .SD_spBnr_12 h4 { display:block; text-align:center; }
+    .SD_spBnr_12 h4 span { display:inline-block; margin:0 0 10px; padding:5px 10px; background:#ddd; border:1px solid #d4d4d4; border-radius:3px; font-size:12px; font-weight:normal; }
+    .SD_spBnr_12 p { float:left; background:#fff; }
+    .SD_spBnr_12 p img { width:100%; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .SD_spBnr_12 p:hover img { filter:alpha(opacity=60); opacity:.6; -webkit-opacity:.6; }
+
+    .SD_spBnr_12 .full { position:relative; }
+    .SD_spBnr_12 .bnr01 { position:absolute; top:0; left:50%; width:2000px; height:400px; margin-left:-1000px; }

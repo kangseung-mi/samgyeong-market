@@ -1,0 +1,61 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div module="member_login" id="{$member_login_module_id}">
+    <!--@css(/css/module/member/join_member.css)-->
+	<!--@js(/js/module/member/login.js)-->
+    <!--
+        $defaultReturnUrl = /index.html
+    -->
+	<div class="boxTitle">
+		<h2>일반 회원가입</h2>
+	</div>
+	<div class="loginWrap">
+		 <fieldset>
+            <div class="formBox">
+				<div class="form">
+					<div class="ec-base-button gFull">
+						<a href="/member/agreement.html" class="btnSubmit bt_typeA">일반 회원가입</a>
+					</div>
+				</div>
+
+				<div class="snsArea">
+					<ul >
+						<li class="kakao {$display_kakao|display}">
+							<a href="#none" onclick="{$kakao_func_login}"><img src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
+						</li>
+						<li class="naver {$display_naver|display}">
+							<a href="#none" onclick="{$naver_func_login}"><img src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
+						</li>
+						<li class="google {$display_google|display}">
+							<a href="#none" onclick="{$google_func_login}"><img src="/web/upload/wp/167417/p__login_sns_03.png" alt="google 로그인" /> 구글로 회원가입</a>
+						</li>
+						<li class="facebook {$display_facebook|display}">
+							<a href="#none" onclick="{$facebook_func_login}"><img src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로 회원가입 </a>
+						</li>
+						<li class="line {$display_line|display}">
+							<a href="#none" onclick="{$line_func_login}"><img src="/web/upload/wp/167417/p__login_sns_05.png" alt="LINE 로그인" /> LINE으로 회원가입</a>
+						</li>
+						<li class="apple {$display_apple|display}">
+							<a href="#none" onclick="{$apple_func_login}"><img src="/web/upload/wp/167417/p__login_sns_06.png" alt="Apple로 로그인" /> Apple로 회원가입</a>
+						</li>
+
+						<!-- 샘플몰에서만 노출 -->
+						<li class="kakao dp_sample">
+							<a href="#none" onclick="{$kakao_func_login}"><img src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
+						</li>
+						<li class="naver dp_sample">
+							<a href="#none" onclick="{$naver_func_login}"><img src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
+						</li>
+						<li class="facebook dp_sample">
+							<a href="#none" onclick="{$facebook_func_login}"><img src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로 회원가입</a>
+						</li><!-- // -->
+					</ul>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>
+
+
+
+

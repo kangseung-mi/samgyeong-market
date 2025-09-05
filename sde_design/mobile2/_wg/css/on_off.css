@@ -1,0 +1,228 @@
+
+/***********************************************************************************************************
+
+    ### 디자인 ON/OFF 설정 ###
+
+    • 수정전 반드시 백업 또는 스킨 복사를 해두시기 바랍니다.
+    • 해당 페이지에서 옵션 변경으로 디자인을 선택적으로 사용하실 수 있습니다.
+    • 사용 [ display:block; ], 미사용 [ display:none; ] 으로 디자인의 사용유무를 선택 가능합니다.
+    • display:none; 으로 안되면 display:none!important; 로 넣어주세요.
+    • display:inline-block 로 처리된 부분이 있습니다.
+    • 아래 내용에 없는 부분은 html상에서 직접 수정하셔야되겠습니다.
+    • ★★★상품이 진열된 곳은 상품을 진열 안하시면 노출되지 않습니다.★★★
+
+
+	CSS 구성목록
+
+	1. 상단
+	2. 메인
+	3. 하단
+	4. 좌측
+	5. 패널
+	6. 기타
+	7. 상품목록
+	8. 상세페이지
+	9. 커뮤니티
+
+***********************************************************************************************************/
+
+
+
+    /******************************************************************************************************
+		1. 상단
+	******************************************************************************************************/
+
+    #cp507			 			{ display:block; }	/* cp507 - 최상단 슬라이드배너, 사용안함(none!important) */
+
+	.JS_multiBtn				{ display:block; }	/* 멀티쇼핑몰 버튼 */
+
+    #header .sns_icon			{ display:block; }	/* SNS 아이콘 */
+
+    .point_ico 					{ display:block; }	/* +3000P 아이콘 */
+
+    #cp503		 				{ display:block; }	/* 상단 원형 슬라이드 배너 */
+
+    .header_search		 		{ display:block; }	/* 검색창 */
+
+    .header_icon		 		{ display:block; }	/* 상단 아이콘(검색창 우측) */
+
+    .cp792.btn					{ display:block; }	/* 카테고리 전체보기 버튼 */
+
+    .categorySub.m01 	 { display:none!important; }  /* 추가메뉴1(회사소개), 사용안함(none!important) */
+
+    .categorySub.m02 	 { display:inline-block; } 	/* 추가메뉴2, 사용안함(none!important) */
+
+    .categorySub.m03 	 { display:inline-block; }  /* 추가메뉴3(아이콘) */
+		.m03 .timeSale			{ display:inline-block; }	/* 추가메뉴3 > 타임세일, 사용안함(none!important) */
+		.m03 .brand				{ display:inline-block; }	/* 추가메뉴3 > 브랜드, 사용안함(none!important) */
+		.m03 .photoReview		{ display:inline-block; }	/* 추가메뉴3 > 포토리뷰, 사용안함(none!important) */
+
+    .categorySub.m04 	 { display:inline-block; }  /* 기획전 */
+
+    .categorySub.comm 	 { display:inline-block; }  /* 커뮤니티 */
+
+    .categorySub.etc 	 { display:inline-block; }  /* 기타메뉴 */
+
+
+
+
+    /******************************************************************************************************
+		2. 메인
+	******************************************************************************************************/
+
+    #cp500						{ display:block; }	/* cp500 (메인슬라이드배너) */
+
+	.cp560						{ display:block; }	/* cp560 (메인분류메뉴) */
+
+    .cp301 						{ display:block; }	/* cp301 (슬라이드배너 / 유튜브 / 공지사항) */
+
+    .cp303 						{ display:block; }	/* cp303 (WEEKLY HOT ITEMS / 슬라이드배너) */
+
+    #cp520						{ display:block; }	/* cp520 (탭롤링 베스트) */
+
+    #cp530 						{ display:block; }	/* cp530 (추천상품 MD's PICK) */
+
+    /* 메인 > SHOP 추천상품 RECOMMEND ITEMS(이하 상품카테고리들) */
+    /* 진열된 상품을 다 빼주시면 해당 카테고리가 노출되지 않습니다. */
+	/* [참고] 상품목록 진열변경 방법 - http://webgood.co.kr/board/free/read.html?no=31961&board_no=3 */
+
+    #cp515 						{ display:block; }	/* cp515 (슬라이드 배너) */
+
+    #cp508 						{ display:block; }	/* cp508 (와이드 슬라이드 배너) */
+
+    .cp574 						{ display:block; }	/* cp574 (타임세일) */
+
+    .cp576 						{ display:block; }	/* cp576 (포토후기) */
+
+
+
+
+
+
+
+    /******************************************************************************************************
+		3. 하단
+	******************************************************************************************************/
+
+    .cp005		 				{ display:block; }	/* 커스텀팩 005 (하단배너) */
+
+    .instagram_wrap 			{ display:block; }	/* 인스타그램 */
+
+    .footer_ico 				{ display:block; }	/* 아이콘 */
+
+	/* 그 외 요소들은 /_wg/import/footer.html 에서 html 소스를 삭제해주세요. */
+
+
+
+
+
+    /******************************************************************************************************
+		4. 좌측
+	******************************************************************************************************/
+
+    #left .oper_time 			{ display:block; }	/* 고객센터 */
+
+    #left .counselBtn 			{ display:block; }	/* 상담버튼 전체 */
+		#left .counselBtn .p_naverTalk	{ display:block; }	/* 네이버톡톡 */
+		#left .counselBtn .p_kakaoCh	{ display:block; }	/* 카카오톡채널 */
+		#left .counselBtn .formQNA		{ display:block; }	/* 폼메일상담 */
+
+    #left .JS_faq				{ display:block; }	/* 자주묻는질문 - FAQ */
+
+    #left .leftMenu				{ display:block; }	/* 좌측메뉴 */
+
+
+
+
+
+    /******************************************************************************************************
+		5. 패널
+	******************************************************************************************************/
+
+	/* 패널버튼 */
+	.cp550 						{ display:block; } /* 우측 디자인 전체 */
+		.cp550_search				{ display:block; }	/* 검색, 사용안함 - display:none!important; */
+		.cp550 .cp793				{ display:block; }	/* 패널 버튼 */
+		.cp550 .cp791				{ display:block; }	/* 전체 아이콘 */
+		.cp550 .p_naverTalk			{ display:block; }	/* 네이버톡톡 */
+		.cp550 .p_kakaoCh			{ display:block; }	/* 카카오톡 */
+		.cp550 .updown				{ display:block; }	/* 상하버튼 */
+
+	/* 패널 */
+	#cp793_slide				{ display:block; }	/* 패널 슬라이드 배너 */
+	.cp793 .bnr					{ display:block; }	/* 이미지 배너 */
+	.attendBnr					{ display:block; }	/* 출석체크 배너, 사용안함 - display:none!important; */
+	.cp793 .sns_icon			{ display:block; }	/* SNS 아이콘 */
+	.cp793 .menu				{ display:block; }	/* 패널 메뉴 */
+	.cp793 .oper_time			{ display:block; }	/* 고객센터 */
+	.cp793 .bank_info			{ display:block; }	/* 계좌안내 */
+
+
+    /******************************************************************************************************
+		6. 기타
+	******************************************************************************************************/
+
+	.cp701						{ display:block; }	/* 인트로팝업 */
+    .cp703 						{ display:block; } 	/* 스마트팝업 */
+
+	.productRecent				{ display:block; } 	/* 좌측 최근본상품, 사용안함 - none!important */
+
+    .made 						{ display:block; }	/* 기타 > Design by WG */
+
+
+
+
+
+    /******************************************************************************************************
+		7. 상품목록
+	******************************************************************************************************/
+
+    .dc_rate.on					{ display:block; }	/* 세일할인율 (소비자가-판매가의 차액이 퍼센트로 노출) */
+
+    .-likeButton 				{ display:block; }	/* 좋아요 (엄지척) */
+
+    .list_button .zoom 			{ display:block; }	/* 새창보기 */
+
+    .list_button .basket 		{ display:block; }	/* 장바구니 */
+
+    .list_button .option 		{ display:block; }	/* 옵션보기 */
+
+    .list_button .wish 			{ display:block; }	/* 관심상품 */
+
+
+
+
+
+    /******************************************************************************************************
+		8. 상세페이지
+	******************************************************************************************************/
+
+    .btn-buy-open 				{ display:block; }	/* 구매하기(스크롤시 나타나는 구매하기 버튼) */
+
+	.cp582						{ display:block; }	/* 유튜브 팝업 */
+
+    #cp513 						{ display:block; }	/* 상세페이지 슬라이드배너 */
+
+	.coupon_popup.btn			{ display:inline-block; }	/* 할인쿠폰 버튼 */
+
+    .snsIco 					{ display:block; }	/* SNS홍보 */
+    	#kakao-link-btn 			{ display:display:inline-block; }	/* SNS홍보(카카오톡만) */
+		/* 나머지 버튼은 프로모션 > SNS 관리 > SNS 상품홍보 관리 에서 설정해주세요 */
+
+    .etcBtn 					{ display:block; }	/* 기타버튼 */
+		.etcBtn_01					{ display:display:inline-block; }	/* 폼메일 상담 */
+		.etcBtn_02					{ display:display:inline-block; }	/* 추천메일 보내기 */
+		.etcBtn_03					{ display:display:inline-block; }	/* 상품조르기 */
+		.etcBtn_04					{ display:display:inline-block; }	/* 대량구매문의 */
+
+	.cp522						{ display:block; }	/* 회원등급별 혜택안내 */
+
+	.eventArea.typeA			{ display:block; }	/* 이벤트A - 프로모션 > 공통이벤트 관리 에서 설정이 가능하십니다. */
+	.eventArea.typeB			{ display:block; }	/* 이벤트B */
+
+	.couponZone					{ display:block; }	/* 할인쿠폰 다운로드 */
+
+	#cp535						{ display:block; }	/* 관련상품 */
+
+    .img_info.img1 				{ display:block; }	/* 상단 정보 이미지  (상세페이지 설명 상단) */
+    .img_info.img2 				{ display:block; }	/* 하단 정보 이미지  (상세페이지 설명 하단) */

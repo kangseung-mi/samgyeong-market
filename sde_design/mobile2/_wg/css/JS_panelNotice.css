@@ -1,0 +1,14 @@
+    
+    .JS_panelNotice { position:relative; width:200px; height:22px; margin:0 auto 20px; border-bottom:1px solid #eee; }
+    
+    .JS_panelNotice .tit a { position:relative; float:left; height:22px; margin-right:5px; font-size:15px; letter-spacing:0.1em; line-height:19px; color:#111; text-decoration:none; }
+    
+    .JS_panelNotice .DB_mask { position:relative; width:170px; height:22px; overflow:hidden; }
+
+    .JS_panelNotice .DB_imgSet { position:absolute; width:170px; }
+    .JS_panelNotice .DB_imgSet li { width:100%; line-height:20px; margin-bottom:10px; }
+    .JS_panelNotice .DB_imgSet li a { display:block; color:#333; font-size:11px; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal; overflow:hidden; }
+    .JS_panelNotice .DB_imgSet li a:hover { color:#999; text-decoration:none; }
+    
+    .JS_panelNotice .DB_prevBtn { position:absolute; top:12px; right:14px; cursor:pointer; display:none; }
+    .JS_panelNotice .DB_nextBtn { position:absolute; top:12px; right:0px; cursor:pointer; display:none; }

@@ -1,0 +1,24 @@
+.xans-member-joincomplete { padding:30px 0; line-height:150%; text-align:center;}
+.xans-member-joincomplete .joinComplete h3 { margin:0 0 30px 0; }
+.xans-member-joincomplete .joinComplete .desc { margin: 50px 0 30px; padding: 50px 0 0; font-size:26px; font-weight:bold; background:url(/web/upload/wp/167417/p__result_check.png) no-repeat center top; }
+.xans-member-joincomplete .joinComplete .desc span{color:#151515;}
+
+.xans-member-joincomplete .joinComplete .ec-base-box { width:430px; margin:0 auto;overflow:hidden; border:1px solid #d6d4d4; text-align:left; }
+.xans-member-joincomplete .joinComplete .ec-base-box.typeMember.gMessage{border:0;}
+.xans-member-joincomplete .joinComplete .ec-base-box.typeMember .information .description{display: block;border: 0;width: 470px;padding: 0; margin:20px 0;}
+.xans-member-joincomplete .joinComplete .ec-base-box.typeMember .information .description .ec-base-desc dt{font-size:17px; font-weight:bold; padding: 13px; width:180px; }
+.xans-member-joincomplete .joinComplete .ec-base-box.typeMember .information .description .ec-base-desc dd{font-size:17px; border-bottom: 1px solid #f1f1f1;padding: 13px 5px 3px 100px;}
+
+
+.xans-member-joincomplete .joinComplete .ec-base-box li strong { padding:0 0 0 10px; width:95px; color:#2e2e2e; font-weight:normal; background:url("//img.echosting.cafe24.com/skin/base/common/ico_arrow.png") no-repeat 0 6px; }
+.xans-member-joincomplete .joinComplete .memberSpecial { margin:40px 0 0; line-height:160%; color:#757575; }
+.xans-member-joincomplete .joinComplete .memberSpecial p { margin:5px 0 0; }
+.xans-member-joincomplete .joinComplete .memberSpecial p:first-child { margin:0; }
+.xans-member-joincomplete .joinComplete .memberSpecial em { color:#34a7b3; font-style:normal; }
+
+.xans-member-joincomplete .joinComplete .memberAge { margin:20px 0 0; line-height:160%; }
+.xans-member-joincomplete .joinComplete .memberAge strong { color:#f26323; }
+
+.xans-member-joincomplete .ec-base-button{padding-top:30px;}
+.xans-member-joincomplete .bt_typeA,
+.xans-member-joincomplete .bt_typeB{width:233px;height:66px;line-height:66px;display:inline-block; font-size:20px;}

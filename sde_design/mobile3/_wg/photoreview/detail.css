@@ -1,0 +1,16 @@
+.detail-dimmed { display: none; background-color: #fff; width: 660px; border-radius: 1em; padding: 30px 0px; }
+.detail-dimmed .contents_tle {text-align:center;}
+.detail-dimmed .contents_tle .tle_deco {margin-bottom:10px;}
+.detail-dimmed .contents_tle span { font-size:0.8em;text-decoration:underline; margin-bottom:5px; display:inline-block;}
+.detail-dimmed {display:none; background-color:#fff; width:660px; border-radius: 1em; padding:30px 0px;}
+.detail-dimmed .detail { width:90%; margin:20px auto; border:1px solid #ddd; text-align:center; border-radius:1em; box-shadow: 0 0 5px rgba(0,0,0,.2); -moz-border-radius: box-shadow:0 0 5px rgba(0,0,0,.2); -webkit-box-shadow: 0 0 5px rgba(0,0,0,.2);}
+.detail-dimmed .detail p.post { position:relative; padding: 17px 0 14px 19px; font-weight:bold; background-color:#ededed; }
+.detail-dimmed .b-close { display:block;position:absolute; top:15px; right:20px; width:16px; height:15px; text-indent:-9999px; background:url('//img.echosting.cafe24.com/apps/photo-review/skin3/btn_close.gif') no-repeat 0 0; }
+.detail-dimmed .detail p.image { padding:20px 0 10px; text-align:center; }
+.detail-dimmed .detail p.image a {display:inline-block; width:100px; height:100px; overflow:hidden; border-radius:50%; margin:0 5px; position:relative;}
+.detail-dimmed .detail p.image img { width:100px; height:auto; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%)}
+.detail-dimmed .detail .contents {padding:0 19px 16px 19px;}
+.detail-dimmed .title {font-size:1.5em; padding:1em;}
+.detail-dimmed  .help {text-align:center;}
+.detail-dimmed  .help span.txt {background-color:#ccc; color:#fff; display:inline-block;height:20px; line-height:20px; vertical-align:top;}
+.detail-dimmed  .help span.img { vertical-align:top;  width: 23px; height: 20px; display: inline-block; background: #888 url(/G_design/PC/btn/top_search01_w.png) no-repeat center center; }

@@ -1,0 +1,10 @@
+
+    .SD_searchColor { margin:0 0 10px; padding:10px 0 0; border-top:1px solid #eee; }
+    .SD_searchColor:after { content:""; display:block; *zoom:1; clear:both; }
+    .SD_searchColor ul { display:block; width:890px !important; font-size:0; }
+    .SD_searchColor li { position:relative; float:left; margin:0 12px 0 0; }
+    .SD_searchColor li a { display:block; width:22px; height:22px; border-radius:100%; box-shadow:0 0 2px rgba(0,0,0,0.3); transition:all .4s ease; -webkit-transition:all .4s ease; }
+    .SD_searchColor li:hover a { transform:scale(1.1,1.1); -webkit-transform:scale(1.1,1.1); transition:all .15s ease; -webkit-transition:all .15s ease; }
+
+    .SD_searchColor li p { position:absolute; z-index:1; top:-29px; left:50%; width:74px; margin-left:-37px; line-height:25px; border:1px solid #ddd; border-radius:4px; background:#f4f4f4; font-size:11px; color:#333; text-align:center; white-space:nowrap; filter:alpha(opacity=0); opacity:0; -webkit-opacity:0; transition:all .2s ease; -webkit-transition:all .2s ease; }
+    .SD_searchColor li:hover p { top:-32px; filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0; }

@@ -1,0 +1,20 @@
+
+/** 룩북 **/
+    .JS_lookbook_home a { position:fixed; z-index:10; top:0; left:0; width:52px; height:40px; background:#222; text-align:center; }
+    .JS_lookbook_home i { line-height:38px; font-size:20px; color:#fff; }
+
+    .JS_lookbook { position:relative; width:100%; height:100%; overflow:hidden; background:#fff; }
+    .JS_lookbook .DB_org { width:100%; height:100%; }
+    
+    .JS_lookbook .DB_thum { position:absolute; bottom:60px; background:#fff; font-size:0; }
+    .JS_lookbook .DB_thum li { position:relative; float:left; width:190px; margin-left:-1px; border:1px solid #ddd; cursor:pointer;  }
+    .JS_lookbook .DB_thum li.on { position:relative; z-index:1; border:1px solid #aaa; }
+    
+    /* 페이지링크 버튼 */
+    .JS_lookbook .DB_thum li a { position:absolute; z-index:2; display:block; top:10px; left:10px; width:40px; height:40px; background:rgba(0,0,0,.9); background:none \9; border-radius:30px; -webkit-border-radius:30px; font-family:malgun gothic; font-weight:bold; font-size:11px; color:#fff; line-height:41px; text-align:center; filter:alpha(opacity=0); opacity:0; -webkit-opacity:0; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .JS_lookbook .DB_thum li:hover a { background:#000 \9; filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0; }
+    .JS_lookbook .DB_thum li a:hover { width:80px; background:#333; color:#fff; text-decoration:none; }
+    
+    .JS_lookbook .DB_next { position:absolute; right:0; top:50%; height:400px; margin-top:-200px; cursor:pointer; }
+    .JS_lookbook .DB_prev { position:absolute; left:0; top:50%; height:400px; margin-top:-200px; cursor:pointer; }
+

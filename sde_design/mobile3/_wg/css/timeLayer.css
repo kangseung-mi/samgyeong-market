@@ -1,0 +1,20 @@
+
+    .timeLayer { display:block; position:relative; width:300px; }
+
+    .timeLayer h4 { transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .timeLayer h4:hover { filter:alpha(opacity=40); opacity:.4; -webkit-opacity:.4; }
+
+    /* 타이머 */
+    .timeLayer .timer { display:block; height:40px; margin:10px 0; padding:0 10px; font-size:12px; text-align:center; }
+    .timeLayer .comment { display:block; line-height:40px; background:#eee; border-radius:5px; -webkit-border-radius:5px; font-size:15px; color:#333; }
+
+    /* 타임아웃 워터마크 */
+    .timeLayer .time_out { display:none; position:absolute; z-index:10; width:100%; height:100%; background:url('/_wg/img/SD_timeSale/out_bg.png') no-repeat 50% 50% #fff; filter:alpha(opacity=70); opacity:.7; -webkit-opacity:.7; }
+    .timeLayer .item.on .time_out { display:block; }
+    .timeLayer .section { display:inline-block; height:40px; line-height:40px; margin:0 -2px 0 6px; padding:0 0 0 5px; background:url('/_wg/img/SD_timeSale/time_bg.png') no-repeat; background-position:right 9px; background-size:58px 23px; font-size:13px; font-weight:400; letter-spacing:.8em; color:#fff; }
+
+    /* 리스트 */
+    .timeLayer .thumbnail { position:relative; width:92%; margin:0 auto 15px; font-size:0; line-height:0; outline:1px solid #eee; vertical-align:top; }
+    .timeLayer .thumbnail img { width:100%; max-width:100%; }
+
+    .timeLayer .spec { display:none; }

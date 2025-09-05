@@ -1,0 +1,49 @@
+
+	.board_list { letter-spacing:0; font-size:0; }
+
+	.board_part { display:inline-block; position:relative; *zoom:1; width:32%; margin:0 2% 30px 0; vertical-align:top; }
+
+	.board_part h3 { height:35px; margin:0; padding:0 50px 0 5px; border-bottom:1px solid #888; font-size:16px; line-height:33px; color:#333; letter-spacing:-0.03em; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+	.board_part h3 i { position:relative; top:1px; }
+
+	.board_part .more { position:absolute; top:7px; right:5px; }
+	.board_part .more:hover { text-decoration:none; }
+	.board_part .more i { font-size:22px; color:#333; }
+	.board_part .more i:hover { color:#999; }
+
+    .board_part ul { display:block; position:relative; min-height:36px; line-height:0; border-bottom:1px solid #f0f0f0; font-size:0; cursor:pointer; transition:background .3s ease; }
+    .board_part ul:hover { background:rgba(0,0,0,.03); }
+
+	.board_part .notice ul { } 
+	.board_part .notice li.subject a { font-weight:bold; }
+	.board_part .notice i { color:#ff0000; }
+
+	.board_part li { position:relative; line-height:35px; font-size:13px; word-break:break-all; }
+	.board_part li.subject { position:relative; float:left; width:calc(100% - 90px); text-indent:5px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; }
+	.board_part li.subject a { color:#666; }
+	.board_part li.subject a:hover { text-decoration:none; }
+	.board_part li.subject img { vertical-align:middle; }
+	.board_part li.date { float:right; width:80px; color:#aaa; font-size:12px; text-align:center; }
+	.board_part li i { margin:0 3px 0 0; font-size:12px; color:#aaa; }
+
+	/* 갤러리게시판 - fixcafe.css의 게시판에서 공통으로 사용됨 */
+
+	/* 스마트폰 세로 */
+	@media all and (max-width:575px) {
+		.board_part,
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+        .board_part:nth-child(3n) { margin:0 2% 20px; }
+	}
+	/* 스마트폰 가로 + 테블릿 세로 */
+	@media all and (min-width:576px) and (max-width:960px) {
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+	}
+	/* 스마트폰 가로 + 테블릿 세로 + 테블릿 가로 */
+	@media all and (min-width:576px) and (max-width:1200px) {
+        .board_part { width:46%; margin:0 2% 20px; }
+        .board_part.gallery { width:96%!important; margin:0 2% 20px!important; }
+	}
+	/* 데스크탑 */
+	@media all and (min-width:1201px) {
+		.board_part:nth-child(3n) { margin:0 0 20px 0; }
+	}

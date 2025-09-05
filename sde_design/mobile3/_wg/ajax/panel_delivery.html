@@ -1,0 +1,49 @@
+<div class="loadhtml">
+	<div fix id="p_box" ax="main">
+		<ul>
+			<li>
+				<h1 class="titlebox"><em></em>주문내역<span ax="boxclose"></span></h1>
+				<div class="scrollbar_box order_wrap" module="Myshop_OrderHistoryListitem">
+					<div class="-panelempty {$empty_display|display}">
+						<p>주문 내역이 없습니다.</p>
+					</div>
+					<div class="-panelprod {$list_display|display}">
+						<ul>
+							<table class="-panel-tablebox">
+								<caption>주문내역</caption>
+								<colgroup>
+									<col style="width:60px;" />
+									<col />
+									<col style="width:150px;" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" class="-maximg item_img" /></a></th>
+										<td><a href="/product/detail.html{$param}">{$product_name}</a></td>
+										<td>
+											<p>{$status}</p>
+											<p class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></p>
+											<p class="{$invoice_no_display|display}"><a href="#none" class="-btn -xs -blue" onclick="{$shipping_trace_popup}">{$invoice_no}</a></p>
+										</td>
+									</tr>
+									<tr>
+										<th><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" class="-maximg item_img" /></a></th>
+										<td><a href="/product/detail.html{$param}">{$product_name}</a></td>
+										<td>
+											<p>{$status}</p>
+											<p class="{$shipping_company_display|display}"><a href="{$shipping_company_link}" target="{$shipping_company_target}">{$shipping_company}</a></p>
+											<p class="{$invoice_no_display|display}"><a href="#none" class="-btn -xs -blue" onclick="{$shipping_trace_popup}">{$invoice_no}</a></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<p class="-panelBtn">
+				<a href="/myshop/order/list.html" class="-btn -black">주문내역 상세보기</a>
+			</p>
+		</ul>
+	</div>
+</div>

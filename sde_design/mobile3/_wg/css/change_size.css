@@ -1,0 +1,12 @@
+
+    .change_size { display:block; clear:both; margin:10px 0 60px; }
+    .change_size h3 { display:inline-block; margin:0 0 20px; font-size:15px; letter-spacing:-0.05em; color:#111; }
+    .change_size .line { width:30px; height:0; margin:0 0 20px; border-bottom:1px solid #ccc; }
+    .change_size:hover .line { width:50px; border-bottom:1px solid #333; }
+
+    .change_size ul { display:block; padding:10px 0; border-top:1px solid #eee; font-size:0; line-height:0; letter-spacing:-4px; }
+    .change_size ul.first { border-top:none; }
+    .change_size ul li { display:inline-block; *display:inline; *zoom:1; height:40px; margin:0 5px; line-height:40px; font-size:12px; letter-spacing:0; }
+    .change_size ul li.tit { width:150px; margin:0 20px 0 0; background:#333; border:1px solid #111; text-align:center; font-size:12px; font-weight:bold; color:#fff; }
+    .change_size span { position:relative; top:-1px; display:inline-block; margin:0 5px; padding:0 10px; height:40px; line-height:40px; background:#f4f4f4; border:1px solid #eee; font-size:11px; color:#555; }
+    .change_size input { width:45px; margin:0 5px 0 0; padding:0; border:none; background:#f4f4f4; color:#111; text-align:center; font-size:12px; }

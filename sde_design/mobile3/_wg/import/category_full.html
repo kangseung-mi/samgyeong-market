@@ -1,0 +1,49 @@
+<!-- 카테고리 전체보기 -->
+<div id="d_full_btn" class="category_full"><btn><!-- 카테고리 전체보기 버튼 --><div class="-caption"><p>카테고리 전체보기</p></div></btn>
+    <div id="category-full" module="Layout_category">
+        <div class="scrollbar_box">
+            <div class="left_section">
+                <h2><i class="xi-ellipsis-v"></i>카테고리 전체보기</h2>
+                
+                <!-- 추가메뉴1 -->
+                <span class="categorySub m01 t01">
+                    <!--@import(/_wg/import/categorySub1.html)-->
+                </span>
+                
+                <!-- 상품분류 -->
+                <span class="d1-wrap">
+                    <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                    <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                    <li class="d1" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+                </span>
+                
+                <!-- 기획전 -->
+                <span class="categorySub m04" module="layout_project">
+                    <!--@import(/_wg/import/categorySub4.html)-->
+                </span>
+                
+                <!-- 추가메뉴2 -->
+                <span class="categorySub m02">
+                    <!--@import(/_wg/import/categorySub2.html)-->
+                </span>
+            </div>
+            
+            <div class="right_section">
+                
+                <!-- 게시판목록 -->
+                <h4><a href="/board/index.html">커뮤니티</a></h4>
+                <ul class="menuList" module="Layout_BoardInfo">
+                    <li><a href="{$board_list_url}">{$board_name}</a> {$board_adult_icon}</li>
+                    <li><a href="{$board_list_url}">{$board_name}</a> {$board_adult_icon}</li>
+                </ul>
+                
+                <!-- 기타메뉴 -->
+                <ul class="menuList sub">
+                    <!--@import(/_wg/import/full_menu.html)-->
+                </ul>
+            </div>
+        </div><!--스크롤박스끝-->
+        
+        <div class="close">닫기</div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<li>
+    <!--@css(/_wg/css/main_notice_list.css)-->
+    <div module="board_listpackage_1" class="main_notice_list">
+        <h4>NOTICE</h4>
+        <div class="line"></div>
+        <div module="board_notice_1" class="notice">
+            <!--
+            $count = 2
+            $main_list = yes
+            -->
+            <ul>
+                <li class="title"><a href="/board/product/read.html{$param_read}">{$subject|cut:16,..}</a></li>
+                <li class="date">{$write_date|date:Y/m/d}</li>
+            </ul>
+            <ul>
+                <li class="title"><a href="/board/product/read.html{$param_read}">{$subject|cut:16,..}</a></li>
+                <li class="date">{$write_date|date:Y/m/d}</li>
+            </ul>
+        </div>
+        <div module="board_list_1" class="list">
+            <!--
+            $count = 4
+            $main_list = yes
+            -->
+            <ul>
+                <li class="title"><a href="/board/product/read.html{$param_read}">{$subject|cut:16,..}</a></li>
+                <li class="date">{$write_date|date:Y/m/d}</li>
+            </ul>
+            <ul>
+                <li class="title"><a href="/board/product/read.html{$param_read}">{$subject|cut:16,..}</a></li>
+                <li class="date">{$write_date|date:Y/m/d}</li>
+            </ul>
+        </div>
+        <div class="more"><a href="/board/free/list.html?board_no=1"><img src="/_wg/img/board_btn_more.gif" alt="더보기" /></a></div>
+    </div>
+</li>

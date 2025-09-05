@@ -1,0 +1,9 @@
+
+    /* 메인콜센터 */
+    .main_info .call_center { position:relative; width:100%; font-size:11px; color:#333; line-height:35px; }
+    .main_info .call_center h4 { display:inline-block; *display:inline; *zoom:1; width:130px; height:35px; margin:0 30px 0 0; background:url('/_wg/img/bg_slash.gif') #fff; border:1px solid #eee; border-bottom:0; text-align:center; letter-spacing:0.08em; }
+    .main_info .call_center p { display:none; }
+    .main_info .call_center ul { display:inline-block; *display:inline; margin:0; }
+    .main_info .call_center .phone { position:relative; display:inline-block; *display:inline; *zoom:1; margin:0 15px 0 0; font-size:13px; font-weight:700; letter-spacing:0.05em; }
+    .main_info .call_center span { padding-right:5px; color:#999; }
+    .main_info .call_center li { display:inline-block; *display:inline; *zoom:1; margin:0 15px 0 0; }

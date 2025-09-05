@@ -1,0 +1,22 @@
+<div module='Product_OptionPreview'>
+    <div id="{$opt_preview_id}" class="prdOption">
+        <p class="ico"></p>
+        <div class="inner">
+            <p class="close"><a href="#none" onclick="{$opt_preview_close}"></a></p>
+            <ul class="scrollbar_box" module="Product_optionPreviewList">
+                <li>{$option}</li>
+                <li>{$option}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--아이프레임 방식으로 cafe24 파일을 로그하는 방식이라 해당페이에 스크롤 스크립트를 작성해줌-->
+<script>
+$jq(document).ready(function(){
+    $jq('.scrollbar_box').mCustomScrollbar({
+        theme:"dark",
+        mouseWheel:{ scrollAmount: 300 }
+    });
+});
+</script>

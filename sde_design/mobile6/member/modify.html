@@ -1,0 +1,514 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!-- <div id="titleArea">
+    <h2>회원 정보 수정</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div> -->
+
+<div module="member_edit">
+    <!--@css(/css/module/member/edit.css)-->
+    <!--
+        $login_page = /member/login.html
+        $isRuleBasedAddrForm = T
+     -->
+	 <div class="boxTitle">
+		<h2>회원 정보 수정</h2>
+	</div>
+	<div class="formBox">
+		<div class="member_type_wrap">
+			<div class="{$display_certification_form|display}">
+				<!-- <h3>회원인증</h3> -->
+				<div class="section">
+					<ul class="{$display_member_type|display}">
+						<li class="tlt">회원구분</li>
+						<li>{$member_type}</li>
+					</ul>
+					<ul>
+						<li class="tlt">인증여부</li>
+						<li><strong class="txtEm" id="MauthText">미인증</strong></li>
+					</ul>
+					<ul class="{$display_certification_method|display}">
+						<li class="tlt">회원인증</li>
+						<li>
+							{$form.personal_type}
+							<div class="certifForm" id="ipinWrap">
+								<a href="#none" onclick="{$action_ipin_open}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_Ipin.gif" width="106" alt="아이핀 인증"></a>
+							</div>
+							<div class="certifForm" id="mobileWrap">
+								<a href="#none" onclick="{$action_mobile_open}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/member/btn_mobile_check.gif" width="106" alt="휴대폰 인증"></a>
+							</div>
+							<div class="certifForm" id="emailWrap">
+								<p class="ec-base-help typeDash">기본정보 &gt; 이메일 항목에 입력하신 정보로 본인인증을 진행합니다. 정보수정 후에 입력하신 이메일 주소로 인증 메일이 발송되오니, 확인해 주시기 바랍니다.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- <h3>기본정보 <span><span class="ico_required">*</span>필수</span></h3> -->
+		<div class="section">
+			<ul class="emailCheck">
+				<li class="tlt">이메일 <span class="ico_required">*</span></li>
+				<li>
+					{$form.email} <p id="{$emailMsg_id}"></p>
+                    <p class="ec-base-help typeDash txt_info {$display_is_email_auth_info|display}">이메일 주소 변경 시 로그아웃 후 재인증을 하셔야만 로그인이 가능합니다.</p>
+				</li>
+			</ul>
+			<ul class="{$display_use_id|display}">
+				<li class="tlt">아이디 <span class="ico_required">*</span></li>
+				<li>
+					{$form.member_id}
+                    {$form.user_id_dupl}
+				</li>
+			</ul>
+			<ul>
+				<li class="tlt">{$display_passwd_title} <span class="ico_required {$display_is_none_certification|display}">*</span></li>
+				<li>
+					<div class="ec-base-tooltip-area">
+						<span class="eTip">{$form.passwd}</span>
+						<div class="ec-base-tooltip typeUpper {$display_is_passwd_speech_bubble|display}">
+							<div class="content">
+								<strong class="txtWarn">※ {$passwd_terms}</strong>
+								<ul class="ec-base-help typeDash txtWarn">
+									{$passwd_chk_info}
+								</ul>
+								<button type="button" class="btnClose eClose">닫기</button>
+							</div>
+						</div>
+					</div>
+					<!-- <p class="ec-base-help typeDash txt_info">{$passwd_type_desc}</p> -->
+					<p class="txt_info">- 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+				</li>
+			</ul>
+			<ul class="{$display_is_none_certification|display}">
+				<li class="tlt">비밀번호 확인 <span class="ico_required">*</span></li>
+				<li>{$form.user_passwd_confirm} <span id="{$pwConfirmMsg_id}" class="txt_info"></span></li>
+			</ul>
+			<ul class="{$display_is_certification|display}">
+				<li class="tlt">새 비밀번호</li>
+				<li>
+					<div class="ec-base-tooltip-area">
+						<span class="eTip">{$form.new_passwd}</span>
+						<div class="ec-base-tooltip typeUpper">
+							<div class="content">
+								<strong class="txtWarn">※ {$passwd_terms}</strong>
+								<ul class="ec-base-help typeDash txtWarn">
+									{$passwd_chk_info}
+								</ul>
+								<button type="button" class="btnClose eClose">닫기</button>
+							</div>
+						</div>
+					</div>
+					<p class="ec-base-help typeDash txt_info">{$passwd_type_desc}</p>
+				</li>
+			</ul>
+			<ul class="{$display_is_certification|display}">
+				<li class="tlt">새 비밀번호 확인</li>
+				<li>{$form.new_passwd_confirm} <span id="{$newPwConfirmMsg_id}" class="txt_info"></span></li>
+			</ul>
+			<ul class="{$display_hint|display}">
+				<li class="tlt">비밀번호 확인질문 <span class="ico_required">*</span></li>
+				<li>{$form.hint}</li>
+			</ul>
+			<ul class="{$display_hint_answer|display}">
+				<li class="tlt">비밀번호 확인답변 <span class="ico_required">*</span></li>
+				<li>{$form.hint_answer}</li>
+			</ul>
+			<ul class="{$display_name|display}">
+				<li class="tlt" id="{$name_title}">이름 <span class="ico_required">*</span></li>
+				<li>{$form.name}</li>
+			</ul>
+			<ul class="{$display_eng_name|display}">
+				<li class="tlt">이름(영문) <span class="ico_required {$display_required_name_en|display}">*</span></li>
+				<li>{$form.name_en}</li>
+			</ul>
+			<ul class="{$display_foreigner_ssn|display}">
+				<li class="tlt">{$foreigner_type}</li>
+				<li>{$foreigner_ssn}</li>
+			</ul>
+			<ul class="{$display_coroperate|display}">
+				<li class="tlt">법인명</li>
+				<li>{$coroperate_name}</li>
+			</ul>
+			<ul class="{$display_coroperate|display}">
+				<li class="tlt">법인번호</li>
+				<li>{$coroperate_ssn}</li>
+			</ul>
+			<ul class="{$display_company|display}">
+				<li class="tlt">상호명</li>
+				<li>{$form.cname}</li>
+			</ul>
+			<ul class="{$display_company|display}">
+				<li class="tlt">사업자번호</li>
+				<li>
+					{$form.cssn}
+					<button type="button" class="btnBasic {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</button>
+					<p id="{$cssnMsg_id}" class="txt_info"></p>
+				</li>
+			</ul>
+			<ul class="{$display_nation|display}">
+				<li class="tlt">국적</li>
+				<li>{$form.citizenship}</li>
+			</ul>
+			<ul class="{$display_addr|display}">
+				<li class="tlt">주소 <span class="ico_required {$display_required_address|display}">*</span></li>
+				<li>{$form.address}</li>
+			</ul>
+			<ul class="{$display_phone|display}">
+				<li class="tlt">일반전화 <span class="ico_required {$display_required_phone|display}">*</span></li>
+				<li>{$form.phone}</li>
+			</ul>
+			<ul  class="{$display_mobile|display}">
+				<li class="tlt">휴대전화 <span class="ico_required {$display_required_cell|display}">*</span></li>
+				<li>
+					{$form.mobile}
+                    <button type="button" class="btnBasic gBlank5 {$display_verify_mobile|display}" id="{$btn_action_verify_mobile}" onclick="{$action_verify_mobile}">인증번호받기</button>
+				</li>
+			</ul>
+			<ul class="{$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
+				<li class="tlt">인증번호 <span class="ico_required">*</span></li>
+				<li>
+					<div class="verify">
+						{$form.verify_sms_number}
+						<span class="time" id="{$expiryTime}"></span>
+					</div>
+					<button type="button" class="btnBasic gBlank5" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
+				</li>
+			</ul>
+			<ul class="{$display_is_sms|display}">
+				<li class="tlt">SMS 수신여부 <span class="ico_required">*</span></li>
+				<li>{$form.is_sms}</li>
+			</ul>
+
+			<ul class="{$display_is_news_mail|display}">
+				<li class="tlt">이메일 수신여부 <span class="ico_required">*</span></li>
+				<li>{$form.is_news_mail}</li>
+			</ul>
+			<ul class="{$display_is_lifetime|display}">
+				<li class="tlt">평생회원</li>
+				<li>
+					{$form.is_lifetime}
+					<ul class="ec-base-help typeDash txt_info lifetime">
+						<li>평생회원으로 가입하시면 {$mall_name} 회원 탈퇴시까지는 휴면회원으로 전환되지 않으며, 고객님의 개인정보가 탈퇴시까지 안전하게 보관됩니다.</li>
+						<li>
+							<strong class="">평생 회원 가입 시 혜택</strong>
+							<p class="txt">① 즉시할인 3천원 쿠폰 　② 매달 리필 10% 할인 쿠폰<br/>③ 구매금액의 1~2% 적립　④ 포토리뷰 3천원 적립</p>
+							<p>(쿠폰혜택을 받으신 경우, 3개월간 평생 회원을 유지 하셔야합니다.)</p>
+						</li>
+						<!-- <li class="{$display_is_lifetime_benefit|display}">지금 평생회원으로 가입하시면 쿠폰혜택을 드립니다. (쿠폰혜택을 받으신 경우, 3개월간 평생회원을 유지하셔야 합니다.)</li> -->
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<!-- <h3 class="{$display_add_title|display}">추가정보</h3> -->
+		<div class="section">
+			<ul class="{$display_nick|display}">
+				<li class="tlt">별명 <span class="ico_required {$display_required_nick_name_flag|display}">*</span></li>
+				<li>{$form.nick_name}</li>
+			</ul>
+			<ul class="{$display_is_sex|display}">
+				<li class="tlt">성별 <span class="ico_required {$display_required_sex|display}">*</span></li>
+				<li>{$form.is_sex}</li>
+			</ul>
+			<ul class="{$display_birthday|display}">
+				<li class="tlt">생년월일 <span class="ico_required {$display_required_is_birthday|display}">*</span></li>
+				<li><p class="gBreak7 {$display_calendar_type|display}">{$form.is_solar_calendar}</p>{$form.birth_year} 년 {$form.birth_month} 월 {$form.birth_day} 일</li>
+			</ul>
+			<ul class="{$display_marry|display}">
+				<li class="tlt">결혼기념일 <span class="ico_required {$display_required_is_wedding_anniversary|display}">*</span></li>
+				<li>{$form.marry_year} 년 {$form.marry_month} 월 {$form.marry_day} 일</li>
+			</ul>
+			<ul class="{$display_partner|display}">
+				<li class="tlt">배우자생일 <span class="ico_required {$display_required_is_life_partner|display}">*</span></li>
+				<li>{$form.partner_year} 년 {$form.partner_month} 월 {$form.partner_day} 일</li>
+			</ul>
+			<ul class="{$display_child|display}">
+				<li class="tlt">자녀 <span class="ico_required {$display_required_child|display}">*</span></li>
+				<li>{$form.child}</li>
+			</ul>
+			<ul class="{$display_school|display}">
+				<li class="tlt">최종학력 <span class="ico_required {$display_required_school|display}">*</span></li>
+				<li>{$form.school}</li>
+			</ul>
+			<ul class="{$display_job_class|display}">
+				<li class="tlt">직종 <span class="ico_required {$display_required_job_class|display}">*</span></li>
+				<li>{$form.job_class}</li>
+			</ul>
+			<ul class="{$display_job|display}">
+				<li class="tlt">직업 <span class="ico_required {$display_required_job|display}">*</span></li>
+				<li>{$form.job}</li>
+			</ul>
+			<ul class="{$display_earning|display}">
+				<li class="tlt">연소득 <span class="ico_required {$display_required_earning|display}">*</span></li>
+				<li>{$form.earning}</li>
+			</ul>
+			<ul class="{$display_car|display}">
+				<li class="tlt">자동차 <span class="ico_required {$display_required_car|display}">*</span></li>
+				<li>{$form.car}</li>
+			</ul>
+			<ul class="{$display_region|display}">
+				<li class="tlt">지역 <span class="ico_required {$display_required_region|display}">*</span></li>
+				<li>{$form.region}</li>
+			</ul>
+			<ul class="{$display_internet|display}">
+				<li class="tlt">인터넷<br>이용장소 <span class="ico_required {$display_required_internet|display}">*</span></li>
+				<li>{$form.internet}</li>
+			</ul>
+			<ul class="{$display_inter|display}">
+				<li class="tlt">관심분야 <span class="ico_required {$display_required_interest|display}">*</span></li>
+				<li><div class="interest">{$form.inter_check}</div></li>
+			</ul>
+			<ul class="{$display_add1|display}">
+				<li class="tlt">{$title_add1} <span class="ico_required {$display_required_add1|display}">*</span></li>
+				<li>{$form.add1}</li>
+			</ul>
+			<ul class="{$display_add2|display}">
+				<li class="tlt">{$title_add2} <span class="ico_required {$display_required_add2|display}">*</span></li>
+				<li>{$form.add2}</li>
+			</ul>
+			<ul class="{$display_add3|display}">
+				<li class="tlt">{$title_add3} <span class="ico_required {$display_required_add3|display}">*</span></li>
+				<li>{$form.add3}</li>
+			</ul>
+			<ul class="{$display_add4|display}">
+				<li class="tlt">{$title_add4} <span class="ico_required {$display_required_add4|display}">*</span></li>
+				<li>{$form.add4}</li>
+			</ul>
+			<ul class="{$display_add5|display}">
+				<li class="tlt">{$title_add5} <span class="ico_required {$display_required_add5|display}">*</span></li>
+				<li>{$form.add5}</li>
+			</ul>
+			<ul class="{$display_add6|display}">
+				<li class="tlt">{$title_add6} <span class="ico_required {$display_required_add6|display}">*</span></li>
+				<li>{$form.add6}</li>
+			</ul>
+			<ul class="{$display_add7|display}">
+				<li class="tlt">{$title_add7} <span class="ico_required {$display_required_add7|display}">*</span></li>
+				<li>{$form.add7}</li>
+			</ul>
+			<ul class="{$display_add8|display}">
+				<li class="tlt">{$title_add8} <span class="ico_required {$display_required_add8|display}">*</span></li>
+				<li>{$form.add8}</li>
+			</ul>
+			<ul class="{$display_add9|display}">
+				<li class="tlt">{$title_add9} <span class="ico_required {$display_required_add9|display}">*</span></li>
+				<li>{$form.add9}</li>
+			</ul>
+			<ul class="{$display_add10|display}">
+				<li class="tlt">{$title_add10} <span class="ico_required {$display_required_add10|display}">*</span></li>
+				<li>{$form.add10}</li>
+			</ul>
+			<ul class="{$display_add11|display}">
+				<li class="tlt">{$title_add11} <span class="ico_required {$display_required_add11|display}">*</span></li>
+				<li>{$form.add11}</li>
+			</ul>
+			<ul class="{$display_add12|display}">
+				<li class="tlt">{$title_add12} <span class="ico_required {$display_required_add12|display}">*</span></li>
+				<li>{$form.add12}</li>
+			</ul>
+			<ul class="{$display_add13|display}">
+				<li class="tlt">{$title_add13} <span class="ico_required {$display_required_add13|display}">*</span></li>
+				<li>{$form.add13}</li>
+			</ul>
+			<ul class="{$display_add14|display}">
+				<li class="tlt">{$title_add14} <span class="ico_required {$display_required_add14|display}">*</span></li>
+				<li>{$form.add14}</li>
+			</ul>
+			<ul class="{$display_add15|display}">
+				<li class="tlt">{$title_add15} <span class="ico_required {$display_required_add15|display}">*</span></li>
+				<li>{$form.add15}</li>
+			</ul>
+			<ul class="{$display_reco_id|display}">
+				<li class="tlt">추천인아이디 <span class="ico_required {$display_required_reco_id|display}">*</span></li>
+				<li>{$form.reco_id}</li>
+			</ul>
+		</div>
+
+		 <!-- <div class="titleArea accountArea {$display_bank_info|display}">
+			<h3>환불계좌</h3>
+		</div> -->
+		<div class="section">
+			<ul class="{$display_bank_info|display}">
+				<li class="tlt">계좌정보 <span class="ico_required {$display_required_bank_account_no|display}">*</span></li>
+				<li class="account">
+					<span id="{$id_bank_info}">{$bank_info}</span>
+					<p class="gBlank5"><a href="#none" {$action_reg_bank} class="btnBasic" ><span id="id_has_bank_img" class="{$display_has_bank|display}" >환불계좌변경</span><span id="id_reg_bank_img" class="{$display_reg_bank|display}">환불계좌등록</span></a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+    <div module="member_editInformation">
+        <h3>제3자 정보제공 동의현황</h3>
+        <div class="boardList">
+            <table border="1" summary="">
+                <caption>제3자 정보제공 동의현황</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:15%;">
+                    <col style="width:25%;">
+                    <col style="width:15%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">제공서비스</th>
+                        <th scope="col">제공받는 자</th>
+                        <th scope="col">개인정보 이용 목적</th>
+                        <th scope="col">제공하는<br>개인정보 항목</th>
+                        <th scope="col">보유기간</th>
+                        <th scope="col">동의여부</th>
+                        <th scope="col">동의/철회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$perinfo_offer}</td>
+                        <td>{$perinfo_purpose}</td>
+                        <td>{$perinfo_item}</td>
+                        <td class="center">{$perinfo_retain}</td>
+                        <td class="center">{$perinfo_status}</td>
+                        <td class="center">{$perinfo_button}</td>
+                    </tr>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$perinfo_offer}</td>
+                        <td>{$perinfo_purpose}</td>
+                        <td>{$perinfo_item}</td>
+                        <td class="center">{$perinfo_retain}</td>
+                        <td class="center">{$perinfo_status}</td>
+                        <td class="center">{$perinfo_button}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="ec-base-help typeDash">정보제공에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
+    </div>
+    <div module="member_editConsignment">
+        <h3>처리위탁 동의현황</h3>
+        <div class="boardList">
+            <table border="1" summary="">
+                <caption>처리위탁 동의현황</caption>
+                <colgroup>
+                    <col style="width:auto;">
+                    <col style="width:20%;">
+                    <col style="width:30%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                    <col style="width:12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">제공서비스</th>
+                        <th scope="col">위탁받은 자</th>
+                        <th scope="col">위탁업무의 내용</th>
+                        <th scope="col">보유기간</th>
+                        <th scope="col">동의여부</th>
+                        <th scope="col">동의/철회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$trust_target}</td>
+                        <td>{$trust_work}</td>
+                        <td class="center">{$trust_retain}</td>
+                        <td class="center">{$trust_status}</td>
+                        <td class="center">{$trust_button}</td>
+                    </tr>
+                    <tr>
+                        <td>{$app_name}<br><span class="line">({$sa_av_version})</span></td>
+                        <td>{$trust_target}</td>
+                        <td>{$trust_work}</td>
+                        <td class="center">{$trust_retain}</td>
+                        <td class="center">{$trust_status}</td>
+                        <td class="center">{$trust_button}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="ec-base-help typeDash">처리위탁에 대한 동의여부를 변경할 수 있으며, 철회 시 일부 서비스 사용이 불가할 수 있습니다.</p>
+    </div>
+
+    <div class="{$display_privacy_optional|display} agreeArea">
+        <div class="title">
+            <h4>{$form.agree_privacy_optional_check}<label for="agree_privacy_optional_check0" class="check">개인정보 수집 및 이용 동의 (선택)</label></h4>
+            <a href="/member/agreement/agreement6.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$privacy_optional_desc}</div>
+    </div>
+    <div class="{$display_information|display} agreeArea">
+        <div class="title">
+            <h4>{$form.agree_information_check}<label for="agree_information_check0" class="check">개인정보 제3자 제공 동의(선택)</label></h4>
+            <a href="/member/agreement/agreement3.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$information_desc}</div>
+    </div>
+    <div class="{$display_consignment|display} agreeArea">
+        <div class="title">
+            <h4>{$form.agree_consignment_check}<label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의(선택)</label></h4>
+            <a href="/member/agreement/agreement4.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$consignment_desc}</div>
+    </div>
+
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit bt_typeA" onclick="{$action_func_join}">회원정보수정</a>
+        <!-- <a href="/index.html" class="btnEm">취소</a> -->
+        <span class="gRight">
+            <a href="#none" class="btnNormal sizeS" onclick="{$action_func_del}">회원탈퇴</a>
+        </span>
+    </div>
+    
+    <div class="layerLeave ec-base-layer" id="{$leave_layer_id}">
+       <!--@css(/layout/basic/css/ec-base-layer.css)-->
+        <div class="header">
+            <h3>회원탈퇴</h3>
+        </div>
+        <div class="content">
+            <div class="ec-base-box typeMember">
+                <div class="information">
+                    <strong class="title">혜택 내역</strong>
+                    <div class="description">
+                        <ul>
+                            <li id="{$leave_layer_text_id}">탈퇴시 보유하고 있는 적립금은 모두 삭제됩니다.</li>
+                            <li>현재 적립금 : <strong id="{$leave_layer_mileage}" class="txtEm">0</strong></li>
+                            <li id="{$leave_layer_deposit_id}">현재 예치금 : <strong id="{$leave_layer_deposit}" class="txtEm">0</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h4>회원탈퇴 사유</h4>
+            <div class="ec-base-table typeWrite">
+                <table border="1" summary="">
+                    <caption>회원탈퇴 사유</caption>
+                    <colgroup>
+                        <col style="width:140px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">선택</th>
+                            <td>{$form.leave_reason}</td>
+                        </tr>
+                        <tr id="{$leave_layer_etc_reason_id}">
+                            <th scope="row">기타</th>
+                            <td>{$form.subjective_leave_reason}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="#none" class="btnSubmit" id="{$leave_layer_submit_btn_id}">탈퇴</a>
+            <a href="#none" class="btnNormal" onclick="$('#{$leave_layer_id}').hide();">취소</a>
+        </div>
+        <a href="#none" class="close" onclick="$('#{$leave_layer_id}').hide();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+    </div>
+</div>

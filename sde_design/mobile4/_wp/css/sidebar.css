@@ -1,0 +1,162 @@
+/**
+ * 모바일쇼핑몰 슬라이딩메뉴
+ */
+
+#wrap { overflow:hidden; position:relative; min-height:100%; width:100%; }
+
+/* 확장 */
+html.expand { height:100%; }
+html.expand #container {-webkit-transform: translate(75%, 0); -moz-transform: translate(75%, 0); -ms-transform: translate(75%, 0); -o-transform: translate(75%, 0); transform: translate(75%, 0); }
+html.expand #btnFoldLayout { z-index:405; }
+html.expand #aside { z-index:0; overflow-x:hidden; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	html.expand #aside { z-index:999;}
+}
+html.expand .side_bnr_wrap{z-index: -1;opacity:0;}
+
+/* aside */
+#aside {
+	z-index: -1;visibility: hidden;position: fixed;left: 0px;top: 0px;bottom: 0;overflow: auto;overflow-x: hidden;min-width: 225px;width: 75%;font-size: .9rem;background: #fff;box-sizing: border-box;-webkit-overflow-scrolling: touch;
+}
+
+#aside .line_bx{height:1px;background:#eee;display:block;margin: 1rem 1.5rem;}
+
+#aside .toparea{position:relative;padding: 3rem 1.75rem 0; background:#fff; overflow: hidden;}
+#aside .btnClose{position: absolute;right: 0.7rem;top: 0.4rem;width: 2.5rem;height: 2.5rem;}
+#aside .btnClose > span{ position:absolute; width:20px; height:1px; background:#fff; top: 23px; right: 12px; z-index: 19;}
+#aside .btnClose .line.first, #aside .btnClose .line.second {
+	position: absolute;top: 50%;left: 50%;margin-left: -.7rem;display: block;width: 0;height: .15rem;background: #555;transform: rotate(0deg);
+    transition: transform 0.3s cubic-bezier(0.1,0.2,0.8,0.9),width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.4s;
+    -webkit-transition: transform 0.3s cubic-bezier(0.1,0.2,0.8,0.9),width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.4s;
+    -moz-transition: transform 0.3s cubic-bezier(0.1,0.2,0.8,0.9),width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.4s;
+    -ms-transition: transform 0.3s cubic-bezier(0.1,0.2,0.8,0.9),width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.4s;
+    -o-transition: transform 0.3s cubic-bezier(0.1,0.2,0.8,0.9),width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.4s;
+}
+#aside .btnClose.active .line.first, #aside .btnClose.active .line.second {
+    width: 20px;
+    transition: width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.3s,transform 0.4s cubic-bezier(0.1,0.2,0.8,0.9) 0.8s;
+    -webkit-transition: width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.3s,transform 0.4s cubic-bezier(0.1,0.2,0.8,0.9) 0.8s;
+    -moz-transition: width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.3s,transform 0.4s cubic-bezier(0.1,0.2,0.8,0.9) 0.8s;
+    -ms-transition: width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.3s,transform 0.4s cubic-bezier(0.1,0.2,0.8,0.9) 0.8s;
+    -o-transition: width 0.3s cubic-bezier(0.1,0.2,0.8,0.9) 0.3s,transform 0.4s cubic-bezier(0.1,0.2,0.8,0.9) 0.8s;
+}
+#aside .btnClose.active .line.first {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+#aside .btnClose.active .line.second {
+    transform: rotate(-315deg);
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    -ms-transform: rotate(-315deg);
+    -o-transform: rotate(-315deg);
+}
+
+#aside .btn_login {}
+
+#aside .btn_login ul li {display: inline-block;position: relative;}
+#aside .btn_login ul li:after {content: "|";font-size: 0.8rem;margin: 0 9px;vertical-align:text-top;color:#aaa;}
+#aside .btn_login ul li:last-child:after { content: "";}
+#aside .btn_login ul li a { font-size: 1rem; color: #222;}
+
+/**/
+#aside .user-menu-box{margin: 0 0;}
+#aside .user-menu-box ul{display:flex;}
+#aside .user-menu-box ul li{flex:1;text-align:center;}
+#aside .user-menu-box ul li a{display:block;}
+#aside .user-menu-box ul li img{display:block;margin: 0 auto .5rem; width: 1.7rem;}
+
+/* 컨텐츠 목록 */
+#aside .all-menu-box .tm{margin: 0 1.5rem;}
+#aside .all-menu-box .tm.project{border-top: 1px solid #eee;padding: 1rem 0 ;margin-top:.5rem;}
+#aside .all-menu-box .tm.commu{border-top: 1px solid #eee;padding: 1rem 0 ;margin-top:.5rem;}#aside .all-menu-box .tm > a{color: #222;display: block;padding: .8rem 0  .8rem 0;font-size: 1.2rem;font-weight:600;}
+
+#aside .categoryCont .menuList{font-size: 1rem; }
+#aside .categoryCont .menuList > li > a{
+    border-bottom: 0px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;padding: .5rem 0 .5rem 1rem; box-sizing: border-box; color: #222; display: block; font-size: 1rem;
+}
+#aside .categoryCont .menuList > li:first-child > a{border-top:0px solid #ececec; }
+#aside .categoryCont li a.cateView{word-wrap: break-word;  transition: padding .35s ease; }
+
+
+/* 카테고리 리스트 */
+#aside .categoryList ul { display:none; }
+#aside .categoryList li { position:relative;}
+#aside .categoryList li > a.view{position:absolute;top:0px;right:0px;width:4rem;height:1.5rem;background: url(/web/upload/wp/167417/m__ico_plus_24x24.png) no-repeat right 50% / 1rem;font-size: 0;border:0;}
+#aside .categoryList li > a.view:after{content:none !important;}
+#aside .categoryList li.noChild > a.view{display:none;}
+#aside .categoryList li.selected > a.view{background: url(/web/upload/wp/167417/m__ico_minus_24x24.png) no-repeat right 50% / 1rem;}
+#aside .categoryList > li > ul > li > a.cate {color: #222;font-size: 1rem;font-weight: normal;border-top: 0px solid #ebebeb;padding: .5rem 0 .5rem 1rem;}
+#aside .categoryList > li > ul > li.selected > a.cate {color:#222; }
+#aside .categoryList > li > ul > li.noChild > a.cate{background:none;}
+#aside .categoryList > li > ul > li > ul > li > a.cate {color: #222;font-size: 1rem;border-bottom: 0px solid #ebebeb;padding: .5rem 0 .5rem 2rem;}
+#aside .categoryList > li > ul > li > ul > li:last-child > a.cate{border-bottom:0;}
+#aside .categoryList > li > ul > li > ul > li.selected > a.cate { color:#222; }
+#aside .categoryList > li > ul > li > ul > li > ul > li a.cate {color: #222;font-size: 1rem;border-bottom: 0px solid #ebebeb;padding: .5rem 0 .5rem 3rem;}
+#aside .categoryList li > a.cate:after,
+#aside .categoryList a.cateView:after{
+	content: "";
+    height: 100%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -15px;
+	-webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
+	margin-left: 3px;
+}
+#aside .categoryList > li.selected a.cateView:after,#aside .categoryList li.selected > a.cate:after{
+	content: "";
+    height: 100%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #ff5880;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-top: -15px;
+}
+#aside .categoryList li a.cate { display:block; word-wrap:break-word; }
+#aside .categoryList li.selected > a.cateView {color:#222;}
+#aside .categoryList li.noChild > a.view { display:none; }
+
+/* 즐겨찾기 아이콘 */
+#aside .xans-layout-category li .icoBookmark, #aside .bookmarkCategory li .icoBookmark { display:none; }
+#aside .xans-layout-category li .icoBookmark.selected, #aside .bookmarkCategory li .icoBookmark.selected { display:none; }
+
+
+/* 배송국가 */
+#aside .multishop .xans-layout-multishoplistmultioptioncountry li a { padding:9px 10px 11px 17px; font-size:13px; }
+
+/* 멀티쇼핑몰 */
+#aside .xans-multishop-listitem{overflow:hidden;margin:2rem 1.5rem;}
+#aside .xans-multishop-listitem li {padding: 0.4rem 0.4rem;}
+#aside .xans-multishop-listitem li:first-child { border-top:0; }
+#aside .xans-multishop-listitem li a { display:block; padding: 0 7px 0 0;word-wrap:break-word; }
+#aside .xans-multishop-listitem li a .name { margin:0 0 0 5px; font-size:13px; vertical-align:middle;  }
+
+
+
+
+
+/* conatiner */
+#container {
+    z-index:100; position:relative; overflow:hidden; margin-top:0; margin-left:0; background-color:#fff;
+    -webkit-transition:300ms; -moz-transition:300ms; -ms-transition:300ms; -o-transition:300ms; transition:300ms;
+    -webkit-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
+}
+
+/* btnFoldLayout */
+#btnFoldLayout {
+    display:none; position:absolute; left:100%; top:0; right:0; bottom:0; width:100%; height:100%; opacity:0;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0); and -webkit-focus-ring-color:rgba(0, 0, 0, 0);
+}

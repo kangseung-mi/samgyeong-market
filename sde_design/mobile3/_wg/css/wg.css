@@ -1,0 +1,378 @@
+
+    /*************************************************************************************************
+
+        디자인웹굿 추가 CSS 
+
+    *************************************************************************************************/
+
+
+    body#main { background:#fff; }
+
+
+
+	/** 컬러 **/
+
+	/* 배경 */
+	.mColor,
+	.ec-base-product.cp574 .ing .state,
+	.btn span { background:#4d7a48/*배경색*/!important; color:#fff/*글자색*/!important; }
+	/* 텍스트 */
+	.mTxt { color:#51437f; }
+	/* 할인율 */
+	.sColor { background:#333/*배경색*/; color:#fff/*글자색*/; }
+	/* 쿠폰 */
+    .xans-coupon-productdetailajax ul li { background-image:url('/_wg/img/coupon_bg.png')/*쿠폰이미지 280x145*/; background-color:#4d7a48 /*쿠폰배경색*/; }
+
+
+
+    /* XEICON */
+    body i { position:relative; top:1px; text-decoration:none !important; }
+    body i:hover { text-decoration:none !important; }
+
+	/** 반응형 전체구조(PC버젼기준) **/
+	.-frame { position:relative; width:100%; max-width:1260px; min-width:320px; margin:0 auto; word-wrap:break-word; }
+	.-frame:after { content:""; display:block; clear:both; *zoom:1; }
+
+    .displaynone { display:none; }
+    .divClear { position:relative; display:block; clear:both; }
+    .divClear:after { content:""; display:block; clear:both; *zoom:1; }
+    .d_clear { clear:both; }
+
+	/* 더미 이미지 (슬라이드배너의 높이값을 유지하도록 한다) */
+	.section_dummy { width:100%; }
+
+	/** 이미지 효과 **/
+	/* 모션 */
+    .-mov, .-mov img {
+        -khtml-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .-mov:hover, .-mov:hover img {
+        -khtml-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+	/* 스케일 */
+	.-scl img { 
+        -khtml-transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -o-transform: scale(1,1);
+        transform:scale(1,1);
+	}
+	.-scl:hover img { 
+        -khtml-transform: scale(1.05,1.05);
+        -moz-transform: scale(1.05,1.05);
+        -ms-transform: scale(1.05,1.05);
+        -o-transform: scale(1.05,1.05);
+        transform:scale(1.05,1.05);
+	}
+
+	/* 투명도 */
+	.-opt, .-opt img {
+        filter: alpha(opacity=100);
+        -khtml-opacity: 1;
+        -moz-opacity: 1;
+        -ms-opacity: 1;
+        -o-opacity: 1;
+        opacity: 1;
+    }
+	.-opt:hover, .-opt:hover img {
+        filter: alpha(opacity=80);
+        -khtml-opacity: .8;
+        -moz-opacity: .8;
+        -ms-opacity: .8;
+        -o-opacity: .8;
+        opacity: .8;
+    }
+
+
+	/* 스프링 X축 */
+    .-spring_x {
+        transition:all .3s ease; -webkit-transition:all .3s ease;
+        animation-name:spring_x;
+        animation-duration:3.5s;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease;
+        animation-direction:normal;
+        -webkit-animation-name:spring_x;
+        -webkit-animation-duration:3.5s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:ease;
+        -webkit-animation-direction:normal;
+    }
+    @keyframes spring_x {
+        0% { transform:translate(0px,0px) }
+        80% { transform:translate(0px,0px) }
+        85% { transform:translate(4px,0px) }
+        90% { transform:translate(0px,0px) }
+        95% { transform:translate(4px,0px) }
+        100% { transform:translate(0px,0px) }
+    }
+    @-webkit-keyframes spring_x {
+        0% { transform:translate(0px,0px) }
+        80% { transform:translate(0px,0px) }
+        85% { transform:translate(0px,4px) }
+        90% { transform:translate(0px,0px) }
+        95% { transform:translate(0px,4px) }
+        100% { transform:translate(0px,0px) }
+    }
+
+	/* 스프링 Y축 */
+    .-spring_y {
+        transition:all .3s ease; -webkit-transition:all .3s ease;
+        animation-name:spring_y;
+        animation-duration:3.5s;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease;
+        animation-direction:normal;
+        -webkit-animation-name:spring_y;
+        -webkit-animation-duration:3.5s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:ease;
+        -webkit-animation-direction:normal;
+    }
+    @keyframes spring_y {
+        0% { transform:translate(0px,0px) }
+        80% { transform:translate(0px,0px) }
+        85% { transform:translate(0px,4px) }
+        90% { transform:translate(0px,0px) }
+        95% { transform:translate(0px,4px) }
+        100% { transform:translate(0px,0px) }
+    }
+    @-webkit-keyframes spring_y {
+        0% { transform:translate(0px,0px) }
+        80% { transform:translate(0px,0px) }
+        85% { transform:translate(0px,4px) }
+        90% { transform:translate(0px,0px) }
+        95% { transform:translate(0px,4px) }
+        100% { transform:translate(0px,0px) }
+    }
+
+
+
+    .-change { position:relative; width:25px; height:27px; }
+    .-change img { left:0; }
+    .-change i { left:50%; width:18px; margin-left:-8px; line-height:25px; font-size:18px; }
+
+    /* 1번 오브젝트 */
+    .-change img:nth-child(1),
+    .-change i:nth-child(1) { position:absolute; top:0px; visibility:visible; filter:alpha(opacity=100); opacity:1.0; transition:all .3s ease; }
+    .-change:hover img:nth-child(1),
+    .-change:hover i:nth-child(1) { top:5px; visibility:hidden; filter:alpha(opacity=0); opacity:0; }
+
+    /* 2번 오브젝트 */
+    .-change img:nth-child(2),
+    .-change i:nth-child(2) { position:absolute; top:-5px; visibility:hidden; filter:alpha(opacity=0); opacity:0; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .-change:hover img:nth-child(2),
+    .-change:hover i:nth-child(2) { top:0; visibility:visible; filter:alpha(opacity=100); opacity:1.0; }
+
+
+
+/** 모달팝업 (인트로팝업 등) **/
+	.b-modal { -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); } /* 배경 흐림효과 */
+
+
+
+/** 캡션 **/
+    .-caption { position:absolute; z-index:100; left:50%; bottom:0; width:0; height:0; }
+    .-caption p { display:block; position:absolute; top:0; height:25px; line-height:25px; padding:0 10px; transform:translateX(-50%); background:rgba(255,255,255,.9); border:1px solid rgba(0,0,0,.1); border-radius:5px; box-shadow:0 1px 3px rgba(0,0,0,0.1); font-size:11px; color:#333; font-weight:normal; white-space:nowrap; visibility:hidden; filter:alpha(opacity=0); opacity:0; transition:all .3s ease; }
+	td:hover .-caption p,
+	li:hover .-caption p,
+	btn:hover .-caption p,
+    a:hover .-caption p { visibility:visible; filter:alpha(opacity=100); opacity:1.0; }
+
+
+
+/** 닫기버튼 캡션 **/
+	.-cap { border-radius:0; }
+	.-cap:after { content:'오늘하루 열지않음'; position:absolute; left:-109px; top:0; width:104px; height:27px; line-height:27px; padding:0 0 0 10px; background:rgba(0,0,0,.8); font-size:12px; color:#fff; opacity:0; visibility:hidden; transition:all .3s ease; }
+    .-cap:hover:after { left:-114px; opacity:1; visibility:visible; }
+
+	.-cap2 { border-radius:0; }
+	.-cap2:after { content:'닫기'; position:absolute; left:-45px; top:0; width:40px; height:27px; line-height:27px; padding:0 0 0 10px; background:rgba(0,0,0,.8); font-size:12px; color:#fff; opacity:0; visibility:hidden; transition:all .3s ease; }
+    .-cap2:hover:after { left:-50px; opacity:1; visibility:visible; }
+
+
+
+/** 버튼 흑백변경 **/
+	.ec-base-button img,
+	.button img { filter:url(filters.svg#grayscale)/* Firefox */; filter:gray/* IE(6~9) */; filter:grayscale(100%); -webkit-filter:grayscale(1)/* Webkit */; }
+
+
+
+/** 할인율 아이콘 **/
+	.dc_rate { display:none; position:absolute; z-index:5; top:-3px; right:-3px; box-shadow:-1px 1px 2px rgba(0,0,0,0.2); text-align:center; vertical-align:middle; font-family:'Roboto'; color:#fff; font-weight:bold; letter-spacing:-0.02em; cursor:pointer; }
+	.dc_rate .sale { display:none; }
+    .dc_rate.on { display:block; }
+	.dc_rate i { margin-left:1px; font-style:normal; font-weight:normal; }
+
+    /* 효과 */
+    .item:hover .dc_rate { 
+        animation-name:sale_rate;
+        animation-duration:.3s;
+        animation-timing-function:ease;
+        animation-direction:normal;
+        -webkit-animation-name:sale_rate;
+        -webkit-animation-duration:.3s;
+        -webkit-animation-timing-function:ease;
+        -webkit-animation-direction:normal;
+    }
+    @keyframes sale_rate {
+        0% { transform:translate(0px,0px) }
+        50% { transform:translate(0,4px) }
+        100% { transform:translate(0px,0px) }
+    }
+
+    /* 기본사이즈 */
+    .dc_rate.md { width:45px; height:45px; line-height:45px; font-size:18px; }
+    .dc_rate.md i { font-size:14px; }
+
+    /* 작은사이즈 */
+    .dc_rate.sm { width:35px; height:35px; line-height:35px; font-size:14px; }
+    .dc_rate.sm i { font-size:13px; }
+
+
+
+/** 좋아요 버튼 **/
+    .-likeButton { position:absolute; z-index:10; bottom:10px; right:-9px; max-width:100px; height:16px; padding:8px 0 0; background:url('/_wg/img/like_shadow.gif') no-repeat right top; visibility:hidden; filter:alpha(opacity=0); opacity:0; }
+    .item:hover .-likeButton { bottom:15px; visibility:visible; filter:alpha(opacity=100); opacity:1.0; }
+    .-likeButton:hover { color:#333; }
+    .-likeButton button { padding:2px 5px; background:#fff; border:1px solid #f4f4f4; color:inherit; text-align:left; box-shadow:-2px 1px 2px rgba(0,0,0,0.2); line-height:16px; }
+    .-likeButton button img { display:inline-block !important; }
+
+    .-likeButton button .likePrdIcon { content:url('/_wg/img/_btn/list_like_off.png'); width:14px!important; margin:-2px 3px 0 0; }
+    .-likeButton.selected button .likePrdIcon { content:url('/_wg/img/_btn/list_like_on.png'); }
+    .-likeButton button .likePrdCount { font-weight:normal; color:inherit; font-size:10px; }
+
+    .-likeButton.selected { bottom:20px!important; right:-9px!important; visibility:visible; filter:alpha(opacity=100); opacity:1.0; }
+    .-likeButton.selected button { background:#333; border:1px solid #222; color:#fff; }
+    .-likeButton.selected button:before { content:'LIKE'; position:relative; display:inline-block; margin:0 4px 0 0; font-size:10px; }
+
+
+
+/** 팝업텍스트 **/
+    .-pTxt { display:block; position:absolute; z-index:1; top:/*각디자인에서 설정 */; left:50px; padding:5px 10px; background:#333; border-radius:3px; font-size:11px; color:#fff; letter-spacing:0; white-space:nowrap; filter:alpha(opacity=0); opacity:0; transition:all .3s ease; }
+    li:hover .-pTxt { top:/*각디자인에서 설정 */; filter:alpha(opacity=100); opacity:1; }
+
+
+
+/** 좌측하단팝업 위치 **/
+	.popup_wrap { position:fixed; z-index:100; left:0; bottom:10px; }
+	.popup_inner { display:table-cell; position:relative; z-index:100; width:70px; height:170px; vertical-align:bottom; font-size:0; line-height:0; }
+
+
+
+/** 추가수정 **/
+
+	/* 로딩시 보이지 않는 상황 정리 */
+	.owl-carousel { display:block !important; }
+    .owl-carousel.ul > li { display:none; }
+	.owl-carousel.ul > li:first-child { display:block; }
+
+	/** 슬라이드배너 코어 **/
+    .slide .owl-stage { position:relative; -ms-touch-action:pan-Y; touch-action:manipulation; -moz-backface-visibility:hidden; }
+	.slide .owl-stage:after { content: "."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+	.slide .owl-stage-outer { position:relative; overflow:hidden; -webkit-transform:translate3d(0px, 0px, 0px); }
+	.slide .owl-wrapper, .slide .owl-item { -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; -webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); }
+	.slide .owl-item { position: relative; min-height:1px; float:left; -webkit-backface-visibility:hidden; -webkit-tap-highlight-color:transparent; -webkit-touch-callout:none; }
+	.slide .owl-item img { display:block; width:100%; }
+
+	.slide .owl-nav.disabled, .slide .owl-dots.disabled { display:none; }
+	.slide .owl-nav .owl-prev, .slide .owl-nav .owl-next, .slide .owl-dot { cursor:pointer; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
+	.slide .owl-nav button.owl-prev, .slide .owl-nav button.owl-next, .slide button.owl-dot { background:none; color:inherit; border:none; padding:0 !important; font:inherit; }
+	.slide.owl-loaded { display: block; }
+	.slide.owl-loading { display:block; opacity:0; }
+	.slide.owl-hidden { opacity:0; }
+	.slide.owl-refresh .owl-item { visibility:hidden; }
+	.slide.owl-drag .owl-item { -ms-touch-action:pan-y; touch-action:pan-y; -webkit-user-select:none; -moz-user-select:none;-ms-user-select:none; user-select:none; }
+	.slide.owl-grab { cursor:move; cursor:grab; }
+	.slide.owl-rtl { direction:rtl; }
+	.slide.owl-rtl .owl-item { float:right; }
+
+    /* Owl Carousel - Auto Height Plugin */
+    .owl-height { transition:height 300ms ease; }
+
+    /* Owl Carousel - Lazy Load Plugin */
+    .slide .owl-item { }
+	.slide .owl-item .owl-lazy { opacity: 0; transition:opacity 400ms ease; }
+	.slide .owl-item .owl-lazy[src^=""], .slide .owl-item .owl-lazy:not([src]) { max-height: 0; }
+	.slide .owl-item img.owl-lazy { transform-style:preserve-3d; }
+
+    /* Owl Carousel - Video Plugin */
+    .slide .owl-video-wrapper { position:relative; height:100%; background:#1e1e1e; }
+    .slide .owl-video-play-icon { position:absolute; left:50%; top:50%; width:80px; height:80px; margin-left:-40px; margin-top:-40px; background:url("/_wg/img/owl.video.play.png") no-repeat; cursor:pointer; z-index:1; -webkit-backface-visibility:hidden; transition:transform 100ms ease; }
+    .slide .owl-video-play-icon:hover { -ms-transform:scale(1.3, 1.3); transform:scale(1.3, 1.3); }
+    .slide .owl-video-playing .owl-video-tn, .slide .owl-video-playing .owl-video-play-icon { display:none; }
+    .slide .owl-video-tn { opacity:0; height:100%; background-position:center center; background-repeat:no-repeat; background-size:contain; transition:opacity 400ms ease; }
+    .slide .owl-video-frame { position:relative; z-index:1; width:100%; height:100%; }
+
+
+
+    /** 관심상품 하트아이콘 **/
+    .wishHeart { position:relative; font-size:0; }
+    .wishHeart img { }
+    
+    /* 두근두근 디자인 */
+    .wishHeart .btn_off { filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0;
+        transition:all .3s ease; -webkit-transition:all .3s ease;
+        animation-name:heart;
+        animation-duration:4s;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease-in-out;
+        animation-direction:normal;
+        -webkit-animation-name:heart;
+        -webkit-animation-duration:4s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:ease-in-out;
+        -webkit-animation-direction:normal;
+    }
+    @keyframes heart {
+        0% { transform:scale(1,1) }
+        5% { transform:scale(1.18,1.18) }
+        10% { transform:scale(1,1) }
+        15% { transform:scale(1.18,1.18) }
+        20% { transform:scale(1,1) }
+        100% { transform:scale(1,1) }
+    }
+    @-webkit-keyframes heart {
+        0% { transform:scale(1,1) }
+        5% { transform:scale(1.18,1.18) }
+        10% { transform:scale(1,1) }
+        15% { transform:scale(1.18,1.18) }
+        20% { transform:scale(1,1) }
+        100% { transform:scale(1,1) }
+    }
+    .wishHeart:hover .btn_off { filter:alpha(opacity=0); opacity:0; -webkit-opacity:0; transition-delay:.5s; -webkit-transition-delay:.5s; }
+    
+    /* 쿵쾅쿵쾅 디자인 */
+    .wishHeart .btn_on { position:absolute; left:0; top:0; filter:alpha(opacity=0); opacity:0; -webkit-opacity:0;
+        transition:all .3s ease; -webkit-transition:all .3s ease;
+        animation-name:heart_on;
+        animation-duration:.3s;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease-in-out;
+        animation-direction:normal;
+        -webkit-animation-name:heart_on;
+        -webkit-animation-duration:.3s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:ease-in-out;
+        -webkit-animation-direction:normal;
+    }
+    @keyframes heart_on {
+        0% { transform:scale(1,1) }
+        50% { transform:scale(1.22,1.22) }
+        100% { transform:scale(1,1) }
+    }
+    @-webkit-keyframes heart_on {
+        0% { transform:scale(1,1) }
+        50% { transform:scale(1.22,1.22) }
+        100% { transform:scale(1,1) }
+    }
+    .wishHeart:hover .btn_on { filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0; }

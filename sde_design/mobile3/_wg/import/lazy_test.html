@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+    
+<div style="height:1000px;"></div>
+    
+<img class="lazy" data-original="http://placehold.it/500x500/fdd/">
+    
+<div style="height:300px;"></div>
+    
+<img class="lazy" data-original="http://placehold.it/500x500/dfd/">
+    
+<div style="height:300px;"></div>
+    
+<img class="lazy" data-original="http://placehold.it/500x500/ddd/">
+    
+
+    
+<!-- jquery CDN-->
+<script src="//code.jquery.com/jquery.min.js"></script>
+<!-- lazyload 1.9.1 CDN -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+ 
+<script>
+$("img.lazy").lazyload({
+    threshold : 300,        //뷰포트에 보이기 300px 전에 미리 로딩
+    effect : "fadeIn"       //효과
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+<!-- 
+$board_no=4
+$point=show
+$author_disp=name
+-->
+<div class="review_btn">
+  <div class="review_prev"><span>PREV</span> PHOTO REVIEW</div>
+  <div class="review_next"><span>NEXT</span> PHOTO REVIEW</div>
+</div>
+<div id="review_slide">
+  <div class="photoreview_list lister_wrap">
+    <div class="photoreview_img photoreview_click">
+      <a href="#none" rel="{$no}"><span>{$rsub}</span><img src="{$rhimg}" alt="" /></a>
+    </div>
+    <div class="photoreview_sub">
+      <div class="review_item">
+        <a href="/surl/P/{$pno}" target="_blank">{$pname|striptag}</a>
+      </div>
+      <div class="point is_rating">
+        <img src="/_wg/img/ico_point_00{$rpoint}.png" alt="{$rpoint}점" />
+      </div>
+      <div class="photoreview_click">
+        <span class="item_cont overflow_03">{$rcont}</span>
+      </div>
+      <div class="writer">
+        <div class="writer_none">
+          {$rwriter}
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="photoreview_list lister_wrap">
+    <div class="photoreview_img photoreview_click">
+      <a href="#none" rel="{$no}"><span>{$rsub}</span><img src="{$rhimg}" alt="" /></a>
+    </div>
+    <div class="photoreview_sub">
+      <div class="review_item">
+        <a href="/surl/P/{$pno}" target="_blank">{$pname|striptag}</a>
+      </div>
+      <div class="point is_rating">
+        <img src="/_wg/img/ico_point_00{$rpoint}.png" alt="{$rpoint}점" />
+      </div>
+      <div class="photoreview_click">
+        <span class="item_cont overflow_03">{$rcont}</span>
+      </div>
+      <div class="writer">
+        <div class="writer_none">
+          {$rwriter}
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--@import(/_wg/photoreview/detail.html)-->

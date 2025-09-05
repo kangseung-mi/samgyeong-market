@@ -1,0 +1,77 @@
+
+	/* 상단이미지 */
+    .page_top { min-height:30px; width:100%; max-width:1260px; margin:-10px 0 10px; }
+
+	/* 분류메뉴 */
+	.subMenu { display:block; position:relative; z-index:15; margin:0 0 100px; font-size:0; line-height:0; letter-spacing:-4px; text-align:center; }
+	.subMenu:after { content:""; display:block; clear:both; *zoom:1; }
+    .subMenu li { position:relative; display:inline-block; *display:inline; *zoom:1; width:18.5%; margin:0 .5% 10px; padding:0; border:1px solid #ddd; letter-spacing:-0.03em; }
+    .subMenu a { display:block; height:40px; line-height:40px; color:#333; font-size:15px; letter-spacing:0; text-align:left; text-indent:15px; transition:background .3s ease; }
+    .subMenu a:hover { text-decoration:none; color:#000; }
+    .subMenu > li > a:hover,
+    .subMenu > li.on { background:rgba(0,0,0,.05); font-weight:bold; }
+    /* 스마트폰 세로 */
+    @media all and (max-width:575px) {
+        .subMenu { margin:0 2% 80px; text-align:left; }
+    	.subMenu li { width:47%; margin:0 1% 10px; }
+    }
+	/* 스마트폰 가로 + 테블릿 세로 */
+	@media all and (min-width:576px) and (max-width:960px) {
+        .subMenu { margin:0 2% 80px; text-align:left; }
+    	.subMenu li { width:30%; margin:0 1% 10px; }
+	}
+
+
+
+    .page_info { display:block; width:100%; max-width:1260px; margin:0 auto; overflow:hidden; }
+
+	.page_info h3 { width:77%; line-height:35px; margin:0 auto 50px; text-align:center; font-size:28px; font-weight:bold; color:#111; letter-spacing:-0.08em; word-break:keep-all; }
+	.page_info h4 { width:77%; line-height:27px; margin:0 auto 50px; text-align:center; font-size:18px; font-weight:normal; color:#999; letter-spacing:-0.08em; word-break:keep-all; }
+
+    .page_info .info_img { width:100%; margin:0 auto 30px; text-align:center; }
+    .page_info .info_img img { max-width:100%; }
+
+	.page_info .txt { display:block; width:77%; line-height:22px; margin:0 auto 70px; text-align:left; font-size:14px; color:#333; word-break:keep-all; }
+
+	.page_info .signature { width:100%; text-align:right; }
+	.page_info .signature s1 { display:block; margin:0 0 5px; font-size:15px; }
+	.page_info .signature s2 { display:block; margin:0 0 20px; font-size:18px; font-weight:bold; }
+
+	.page_info iframe { width:100%; height:450px; margin:0 auto 30px; border:none; }
+
+	.page_info .section { text-align:left; line-height:30px; margin:0 0 40px; }
+	.page_info .section ul { padding:15px 0; border-bottom:1px solid #eee; }
+	.page_info .section li:first-child { margin:0 0 5px; font-size:16px; font-weight:bold; color:#333; }
+	.page_info .section li { display:block; line-height:20px; padding:0 0 0 10px; vertical-align:top; font-size:13px; color:#777; }
+
+
+
+
+
+	/* 연혁 */
+    .history .content { position:relative; }
+    .history .content > li p { margin:0 0 10px; font-family:'Oswald'; font-size:25px; }
+    .history .content > li { width:100%; height:100%; line-height:25px; margin:0 0 50px; font-size:13px; }
+
+
+
+
+
+	/* 특허/인증 */
+    .list_01 { position:relative; width:100%; max-width:1260px; margin:0 auto 40px/*하단여백*/; }
+    .list_01:after { content:""; display:block; *zoom:1; clear:both; }
+    .list_01 > ul { }
+    .list_01 > ul > li:nth-child(1) { margin:0; }
+    .list_01 > ul > li { float:left; width:23.81%; margin:0 0 30px 1.5866%; }
+    .list_01 > ul > li a { display:block; margin:0 0 10px; overflow:hidden; }
+    .list_01 > ul > li img { width:100%; }
+    .list_01 > ul > li p { line-height:20px; font-size:14px; }
+
+
+    /* 스마트폰 세로 */
+    @media all and (max-width:575px) {
+        .list_01 > ul > li:first-child { margin:0 1% 30px; }
+        .list_01 > ul > li { width:48%; margin:0 1% 30px; }
+    }
+
+

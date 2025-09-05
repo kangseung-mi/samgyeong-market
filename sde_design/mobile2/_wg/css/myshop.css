@@ -1,0 +1,105 @@
+
+
+	.xans-myshop-main { border:1px solid #ddd; }
+    .xans-myshop-main li a { font-size:14px; }
+    .xans-myshop-main li .count { color:#1e1e1e !important; }
+
+	/* 스마트폰 세로 + 테블릿 세로 */
+	@media all and (max-width:960px) {
+		.myshopMain { margin:0 2%; }
+	}
+
+	/* 회원등급 */
+    .xans-myshop-asyncbenefit { padding:10px; margin:0 0 20px; border:1px solid #ddd; border-radius:13px; }
+    .xans-myshop-asyncbenefit .info { min-height:90px; }
+    .xans-myshop-asyncbenefit .info .memberInfo { position:relative; padding:12px 0 12px 100px; }
+    .xans-myshop-asyncbenefit .info .memberInfo > span { position:absolute; left:10px; top:10px; }
+    .xans-myshop-asyncbenefit .info .memberInfo > span img { width:80px; }
+    .xans-myshop-asyncbenefit .info .memberInfo ul li { line-height:22px; background:none !important; font-size:15px; color:#111; }
+    .xans-myshop-asyncbenefit .info .memberInfo .name { font-weight:bold; }
+    .xans-myshop-asyncbenefit .info .memberInfo a.modify { position:absolute; top:14px; right:14px; width:59px; height:25px; text-align:center; font-size:15px; line-height:24px; border:1px solid #d5d5d5; border-radius:3px; background:#f1f1f1; }
+    .xans-myshop-asyncbenefit .info .help.tdisplaynonedisplaynone { display:none; }
+
+    .xans-myshop-asyncbenefit .info .ec-base-help { position:relative; padding:0 0 0 100px; background:none; }
+    .xans-myshop-asyncbenefit .info .ec-base-help p { background:none; font-size:13px; }
+
+    .xans-myshop-asyncbenefit .invite { margin:7px 0; padding:14px; border:1px solid #d5d5d5; }
+    .xans-myshop-asyncbenefit .invite h3 { margin:0 0 14px; }
+    .xans-myshop-asyncbenefit .invite .inputBox { position:relative; box-sizing:content-box; padding:0 77px 0 0; margin:0 0 14px; }
+    .xans-myshop-asyncbenefit .invite .inputBox input { width:100%; }
+    .xans-myshop-asyncbenefit .invite a { position:absolute; top:0; right:0; display:block; float:right; }
+    .xans-myshop-asyncbenefit .invite .help { font-size:11px; }
+
+
+
+
+	/* 나의 쇼핑정보 */
+    .displaynone + .xans-myshop-asyncbankbook { border-top:0; }
+
+    .xans-myshop-asyncbankbook { padding:10px 20px; margin:0 0 20px; border:1px solid #ddd; border-radius:13px; }
+    .xans-myshop-asyncbankbook:after { content:""; display:block; *zoom:1; clear:both; }
+    .xans-myshop-asyncbankbook > .title { display:block; margin:10px 0 20px; padding:0 0 10px; border-bottom:1px solid #eee; background:#fff; }
+    .xans-myshop-asyncbankbook > .title h3 { font-size:17px; color:#1b1b1b; }
+    .xans-myshop-asyncbankbook ul { padding:0 0 10px; overflow:hidden; text-align:center; }
+    .xans-myshop-asyncbankbook li { display:inline-block; width:16%; padding:10px 0; margin:0 0 0 -1px; border-left:1px dotted #ccc; text-align:center; vertical-align:top; }
+    .xans-myshop-asyncbankbook li a { display:block; }
+    .xans-myshop-asyncbankbook li:first-child { border-left:0; }
+    .xans-myshop-asyncbankbook li strong { display:block; margin:0 0 10px; font-weight:normal; font-size:13px; color:#555; }
+    .xans-myshop-asyncbankbook .count { display:block; font-weight:bold; font-size:15px; color:#1e1e1e; }
+	/* 스마트폰 세로 + 테블릿 세로 */
+	@media all and (max-width:960px) {
+		.myshopMain { margin:0 2%; }
+		.xans-myshop-asyncbankbook li:first-child { border-top:0; }
+		.xans-myshop-asyncbankbook li { display:block; width:auto; height:30px; padding:10px 0 0 10px; border-left:0; border-top:1px dotted #ccc; text-align:left; }
+        .xans-myshop-asyncbankbook li strong { display:inline-block; width:100px; }
+    	.xans-myshop-asyncbankbook .count { display:inline-block; height:auto; }
+	}
+
+
+
+
+
+	/* 나의 주문처리 현황 */
+    .xans-myshop-orderstate { padding:10px 20px; margin:0 0 20px; border:1px solid #ddd; border-radius:13px; }
+    .xans-myshop-orderstate > .title { display:block; margin:10px 0 20px; padding:0 0 10px; border-bottom:1px solid #eee; background:#fff; }
+    .xans-myshop-orderstate > .title h3 { font-size:17px; color:#1b1b1b; }
+    .xans-myshop-orderstate .desc { padding:0 0 0 4px; font-weight:normal; font-size:12px; color:#888; }
+    .xans-myshop-orderstate .desc em { color:#1e1e1e; font-weight:bold; font-style:normal; }
+
+    .xans-myshop-orderstate .order { overflow:hidden; margin:0 0 20px; }
+    .xans-myshop-orderstate .order li { display:inline-block; width:24%; padding:10px 0; margin:0 0 0 -1px; border-left:1px dotted #ccc; text-align:center; vertical-align:top; }
+    .xans-myshop-orderstate .order li a { display:block; }
+    .xans-myshop-orderstate .order li:first-child { border-left:0; }
+    .xans-myshop-orderstate .order li strong { display:block; margin:0 0 10px; font-weight:normal; font-size:13px; color:#555; }
+    .xans-myshop-orderstate .order .count { font-weight:bold; font-size:18px; color:#1e1e1e; }
+
+    .xans-myshop-orderstate .cs { overflow:hidden; margin:0 0 10px; padding:20px 0 0; border-top:1px solid #eee; }
+    .xans-myshop-orderstate .cs li { overflow:hidden; float:left; width:33.3%; margin:0 0 0 -1px; border-left:1px dotted #ccc; font-size:13px; }
+    .xans-myshop-orderstate .cs li a { display:block; text-align:center; }
+    .xans-myshop-orderstate .cs strong { margin:0 0 10px; font-weight:normal; font-size:13px; color:#555; }
+    .xans-myshop-orderstate .cs .count { font-weight:bold; font-size:18px; color:#1e1e1e; }
+    .xans-myshop-orderstate .cs .icoDot { display:inline-block; width:2px; height:2px; margin:9px 3px 0 0; background:#111; vertical-align:top; }
+
+
+
+
+
+	/* 마이페이지 메뉴 */
+    .xans-myshop-main { padding:10px 20px; margin:0 0 20px; border:1px solid #ddd; border-radius:13px; }
+    .xans-myshop-main li { border-top:1px solid #eee; background-size:20px; background-repeat:no-repeat; background-position:12px; }
+    .xans-myshop-main li:first-child { border-top:0; }
+    .xans-myshop-main li a { display:block; position:relative; padding:14px 14px 14px 48px; }
+    .xans-myshop-main li a:after { display:block; position:absolute; top:15px; right:12px; content:""; width:15px; height:15px; background:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_arrow_right.png") no-repeat; background-size:15px 15px; }
+    .xans-myshop-main li .count { color:#1e1e1e; }
+
+    .xans-myshop-main li.order { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_order.png"); }
+    .xans-myshop-main li.modify { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_modify.png"); }
+    .xans-myshop-main li.wishlist { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_wishlist.png"); }
+    .xans-myshop-main li.mileage { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_mileage.png"); }
+    .xans-myshop-main li.deposits { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_deposits.png"); }
+    .xans-myshop-main li.consult { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_consult.png"); }
+    .xans-myshop-main li.coupon { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_coupon.png"); }
+    .xans-myshop-main li.board { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_board.png"); }
+    .xans-myshop-main li.address { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_address.png"); }
+    .xans-myshop-main li.likeit { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_likeit.png"); }
+    .xans-myshop-main li.regularDelivery { background-image:url("//img.echosting.cafe24.com/skin/mobile/myshop/ico_regular_delivery.png"); }

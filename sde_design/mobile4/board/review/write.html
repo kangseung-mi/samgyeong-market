@@ -1,0 +1,128 @@
+<!--@layout(/layout/basic/review.html)-->
+<!--@js(/_wp/js/iframeResizer.contentWindow.min.js)-->
+<!--@js(js/promise.polyfill.js)-->
+<!--@js(js/write.js)-->
+<!--@css(/board/review/css/review.write.css)-->
+
+<div module="board_writePackage_4">
+    <div module="board_write_4">
+        <!--
+            $write_success_url = /board/review/list.html
+            $product_select_url = /product/search_board_list.html
+            $order_select_url = /order/search_board_list.html
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+
+        <!-- 상품정보선택 -->
+        <div class="ec-base-box typeProduct {$display_product|display} displaynone">
+            <p class="thumbnail"><a href="{$link_product_detail}"><img id="{$product_img_id}" src="{$url_product_img}" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" alt="" /></a></p>
+            <div class="information">
+                {$product_icon}
+                <h3><a href="/product/detail.html{$param_product}" id="{$product_name_link_id}">{$product_name}</a></h3>
+                <p class="price">{$product_price} {$product_tax_type_text}</p>
+                <p class="button">
+                    <span id="{$product_view_id}" class="{$display_product_info|display}"><a href="/product/detail.html{$param_product}" id="{$product_link_id}" target="_blank" ><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/btn_prd_detail.gif" alt="상품상세보기" /></a></span>
+                    <span class="{$display_product_select|display}"><a href="javascript:;" onclick="{$action_product_select}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/btn_prd_select.gif" alt="상품정보선택" /></a></span>
+                    <span class="{$display_order_select|display}"><a href="javascript:;" onclick="{$action_order_select}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/board/btn_prd_order.gif" alt="주문상품선택" /></a></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="ec-base-table typeWrite displaynone">
+            <table border="1" summary="">
+            <caption>글쓰기 폼</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$form.board_category} <input id="subject" name="subject" fw-filter="isFill" fw-label="제목" fw-msg="" class="inputTypeText" placeholder="" maxlength="125" value="" type="hidden"> {$form.notice} {$form.is_post}</td>
+                </tr>
+                <tr class="{$config.is_login|display}">
+                    <th scope="row">작성자</th>
+                    <td>{$form.writer}</td>
+                </tr>
+                <tr class="{$config.use_write_email|display}">
+                    <th scope="row">이메일</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="clear">
+						{$form.content}
+                    </td>
+                </tr>
+                 <tr class="ucc">
+                    <th scope="row">UCC URL</th>
+                    <td>{$form.ucc}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr class="{$config.use_password|display}">
+                    <th scope="row">비밀번호</th>
+                    <td>{$form.password}</td>
+                </tr>
+                <tr class="{$config.use_secret|display}">
+                    <th scope="row">비밀글설정</th>
+                    <td>{$form.secure}</td>
+                </tr>
+                <tr class="captcha {$config.use_captcha_write|display}">
+                    <th scope="row">자동등록방지<br />보안문자</th>
+                    <td>
+                        {$captcha_image} {$captcha_refresh}
+                        <p class="gBlank5">{$form.captcha} <span class="ec-base-help txtInfo">영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span></p>
+                    </td>
+                </tr>
+                <tr class="agree {$config.is_login|display}">
+                    <th scope="row">개인정보 수집 및 <br />이용 동의</th>
+                    <td>
+                        {$form.privacy_agreement}<br />
+                        개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+		<div class="wp-input-form">
+			<div class="wp-right {$config.use_attach|display}">
+				<div class="wp-point {$config.is_use_point|display}">
+					<h5>별점</h5>
+					<div class="wp-point-box">
+						{$form.point}
+					</div>
+				</div>
+				<div class="wp-review-photo">
+					<h5>사진첨부</h5>
+					<div class="wp-file-box">
+						<ul class="attachFile">
+							<li><div class="afile">{$form.attach_file}</div></li>
+							<li><div class="afile">{$form.attach_file}</div></li>
+							<li><div class="afile">{$form.attach_file}</div></li>
+							<li><div class="afile">{$form.attach_file}</div></li>
+							<li><div class="afile">{$form.attach_file}</div></li>
+						</ul>
+						<ul id="attachImages">
+							<li><img src="/board/review/img/img_attach.jpg" /></li>
+							<li><img src="/board/review/img/img_attach.jpg" /></li>
+							<li><img src="/board/review/img/img_attach.jpg" /></li>
+							<li><img src="/board/review/img/img_attach.jpg" /></li>
+							<li><img src="/board/review/img/img_attach.jpg" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="wp-left">
+				<textarea placeholder="리뷰를 남겨주세요"></textarea>
+			</div>
+			<div class="ec-base-button gColumn">
+				<a href="javascript:;" class="btnSubmit" id="reviewSubmit">리뷰 등록하기</a>
+				<a href="/board/review/list.html?board_no=4" target="_parent" class="btnEm">리뷰 전체보기</a>
+			</div>
+		</div>
+    </div>
+</div>
+
+

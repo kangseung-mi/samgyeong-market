@@ -1,0 +1,13 @@
+<div module="Layout_SearchHeader" class="header_search">
+    <!--
+    $product_page=/product/detail.html
+    $category_page=/product/list.html
+    -->
+    <fieldset>
+        <legend>검색</legend>
+        {$form.keyword}<input type="image" src="/_wg/img/_btn/btn_search_b_50.png" alt="검색" onclick="{$action_search_submit}" /></fieldset>
+		<button type="button" class="btnDelete"><i class="xi-close-min"></i></button>
+    	<div class="autoList" id="{$searchdata_auto_list_id}">
+        	<ul class="autoDrop" id="{$search_auto_id}"></ul>
+    	</div>
+</div>

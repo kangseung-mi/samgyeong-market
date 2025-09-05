@@ -1,0 +1,5 @@
+.xans-myshop-boardlistsearch { padding:15px 0 20px; color:#2e2e2e; font-size:12px; text-align:center;}
+.xans-myshop-boardlistsearch #search_key{ }
+.xans-myshop-boardlistsearch #search { width:162px;   }
+.xans-myshop-boardlistsearch #search +[class^='btn'][class*='Fix']{    height: 34px;line-height:34px; padding: 0;}
+.xans-myshop-boardlistsearch .boardSearch { display:block; }

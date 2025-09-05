@@ -1,0 +1,11 @@
+
+/** 팝업 05 **/
+    /* 버튼 */
+    #btn-popup05 { position:relative; z-index:1; width:80px; height:80px; margin-left:10px; cursor:pointer; opacity:1; vertical-align:bottom; transition:all .3s 1s ease-in-out; }
+    #btn-popup05.on { opacity:0; transform:scale(0,0); }
+
+    #popup05-box { display:none; position:relative; top:50%; left:50%; width:400px; height:400px; padding:10px; background:#f4f4f4; transform:translate(-50%,-47%); opacity:0; transition:opacity .2s, transform .3s .2s ease-in-out; }
+    #popup05-box.on { opacity:1; transform:translate(-50%, -50%); }
+    /* 닫기버튼 */
+    #popup05-box .b-close { position:absolute; z-index:10; top:0px; right:0; width:27px; height:27px; background:url('/_wg/img/_btn/btn_x_w_11.gif') no-repeat center rgba(0,0,0,.8); cursor:pointer; opacity:0; transition:all .3s ease-in-out; }
+    #popup05-box:hover .b-close { opacity:1; }

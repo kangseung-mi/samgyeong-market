@@ -1,0 +1,97 @@
+<div id="footer">
+	<div class="inner">
+		<div class="site-wrap">
+			<div class="info-wrap" >
+				<div class="logo"><img src="/web/upload/wp/167418/p__logo_samkyoungmarket_fff.png" /></div>
+				<ul class="util">
+					<li><a href="/shopinfo/company.html">회사소개</a></li>
+					<li><a href="/member/agreement.html">이용약관</a></li>
+					<li><a href="/member/privacy.html"><strong>개인정보 취급방침</strong></a></li>
+					<li><a href="/shopinfo/guide.html">이용안내</a></li>
+				</ul>
+				<!-- 상점정보 -->
+				<div  module="Layout_footer">
+					<div class="footerInfo">
+						<span>법인명(상호) : {$company_name} </span>
+						<span class="line">|</span>
+						<span>대표자 :  <a href="mailto:{$email}">{$president_name}</a></span>
+						<span class="line">|</span>
+						<span>전화 : <a href="tel:{$phone}">{$phone}</a></span>
+						<span class="line">|</span>
+						<!-- <span>팩스 : {$fax}</span>
+						<span class="line">|</span> -->
+						<span class="{$cpo_email|display}">개인정보관리책임자 : <a href="mailto:{$cpo_email}">{$cpo_name}</a></span>
+						<br/>
+						<span>사업자등록번호 : {$company_regno}</span>
+						<span class="line">|</span>
+						<span>통신판매업신고 : {$network_regno} {$biz_no_link}</span>
+						<br/>
+						<span>주소 :  {$mall_addr1} {$mall_addr2}</span>
+					</div>
+
+				</div>
+				<!--//-->
+			</div>
+			<!--//-->
+			<!-- 하단 고객센터 -->
+			<div class="cs" module="layout_info">
+				<h1 class="tlt">고객센터</h1>
+				<!--<p class="phone">{$phone}</p>-->
+                <a href="https://url.kr/fuzjkc" class="btnNormal">채널톡 상담</a>
+                <br>
+				<p class="runtime">{$runtime}</p>
+				<a href="/board/product/list.html?board_no=6" class="btnNormal">Q&amp;A 게시판</a>
+			</div>
+			<!--//-->
+			<!-- 하단 커뮤니티 -->
+			<div class="lnk">
+				<h1 class="tlt">커뮤니티</h1>
+				<ul>
+					<li><a href="/board/free/list.html?board_no=1">공지사항</a></li>
+					<li><a href="/board/gallery/list.html?board_no=8">이벤트</a></li>
+					<li><a href="/board/product/list.html?board_no=6">상품Q&amp;A</a></li>
+					<li><a href="/board/review/list.html?board_no=4">리뷰</a></li>
+				</ul>
+				<ul>
+					<li module="Layout_statelogoff" ><a href="/member/join_member.html">회원가입</a></li>
+					<li module="Layout_statelogoff" ><a href="/member/login.html">로그인</a></li>
+					<li module="Layout_stateLogon"><a href="/member/modify.html">회원정보수정</a></li>
+					<li><a href="/myshop/index.html">마이페이지</a></li>
+					<li><a href="/myshop/order/list.html">주문조회</a></li>
+				</ul>
+			</div>
+			<!--//-->
+			<div class="clear"></div>
+			<div class="copyright" module="Layout_footer">
+				<div class="escrow">안전거래를 위해 페이먼트구매안전(에스크로)에 가입하여 서비스를 제공하고 있습니다.</div>
+				<div class="copy">Copyright &copy; <strong>{$mall_name}</strong>. All rights reserved.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 카카오톡, 위아래 이동버튼-->
+<!--@js(/_wp/js/side.btn.js)-->
+<div class="side_bnr_wrap">
+	<div class="bt">
+		<a href="javascript:;" onclick="javascript:window.open('https://pf.kakao.com/_xbZaxdb', 'kakao_chat','width=450, height=550');"><img src="/web/upload/wp/167417/bt_side_kakao.png" /></a>
+	</div>
+	<div class="bt">
+		<a href="/product/recent_view_product.html"><img src="/web/upload/wp/167417/bt_side_view.png" alt="최근본상품" /></a>
+	</div>
+	<div class="bt_scroll">
+		<a href="javascript:;" onclick="pageScroll('up')" class="bt_top"></a>
+		<!-- <a href="javascript:;" onclick="pageScroll('down')" class="bt_btm"></a> -->
+	</div>
+</div>
+<!--//-->
+
+<!-- WIDERPLANET HOME SCRIPT START 2023.8.9 -->
+<div id="wp_tg_cts" style="display:none;"></div>
+<script type="text/javascript">
+var wp_conf = 'ti=54849&v=1&device=web';
+</script>
+<script type="text/javascript" defer src="//cdn-aitg.widerplanet.com/js/wp_astg_2.0_mall.js"></script>
+<!-- // WIDERPLANET HOME SCRIPT END 2023.8.9 -->
+
+

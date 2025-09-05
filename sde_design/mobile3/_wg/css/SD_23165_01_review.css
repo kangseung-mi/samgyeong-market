@@ -1,0 +1,22 @@
+
+    /* 공지사항 */
+    .SD_23165_01_review { float:left; width:92%; height:150px; margin:0 2% 0 4.5%; padding:0 4.5% 0 0; border-right:1px solid #eee; }
+    .SD_23165_01_review h4 a { display:block; height:35px; line-height:35px; margin:0 0 7px; border:1px solid #eee; background:url('/_wg/img/bg_slash.gif') #fff; font-size:13px; color:#333; text-align:center; }
+    .SD_23165_01_review h4 a span { padding:0 0 0 5px; font-size:11px; color:#999; font-weight:400; }
+    .SD_23165_01_review:hover h4 a { border:1px solid #111; background:url('/_wg/img/bg_slash_b.gif') #444; text-decoration:none; color:#fff; }
+    
+    .SD_23165_01_review li { line-height:22px; }
+    .SD_23165_01_review li.title { float:left; width:68%; font-size:11px; white-space:nowrap; overflow:hidden; }
+    .SD_23165_01_review li.date { float:right; width:24%; font-size:10px; color:#bbb; font-weight:400; text-align:center; }
+    .SD_23165_01_review li.title a { padding:0 0 0 15px; background:url('/_wg/img/dot.gif') no-repeat 7px 6px; color:#777; }
+    .SD_23165_01_review li a:hover { color:#111; text-decoration:none; }
+    
+    .SD_23165_01_review .notice { font-weight:700; }
+    
+    .SD_23165_01_review .more { position:absolute; right:12px; top:8px; }
+    .SD_23165_01_review .more a:hover img { filter:alpha(opacity=30); opacity:0.3; -webkit-opacity:0.3; }
+
+    /* 1280px 이하 */
+    @media all and (max-width:1285px){
+        .SD_23165_01_review { height:110px; overflow:hidden; }
+    }

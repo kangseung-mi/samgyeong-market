@@ -1,0 +1,313 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!-- ■ additional js ■ -->
+<!-- ■ additional css ■ -->
+<!--@css(/layout/basic/css/didot-delivery-product.css)-->
+<!--@css(/layout/basic/css/didot-subscription.css)-->
+
+
+<div class="subscript-view">
+    <div class="inner">
+        <!----------------------------
+            정기구매 상단 
+        ------------------------------>
+        <div class="tit-area">
+            <h3>E<span>:</span>DAC delivery</h3>
+            <p>정기구매신청</p>
+        </div>
+        <div class="sub-visual">
+            <img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_visual.jpg" />
+        </div>
+        
+        <!----------------------------
+            배송주기선택
+        ------------------------------>
+        <div class="subscript-contents">
+            <div module="product_detail" class="subs-wrap">
+                <div class="detailArea both">
+                    <!-- ■■■■■ [S] detail-info ■■■■■ -->
+                    <div class="detail-info infoArea">
+                        <div class="info-wrap">
+                            <div class="dd-delivery dd-section">
+                                <!-- □□□ delivery - title □□□ -->
+                                <div class="dd-header">
+                                    <p class="ico"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_delivery.png" alt="배송 주기 선택" /></p>
+                                    <p class="tit">배송 주기 선택</p>
+                                    <p class="dis">이닥의 정기배송 상품은 <b>무료배송</b>입니다.</p>
+                                </div>
+
+                                <!-- □□□ delivery □□□ -->
+                                <div class="regularDelivery {$regular_delivery_display|display}">
+                                    <div class="head">
+                                        <label class="gLabel">{$regular_deliveryT}</label>
+                                    </div>
+                                    <div class="shippingCycle {$regular_cycle_period|display}" id="{$regular_cycle_period_id}">
+                                        <div class="button" module="product_regularPeriod">
+                                            <label class="gLabel">{$item_form}<span class="txt">{$item_content}</span></label>
+                                            <label class="gLabel">{$item_form}<span class="txt">{$item_content}</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="dd-option dd-section">
+                                <!-- □□□ option - title □□□ -->
+                                <div class=" dd-header">
+                                    <p class="ico"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_chk.png" alt="상품 선택" /></p>
+                                    <p class="tit">정기구매 상품선택</p>
+                                    <p class="dis">정기배송으로 받아보실 상품을 선택해주세요.</p>
+                                </div>
+
+                                <!-- □□□ option info □□□ -->
+                                <div class="option-info" module="product_option">
+                                    <div class="option-list">
+                                        <ul>
+                                            <li class="option-item" data-title="칫솔헤드추가">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_brush.png" alt="칫솔모" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">칫솔헤드추가</span>
+                                                        <span class="price"><b>6,400</b>원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="option-item" data-title="치약">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_brush.png" alt="칫솔모" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">치약</span>
+                                                        <span class="price"><b>6,400</b>원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="option-item" data-title="치간칫솔">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_everyday.png" alt="치약" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">치간칫솔</span>
+                                                        <span class="price"><b>8,900</b>원</span>
+                                                        <span class="sub-price">12,000원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="option-item" data-title="치실">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_gargle.png" alt="가글" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">치실</span>
+                                                        <span class="price"><b>8,900</b>원</span>
+                                                        <span class="sub-price">12,000원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="option-item" data-title="일반칫솔">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_everyday.png" alt="치약" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">일반칫솔</span>
+                                                        <span class="price"><b>6,400</b>원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li class="option-item" data-title="교정칫솔">
+                                                <a class="both">
+                                                    <p class="thumb"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_gargle.png" alt="가글" /></p>
+                                                    <p class="txt">
+                                                        <span class="name">교정칫솔</span>
+                                                        <span class="price"><b>10,000</b>원</span>
+                                                        <span class="sub-price">12,000원</span>
+                                                        <span class="dis">
+                                                            칫솔모는 필수 선택사항 입니다.
+                                                        </span>
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                   
+                                    <caption>상품 옵션</caption>
+                                    <tbody module="product_option" class="hidden">
+                                        <tr>
+                                            <th scope="row">{$option_name}</th>
+                                            <td>{$form.option}<p class="value">{$option_desc}</p>
+                                            </td>
+                                        </tr>
+                                        <tr module="product_quantity">
+                                            <th scope="row">수량</th>
+                                            <td>
+                                                <div class="ec-base-qty">
+                                                    {$form.quantity}
+                                                    <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                                    <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </div>
+                            </div>
+
+                            <div class="dd-quantity dd-section">
+                                <!-- □□□ quantity - title □□□ -->
+                                <div class="dd-quantity dd-header">
+                                    <p class="ico"><img src="https://e-dac.co.kr/web/upload/__mad/img/contents/subscription_icon_quantity.png" alt="상품 수량 선택" /></p>
+                                    <p class="tit">정기구매 상품수량</p>
+                                    <p class="dis">정기배송으로 받아보실 상품의 수량을 선택해주세요.</p>
+                                </div>
+                                
+                                <!-- □□□ TOTAl option □□□ -->
+                                <div id="{$total.total_id}" class="total-info {$total.total_display|display}">
+                                    <table border="1" summary="">
+                                        <caption>상품 목록</caption>
+                                        <colgroup>
+                                            <col style="width:60%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:20%;" />
+                                        </colgroup>
+                                        <tbody class="{$quantity_display|display}">
+                                            <tr>
+                                                <td class="name">{$name}</td>
+                                                <td class="quantity">
+                                                    <div class="quantity">
+                                                        <a href="#none"><span title="수량감소" class="{$quantity_down_class} down">-</span></a>
+                                                        {$quantity}
+                                                        <a href="#none"><span title="수량증가" class="{$quantity_up_class} up">+</span></a>
+                                                    </div>
+                                                </td>
+                                                <td class="price">
+                                                    <span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                        <!-- 
+                                            옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 
+                                            쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 
+                                            삭제시 기능이 정상동작 하지 않습니다. 
+                                        -->
+                                        <tbody>
+                                            <!-- tr>
+                                            <td class="name">$상품명<br /><span>$옵션</span></td>
+                                            <td class="quantity">
+                                                <span class="quantity">
+                                                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" class="up" /></a>
+                                                    <input type="text" class="quantity_opt" />
+                                                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" class="down" /></a>
+                                                </span>
+                                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_price_delete.gif" alt="삭제" class="option_box_del" /></a>
+                                            </td>
+                                            <td class="price">
+                                                <span>$가격</span>
+                                                <span class="mileage">(<img src="//img.echosting.cafe24.com/design/skin/admin/ko_KR/product/ico_pay_point.gif" /> <span class="mileage_price">$적립금</span>)</span>
+                                            </td>
+                                        </tr -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <!-- □□□ TOTAl price □□□ -->
+                                <div id="{$total.total_price_id}" class="totalPrice">
+                                    <strong>총 상품금액</strong><span class="{$total.total_cnt}"><strong><em>0</em>원</strong></span>
+                                </div>
+                                
+                                <!-- □□□ product quantity □□□ -->
+                                <dl module="product_quantity" class="ec-base-desc quantity" style="display:none">
+                                    <dt>수량</dt>
+                                    <dd>
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <!-- □□□ ACTION □□□ -->
+                            <div module="product_action">
+                                <div class="both">
+<!--                                    <a href="#none" class="buy btnSubmit {$buy_display|display}" onclick="{$action_buy}">-->
+                                    <a href="#none" class="buy btnSubmit {$buy_display|display}" onclick=" acsub();">
+                                        <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display} delivery-submit actionSubmit">정기배송 신청하기</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ■■■■■ [E] detail-info ■■■■■ -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+setTimeout(function() {
+  $('.option-info > ul[option_title=기본값]').find("li:eq(0)").trigger("click");
+}, 1000);
+
+function acsub() {
+    //배송주기 선택했는지 확인
+    if ( $('.EC_regular_cycle_count:checked').length === 0 ) {
+        alert("배송주기를 선택해주세요.");
+        $('.EC_regular_cycle_count').focus();
+        return false;
+    }
+    //상품을 선택했는지 확인
+    if ( $('.option_products tr').length < 2 ) {
+        alert('정기배송으로 받아보실 상품을 선택해주세요.');
+        return false;
+    }
+    product_submit(1, '/exec/front/order/basket/', this);
+}
+
+(function($) {
+    var jQuery = $;
+    
+    $("input:radio[name='is_subscription']:radio[value='T']").attr("checked",true);//정기배송 radio 선택
+    
+
+
+    
+    $(".option-info .option-list li").bind("click", function(){
+        var optionid = $(this).data('title'); 
+        var optionvalue = $(this).find(".name").text(); 
+        var status = [];
+            status[0] = $('.subscript-view .option_product:eq(0) .product span').text();
+            status[1] = $('.subscript-view .option_product:eq(1) .product span').text();
+            status[2] = $('.subscript-view .option_product:eq(2) .product span').text();
+            status[3] = $('.subscript-view .option_product:eq(3) .product span').text();
+            status[4] = $('.subscript-view .option_product:eq(4) .product span').text();
+        	status[5] = $('.subscript-view .option_product:eq(5) .product span').text();
+        	status[6] = $('.subscript-view .option_product:eq(6) .product span').text();
+        
+        if( status.indexOf(optionvalue) != -1 ) { //만약 옵션목록에 클릭한 상품이 있다면
+            var i = status.indexOf(optionvalue); //옵션목록에서 몇번째에 있는지 숫자로 알려준다.
+            $('.subscript-view .option_product:eq('+ i + ')').find('.option_box_del').trigger("click"); //해당하는 목록을 삭제
+            $(this).removeClass('active'); //선택효과 삭제
+            $('.option-info > ul[option_title=' + optionid + ']').find("li:eq(0)").removeClass('ec-product-selected'); //내장 효과 삭제
+        } else { //만약 옵션목록에 클릭한 상품이 없으면
+            $('.option-info > ul[option_title=' + optionid + ']').find("li:eq(0)").trigger("click"); //옵션목록에 클릭한 상품을 넣어준다
+            $(this).addClass('active'); //선택효과 넣는다
+        }
+    });
+
+}(jQuery3_4_1));
+</script>
+
+<!--@define(cmc_log)-->

@@ -1,0 +1,32 @@
+
+    #coupon_list { position:relative; z-index:2; width:100%; margin:20px 0 100px; }
+    #coupon_list:after { content:""; display:block; clear:both; *zoom:1; }
+
+    #coupon_list #btn_all_coupondown { position:absolute; top:50px; right:10px; }
+    
+    #coupon_list .couponSkinArea ul { zoom:1; margin:0 auto; text-align:center; }
+    #coupon_list .couponSkinArea ul:after { content:""; display:block; clear:both; }
+    #coupon_list .couponSkinArea ul li { display:inline-block; *display:inline; *zoom:1; width:280px; padding:0; list-style:none; }
+    #coupon_list .couponSkinArea ul.grid { width:100%; }
+    #coupon_list .couponSkinArea ul.grid li { margin:0 5px; }
+    
+    #coupon_list .couponSkinArea .coupon { position:relative; width:280px; height:180px; font-size:12px; line-height:1.5; text-align:center; background-repeat:no-repeat; cursor:pointer; }
+    #coupon_list .couponSkinArea .coupon img { border:0; }
+    #coupon_list .couponSkinArea .coupon .detail { display:block; padding:25px 0 0 20px; color:#333; }
+    #coupon_list .couponSkinArea .coupon .discount { display:block; margin:0 0 5px; font-size:27px; font-weight:700; text-decoration:none; letter-spacing:-0.03em; }
+    #coupon_list .couponSkinArea .coupon .title { display:block; margin:0 0 5px; font-size:14px; font-weight:700; }
+    #coupon_list .couponSkinArea .coupon .period { display:block; font-size:12px; font-weight:400; }
+    #coupon_list .couponSkinArea .coupon .button { position:absolute; bottom:0px; left:50%; width:140px; margin:0 0 0 -69px; }
+
+    #coupon_list .couponSkinArea .imgCoupon .title,
+    #coupon_list .couponSkinArea .imgCoupon .discount,
+    #coupon_list .couponSkinArea .imgCoupon .period,
+    #coupon_list .couponSkinArea .imgCoupon .button { display:none; }
+    
+    #dCouponDetail { overflow:hidden; position:relative; z-index:10; width:398px; padding:0 0 69px; border:1px solid #333; background:#fff url("http://img.echosting.cafe24.com/skin/base_ko_KR/coupon/bg_coupon_detail.gif") repeat-x 0 100%; box-shadow:5px 5px 5px #d3d3d3; }
+    #dCouponDetail h3  { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background:#333; }
+    #dCouponDetail h3 + a { position:absolute; right:20px; top:10px; }
+    #dCouponDetail ul { clear:both; padding:16px 10px 17px 20px; margin:25px 19px 0; background:#f5f5f5; }
+    #dCouponDetail ul li { margin:7px 0 0; color:#2e2e2e; line-height:18px; }
+    #dCouponDetail ul li:first-child { margin-top:0; }
+    #dCouponDetail ul + a { position:absolute; left:50%; bottom:9px; margin:0 0 0 -50px; }

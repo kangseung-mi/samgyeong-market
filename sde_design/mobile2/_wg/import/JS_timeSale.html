@@ -1,0 +1,55 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Product_menupackage" class="_product_menupackage">
+    <div class="path" module="product_headcategory">
+        <span>현재 위치</span>
+        <ol>
+            <li><a href="/">홈</a></li>
+            <li><a href="#none">타임세일</a></li>
+        </ol>
+    </div>
+</div>
+
+<!-- 타임세일 -->
+<!--@js(/_wg/js/jquery.d_DDay.js)-->
+<!--@js(/_wg/js/JS_timeSale.js)-->
+<!--@css(/_wg/css/JS_timeSale.css)-->
+<div class="ec-base-product JS_timeSale -frame" module="product_listmain_15">
+    <!--
+        $count = 9
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <h2>
+        <div style="display: {$category_title_text_display};" class="text">{$category_title_text}<p>- 본 타임세일 이벤트는 조기 종료될 수 있습니다 -<br>- 준비중/종료된 타임세일은 클릭되지 않습니다 -</p></div>
+        <div style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></div>
+    </h2>
+    <ul class="prdList grid3">
+        <li class="item box1" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box2" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box3" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box4" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box5" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box6" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box7" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box8" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+        <li class="item box9" id="anchorBoxId_{$product_no}">
+            <!--@import(/_wg/import/timeList.html)-->
+        </li>
+    </ul>
+</div>

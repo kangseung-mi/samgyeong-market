@@ -1,0 +1,141 @@
+<!-- 
+포토 리뷰를 노출하지 않으실 경우 on을 off로 수정해 주세요.
+<div class="photo_review_on"> → <div class="photo_review_off">
+-->
+<div class="photo_review_on">
+  <div class="scroll_list" data-name="PHOTO REVIEW" id="mainlist_review">
+    <div module="board_list_4" class="main_reviewArea">
+      <!--
+      $count = 1
+      -->
+      <div class="main_reviewArea_inner">
+        <div class="main_review_tle">
+          <h2><a href="/board/product/list.html?board_no=4">NEW REVIEWS</a></h2>
+          <span>고객님들께서 남겨주신 소중한 후기입니다</span>
+        </div>
+        <!--@import(/board/product/photo_list_best.html)-->
+        <div module="Board_ListPackage_4" class="main_review_border">
+          <div module="board_list_4" class="board_list_4_border">
+            <!--
+            $count = 10
+            $product_name_cut = 10
+            -->
+            <div class="main_review_list">
+              <div class="checkbox {$checkbox|display}">{$checkbox}</div>
+              <div class="main_review_img">
+                <div class="photo_file {$icon_file|display}">
+                  <a href="/board/product/view_photo.html{$param_read}" class="review_pop_width">
+                    <div class="photo_file_ico">
+                      <img src="/_wg/img/review_ico.png" />
+                    </div>
+                    <div class="img_center">
+                      <img class="review_img" src="{$img_src}" />
+                    </div>
+                  </a>
+                </div>
+                <div class="photo_prd review_photo">
+                  <a href="/board/product/view.html{$param_read}" class="review_pop_width">
+                    <span class="img_center">{$product_img}</span></a>
+                </div>
+              </div>
+              <div class="main_review_info board-list-4-inner">
+                <a href="/board/product/view_photo.html{$param_read}"></a>
+                <div class="subject overflow_txt">{$subject|striptag}</div>
+                <div class="content">
+                  <div class="photo_file {$icon_file|display}">
+                    <a href="/board/product/view_photo.html{$param_read}" class="review_pop_width"><img
+                        src="/_wg/img/blank.gif" /></a>
+                  </div>
+                  <a href="/board/product/view.html{$param_read}" class="review_pop_width overflow_02">{$content}</a>
+                </div>
+                <div class="writer">
+                  <span class="comment_count {$comment_count|display}"><span>{$comment_count}</span></span>{$writer}
+                </div>
+                <div class="prd_info">
+                  <div class="prd_img">
+                    <a href="{$link_product_detail}" target="_blank">{$product_img}</a>
+                  </div>
+                  <div class="prd_name">
+                    <a class="overflow_txt" href="/product/detail.html{$param_product}"
+                      target="_blank">{$product_name|striptag}</a>
+                  </div>
+                  <div class="photo_grade {$point_display|display}">
+                    <img src="/_wg/img/ico_point_0{$point_count}.png" alt="{$point_count}점" />
+                  </div>
+                </div>
+                <div class="vote_border {$vote_display|display}">
+                  - 리뷰가 도움 되었나요?
+                  <div class="vote_count">
+                    <div class="vote_click">
+                      <a href="#none" class="btnNormal" onclick="vote_click('{$idx}');">도움돼요</a><span
+                        class="vote_no {$vote_display|display}">+ {$vote}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main_review_list">
+              <div class="checkbox {$checkbox|display}">{$checkbox}</div>
+              <div class="main_review_img">
+                <div class="photo_file {$icon_file|display}">
+                  <a href="/board/product/view_photo.html{$param_read}" class="review_pop_width">
+                    <div class="photo_file_ico">
+                      <img src="/_wg/img/review_ico.png" />
+                    </div>
+                    <div class="img_center">
+                      <img class="review_img" src="{$img_src}" />
+                    </div>
+                  </a>
+                </div>
+                <div class="photo_prd review_photo">
+                  <a href="/board/product/view.html{$param_read}" class="review_pop_width">
+                    <span class="img_center">{$product_img}</span></a>
+                </div>
+              </div>
+              <div class="main_review_info board-list-4-inner">
+                <a href="/board/product/view_photo.html{$param_read}"></a>
+                <div class="subject overflow_txt">{$subject|striptag}</div>
+                <div class="content">
+                  <div class="photo_file {$icon_file|display}">
+                    <a href="/board/product/view_photo.html{$param_read}" class="review_pop_width"><img
+                        src="/_wg/img/blank.gif" /></a>
+                  </div>
+                  <a href="/board/product/view.html{$param_read}" class="review_pop_width overflow_02">{$content}</a>
+                </div>
+                <div class="writer">
+                  <span class="comment_count {$comment_count|display}"><span>{$comment_count}</span></span>{$writer}
+                </div>
+                <div class="prd_info">
+                  <div class="prd_img">
+                    <a href="{$link_product_detail}" target="_blank">{$product_img}</a>
+                  </div>
+                  <div class="prd_name">
+                    <a class="overflow_txt" href="/product/detail.html{$param_product}"
+                      target="_blank">{$product_name|striptag}</a>
+                  </div>
+                  <div class="photo_grade {$point_display|display}">
+                    <img src="/_wg/img/ico_point_0{$point_count}.png" alt="{$point_count}점" />
+                  </div>
+                </div>
+                <div class="vote_border {$vote_display|display}">
+                  - 리뷰가 도움 되었나요?
+                  <div class="vote_count">
+                    <div class="vote_click">
+                      <a href="#none" class="btnNormal" onclick="vote_click('{$idx}');">도움돼요</a><span
+                        class="vote_no {$vote_display|display}">+ {$vote}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="main_review_border_more">
+          <a href="/board/product/list.html?board_no=4"><img src="/_wg/img/btn_review_more_all.gif" /></a>
+        </div>
+      </div>
+    </div>
+    <!--@import(/_wg/main_photo/main_photo_review.html)-->
+  </div>
+</div>

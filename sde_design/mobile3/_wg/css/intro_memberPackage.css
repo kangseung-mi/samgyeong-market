@@ -1,0 +1,76 @@
+/* 타이틀 */
+#titleArea { position:relative; border-bottom:1px solid #ddd; background-color:#fff; }
+#titleArea h2 { padding:0 61px; line-height:43px; font-size:15px; color:#2e2e2e; text-align:center; font-family:'Namum Gothic'; }
+#titleArea span { position:absolute; top:6px; left:14px; }
+
+.xans-intro-memberpackage { position:relative; width:98%; max-width:400px; margin:80px auto; font-family:'Namum Gothic'; }
+.xans-intro-memberpackage .xans-intro-memberpackage { padding:0 14px; border-top:1px solid #d5d5d5; }
+.xans-intro-memberpackage .formBox { position:relative; font-size:11px; }
+.xans-intro-memberpackage .formBox:after { content:""; display:block; clear:both; }
+.xans-intro-memberpackage .loginHeader { width:100%; line-height:16px; }
+.xans-intro-memberpackage .loginHeader:after { content:""; display:block; clear:both; }
+.xans-intro-memberpackage h3 { float:left; height:30px; padding:13px 0 0; color:#4a5164; font-size:13px; font-weight:bold; }
+.xans-intro-memberpackage h3 .txtEm { color:#4a5164; }
+
+.xans-intro-memberpackage .ec-base-help { display:block; padding:15px 5px; border-radius:5px; background:#f4f4f4; font-weight:bold; font-size:13px; text-align:center; }
+
+.xans-intro-memberpackage .view { text-align:center; }
+.xans-intro-memberpackage .view > div { display:none; padding:0 0 14px; }
+.xans-intro-memberpackage .formBox .option { overflow:hidden; font-size:13px; line-height:30px; text-align:center; }
+.xans-intro-memberpackage .formBox .option > span { display:inline-block; *display:inline; *zoom:1; margin:0 10px 0 0; }
+.xans-intro-memberpackage .formBox .option > span:last-child { margin-right:0; }
+.xans-intro-memberpackage .formBox .option input[type="checkbox"],
+.xans-intro-memberpackage .formBox .option img { margin:0 3px 0 0; }
+.xans-intro-memberpackage .formBox .option .ssl img { width:14px; margin:0 3px 0 0; vertical-align:middle; }
+.xans-intro-memberpackage .formBox .option .ssl em { color:#757575; vertical-align:middle; }
+
+.xans-intro-memberpackage .formBox .form { position:relative; }
+.xans-intro-memberpackage .formBox .form.id,
+.xans-intro-memberpackage .formBox .form .password { overflow:hidden; display:block; margin:0 0 10px; }
+.xans-intro-memberpackage .formBox .form label { width:100%; }
+.xans-intro-memberpackage .formBox .form label input { width:100% !important; height:40px; line-height:45px; margin:10px 0 0; border:none; border-bottom:1px solid #ddd; font-size:16px !important; text-indent:10px; letter-spacing:0.1em; transition:border-bottom .5s ease; }
+.xans-intro-memberpackage .formBox .form label input:focus { border-bottom:1px solid #333; }
+
+/* 공통버튼 */
+.xans-intro-memberpackage .-btn { margin:0 0 10px; }
+.xans-intro-memberpackage .-btn i { top:2px; margin:0 5px 0 0; font-size:20px; }
+.xans-intro-memberpackage button.-btn { margin:0 0 10px; font-size:16px !important; }
+
+.xans-intro-memberpackage .btn { display:block; margin:0 0 20px 0; text-align:center; }
+.xans-intro-memberpackage .btn li { display:inline-block; *display:inline; *zoom:1; width:30%; padding:0 1%; }
+.xans-intro-memberpackage .btn li a { width:100%; }
+
+
+.xans-intro-memberpackage .snsLogin .btnNaver {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#26c826 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_naver.png") no-repeat 13px 0; background-size:33px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-intro-memberpackage .snsLogin .btnFacebook {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:33px; line-height:33px; padding:0 0 0 45px;
+    background:#4267b2 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_facebook.png") no-repeat 13px 0; background-size:33px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-intro-memberpackage .snsLogin .btnGoogle {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:33px; line-height:33px; padding:0 0 0 45px;
+    background:#517ff3 url("//img.echosting.cafe24.com/skin/mobile/member/ico_google.png") no-repeat 0 0; background-size:auto 31px; border:1px solid #517ff3;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-intro-memberpackage .snsLogin .btnKakao {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#3c1e1e; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#ffeb00 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_kakao.png") no-repeat 11px 1px; background-size:auto 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-intro-memberpackage .snsLogin .btnLine {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#26c826 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_line.png") no-repeat 10px 0; background-size:35px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+.xans-intro-memberpackage .snsLogin .btnApple {
+    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
+    background:#000 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_apple.png") no-repeat 13px 0; background-size:33px 33px;
+    -moz-box-sizing:border-box; box-sizing:border-box;
+}
+/* input */
+.xans-intro-memberpackage #member_id,
+.xans-intro-memberpackage #member_passwd { font-size:15px; }

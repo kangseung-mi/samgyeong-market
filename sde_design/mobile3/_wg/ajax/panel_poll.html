@@ -1,0 +1,29 @@
+<div class="-ajax-result">
+
+	<div fix id="-ajaxbox" ajax="contents">
+		<ul>
+			<li>
+				<h1 class="-panel-titlebox -font-ns"><em></em>설문조사<span ajax="panelclose"></span></h1>
+				<div class="scrollbar-inner">
+					<div module="Layout_Poll">
+						<h1 class="-panel-bighead -font-ns">{$poll_title}</h1>
+						<div class="-panel-poll">
+							<!--<legend>설문조사 항목</legend>-->
+							<ul>
+								<li>{$poll} {$poll_name}</li>
+								<li>{$poll} {$poll_name}</li>
+								<li>{$poll} {$poll_name}</li>
+								<li>{$poll} {$poll_name}</li>
+							</ul>
+							<p>
+								<a href="#none" onclick="{$action_poll_result}" class="-btn -white -inblock"><i class="fa fa-bar-chart"></i> &nbsp; 결과보기</a>
+								<a href="#none" onclick="{$action_poll_submit}" class="-btn -black -inblock"><i class="fa fa-question"></i> &nbsp; 투표하기</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</div>

@@ -1,0 +1,133 @@
+<footer id="footer" module="layout_footerPackage">
+	<div class="info-wrap">
+		<!-- 고객센터 -->
+		<div class="cs" module="layout_info">
+			<div class="phone">
+				<h1 class="tlt">고객센터</h1>
+				{$phone}
+			</div>
+			<div class="runtime">{$runtime}</div>
+		</div>
+		<!--//-->
+
+		<ul class="util">
+			<li><a href="/shopinfo/company.html">회사소개</a></li>
+			<li><a href="/member/mall_agreement.html">이용약관</a></li>
+			<li><a href="/member/privacy.html"><strong>개인정보 취급방침</strong></a></li>
+			<li><a href="/shopinfo/guide.html">이용안내</a></li>
+		</ul>
+
+		<!-- 상점정보 -->
+		<div module="Layout_footer">
+			<div class="footerInfo">
+				<span>법인명(상호) : {$company_name} </span>
+				<span class="line">|</span>
+				<span>대표자 :  <a href="mailto:{$email}">{$president_name}</a></span>
+				<br/>
+				<span>전화 : <a href="tel:{$phone}">{$phone}</a></span>
+				<br/>
+				<span>주소 :  {$mall_addr1} {$mall_addr2}</span>
+				<br/>
+				<span>사업자등록번호 : {$company_regno}</span>
+				<br/>
+				<span>통신판매업신고 : {$network_regno}</span>
+				<!-- <span class="line">|</span>
+				<span>팩스 : {$fax}</span> -->
+				<br/>
+				<span class="{$cpo_email|display}">개인정보관리책임자 : <a href="mailto:{$cpo_email}">{$cpo_name}</a></span>
+			</div>
+			<div class="copyright">
+				<div class="escrow">안전거래를 위해 페이먼트구매안전(에스크로)에 가입하여 서비스를 제공하고 있습니다.</div>
+				<div class="copy">Copyright &copy; <strong>{$mall_name}</strong>. All rights reserved.</div>
+			</div>
+		</div>
+		<!--//-->
+
+		<div module="Layout_ReferenceCurrencyList" class="list mobileFooter">
+                <!--@css(/css/module/layout/multiCurrency.css)-->
+                <button type="button" class="toggle" id="reference_currency_button">
+                    <span class="btn-global">참조화폐</span>
+                    <span class="currencyNow">{$current_reference_currency_code} {$current_reference_currency_symbol}</span>
+                </button>
+                <ul module="Layout_ReferenceCurrencyListitem" class="referencecurrencylistitem" id="reference_currency_list">
+                    <li class="">
+                        <a href="#">
+                            <span class="name">{$reference_currency_code}</span>
+                            <span class="unit">{$reference_currency_symbol}</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            <span class="name">{$reference_currency_code}</span>
+                            <span class="unit">{$reference_currency_symbol}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <a href="#none" onclick="javascript:isPCver();" class="btnUtil typeRight">PC버전</a> -->
+		</div>
+	</div>
+
+</footer>
+
+<!-- 카카오톡, 위아래 이동버튼-->
+<!--@js(/_wp/js/side.btn.js)-->
+<div class="side_bnr_wrap">
+	<div class="bt">
+		<a href="javascript:;" onclick="javascript:window.open('https://pf.kakao.com/', '1','width=350, height=513');"><img src="/web/upload/wp/167417/bt_side_kakao.png" /></a>
+	</div>
+	<div class="bt">
+		<a href="/myshop/recent_list.html"><img src="/web/upload/wp/167417/bt_side_view.png" /></a>
+	</div>
+	<div class="bt_scroll">
+		<a href="javascript:;" onclick="pageScroll('up')" class="bt_top"></a>
+		<a href="javascript:;" onclick="pageScroll('down')" class="bt_btm"></a>
+	</div>
+</div>
+<!--//-->
+
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+<div module="Layout_multishopShipping" class="ec-base-layer typeModal">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <h1>WORLD SHIPPING</h1>
+    <div class="wrap worldshipLayer">
+        <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+        <div class="select">
+            <select module="Layout_multishopShippingCountrylist">
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+            </select>
+        </div>
+        <div class="select">
+            <select module="Layout_multishopShippingLanguagelist">
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+            </select>
+        </div>
+    </div>
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit">GO</a>
+    </div>
+    <a href="#none" class="btnClose">닫기</a>
+</div>
+<!-- <div class="btnTop" id="btnTop">
+    <a href="#">맨위로</a>
+</div> -->
+<div module="mobilequick_display">
+    {$quick_link}
+    {$quick_button}
+</div>
+
+

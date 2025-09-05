@@ -1,0 +1,17 @@
+.xans-myshop-asyncbenefit { margin:50px 0 20px; color:#353535;}
+.xans-myshop-asyncbenefit .thumbnail img { max-width:70px; max-height:70px; }
+.xans-myshop-asyncbenefit .description { font-size: 15px;  border-bottom: 0px solid #ddd;}
+.xans-myshop-asyncbenefit .ec-base-box.typeMember .information .description{padding:0 15px;font-size: 14px;}
+.xans-myshop-asyncbenefit .ec-base-box.typeThinBg { margin-top:-1px; padding-left:110px; }
+.xans-myshop-asyncbenefit .myshop_benefit_display_no_benefit{margin-top:10px;}
+.xans-myshop-asyncbenefit .invite > strong { display:block; }
+.xans-myshop-asyncbenefit .invite .copy { margin:8px 0 0; }
+.xans-myshop-asyncbenefit .invite #reco_url { width:439px; }
+.xans-myshop-asyncbenefit .invite ul { margin:8px 0 0; font-size:11px; line-height:1.25; color:#757575; }
+.xans-myshop-asyncbenefit .invite ul li { margin:3px 0 0; }
+
+.xans-myshop-asyncbankbook { padding:10px 14px; border-top:1px solid #e9e9e9; }
+.displaynone + .xans-myshop-asyncbankbook { border-top:0; }
+.xans-myshop-asyncbankbook li { display:inline-block; font-size:13px; line-height:14px;border-left:1px solid #ddd;padding-left:10px;margin-left:10px; }
+    .xans-myshop-asyncbankbook li:first-child{border-left:0;padding-left:0;margin-left:0;}
+.xans-myshop-asyncbankbook li a { color:#444; }

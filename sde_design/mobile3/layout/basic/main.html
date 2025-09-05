@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css) 사용안함 -->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css) 사용안함 -->
+    <!--@css(/layout/basic/css/ec-base-button.css)--><!-- 수정 -->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-fold.css)-->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+    <!--@js(/layout/basic/js/basic.js)-->
+        
+    <!--@import(/_wg/base.html)--><!-- 베이스 -->
+</head>
+<body id="main">
+    <div module="Popup_MultiPopup">
+        <!--
+            $banner_popup_no =
+            ※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+        -->
+        {$popup}
+    </div>
+    <div module="Popup_MultiBanner">
+        <!--
+            $banner_popup_no =
+            ※ 노출시킬 배너의 ID를 숫자로 넣어주세요.
+        -->
+        {$banner}
+    </div>
+    <div id="wrap">
+        <!-- cp507 ( 최상단 슬라이드배너 - 메인페이지에만 노출됩니다.) -->
+        <!--@import(/_wg/_cPack/cp507/dom.html)-->
+
+        <!-- 상단 디자인 -->
+        <!--@import(/_wg/import/header.html)-->
+
+        <div id="container">
+            <div id="contents">
+                <!--@contents-->
+            </div>
+        </div><hr class="layout" />
+
+        <!-- 하단 디자인 -->
+        <!--@import(/_wg/import/footer.html)-->
+
+        <!-- 우측 디자인 -->
+        <!--@import(/_wg/_cPack/cp550/dom.html)-->
+
+        <!-- cp701(인트로팝업) -->
+        <!--@import(/_wg/_cPack/cp701/dom.html)-->
+
+        <!-- cp703(스마트팝업) -->
+        <!--@import(/_wg/_cPack/cp703/dom.html)-->
+    </div>
+</body>
+</html>

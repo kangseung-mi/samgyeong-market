@@ -1,0 +1,30 @@
+<div class="main-notice">
+	<div class="site-wrap">
+		<div class="board" module="board_listpackage_1">
+			<h3 module="board_title_1"><!--{$home_title}-->공지사항</h3>
+			<div class="board_list" >
+				<div class="swiper-container">
+					<div class="swiper-wrapper" module="board_list_1">
+						<!--
+							$count = 5
+							$main_list = yes
+							$main_list_reply_view = no
+						 -->
+						 <ul class="swiper-slide">
+							<li class="subject"><a href="{$link_board_detail}">{$subject}</a></li>
+							<li class="date {$date_display|display}">{$write_date|date:y.m.d}</li>
+						 </ul>
+						 <ul class="swiper-slide">
+							<li class="subject"><a href="{$link_board_detail}">{$subject}</a></li>
+							<li class="date {$date_display|display}">{$write_date|date:y.m.d}</li>
+						 </ul>
+					</div>
+				 </div>
+			</div>
+			<a href="javascript:;" class="bt_prev">이전글</a>
+			<a href="javascript:;" class="bt_next">다음글</a>
+			<a href="/board/free/list.html?board_no=1" class="bt_more">더보기</a>
+		</div>
+	</div>
+</div>
+

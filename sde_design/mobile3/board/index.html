@@ -1,0 +1,245 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--------------------------------------------------------------------------------------------------------------
+
+	다른 게시판을 추가하실 경우
+
+	아래 공지사항 소스코드 전체(24~57번줄)를 복사해서 붙혀주시고,
+	공지사항 소스에 숫자 1이라고 된 부분을 사용하실 게시판 ID를 확인하신 뒤 교체해주시면 되겠습니다.
+
+-------------------------------------------------------------------------------------------------------------->
+
+<div id="titleArea">
+    <h2>커뮤니티</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+    </span>
+</div>
+
+<!--@css(/_wg/css/board.css)-->
+
+<div class="titleImg">
+    <!-- 타이틀 이미지 -->
+    <img src="/_wg/img/titBnr.jpg" alt="" />
+</div>
+
+<div class="board_list">
+
+    <!-- 공지사항 -->
+    <div module="board_listpackage_1" class="board_part">
+        <h3 module="board_title_1"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_notice_1" class="notice">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <div module="board_list_1">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <a href="/board/free/list.html?board_no=1" class="more"><i class="xi-bars"></i></a>
+    </div>
+
+    <!-- 이용안내 FAQ -->
+    <div module="board_listpackage_3" class="board_part">
+        <h3 module="board_title_3"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_notice_3" class="notice">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <div module="board_list_3">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <a href="/board/free/list.html?board_no=3" class="more"><i class="xi-bars"></i></a>
+    </div>
+    
+    <!-- 상품 사용후기 -->
+    <div module="board_listpackage_4" class="board_part">
+        <h3 module="board_title_4"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_notice_4" class="notice">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <div module="board_list_4">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <a href="/board/product/list.html?board_no=4" class="more"><i class="xi-bars"></i></a>
+    </div>
+
+    <!-- 상품 Q&A -->
+    <div module="board_listpackage_6" class="board_part">
+        <h3 module="board_title_6"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_notice_6" class="notice">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <div module="board_list_6">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/product/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <a href="/board/product/list.html?board_no=6" class="more"><i class="xi-bars"></i></a>
+    </div>
+
+    <!-- 자유게시판2 -->
+    <div module="board_listpackage_1002" class="board_part">
+        <h3 module="board_title_1002"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_notice_1002" class="notice">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <div module="board_list_1002">
+            <!--
+                $count = 5
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+            <ul>
+                <li class="subject"><a href="/board/free/read.html{$param_read}"><i class="xi-angle-right-min"></i>{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</li>
+                <li class="date {$date_display|display}">{$write_date|cut:10,}</li>
+            </ul>
+        </div>
+        <a href="/board/free/list.html?board_no=1002" class="more"><i class="xi-bars"></i></a>
+    </div>
+    
+    <!-- 갤러리 -->
+    <div module="board_listpackage_8" class="board_part gallery">
+        <h3 module="board_title_8"><i class="xi-ellipsis-v"></i>{$board_name}</h3>
+        <div module="board_list_8">
+            <!--
+                $count = 4
+                $main_list = yes
+                $main_list_reply_view = no
+             -->
+            <ul class="thumbType grid3">
+                <li>
+                    <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" alt="" /></a></div>
+                    <div class="summary">
+                        <a href="{$link_board_detail}" class="subject">
+                            {$icon_mobile} {$subject}
+                            <span class="comment">{$comment_count}</span>
+                        </a>
+                        <p class="name" title="작성자">{$writer}</p>
+                        <p class="date" title="작성일">{$write_date|cut:10,}</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail"><a href="{$link_board_detail}" class="img"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/board/img_no.png'" alt="" /></a></div>
+                    <div class="summary">
+                        <a href="{$link_board_detail}" class="subject">
+                            {$icon_mobile} {$subject}
+                            <span class="comment">{$comment_count}</span>
+                        </a>
+                        <p class="name" title="작성자">{$writer}</p>
+                        <p class="date" title="작성일">{$write_date|cut:10,}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="/board/gallery/list.html?board_no=8" class="more"><i class="xi-bars"></i></a>
+    </div>
+    
+</div><div class="divClear"></div>

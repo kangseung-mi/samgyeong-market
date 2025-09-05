@@ -1,0 +1,87 @@
+<!-- 패널우측 -->
+<!--@css(/_wg/css/right_panel.css)-->
+
+<div class="cp550 right">
+
+    <!-- 패널 버튼 -->
+    <ul class="right_panel upNdown">
+        
+        <!-- 패널우측 여닫기 -->
+        <li class="d_toggle">
+            <a href="#none"><span class="bar l01"></span><span class="bar l02"></span></a><p class="caption px40">퀵메뉴</p>
+        </li>
+        <li ax="box" class="panel_search">
+            <p class="caption px50">상품검색</p>
+            <i class="xi-search" load_set="on" data-ajax="/_wg/ajax/panel_search.html"></i>
+        </li>
+        <li ax="box" class="panel_recent">
+            <p class="caption px70">최근 본 상품</p>
+            <span module="myshop_main" class="count">{$recent_count}</span>
+            <i class="xi-eye-o" load_set="on" data-ajax="/_wg/ajax/panel_recent.html"></i>
+        </li>
+        <li ax="box" class="panel_cart">
+            <p class="caption px50">장바구니</p>
+            <span module="Layout_orderBasketcount" class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span>
+            <i class="xi-cart-o" load_set="on" data-ajax="/_wg/ajax/panel_basket.html"></i>
+        </li>
+        <li ax="box" class="panel_delivery" module="Layout_statelogoff">
+            <p class="caption px50">배송조회</p>
+            <i class="xi-truck" load_set="on" data-ajax="/_wg/ajax/panel_login.html?noMemberOrder&returnUrl=%2Fmyshop%2Forder%2Flist.html"></i>
+        </li>
+        <li ax="box" class="panel_order" module="Layout_stateLogon">
+            <p class="caption px50">주문내역</p>
+            <i class="xi-box" load_set="on" data-ajax="/_wg/ajax/panel_delivery.html"></i>
+        </li>
+        <li ax="box" class="panel_wish" module="Layout_shoppingInfo">
+            <p class="caption px50">관심상품</p>
+            <span class="count {$use_interest_prd|display}">{$interest_prd_cnt}</span>
+            <i class="xi-heart-o" load_set="on" data-ajax="/_wg/ajax/panel_wishlist.html"></i>
+        </li>
+        <li ax="box" class="panel_like" module="Layout_shoppingInfo">
+            <p class="caption px40">좋아요</p>
+            <span class="count {$use_like_product_cnt|display}">{$like_prd_tag}</span>
+            <i class="xi-star-o" load_set="on" data-ajax="/_wg/ajax/panel_like.html"></i>
+        </li>
+        <li ax="box" class="panel_coupon {$use_coupon_cnt|display}" module="Layout_shoppingInfo">
+            <p class="caption px30">쿠폰</p>
+            <span class="count {$coupon_count_display|display}">{$coupon_count}</span>
+            <i class="xi-bookmark-o" load_set="on" data-ajax="/_wg/ajax/panel_coupon.html"></i>
+        </li>
+		
+        <!-- 네이버톡톡 버튼 -->
+        <li class="panel_naver">
+            <a href="#none" class="p_naverTalk" data-popup="link,window,500,600"><i class="xi-naver"></i><p class="caption px60">네이버톡톡</p></a>
+        </li>
+        <!-- 카카오톡 플러스친구 버튼 -->
+        <li class="panel_kakao">
+            <a href="#none" class="p_plusID" data-popup="link,window,500,700"><i class="xi-kakaotalk"></i><p class="caption px110">카카오톡 플러스친구</p></a>
+        </li>
+
+        <!-- TOP/BOTTOM 버튼 -->
+        <li class="up">
+            <a href="#top"><i class="fa icon xi-angle-up"></i><p class="caption px30">위로</p></a>
+        </li>
+        <li class="down">
+            <a href="#bottom"><i class="fa icon xi-angle-down"></i><p class="caption px40">아래로</p></a>
+        </li>
+    </ul><!-- //패널 버튼 -->
+
+    <div class="position">
+        
+    	<!-- 패널 슬라이드배너 -->
+        <!--@import(/_wg/import/JS_panelBnr.html)-->
+        
+        <!-- 패널 공지사항 -->
+        <!--@import(/_wg/import/JS_panelNotice.html)-->
+        
+        <!-- 패널 메뉴 -->
+        <!--@import(/_wg/import/panelMenu.html)--> 
+        
+        <!-- 고객센터 -->
+        <!--@import(/_wg/import/oper_time.html)-->
+        
+        <!-- 계좌안내 -->
+        <!--@import(/_wg/import/bank_info.html)-->
+    
+    </div>
+</div>

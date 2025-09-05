@@ -1,0 +1,38 @@
+
+    .SD_headerSearch { position:relative; }
+
+
+    .SD_headerSearch .search_form { margin:0 0 15px; padding:0 0 15px; border-bottom:1px solid #eee; }
+    .SD_headerSearch .search_form :after { content:""; display:block; *zoom:1; clear:both; }
+    .SD_headerSearch .search_form h2 { display:block; margin:10px 0 25px; font-size:19px; text-align:center; letter-spacing:.7em; }
+    .SD_headerSearch .search_form fieldset { margin:0 0 20px; border:4px solid #333; }
+    .SD_headerSearch .search_form fieldset:hover { }
+    .SD_headerSearch .search_form #keyword { width:800px; height:50px; line-height:47px; margin:0 0 0 20px; background:none; border:none; font-size:17px/* 글자크기 */; color:#111/* 글자색 */; letter-spacing:0; vertical-align:middle; text-align:center; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .SD_headerSearch .search_form #keyword:focus {  }
+    .SD_headerSearch .search_form input[type=image] { margin:0; border:0; background:#333/* 버튼색상 */; }
+    .SD_headerSearch .search_form input[type=image]:hover { background:#888/* 버튼색상 */; }
+    .SD_headerSearch .search_form input[type=image] { width:40px; height:40px; border:0; cursor:pointer; }
+
+
+
+    .SD_headerSearch h4 { display:inline-block; margin:0 10px 0 0; font-size:12px; color:#333; line-height:25px; }
+    .SD_headerSearch h4 i { display:inline-block; line-height:25px; color:#333; font-weight:bold; vertical-align:top; font-size:11px; }
+
+    /* 판매가격대 */
+    .SD_headerSearch .price { float:left; }
+    .SD_headerSearch .price input[type=text] { margin:0 2px; }
+
+    /* 검색기준 */
+    .SD_headerSearch .order { float:right; }
+
+    /* 인기검색어 */
+    .SD_headerSearch .serch_keyword { position:relative; display:block; margin:0 0 8px; line-height:25px; }
+    .SD_headerSearch .serch_keyword:after { content:""; display:block; clear:both; *zoom:1; }
+    .SD_headerSearch .serch_keyword h4 { padding:0 12px 0 9px; border-radius:5px; background:#222; color:#fff; font-weight:normal; vertical-align:top; }
+    .SD_headerSearch .serch_keyword h4 i { margin:0 3px 0 0; color:#fff; font-size:13px; }
+    .SD_headerSearch .serch_keyword > ul { display:inline-block !important; width:700px; }
+    .SD_headerSearch .serch_keyword > ul > li { float:left; margin:0 12px 0 0; padding:0 14px 0 0; background:url('/_wg/img/bar_ddd.gif') no-repeat right 8px; font-size:12px; }
+    .SD_headerSearch .serch_keyword > ul > li:last-child { background:none; }
+    .SD_headerSearch .serch_keyword > ul > li a { display:block; color:#555; }
+    .SD_headerSearch .serch_keyword > ul > li a:hover { color:#000; text-decoration:none; font-weight:700; }
+

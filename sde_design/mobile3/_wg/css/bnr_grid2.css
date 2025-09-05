@@ -1,0 +1,19 @@
+
+    .bnr_grid2 { width:100%; margin:0 0 30px; }
+    .bnr_grid2 > ul { display:block; }
+    .bnr_grid2 > ul:after { content:""; display:block; clear:both; *zoom:1; }
+    .bnr_grid2 > ul > li { float:left; width:620px; margin:0 0 20px 20px; overflow:hidden; }
+    .bnr_grid2 > ul > li:first-child { margin:0 0 15px; }
+    .bnr_grid2 > ul > li img { width:100%; filter:alpha(opacity=100); opacity:1.0; -webkit-opacity:1.0; 
+        transition:all .3s ease; -webkit-transition:all .3s ease;
+        transform:scale(1,1); -webkit-transform:scale(1,1);
+    }
+    .bnr_grid2 > ul > li:hover img { filter:alpha(opacity=60); opacity:.6; -webkit-opacity:.6; 
+        transform:scale(1.1,1.1); -webkit-transform:scale(1.1,1.1);
+    }
+
+    /* 1280px 이하 */
+    @media all and (max-width:1285px){
+        .bnr_grid2 > ul > li { width:480px; margin:0 0 20px 20px; }
+        .bnr_grid2 > ul > li:first-child { margin:0 0 20px; }
+    }

@@ -1,0 +1,18 @@
+    
+    .SD_bnr_02 { position:relatvie; float:left; width:840px; margin:0 0 20px; }
+    .SD_bnr_02 img { width:100%; }
+    .SD_bnr_02 p { margin:0 0 10px; }
+    .SD_bnr_02 ul { margin:0 0 20px; font-size:0; line-height:0; letter-spacing:-4px; }
+    .SD_bnr_02 ul li { display:block; float:left; width:260px; margin:0 0 20px; }
+    .SD_bnr_02 ul li:first-child { width:560px; height:300px; margin:0 20px 0 0; }
+    .SD_bnr_02 ul li iframe { width:100%; height:100%; }
+    .SD_bnr_02 img { transition:all .5s ease; }
+    .SD_bnr_02 img:hover { filter:alpha(opacity=60); opacity:.6; }
+
+    /* 1280px 이하 */
+    @media all and (max-width:1285px){
+        .SD_bnr_02 { width:655px; }
+        .SD_bnr_02 ul { margin:0 0 11px; }
+        .SD_bnr_02 ul li { width:202px; margin:0 0 12px; }
+        .SD_bnr_02 ul li:first-child { width:436px; height:232px; margin:0 17px 0 0; }
+    }

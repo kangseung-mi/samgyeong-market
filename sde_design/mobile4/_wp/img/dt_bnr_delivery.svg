@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="509.082px" height="362.801px" viewBox="0 0 509.082 362.801" enable-background="new 0 0 509.082 362.801"
+	 xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="509.082" height="362.801"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_2_)" fill="#5A5A5A" d="M177.682,362.801c-29.5,0-53.5-24-53.5-53.5s24-53.5,53.5-53.5
+		s53.5,24,53.5,53.5S207.182,362.801,177.682,362.801 M177.682,280.801c-15.715,0-28.5,12.785-28.5,28.5s12.785,28.5,28.5,28.5
+		s28.5-12.785,28.5-28.5S193.397,280.801,177.682,280.801"/>
+	<path clip-path="url(#SVGID_2_)" fill="#5A5A5A" d="M413.882,362.801c-29.5,0-53.5-24-53.5-53.5s24-53.5,53.5-53.5
+		s53.5,24,53.5,53.5S443.382,362.801,413.882,362.801 M413.882,280.801c-15.715,0-28.5,12.785-28.5,28.5s12.785,28.5,28.5,28.5
+		c15.716,0,28.5-12.785,28.5-28.5S429.598,280.801,413.882,280.801"/>
+	<polygon clip-path="url(#SVGID_2_)" fill="#5A5A5A" points="509.082,323.06 454.822,322.801 454.941,297.801 484.082,297.94 
+		484.082,202.176 444.989,93.301 363.383,93.301 363.383,212.5 102.882,212.5 102.882,296.827 136.708,296.9 136.655,321.9 
+		77.882,321.773 77.882,187.5 338.383,187.5 338.383,68.301 462.575,68.301 509.082,197.824 	"/>
+	
+		<rect x="218.782" y="297.35" transform="matrix(1 0.0019 -0.0019 1 0.6034 -0.575)" clip-path="url(#SVGID_2_)" fill="#5A5A5A" width="154.1" height="25"/>
+	<polygon clip-path="url(#SVGID_2_)" fill="#5A5A5A" points="363.382,212.4 90.382,212.4 90.382,187.4 338.382,187.4 338.382,25 
+		90.382,25 90.382,0 363.382,0 	"/>
+	<rect x="381.883" y="187.5" clip-path="url(#SVGID_2_)" fill="#5A5A5A" width="114.7" height="25"/>
+	<rect y="71" clip-path="url(#SVGID_2_)" fill="#5A5A5A" width="165" height="25"/>
+	<rect x="61.482" y="126.5" clip-path="url(#SVGID_2_)" fill="#5A5A5A" width="103.8" height="25"/>
+</g>
+</svg>

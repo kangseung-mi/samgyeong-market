@@ -1,0 +1,23 @@
+<!-- 자동단위변환 -->
+<!--@css(/_wg/css/change_size.css)-->
+<!--@js(/_wg/js/change_size.js)-->
+
+<div class="change_size">
+    <h3>자동단위변환</h3>
+    <p class="line -mov"></p>
+    <ul class="first">
+        <li class="tit">[무게,단위] 자동환산</li>
+        <li><span><input type="text" id="txtInch" onkeyup="inchtocm(this.value);"/>in(인치)</span> = <span><input type="text" id="txtCm" onkeyup="cmtoinch(this.value);"/>cm(센티)</span></li>
+        <li>/</li>
+        <li><span><input type="text" id="txtPound" onkeyup="fn_weight(this.value , 1);"/>lb(파운드)</span> = <span><input type="text" id="txtKg" onkeyup="fn_weight(this.value, 2);"/>kg(킬로그램)</span> = <span><input type="text" id="txtOz" onkeyup="fn_weight(this.value, 3);"/>oz(온스)</span></li>
+    </ul>
+    <ul>
+        <li class="tit">[신발사이즈] 자동환산</li>
+        <li>여자 <span><input type="text" id="cm_women" onkeyup="women_ussize();"/>mm</span> = <span><input type="text" id="us_women" />us</span></li>
+        <li>/</li>
+        <li>남자 <span><input type="text" id="cm_men" onkeyup="men_ussize();"/>mm</span> = <span><input type="text" id="us_men" />us</span></li>
+        <li>/</li>
+        <li>유아 <span><input type="text" id="cm_babykids" onkeyup="babykids_ussize();"/>mm</span> = <span><input type="text" id="us_babykids" />us</span></li>
+    </ul>
+</div>
+<!-- //자동단위변환 -->

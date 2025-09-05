@@ -1,0 +1,13 @@
+
+    .SD_spBnr_02 { margin-bottom:40px; }
+    .SD_spBnr_02 h4 span { display:inline-block; margin:0 0 10px; padding:5px 10px; background:#ddd; border:1px solid #d4d4d4; border-radius:3px; font-size:12px; font-weight:normal; }
+    .SD_spBnr_02 p { float:left; background:#fff; }
+    .SD_spBnr_02 p img { width:100%; transition:all .3s ease; -webkit-transition:all .3s ease; }
+    .SD_spBnr_02 p:hover img { filter:alpha(opacity=60); opacity:.6; -webkit-opacity:.6; }
+
+    .SD_spBnr_02 .bnr01 { width:19.5%; margin:0 1% 1% 0; }
+    .SD_spBnr_02 .bnr02 { width:19.5%; margin:0 1% 1% 0; }
+    .SD_spBnr_02 .bnr03 { float:right; width:29%; margin:0 1% 1% 0; }
+    .SD_spBnr_02 .bnr04 { float:right; width:29%; margin:0 0 1% 0; }
+    .SD_spBnr_02 .bnr05 { width:40%; margin:0 1% 0 0; }
+    .SD_spBnr_02 .bnr06 { width:59%; }

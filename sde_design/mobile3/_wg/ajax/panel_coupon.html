@@ -1,0 +1,40 @@
+<div class="loadhtml">
+    
+	<div fix id="p_box" ax="main">
+		<ul>
+			<li>
+				<h1 class="titlebox"><em></em>쿠폰<span ax="boxclose"></span></h1>
+				<div class="scrollbar_box">
+					<div class="-panelempty {$display_no_coupon_list|display}" module="myshop_CouponList">
+						<p>보유하고 계신 쿠폰 내역이 없습니다</p>
+					</div>
+					<table class="-panel-tablebox" module="myshop_CouponList">
+						<caption>마이 쿠폰 목록</caption>
+						<colgroup>
+							<col style="width:160px;" />
+							<col />
+							<col style="width:160px;" />
+						</colgroup>
+						<tbody class="{$display_coupon_list|display}">
+							<tr>
+								<th><i class="fa fa-angle-right"></i>{$coupon_name}</th>
+								<td><strong>{$coupon_benefit_result}</strong></td>
+								<td><span class="-date"><i class="fa fa-calendar-check-o"></i> &nbsp; {$coupon_start_end_date|replace:~, ~ <br /><i class="fa fa-calendar-check-o"></i> &nbsp; }</span></td>
+							</tr>
+							<tr>
+								<th><i class="fa fa-angle-right"></i>{$coupon_name}</th>
+								<td><strong>{$coupon_benefit_result}</strong></td>
+								<td><span class="-date"><i class="fa fa-calendar-check-o"></i> &nbsp; {$coupon_start_end_date|replace:~, ~ <br /><i class="fa fa-calendar-check-o"></i> &nbsp; }</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+			<p class="-panelBtn">
+				<a href="/coupon/coupon_zone.html" class="-btn -white -md" module="Layout_couponzoneBanner">쿠폰존</a>
+				<a href="/myshop/coupon/coupon.html" class="-btn -black -md">나의 쿠폰 전체보기</a>
+			</p>
+		</ul>
+	</div>
+
+</div>

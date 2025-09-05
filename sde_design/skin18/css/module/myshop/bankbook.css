@@ -1,0 +1,19 @@
+.xans-myshop-asyncbankbook.ec-base-box { border: 1px solid #e2e2e2; border-bottom:3px solid #1590de;padding: 0; margin:0 0 50px;}
+.xans-myshop-asyncbankbook.ec-base-box ul{overflow:hidden;}
+.xans-myshop-asyncbankbook.ec-base-box ul li{font-size:17px; float:left; padding:24px 20px; border-right:1px solid #e2e2e2;height:110px; box-sizing:border-box;text-align:center;}
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx1{width:295px;}
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx1 [class^='btn'], 
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx1 a[class^='btn']{width:80px;height:28px;line-height:26px; font-size:15px; display:block; margin:6px auto 0; background:#adadad; border:0; padding:0}
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx1 .group{color:#222; font-size:13px; }
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx2,
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx3,
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx4{width:226px;}
+.xans-myshop-asyncbankbook.ec-base-box ul li.bx5{width:225px; border-right:0;}
+.xans-myshop-asyncbankbook.ec-base-box ul li a{text-decoration:none;}
+
+.xans-myshop-asyncbankbook .title { font-weight:normal; box-sizing:border-box; display:block; margin-bottom:2px;}
+.xans-myshop-asyncbankbook .title > span{color:#1590de;}
+.xans-myshop-asyncbankbook .data {box-sizing:border-box; display:block; font-size:20px;}
+.xans-myshop-asyncbankbook .data {color:#1590de;}
+
+

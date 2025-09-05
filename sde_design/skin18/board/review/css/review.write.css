@@ -1,0 +1,45 @@
+/* 포토후기 Write */
+
+.wp-input-form{margin: 0 auto;text-align:center;}
+
+.wp-input-form .wp-left {box-sizing: border-box; width: calc(100% - 310px);display: inline-block;text-align: left;vertical-align: top;}
+.wp-input-form .wp-left textarea {width: 100%;height: 155px;resize: none;padding: 10px;box-sizing: border-box;font-size: 13px;color: #111;resize: none;overflow: auto;border-radius: 4px;background: #f1f1f1;border: 0; }
+.wp-input-form .wp-left textarea:focus{outline:0;}
+
+.wp-input-form .wp-right {box-sizing: border-box;width: 280px;display: inline-block;text-align: left;margin-left: 20px;vertical-align: top;}
+.wp-input-form .wp-point {height: 65px;box-sizing: border-box;}
+.wp-input-form .wp-point h5{font-size:13px;}
+.wp-input-form .wp-point-box {width: 200px;height: 30px;margin: 8px 0 0;box-sizing: border-box;position: relative;background: url(/board/review/img/ico_point_base.gif) no-repeat 0 0;}
+
+.wp-input-form .wp-point-box input[type=radio],
+.wp-input-form .wp-point-box input[type=checkbox]{display: none; }
+.wp-input-form .wp-point-box input[type=radio] + label{height: 30px;display:block;cursor: pointer; position: absolute; left: 0; top: 0; opacity:0; margin:0;}
+.wp-input-form .wp-point-box input[type=radio] + label em{display:none;}
+.wp-input-form .wp-point-box #point0 + label{background: url(/board/review/img/ico_point5.gif) no-repeat 0 0;width: 200px;z-index: 10; }
+.wp-input-form .wp-point-box #point1 + label{background: url(/board/review/img/ico_point4.gif) no-repeat 0 0;width: 160px;z-index: 11;}
+.wp-input-form .wp-point-box #point2 + label{background: url(/board/review/img/ico_point3.gif) no-repeat 0 0;width: 120px;z-index: 12;}
+.wp-input-form .wp-point-box #point3 + label{background: url(/board/review/img/ico_point2.gif) no-repeat 0 0;width: 80px; z-index: 13;}
+.wp-input-form .wp-point-box #point4 + label{background: url(/board/review/img/ico_point1.gif) no-repeat 0 0; width: 40px;z-index: 14;}
+.wp-input-form .wp-point-box input[type=radio]:checked + label{opacity:1;}
+.wp-input-form .wp-review-photo {border: 0px solid #ddd;margin-top: 10px;height: 80px;overflow: hidden;position: relative;}
+.wp-input-form .wp-review-photo h5{font-size:13px; padding-bottom:10px; height:16px;}
+.wp-input-form .wp-review-photo .attachFile{ position:relative; z-index:4; font-size:0;}
+.wp-input-form .wp-review-photo .attachFile li{display:inline-block; vertical-align:top;margin-right:4px; margin-bottom:4px;}
+.wp-input-form .wp-review-photo .attachFile li:last-child{margin-right:0; }
+.wp-input-form .wp-review-photo .attachFile .afile{ width: 49px; height: 49px; overflow: hidden; cursor: pointer; position: relative; border:1px solid #ddd; }
+.wp-input-form .wp-review-photo .attachFile .afile input{ opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+
+#attachImages{ position: absolute; top: 26px; left: 0px; z-index: 3; font-size:0;}
+#attachImages li{ width: 49px; height: 49px; border: 1px solid #ddd; display: inline-block; overflow: hidden; margin-right:4px; margin-bottom:4px;}
+#attachImages li:last-child {margin-right:0;}
+#attachImages li img{width:100%;height: 100%;}
+#attachImages li:after{ content: "파일추가"; width: 100%; height: 100%; display: block; text-align: center; line-height: 58px; color: #888; }
+
+ul.info { margin: 20px 0 0; color: #707070; line-height: 1.5; text-align:left; font-size:12px;}
+ul.info li + li {padding: 4px 0 0 9px;}
+ul.info li { padding: 0 0 0 9px; background: url("//img.echosting.cafe24.com/skin/base/common/ico_square2.gif") no-repeat 4px 7px; }
+
+/* 버튼 */
+	.wp-input-form .ec-base-button{clear:both;}
+	.wp-input-form .ec-base-button [class^='btn'],
+	.wp-input-form .ec-base-button a[class^='btn']{width: auto;padding-left:19px;padding-right:19px;}

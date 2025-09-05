@@ -1,0 +1,29 @@
+<html>
+<body>
+<!--@js(/_wg/js/lazyload.min.js)-->
+<div style="height:1000px;"></div>
+    
+<img class="lazy" data-src="http://placehold.it/500x500/fdd/">
+    
+<div style="height:300px;"></div>
+    
+<img class="lazy" data-src="http://placehold.it/500x500/dfd/">
+    
+<div style="height:300px;"></div>
+    
+<img class="lazy" data-src="http://placehold.it/500x500/ddd/">
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+// lazy loading 
+var lazyLoadInstance = null;
+$(document).ready(function(){
+	lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy",
+		threshold:0
+	});
+});
+
+</script>    
+</body>
+</html>

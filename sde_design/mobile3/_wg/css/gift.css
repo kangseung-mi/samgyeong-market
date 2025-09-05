@@ -1,0 +1,20 @@
+
+    .gif_content { display:block; width:1330px; margin:40px auto; }
+    .gif_content:after { content:""; display:block; *zoom:1; clear:both; }
+
+    .gif_content h2 { display:block; margin:0 0 50px; text-align:center; line-height:35px; font-size:35px; }
+    .gif_content h2 span { display:block; text-align:center; font-size:13px; font-weight:normal; color:#999; }
+    .gif_content h3 { margin:0 0 40px; font-size:25px; text-align:center; }
+    .gif_content h4 { display:inline-block; line-height:25px; margin:0 0 8px; padding:0 10px; border-radius:3px; background:#333; color:#fff; font-weight:normal; }
+    .gif_content .dep { line-height:17px; margin:0 0 20px; }
+
+    /* 팝업 */
+    .gif_content .section { display:inline-block; margin:0 20px 60px 0; vertical-align:top; }
+
+    ._popup_footer { position:relative; bottom:0; width:100% !important; }
+    ._popup_footer > div { width:100% !important; height:30px !important; padding:0 !important; overflow:hidden !important; background:#555 !important; font-family:'Nanum Gothic' !important; }
+    ._popup_footer > div > span { position:relative; display:block; float:left; padding:0 0 0 15px; text-indent:20px; font-size:11px; color:#eee; line-height:30px; }
+    ._popup_footer > div > span > input { position:absolute; left:8px; top:6px; line-height:30px; width:18px; height:18px; }
+    ._popup_footer > div > span:after { content:'오늘하루 열지않음'; }
+    ._popup_footer > div > span + span { display:block; float:right; width:55px; padding:0 22px 0 0; background:#333 !important; font-size:11px; color:#fff; line-height:30px; }
+    ._popup_footer > div > span + span:hover { background:#000 !important; color:#fff; }

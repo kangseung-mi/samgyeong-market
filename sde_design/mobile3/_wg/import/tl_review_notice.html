@@ -1,0 +1,57 @@
+<!--@css(/_wg/css/tl_review_notice.css)-->
+<!--@js(/_wg/js/tl_review_notice.js)-->
+<div class="review_notice_box">
+  <div class="title">
+    <h2>REVIEW NOTICE</h2>
+    <span>리뷰 게시판의 공지를 확인하세요</span>
+  </div>
+  <div class="line">
+    <div class="notice_line_deco"></div>
+    <div class="review_notice" module="board_notice_4">
+    <!--
+    $count = 30
+    $product_name_cut = 30
+    $login_page_url = /member/login.html
+    $deny_access_url = /index.html
+    -->
+      <div class="notice_line first">
+        <div class="check">{$checkbox}
+          <!--{$notice_icon}-->
+        </div>
+        <div class="notice_subject">
+          <div class="subject inline">
+            <span class="category {$category_name_display|display}">[ {$category_name} ]</span> <a
+              href="{$link_board_detail}" style="{$link_color}">{$subject}</a><span
+              class="board_comment_count">{$comment_count}</span>{$icon_file}
+          </div>
+          <div class="notice_right inline"><span class="date {$date_display|display} txtNum">{$write_date}</span> <span
+              class="writer">{$member_icon}{$writer}</span> </div>
+        </div>
+        <div class="notice_content" style="display:none;">
+          {$content}
+          <div class="btn-toggle"><a href="#">공지 숨기기</a></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="notice_line">
+        <div class="check">{$checkbox}
+          <!--{$notice_icon}-->
+        </div>
+        <div class="notice_subject">
+          <div class="subject inline">
+            <span class="category {$category_name_display|display}">[ {$category_name} ]</span> <a
+              href="{$link_board_detail}" style="{$link_color}">{$subject}</a><span
+              class="board_comment_count">{$comment_count}</span>{$icon_file}
+          </div>
+          <div class="notice_right inline"><span class="date {$date_display|display} txtNum">{$write_date}</span> <span
+              class="writer">{$member_icon}{$writer}</span> </div>
+        </div>
+        <div class="notice_content" style="display:none;">
+          {$content}
+          <div class="btn-toggle"><a href="#">공지 숨기기</a></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+<!--------------------------------------------------------------------------------------------------------------------------------------
+
+    ### 하단정보 ###
+    
+    • 상점관리 > 기본정보관리 > 내쇼핑몰 정보 에 회사정보를 기재해주세요. 기재한 사항은 사이트 하단에 노출됩니다.
+
+    • 아이콘 및 반품주소지는 직접 입력해주세요.
+
+--------------------------------------------------------------------------------------------------------------------------------------->
+<!--@css(/_wg/css/footer.css)-->
+
+<!-- 하단 인스타그램 -->
+<!--@import(/_wg/import/insta.html)-->
+
+<div module="Layout_footer" class="footer_wrap">
+
+	<!-- 커스텀팩 005 (하단배너) -->
+	<!--@import(/_wg/_cPack/cp005/dom.html)-->
+    
+    <div id="footer">
+
+        <!-- 하단메뉴 -->
+        <!--@import(/_wg/import/footer_menu.html)-->
+        
+        <!-- 고객센터안내 -->
+        <!--@import(/_wg/import/oper_time.html)-->
+
+        <!-- 계좌안내 -->
+        <!--@import(/_wg/import/bank_info.html)-->
+        
+        <!-- 배송안내 -->
+        <!--@import(/_wg/import/delivery_info.html)-->
+        
+        <line></line>
+
+        <!-- 회사정보 ( 상점관리 > 기본정보관리 > 내쇼핑몰 정보에 기재하신 내용이 자동으로 출력됩니다. ) -->
+        <div class="footer_company _part">
+            <div class="title">
+                <h4>회사정보</h4>
+            </div>
+            <p class="h4_line"></p>
+            <ul>
+                <li><strong>회사명</strong><span>{$company_name}</span></li>
+                <li><strong>대표</strong><span>{$president_name}</span></li>
+                <li><strong>대표전화</strong><span>{$phone}</span></li>
+                <li><strong>팩스</strong><span>{$fax}</span></li>
+                <li><strong>주소</strong><span>{$mall_addr1} {$mall_addr2}</span></li>
+                <li><strong>사업자 등록번호</strong><span>{$company_regno}</span></li>
+                <li><strong>통신판매업 신고</strong><span>{$network_regno} &nbsp;{$biz_no_link}</span></li>
+                <li><strong>개인정보관리책임자</strong><span>{$cpo_name} (<a href="mailto:{$cpo_email}">{$cpo_email}</a>)</span></li>
+                <li><strong>이메일</strong><span><a href="mailto:{$email}"><i class="xi-mail-o"></i> {$email}</a></span></li>
+                <li><strong>호스팅제공</strong><span>Simplex Internet Inc.</span></li>
+            </ul>
+        </div>
+        
+        <!-- 구매안전서비스 -->
+        <!--@import(/_wg/import/escrow_info.html)-->
+        
+        <!-- 하단 아이콘 -->
+        <!--@import(/_wg/import/footer_ico.html)-->
+
+    </div>
+
+    <div class="footer_end">
+        <div class="footer_end_inner -frame">
+            <p class="copyright"><i class="xi-copyright"></i> 2021 <strong>{$mall_name}</strong>. ALL RIGHTS RESERVED.</p>
+            <p class="made"><a href="http://webgood.co.kr/" target="_blank">WG</a></p>
+        </div>
+    </div>
+</div>
+
+
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+<div module="Layout_multishopShipping" class="ec-base-layer typeModal">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <h1>WORLD SHIPPING</h1>
+    <div class="wrap worldshipLayer">
+        <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+        <div class="select">
+            <select module="Layout_multishopShippingCountrylist">
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+            </select>
+        </div>
+        <div class="select">
+            <select module="Layout_multishopShippingLanguagelist">
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+            </select>
+        </div>
+    </div>
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit">GO</a>
+    </div>
+    <a href="#none" class="btnClose">닫기</a>
+</div>
+
+<!--
+	제작사 : 디자인웹굿
+	홈페이지 : http://webgood.co.kr/
+	연락처	: 010-3360-8426
+	메일 : webgood77@naver.com
+
+	** 본 디자인의 저작권은 제작사에 있습니다.
+	** 제작사의 허가 없이 이전/양도/대여/재판매/템플릿제작 등에 무단사용을 금합니다.
+	** 무단사용시 법적책임을 지게됩니다.
+-->

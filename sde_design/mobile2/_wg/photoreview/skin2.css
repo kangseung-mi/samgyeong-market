@@ -1,0 +1,73 @@
+.xans-photoreview-display { overflow:hidden; margin:0; }
+.xans-photoreview-display h2 { width:125px; height:17px; text-indent:-9999px; background:url('//img.echosting.cafe24.com/apps/photo-review/skin3/txt_title.png') no-repeat 0 0; }
+.xans-photoreview-display .lister { float:left; width:171px; margin:0 24px 0 0; }
+
+.xans-photoreview-display .lister_wrap { display:none; }
+
+.xans-photoreview-display dl { margin:22px 0 0; }
+.xans-photoreview-display dt { padding:0; border:1px solid #ddd; border-bottom:none; text-align:center; position: relative; overflow:hidden; height: 230px;}
+.xans-photoreview-display dt > a { position: relative; overflow:hidden; display:block; width:100%; height:100%; margin:0; }
+.xans-photoreview-display dt img { width:120%; position:absolute; left:50%; top:50%; transform: translate(-50%,-50%) }
+.xans-photoreview-display dd { padding:0 0 2px; background-color:#f2f2f2; }
+.xans-photoreview-display dd p { padding:0 14px; border-left:1px solid #ddd; border-right:1px solid #ddd; color:#606060; font-size:11px; line-height:15px; word-break:break-all; background-color:#fff; line-height:40px}
+.xans-photoreview-display dd p.date { padding-top:4px; color:#b2b2b2; font-family:gulim, sans-serif; display:none; }
+.xans-photoreview-display dd p.point { height:20px; padding-left:15px; display:none; }
+.xans-photoreview-display dd p.post { border-bottom:1px solid #c0c0c0; background-color:#f1f1f1; overflow:hidden;}
+.xans-photoreview-display dd p.post .lt {float:left;}
+.xans-photoreview-display dd p.post .rt {float:right;}
+
+.xans-photoreview-display .more { float:left; width:100%; height:38px; margin:28px 0 0; background: url('//img.echosting.cafe24.com/apps/photo-review/skin3/bg_more.jpg') repeat-x 0 0; display:none;}
+.xans-photoreview-display .more a { display:block; padding:8px 0 0; height:25px; color:#fff; text-align:center; }
+.xans-photoreview-display .more a:hover { text-decoration:none; }
+.xans-photoreview-display .more a strong { padding:0 26px 0 0; background:url('//img.echosting.cafe24.com/apps/photo-review/skin3/ico_more.gif') no-repeat 100% 1px; }
+
+
+.prdReview_bg {
+    background: #f0f0f0;
+    padding: 40px 0 50px;
+    width: 1260px;
+}
+
+.prdReview_bg > .tle h2 {
+    margin: 0px auto;
+    font-size: 16px;
+    color: #272823;
+    font-family: Roboto Condensed,Arial,sans-serif;
+    letter-spacing: 0px;
+}
+.prdReview_bg > .tle h2, .prdReview_bg > .tle span {
+    width: 320px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.prdReview_bg > .tle span {
+    margin: 6px auto 15px;
+    padding: 11px 0 0;
+    display: block;
+    font-size: 11px;
+    color: #9c9c9c;
+    font-weight: normal;
+    background: url(/_wg/img/bg_dot.gif) repeat-x 0 0;
+    border: 0;
+}
+
+.photo_review_tiny .photoreview_img img {
+    width: 170%;
+}
+.overflow_txt {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    max-width: 100%;
+    overflow: hidden;
+}
+.prdReview_bg .photo_review_border {margin-top:50px;text-align:center;}
+.prdReview_bg .photo_review_border a { overflow:hidden; display:inline-block; margin:0 auto; }
+.photo-all .prdReview_bg .photo_review_border {display:none;}
+.prdReview_bg .photo_review_border .review_write_02 {display:none;}
+@media (max-width: 1259px) {  
+	.prdReview_bg .photo_review_border .review_write_01 {display:none;}
+    .prdReview_bg .photo_review_border .review_write_02 {display:inline-block;}
+    .prdReview_bg {width: 980px;}
+}
+

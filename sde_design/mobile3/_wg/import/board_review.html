@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!-- 포토리뷰 -->
+<!--@css(/_wg/css/photoReview.css)-->
+<!--@import(/_wg/import/review_list.html)-->
+
+<div module="board_ButtonList_4" class="{$write_display|display} ec-base-button typeBG">
+    <span class="gRight">
+        <a href="/board/product/write.html{$param_write}" class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a>
+    </span>
+</div>
+
+<div module="board_paging_4" class="ec-base-paginate">
+    <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+</div>
+
+<div module="board_search_4">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <p>{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></p>
+    </fieldset>
+</div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_4">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+        {$board_catemove_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_category_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$category_move}</a>
+    </p>
+</div>
+
+<div module="board_function_4">
+    <!--@css(/css/module/board/function.css)-->
+    <p>
+        {$board_function_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_article_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$article_move}</a>
+        <a href="#none" class="btnNormal" onclick="{$action_article_copy}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif" alt="" /> {$article_copy}</a>
+        {$board_function_help}
+    </p>
+</div>
+<!-- // 관리자 전용 메뉴 -->

@@ -1,0 +1,15 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img {margin:0; padding:0;}
+li {list-style:none;}
+img,fieldset { border:none; vertical-align:top;}
+.pop-wrapper{width:300px;overflow:hidden;border:1px solid #ddd;padding:8px; background:#fff;}
+.pop-wrapper .inner{width:300px;margin:0 auto;}
+.pop-wrapper #pop-slide{height:380px;overflow:hidden;}
+.pop-wrapper #pop-slide li{width:300px;height:380px;}
+.pop-wrapper #pop-slide .slide-img{width:100%;}
+.pop-wrapper .pager{position:relative;}
+.pop-wrapper .pager #pop-slide-pager{margin-top:5px;}
+.pop-wrapper .pager #pop-slide-pager li{width:100%; cursor:pointer; border:1px solid #ddd; border-top:0;}
+.pop-wrapper .pager #pop-slide-pager li:first-child{border-top:1px solid #ddd;}
+#bar{position:absolute;border:1px solid #000;z-index:10;top:0;width:302px;height:51px;box-sizing:border-box;}
+.xans-popup-footer{width:100%;}
+#popup_close_check{vertical-align:middle;}

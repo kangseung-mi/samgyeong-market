@@ -1,0 +1,164 @@
+
+/** 멀티팝업 공통 **/
+
+    .multiPopup { position:relative; background:#fff; }
+    
+    /* 배너 */
+    .multiPopup .DB_img { position:relative; overflow:hidden; }
+    .multiPopup .DB_img ul { position:relative; }
+    .multiPopup .DB_img ul li { position:absolute; width:100%; height:100%; }
+
+    /* 화살표 */
+    .multiPopup .arrow.DB_prev { left:-5px; background:url('/_wg/img/_arrow/arrowL_35.gif') no-repeat 50% 50% rgba(255,255,255,.5); filter:alpha(opacity=0); opacity:0; }
+    .multiPopup .DB_img:hover .arrow.DB_prev { left:0; filter:alpha(opacity=100); opacity:1; }
+    .multiPopup .arrow.DB_next { right:-5px; background:url('/_wg/img/_arrow/arrowR_35.gif') no-repeat 50% 50% rgba(255,255,255,.5); filter:alpha(opacity=0); opacity:0; }
+    .multiPopup .DB_img:hover .arrow.DB_next { right:0; filter:alpha(opacity=100); opacity:1; }
+    .multiPopup .arrow { position:absolute; top:50%; width:45px; height:70px; margin-top:-35px; cursor:pointer; transition:all .3s ease; }
+
+    /* 버튼 */
+    .multiPopup .DB_menu { position:relative; }
+    .multiPopup .DB_menu ul li { float:left; margin:0 -1px -1px 0; border:1px solid #ddd; background:#eee; cursor:pointer; color:#999; font-size:11px; line-height:17px; text-align:center; transition:all .5s ease; }
+    .multiPopup .DB_menu ul li:hover { background:#fafafa; }
+    .multiPopup .DB_menu ul li.DB_select { background:#fff; color:#333; font-weight:bold; }
+    .multiPopup .DB_menu ul li p { position:relative; }
+    .multiPopup .DB_menu .DB_box { position:absolute; top:0; left:0; margin:0; padding:0; border:1px solid #888/*박스컬러*/; }
+
+    /* 팝업하단 */
+    .popup_footer { position:fixed; bottom:0; width:100% !important; }
+    .popup_footer > div { width:100% !important; height:30px !important; padding:0 !important; overflow:hidden !important; background:#555 !important; font-family:'NanumGothic' !important; }
+    .popup_footer > div > span { position:relative; display:inline-block; float:left; padding:0 0 0 12px; text-indent:20px; font-size:11px; color:#eee; line-height:30px; }
+    .popup_footer > div > span > input { position:absolute; left:8px; top:6px; line-height:30px; width:18px; height:18px; }
+    .popup_footer > div > span + span { position:absolute; top:0; right:0; padding:0 15px 0 0; background:#333 !important; font-size:11px; color:#fff; line-height:30px; transition:all .3s ease; }
+    .popup_footer > div > span + span:hover { background:#000 !important; color:#fff; }
+
+
+
+/** 멀티팝업 V61 **/
+    .multiPopup.v61 { width:302px; height:550px; padding:8px; border:1px solid #ccc; }
+    
+    /* 배너 */
+    .multiPopup.v61 .DB_img { width:299px; height:380px; margin-bottom:5px; border:1px solid #ddd; }
+    
+    /* 버튼 */
+    .multiPopup.v61 .DB_menu ul li { width:99px; height:80px; }
+    .multiPopup.v61 .DB_menu ul li p { top:30%; }
+    .multiPopup.v61 .DB_menu .DB_box { width:99px; height:80px; }
+
+
+
+/** 멀티팝업 V62 **/
+    .multiPopup.v62 { width:298px; height:543px; }
+    
+    /* 배너 */
+    .multiPopup.v62 .DB_img { width:298px; height:380px; }
+    
+    /* 버튼 */
+    .multiPopup.v62 .DB_menu ul li { width:98px; height:80px; }
+    .multiPopup.v62 .DB_menu ul li p { top:30%; }
+    .multiPopup.v62 .DB_menu .DB_box { display:none/*박스사용X*/; width:98px; height:80px; }
+
+
+
+/** 멀티팝업 V31 **/
+    .multiPopup.v31 { width:302px; height:469px; padding:8px; border:1px solid #ccc; }
+    
+    /* 배너 */
+    .multiPopup.v31 .DB_img { width:299px; height:380px; margin-bottom:5px; border:1px solid #ddd; }
+    
+    /* 버튼 */
+    .multiPopup.v31 .DB_menu ul li { width:99px; height:80px; }
+    .multiPopup.v31 .DB_menu ul li p { top:30%; }
+    .multiPopup.v31 .DB_menu .DB_box { width:99px; height:80px; }
+
+
+
+/** 멀티팝업 V32 **/
+    .multiPopup.v32 { width:298px; height:462px; }
+    
+    /* 배너 */
+    .multiPopup.v32 .DB_img { width:298px; height:380px; }
+    
+    /* 버튼 */
+    .multiPopup.v32 .DB_menu ul li { width:98px; height:80px; }
+    .multiPopup.v32 .DB_menu ul li p { top:30%; }
+    .multiPopup.v32 .DB_menu .DB_box { display:none/*박스사용X*/; width:98px; height:80px; }
+
+
+
+/** 멀티팝업 C31 **/
+    .multiPopup.c31 { width:302px; height:511px; padding:8px; border:1px solid #ccc; }
+    
+    /* 배너 */
+    .multiPopup.c31 .DB_img { width:299px; height:380px; margin-bottom:5px; border:1px solid #ddd; }
+    
+    /* 버튼 */
+    .multiPopup.c31 .DB_menu ul li { display:block; width:299px; height:40px; }
+    .multiPopup.c31 .DB_menu ul li p { top:30%; }
+    .multiPopup.c31 .DB_menu .DB_box { width:299px; height:40px; }
+
+
+
+/** 멀티팝업 C32 **/
+    .multiPopup.c32 { width:298px; height:504px; }
+    
+    /* 배너 */
+    .multiPopup.c32 .DB_img { width:298px; height:380px; }
+    
+    /* 버튼 */
+    .multiPopup.c32 .DB_menu ul li { display:block; width:296px; height:40px; }
+    .multiPopup.c32 .DB_menu ul li p { top:30%; }
+    .multiPopup.c32 .DB_menu .DB_box { display:none/*박스사용X*/; }
+
+
+
+/** 멀티팝업 W41 **/
+    .multiPopup.w41 { width:539px; height:301px; padding:8px; border:1px solid #ccc; }
+    
+    /* 배너 */
+    .multiPopup.w41 .DB_img { float:left; width:420px; height:299px; margin:0 5px 0 0; border:1px solid #ddd; }
+    
+    /* 버튼 */
+    .multiPopup.w41 .DB_menu { position:relative; float:left; width:112px; }
+    .multiPopup.w41 .DB_menu ul li { display:block; width:110px; height:74px; }
+    .multiPopup.w41 .DB_menu ul li p { top:27%; }
+    .multiPopup.w41 .DB_menu .DB_box { width:110px; height:74px; }
+
+
+
+/** 멀티팝업 W42 **/
+    .multiPopup.w42 { width:532px; height:297px; }
+    
+    /* 배너 */
+    .multiPopup.w42 .DB_img { float:left; width:420px; height:297px; }
+    .multiPopup.w42 .DB_img ul li {width:420px !important; height:300px !important; }
+    
+    /* 버튼 */
+    .multiPopup.w42 .DB_menu { position:relative; float:left; width:112px; }
+    .multiPopup.w42 .DB_menu ul li { display:block; width:110px; height:73px; }
+    .multiPopup.w42 .DB_menu ul li p { top:27%; }
+    .multiPopup.w42 .DB_menu .DB_box { display:none/*박스사용X*/; }
+
+
+
+/** 멀티팝업 R51 **/
+    .multiPopup.r51 { width:302px; height:415px; padding:8px; border:1px solid #ccc; }
+    
+    /* 배너 */
+    .multiPopup.r51 .DB_img { width:299px; height:380px; margin-bottom:5px; border:1px solid #ddd; }
+    
+    /* 버튼 */
+    .multiPopup.r51 .DB_menu ul li { width:25px; height:25px; line-height:24px; margin:0 5px 0 0; border-radius:100%;  }
+    .multiPopup.r51 .DB_menu .DB_box { display:none; }
+
+
+
+/** 샘플 **/
+    .multiPopup.z_sample { width:502px; height:920px; }
+    
+    /* 배너 */
+    .multiPopup.z_sample .DB_img { width:500px; height:885px; margin-bottom:5px; }
+    
+    /* 버튼 */
+    .multiPopup.z_sample .DB_menu ul li { width:25px; height:25px; line-height:24px; margin:0 5px 0 0; border-radius:100%;  }
+    .multiPopup.z_sample .DB_menu .DB_box { display:none; }
+

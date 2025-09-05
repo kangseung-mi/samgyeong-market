@@ -1,0 +1,41 @@
+<!--@import(/_wg/base.html)-->
+
+<!--------------------------------------------------------------------------------------------------------------------------------------
+
+    ### 이벤트롤링 ###
+    
+    • 이벤트 이미지의 기본사이즈는 230x230 픽셀입니다. 자동으로 리사이징됩니다.
+
+--------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--@css(/_wg/css/JS_navEvent.css)-->
+
+<div class="JS_navEvent" module="board_listpackage_8">
+    <h2 module="board_title_8">{$board_name}</h2>
+    <a href="/board/gallery/list.html?board_no=8" target="_parent" class="more"><img src="/_wg/img/board_btn_more.gif" alt="MORE" /></a>
+    <!--
+        $count = 5
+        $main_list = yes
+    -->
+    <ul class="img" module="board_list_8">
+        <li>
+            <a href="/board/gallery/read.html{$param_read}" target="_parent" class="thumb"><img src="{$img_src}" alt="" /></a>
+            <div class="info">
+                <span class="subject"><a href="/board/gallery/read.html{$param_read}" target="_parent">{$subject|cut:15,..}</a></span>
+                <span class="date">{$write_date|date:Y-m-d}</span>
+            </div>
+        </li>
+        <li>
+            <a href="/board/gallery/read.html{$param_read}" target="_parent" class="thumb"><img src="{$img_src}" alt="" /></a>
+            <div class="info">
+                <span class="subject"><a href="/board/gallery/read.html{$param_read}" target="_parent">{$subject|cut:15,..}</a></span>
+                <span class="date">{$write_date|date:Y-m-d}</span>
+            </div>
+        </li>
+    </ul>
+    <ul class="btn"></ul><!--/자동셋팅-->
+    <ul class="arrow_wrap">
+        <span class="arrow prev"></span>
+        <span class="arrow next"></span>
+    </ul>
+</div>

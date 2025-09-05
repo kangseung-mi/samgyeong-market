@@ -1,0 +1,41 @@
+/* 최상단 배너*/
+#tbanner {
+    position: relative;
+    overflow: hidden;
+    z-index: 89;
+    height: 40px;
+    /* line-height: 40px; */
+}
+
+/* 탑배너 아이콘 스타일 (회원가입 유도용) */
+#tbanner .tbanner-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    filter: brightness(0) invert(1);  /* SVG를 화이트로 변경 */
+}
+
+#tbanner .swiper-slide.off {
+    display: none !important;
+}
+
+#tbanner .swiper-slide a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    height: 40px; /* 높이 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+#tbanner.off {
+    display: none !important;
+    height: 0 !important;
+}

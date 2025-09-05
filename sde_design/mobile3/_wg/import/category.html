@@ -1,0 +1,47 @@
+<!-- 
+    주의!! 아래의 소스를 수정하시면 상품분류메뉴가 정상작동하지 않습니다.
+    아래의 소스는 가능한 수정하지 않으시는게 좋습니다.
+-->
+<div id="category-lnb" class="category" module="Layout_category" style="height:50px;">
+    <ul class="d1-wrap d_ratio" data-maxHeight="480"><!--★중분류 줄바꿈 최고높이-->
+        <li class="d1 li" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+        <li class="d1 li" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+        <li class="d1 li" data-param="{$param}"><a href="/product/list.html{$param}">{$name}</a></li>
+    </ul>
+</div>
+<script>
+$jq(function() {
+    var ww = $(window).width();
+    var $clnb = $jq('#category_scroll');
+	var scroll_on = false;
+    
+    var delay = (function(){
+  		var timer = 0;
+  		return function(callback, ms){
+    		clearTimeout (timer);
+    		timer = setTimeout(callback, ms);
+  		};
+	})();
+    
+    $(window).resize(function(e) {
+    	ww = $(window).width();
+        delay(toggle_vscroll, 100);
+    });
+    function toggle_vscroll() {
+        if(tl_isMobile()) {
+            $clnb.css({'overflow-x':'auto','overflow-y':'hidden'});
+        }
+        else if(ww > 300 && ww < 2000 && scroll_on == false) {
+        	$clnb.mCustomScrollbar({
+                axis:"x",
+                theme:"dark",
+                scrollbarPosition: "inside" });
+            scroll_on = true;
+        } else if (scroll_on == true && (ww >= 2000 || ww <= 300)){
+            scroll_on = false;
+            $clnb.mCustomScrollbar("destroy");
+        } 
+    }
+    toggle_vscroll();
+});
+</script>

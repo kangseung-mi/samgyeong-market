@@ -1,0 +1,21 @@
+
+    .xans-product-normalmenu { margin:50px 0; }
+    .xans-product-normalmenu .title { margin:0 0 17px; }
+    .xans-product-normalmenu .title h2 { font-weight:400; font-size:20px; color:#333; text-align:center; }
+
+    .xans-product-normalmenu .function { height:35px; padding:0 0 10px; border-bottom:1px solid #eee; }
+
+    /* 상품개수 */
+    .xans-product-normalmenu .prdCount { float:left; line-height:30px; padding:0 0 0 15px; font-size:14px; font-weight:bold; }
+    .xans-product-normalmenu .prdCount strong { display:inline-block; height:30px; margin:0 5px 0 0; padding:0 15px; background:#333; border-radius:25px; font-family:'Oswald'; font-size:14px; font-weight:normal; color:#fff; text-align:center; }
+    
+    /* 상품정렬버튼 */
+	.xans-product-normalmenu .function select { float:right; width:100px; height:30px; line-height:30px; margin:0 10px 0 0; border:2px solid #1e1e1e; border-radius:25px; font-size:14px!important; font-weight:bold!important; text-indent:10px; cursor:pointer; }
+
+    /* 상품비교버튼 */
+    .xans-product-normalmenu .compare { position:relative; top:-1px; left:-1px; display:inline-block; height:40px; border:1px solid #bbb; background:url('/_wg/img/_bg/bg_slash_b_10.png') #ddd; transition:all .3s ease; }
+    .xans-product-normalmenu .compare:hover { background:url('/_wg/img/_bg/bg_slash_b_20.png') #ccc; }
+    .xans-product-normalmenu .compare a { display:block; padding:0 15px 0 45px; background:url('/_wg/img/compare_ico.png') no-repeat 15px 10px; color:#333; }
+    .xans-product-normalmenu .compare a:hover { text-decoration:none; }
+
+	#Product_ListMenu.anchor { position:absolute; top:0px; }

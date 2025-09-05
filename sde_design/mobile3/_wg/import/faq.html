@@ -1,0 +1,23 @@
+<!-- FAQ - 자주묻는질문 -->
+<!--@css(/_wg/css/DB_banner18_1.css)-->
+<!--@js(/_wg/js/DB_banner18_1.js)-->
+<div module="board_listpackage_3" class="DB_banner18_1">
+    <h3 module="board_title_3"><i class="xi-ellipsis-v"></i> {$board_name}</h3>
+    <a href="/board/free/list.html?board_no=3" class="more"><i class="xi-bars"></i></a>
+    <ul module="board_list_3">
+        <!--
+            $count = 20
+        -->
+        <li id="{$param_read}" class="list">
+            <div class="DB_title -mov"><span>{$category_name|cover:[ , ]}</span> {$subject|cut:50,..}</div>
+            <div class="DB_detail">{$content}</div>		
+        </li>
+        <li id="{$param_read}" class="list">
+            <div class="DB_title -mov"><span>{$category_name|cover:[ , ]}</span> {$subject|cut:50,..}</div>
+            <div class="DB_detail">{$content}</div>	
+        </li>
+    </ul>
+    <div class="more2">
+        <a href="/board/free/list.html?board_no=3" class="-btn -sm -dgrey">자주 묻는 질문 더보기</a>
+    </div>
+</div>

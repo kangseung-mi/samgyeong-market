@@ -1,0 +1,30 @@
+
+    .main_category { position:relative; margin:0 0 20px; border-top:1px solid #ddd; border-bottom:1px solid #ddd; }
+	.main_category:after { content:""; display:block; clear:both; *zoom:1; }
+    .main_category li { position:relative; float:left; width:33.33%; height:35px; line-height:37px; font-size:13px; color:#333; letter-spacing:-0.05em; text-align:center; white-space:nowrap; }
+    .main_category li a { display:block; }
+    .main_category li a color { color:#f21c35/*특정메뉴만 컬러지정 - <color>메뉴명</color>로 처리*/; }
+
+
+	/** 상품분류메뉴 **/
+	.main_category .category { margin:0 0 -1px; border-bottom:1px solid #ddd; }
+	.main_category .category:after { content:""; display:block; *zoom:1; clear:both; }
+
+
+	/** 추가메뉴1,2 **/
+    .main_category .categorySub { }
+
+    /* 1depth */
+    .main_category .categorySub li a { position:absolute; z-index:1; top:0; right:0px; width:100%; white-space:nowrap; text-indent:-9999px; }
+    /* 2depth */
+    .main_category .categorySub > li > ul { display:none !important; }
+    /* 3depth */
+    .main_category .categorySub > li > ul > li > ul { display:none !important; }
+    /* 4depth */
+    .main_category .categorySub > li > ul > li > ul > li > ul { display:none !important; }
+
+
+	/** 추가메뉴3 **/
+	.main_category .categorySub.m03 { border-top:1px solid #ddd; }
+	.main_category .categorySub.m03:after { content:""; display:block; clear:both; *zoom:1; }
+    .main_category .categorySub.m03 li {  }

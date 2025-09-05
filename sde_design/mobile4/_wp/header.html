@@ -1,0 +1,107 @@
+<!-- 상단 영역 -->
+<!--
+	#상단 공통 영역입니다.
+	- 이 영역에 대한 스타일은 "/_wp/css/layout.css"에 정의되어 있습니다.
+-->
+<!--@import(/_wp/topbanner.html)-->
+
+<header id="header">
+	<div class="header">
+		<section id="topArea">
+			<div class="inner">
+				<div class="logo-wrap">
+					<!-- 상단 로고 -->
+					<h1 class="logo">
+						<a href="/index.html"><img src="/web/upload/wp/167417/m_logo.png" /></a>
+					</h1>
+					<!-- //  -->
+					<!-- 카테고리 버튼 -->
+					<p class="bt category">
+						<a href="javascript:;" class="fold">카테고리</a>
+					</p>
+					<!-- //  -->
+					<!-- 장바구니버튼 -->
+					<p class="bt basket" module="Layout_orderBasketcount">
+						<a href="/order/basket.html">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+					</p>
+					<!-- // -->
+					<!-- 검색버튼 -->
+					<p class="bt search">
+						<a href="javascript:;" class="fold2">검색</a>
+					</p>
+					<!-- // -->
+					<!-- 검색창-->
+					<div module="Layout_SearchHeader" class="searchBox" id="{$search_box_id}">
+						<!--
+							$category_page=/product/list.html
+						-->
+						<fieldset>
+                            <!--@js(/_wp/js/search.js)-->
+							<legend>검색</legend>
+							<div class="searchForm">
+								{$form.keyword}
+								<button type="submit" class="btnSearch">검색</button>
+								<!-- <button type="button" class="btnDelete">삭제</button> -->
+								<div class="autoList" id="{$searchdata_auto_list_id}">
+									<ul class="autoDrop" id="{$search_auto_id}"></ul>
+								</div>
+							</div>
+						</fieldset>
+						<div class="ec-base-tab">
+							<ul class="searchTab {$hot_use_display|display}">
+								<li data-tab="hotkeyword" class="selected"><a href="#none">인기 검색어</a></li>
+								<li data-tab="recent"><a href="#none">최근 검색어</a></li>
+							</ul>
+						</div>
+						<div module="search_recentkeyword">
+							<p class="{$recent_none_display|display}">최근 검색어가 없습니다.</p>
+							<ul class="{$recent_list_display|display}">
+								<li data-index="{$recent_keyword_index}">
+									<a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+									<button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+								</li>
+								<li data-index="{$recent_keyword_index}">
+									<a href="{$recent_keyword_url}">{$recent_keyword_name}</a>
+									<button type="button" class="btnDelete" onclick="{$recent_keyword_remove}">삭제</button>
+								</li>
+							</ul>
+							<div class="button">
+								<button type="button" class="btnDeleteAll" onclick="{$recent_keyword_remove_all}">검색기록 전체삭제</button>
+							</div>
+						</div>
+						<div module="search_hotkeyword">
+							<ul>
+								<li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+								<li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+							</ul>
+						</div>
+
+						<button type="button" class="btnClose" id="{$search_cancel_id}">닫기</button>
+					</div>
+					<!-- // -->
+				</div>
+
+				<!-- 네비게이션 -->
+				 <nav id="gnb">
+					<div class="scrollbar">
+						<div class="cate-swiper-container">
+							<ul module="layout_category" class="swiper-wrapper cate-override">
+								<li class="swiper-slide"><a href="/shopinfo/company.html">브랜드스토리</a></li>
+								<li data-param="{$param}" class="swiper-slide"><a href="/product/list.html{$param}" cate="{$param}">{$name}</a></li>
+								<li data-param="{$param}" class="swiper-slide"><a href="/product/list.html{$param}" cate="{$param}">{$name}</a></li>
+								<li class="swiper-slide pt"><a href="/timesale/">타임세일</a></li>
+								<li class="swiper-slide pt"><a href="/board/review/list.html?board_no=4">리뷰</a></li>
+								<li class="swiper-slide"><a href="/board/gallery/list.html?board_no=8">이벤트</a></li>
+								<li class="swiper-slide"><a href="/inquiry/">제휴문의</a></li>
+								<li class="swiper-slide"><a href="/board/index.html">커뮤니티</a></li>
+							</ul>
+						</div>
+						<div class="cate-mask-left"></div>
+						<div class="cate-mask-right"></div>
+					</div>
+				</nav> <!-- //네비게이션 -->
+
+			</div>
+		</section>
+	</div>
+</header>

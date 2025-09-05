@@ -1,0 +1,68 @@
+
+
+    .login_form { position:relative; width:90%; max-width:380px; margin:80px auto; }
+
+	/* 중간 타이틀 */
+    .login_form .titleBox { min-height:30px; margin:0 0 20px; border:0; font-family:'Oswald','Nanum Gothic'; }
+	.login_form .titleBox h3 { display:block; clear:both; margin:0; text-align:center; font-size:25px; color:#333; font-weight:normal; }
+    .login_form .titleBox p { display:block; clear:both; margin:0 0 10px; text-align:center; font-size:16px; color:#999; font-weight:normal; }
+
+    .login_form fieldset { position:relative; }
+    .login_form fieldset .id,
+    .login_form fieldset .password { overflow:hidden; display:block; margin:0 0 10px; }
+    .login_form fieldset label input { width:100%; height:40px; line-height:45px; border:none; border-bottom:1px solid #ddd; font-size:16px !important; text-indent:10px; letter-spacing:0.1em; transition:border-bottom .5s ease; }
+    .login_form fieldset label input:focus { border-bottom:1px solid #333; }
+
+    .login_form ::-webkit-input-placeholder { color:#999; font-size:15px !important; letter-spacing:-0.02em !important; }
+	.login_form ::-moz-placeholder { color:#999; font-size:15px !important; letter-spacing:-0.02em !important; }
+    .login_form :-ms-input-placeholder { color:#999; font-size:15px !important; letter-spacing:-0.02em !important; }
+	.login_form :-moz-placeholder { color:#999; font-size:15px !important; letter-spacing:-0.02em !important; }
+    .login_form label.ePlaceholder > span { color:#999 !important; font-size:15px !important; letter-spacing:-0.02em !important; }
+
+	/* 체크박스들 */
+    .login_form .option { overflow:hidden; line-height:43px; text-align:center; }
+    .login_form .option > span { display:inline-block; margin:0 6px; font-size:15px; }
+    .login_form .option > span label { font-size:15px !important; }
+    .login_form .option > span i { top:3px; margin:0 2px 0 0; font-size:20px; color:#90173c; }
+    .login_form .option label { line-height:42px !important; font-size:13px !important; }
+
+	/* 공통버튼 */
+    .login_form .-btn { margin:0 0 10px; }
+    .login_form .-btn i { top:2px; margin:0 5px 0 0; font-size:20px; }
+    .login_form button.-btn { margin:0 0 10px; font-size:16px !important; }
+
+    .login_form .user-login fieldset .btn { display:block; margin:0 0 20px 0; text-align:center; }
+    .login_form .user-login fieldset .btn li { display:inline-block; *display:inline; *zoom:1; width:30%; padding:0 1%; }
+    .login_form .user-login fieldset .btn li a { width:100%; }
+
+
+	/* SNS 로그인 */
+    .login_form .user-login .snsArea { display:block; margin:0 0 20px; padding:20px 0; border-top:1px solid #eee; border-bottom:1px solid #eee; }
+    .login_form .user-login .snsArea li a { display:block; height:40px; line-height:40px; margin:0 0 5px; border-radius:7px; background:#eee; font-size:14px; color:#333; overflow:hidden; transition:background .3s ease; }
+    .login_form .user-login .snsArea li a:hover { text-decoration:none; }
+
+		/* SNS 아이콘 */
+    	.login_form .user-login .snsArea li span { position:relative; float:left; width:55px; height:40px; margin:0 15px 0 0; text-indent:9px; transition:width .3s ease; }
+    	.login_form .user-login .snsArea li:hover span { width:60px; }
+        .login_form .user-login .snsArea li i { line-height:40px; margin:0 5px 0 0; font-size:20px; color:#fff; }
+        .login_form .user-login .snsArea li span.naver{ background:#44ba2f; }/*네이버*/
+        .login_form .user-login .snsArea li span.facebook { background:#365bac; }/*페이스북*/
+        .login_form .user-login .snsArea li span.kakao { background:#ebca12; }/*카카오톡*/
+        .login_form .user-login .snsArea li span.google { background:#d2281e; }/*구글플러스*/
+        .login_form .user-login .snsArea li span.line { background:#44ba2f; }/*라인*/
+        .login_form .user-login .snsArea li span.yahoo { background:#ff0033; }/*야후*/
+        .login_form .user-login .snsArea li span.apple { background:#aaa; }/*애플*/
+
+
+
+
+/** 비회원 주문조회 및 로그인 **/
+
+	/* 앵커 */
+	#unuser-login { position:absolute; top:-130px; width:0; height:0; }
+
+    .login_form .info { display:block; line-height:17px; margin:0 0 10px; padding:10px 20px; background:#f4f4f4; font-size:11px; color:#333; text-align:center; }
+
+	/* 주문번호 사이즈 */
+    .login_form .unuser-login #order_id1 { width:172px; margin:0 17px 0 0; }
+    .login_form .unuser-login #order_id2 { width:172px; margin:0 0 0 17px; }
