@@ -1,14 +1,14 @@
 <!--@layout(/layout/basic/layout.html)-->
 
 <div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>회원가입</strong></li>
-    </ol>
+	<span>현재 위치</span>
+	<ol>
+		<li><a href="/">홈</a></li>
+		<li title="현재 위치"><strong>회원가입</strong></li>
+	</ol>
 </div>
 
- <!-- <div class="titleArea">
+<!-- <div class="titleArea">
     <h2>회원가입</h2>
 </div> -->
 
@@ -26,44 +26,56 @@
 				<h3 class="boxTitle">일반 회원가입</h3>
 				<div class="ec-base-button gColumn">
 					<a href="/member/join.html" class="btnSubmit">일반 회원가입</a>
+					<fieldset>
+						<div class="snsArea">
+							<ul>
+								<li class="kakao {$display_kakao|display}">
+									<a href="#none" onclick="{$kakao_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
+								</li>
+								<li class="naver {$display_naver|display}">
+									<a href="#none" onclick="{$naver_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
+								</li>
+								<li class="google {$display_google|display}">
+									<a href="#none" onclick="{$google_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_03.png" alt="google 로그인" /> 구글로 회원가입</a>
+								</li>
+								<li class="facebook {$display_facebook|display}">
+									<a href="#none" onclick="{$facebook_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로
+										회원가입 </a>
+								</li>
+								<li class="line {$display_line|display}">
+									<a href="#none" onclick="{$line_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_05.png" alt="LINE 로그인" /> LINE으로
+										회원가입</a>
+								</li>
+								<li class="apple {$display_apple|display}">
+									<a href="#none" onclick="{$apple_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_06.png" alt="Apple로 로그인" /> Apple로
+										로그인</a>
+								</li>
+	
+								<!-- 샘플몰에서만 노출 -->
+								<li class="kakao dp_sample">
+									<a href="#none" onclick="{$kakao_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
+								</li>
+								<li class="naver dp_sample">
+									<a href="#none" onclick="{$naver_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
+								</li>
+								<li class="facebook dp_sample">
+									<a href="#none" onclick="{$facebook_func_login}"><img
+											src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로
+										회원가입</a>
+								</li><!-- // -->
+							</ul>
+						</div>
+	
+					</fieldset>
 				</div>
-
-				<fieldset>
-					<div class="snsArea">
-						<ul >
-							<li class="kakao {$display_kakao|display}">
-								<a href="#none" onclick="{$kakao_func_login}"><img src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
-							</li>
-							<li class="naver {$display_naver|display}">
-								<a href="#none" onclick="{$naver_func_login}"><img src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
-							</li>
-							<li class="google {$display_google|display}">
-								<a href="#none" onclick="{$google_func_login}"><img src="/web/upload/wp/167417/p__login_sns_03.png" alt="google 로그인" /> 구글로 회원가입</a>
-							</li>
-							<li class="facebook {$display_facebook|display}">
-								<a href="#none" onclick="{$facebook_func_login}"><img src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로 회원가입 </a>
-							</li>
-							<li class="line {$display_line|display}">
-								<a href="#none" onclick="{$line_func_login}"><img src="/web/upload/wp/167417/p__login_sns_05.png" alt="LINE 로그인" /> LINE으로 회원가입</a>
-							</li>
-							<li class="apple {$display_apple|display}">
-								<a href="#none" onclick="{$apple_func_login}"><img src="/web/upload/wp/167417/p__login_sns_06.png" alt="Apple로 로그인" /> Apple로 로그인</a>
-							</li>
-
-							<!-- 샘플몰에서만 노출 -->
-							<li class="kakao dp_sample">
-								<a href="#none" onclick="{$kakao_func_login}"><img src="/web/upload/wp/167417/p__login_sns_01.png" alt="kakao 로그인" /> 카카오로 회원가입</a>
-							</li>
-							<li class="naver dp_sample">
-								<a href="#none" onclick="{$naver_func_login}"><img src="/web/upload/wp/167417/p__login_sns_02.png" alt="naver 로그인" /> 네이버로 회원가입</a>
-							</li>
-							<li class="facebook dp_sample">
-								<a href="#none" onclick="{$facebook_func_login}"><img src="/web/upload/wp/167417/p__login_sns_04.png" alt="Facebook으로 로그인" /> 페이스북으로 회원가입</a>
-							</li><!-- // -->
-						</ul>
-					</div>
-
-				</fieldset>
 			</div>
 		</div>
 	</div>

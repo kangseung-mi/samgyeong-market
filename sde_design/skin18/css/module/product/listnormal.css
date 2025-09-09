@@ -1,16 +1,80 @@
-.xans-product-normalmenu { margin:0; }
-.xans-product-normalmenu .title { margin:0 0 17px; }
-.xans-product-normalmenu .title h3 { font-weight:normal; font-size:20px; color:#2e2e2e; text-align:center; }
-.xans-product-normalmenu .function { overflow:hidden; margin:50px 0 10px; text-align:right; line-height:38px; }
-.xans-product-normalmenu .function .btnCompare { display:inline-block; padding:0 12px; border-left:1px solid #d7d5d5; }
-.xans-product-normalmenu .function .btnCompare:hover { color:#000000; text-decoration:none; }
-.xans-product-normalmenu .prdCount { float:left;  color:#949494; font-size:15px; }
-.xans-product-normalmenu .prdCount strong{color:#000; font-weight:normal; }
-.xans-product-normalmenu ul#type { display:inline; }
-.xans-product-normalmenu ul#type li { display:inline; padding:0 0 0 20px; }
-.xans-product-normalmenu ul#type li:first-child { background:none; }
-.xans-product-normalmenu ul#type li:last-child{}
-.xans-product-normalmenu ul#type li a { color:#949494 ; font-size:15px;}
-.xans-product-normalmenu ul#type li a:hover { color:#000; text-decoration:none; }
-.xans-product-normalmenu fieldset { margin:-1px 0 0; padding:7px 12px; border:1px solid #d7d5d6; text-align:right; background:#fbf9fa; }
-.xans-product-normalmenu fieldset select { height:24px; }
+.xans-product-normalmenu {
+    margin: 0;
+}
+
+.xans-product-normalmenu .title {
+    margin: 0 0 17px;
+}
+
+.xans-product-normalmenu .title h3 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #2e2e2e;
+    text-align: center;
+}
+
+.xans-product-normalmenu .function {
+    overflow: hidden;
+    margin: 50px 0 10px;
+    text-align: right;
+    line-height: 38px;
+}
+
+.xans-product-normalmenu .function .btnCompare {
+    display: inline-block;
+    padding: 0 12px;
+    border-left: 1px solid #d7d5d5;
+}
+
+.xans-product-normalmenu .function .btnCompare:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.xans-product-normalmenu .prdCount {
+    float: left;
+    color: #949494;
+    font-size: 15px;
+}
+
+.xans-product-normalmenu .prdCount strong {
+    color: #000;
+    font-weight: normal;
+}
+
+.xans-product-normalmenu ul#type {
+    display: inline;
+}
+
+.xans-product-normalmenu ul#type li {
+    display: inline;
+    padding: 0 0 0 20px;
+}
+
+.xans-product-normalmenu ul#type li:first-child {
+    background: none;
+}
+
+.xans-product-normalmenu ul#type li:last-child {}
+
+.xans-product-normalmenu ul#type li a {
+    color: #949494;
+    font-size: 15px;
+}
+
+.xans-product-normalmenu ul#type li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.xans-product-normalmenu fieldset {
+    margin: -1px 0 0;
+    padding: 7px 12px;
+    border: 1px solid #d7d5d6;
+    text-align: right;
+    background: #fbf9fa;
+}
+
+.xans-product-normalmenu fieldset select {
+    height: 24px;
+}

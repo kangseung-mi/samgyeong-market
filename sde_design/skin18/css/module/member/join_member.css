@@ -1,20 +1,96 @@
-.login_wrap{padding:50px 0; text-align: center;}
-.xans-member-login { margin: 0; padding:0; border:0;  }
+.login_wrap {
+    padding: 50px 0;
+    text-align: center;
+}
 
-.login-align{display:inline-block;vertical-align:top;width: 460px;padding: 30px 0;text-align: left;box-sizing: border-box; margin:0 auto;}
+.xans-member-login {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
-.xans-member-login .login fieldset { position:relative; }
+.login-align {
+    display: inline-block;
+    vertical-align: top;
+    width: 460px;
+    padding: 30px 0;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
 
-.xans-member-login .ec-base-button.gColumn{}
-.xans-member-login .ec-base-button.gColumn .btnSubmit{background:#2a2a2a; color:#fff; font-size:18px; height:56px;line-height:56px;}
+.xans-member-login .login fieldset {
+    position: relative;
+}
 
-.xans-member-login .login fieldset .snsArea { padding:50px 0 0;position: relative; margin: 50px 0 0; }
-.xans-member-login .login fieldset .snsArea ul{font-size:0; margin-right:-15px;}
-.xans-member-login .login fieldset .snsArea li{ vertical-align:middle; padding-right: 10px; padding-bottom:10px; box-sizing: border-box;}
-.xans-member-login .login fieldset .snsArea li:before { content: "간편 회원가입"; display: block; text-align: center; font-size: 25px; font-weight:bold; color:#222; position: absolute; top: 0; left: 0;     right: 0;background: #fff;}
-.xans-member-login .login fieldset .snsArea li.kakao{display:block;width:100%;}
-.xans-member-login .login fieldset .snsArea a{text-decoration:none; font-size:15px; text-align:center; display:block; padding:15px 0 13px; background:#fff;  border: 1px solid #ddd; ;}
-.xans-member-login .login fieldset .snsArea .kakao a{background: #fae101; border-color:#fae101;}
-.xans-member-login .login fieldset .snsArea a img{vertical-align:middle; margin-right:5px;}
+.xans-member-login .ec-base-button.gColumn {
+    margin: 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
 
-.boxTitle{font-size:25px; font-weight:bold; color:#222; padding:0 0 20px; text-align:center; }
+.xans-member-login .ec-base-button.gColumn .btnSubmit {
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+}
+
+/* .xans-member-login .login fieldset .snsArea {
+    padding: 20px 0 0;
+    position: relative;
+    margin: 20px 0 0;
+} */
+
+.xans-member-login .login fieldset .snsArea ul {
+    margin: 16px 0 0;
+}
+
+.xans-member-login .login fieldset .snsArea li {
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    padding-right: 0;
+    /* padding-bottom: 10px; */
+    box-sizing: border-box;
+}
+
+.xans-member-login .login fieldset .snsArea li+li {
+    margin-top: 16px;
+}
+
+
+
+.xans-member-login .login fieldset .snsArea li.kakao {
+    display: block;
+    width: 100%;
+}
+
+.xans-member-login .login fieldset .snsArea a {
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    padding: 15px 0 13px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.xans-member-login .login fieldset .snsArea .kakao a {
+    background: #fae101;
+    border-color: #fae101;
+}
+
+.xans-member-login .login fieldset .snsArea a img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.boxTitle {
+    font-size: 25px;
+    font-weight: bold;
+    color: #222;
+    padding: 0 0 24px;
+    text-align: center;
+}
