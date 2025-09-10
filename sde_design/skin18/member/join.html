@@ -2,6 +2,7 @@
 <!--js(/_wp/js/member/form.placeholder.js)-->
 <!--@js(/_wp/js/member/agree.display.js)-->
 
+
 <div class="path">
     <span>현재 위치</span>
     <ol>
@@ -546,4 +547,18 @@
         </div>
 
         <!--@import(/member/join_confirm.html)-->
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    const memberType = new URLSearchParams(window.location.search).get('type');
+                    if (memberType === 'business') {
+                        document.querySelector('#member_type1').checked = true;
+                    } else if (memberType === 'personal') {
+                        document.querySelector('#member_type0').checked = true;
+                    }
+                }, 500);
+            });
+            </script>
+
     </div>
