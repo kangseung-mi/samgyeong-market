@@ -1,4 +1,9 @@
 /* ============================== 공통 CSS ============================== */
+/* Pretendard 폰트 적용 */
+html, body, * {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif !important;
+}
+
 .dp_sample{display:none !important;}
 
 /* 포인트컬러 */

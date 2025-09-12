@@ -1,0 +1,37 @@
+/* Pretendard 폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* Pretendard 폰트 패밀리 정의 */
+:root {
+    --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+/* 기본 폰트 패밀리 설정 */
+body, 
+html, 
+* {
+    font-family: var(--font-pretendard) !important;
+    letter-spacing: -0.02em !important;  /* 자간 -2% */
+}
+
+/* 특정 요소들에 대한 폰트 가중치 설정 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-pretendard) !important;
+    font-weight: 600;
+    letter-spacing: -0.04em !important;  /* 자간 -2% */
+}
+
+p, span, div, a, button, input, textarea, select {
+    font-family: var(--font-pretendard) !important;
+    letter-spacing: -0.02em !important;  /* 자간 -2% */
+}
+
+/* 폰트 가중치별 클래스 */
+.font-thin { font-weight: 100; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
