@@ -103,13 +103,13 @@
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
-.bx-wrapper .bx-prev {
+/* .bx-wrapper .bx-prev {
 
 }
 
 .bx-wrapper .bx-next {
 
-}
+} */
 
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-next:hover { opacity:0.6
@@ -181,7 +181,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #666\9;
+	background: #666;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
 }
@@ -192,4 +192,106 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+
+/* 배너 슬라이더 컨테이너 */
+.banner-slider-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.banner-swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 배너 내부 버튼 완전 제거 */
+.banner-swiper .swiper-button-next,
+.banner-swiper .swiper-button-prev {
+    display: none; /* 배너 안의 버튼 완전히 숨김 */
+}
+
+.banner-swiper .swiper-wrapper {
+    display: flex;
+}
+
+.banner-swiper .swiper-slide {
+    width: auto;
+    flex-shrink: 0;
+}
+
+.banner-swiper .swiper-slide .img {
+    overflow: hidden;
+}
+
+.banner-swiper .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+	margin-right: 16px;
+}
+/* 하단 컨트롤 영역 */
+.banner-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+    background: #fff; /* 배경색으로 완전 분리 */
+}
+
+/* /* 네비게이션 버튼 하단 스타일 */
+.banner-controls .swiper-button-next {
+    position: static;
+    margin-top: 0;
+    color: transparent; /* 텍스트 숨김 */
+    background: url('/icon/ico_next.svg') no-repeat center;
+    background-size: 16px 16px; /* 아이콘 크기 16x16px */
+    width: 32px; /* 오타 수정: 32x → 32px */
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.banner-controls .swiper-button-prev {
+    position: static;
+    margin-top: 0;
+    color: transparent; /* 텍스트 숨김 */
+    background: url('/icon/ico_pre.svg') no-repeat center;
+    background-size: 16px 16px; /* 아이콘 크기 16x16px */
+    width: 32px; /* 오타 수정: 32x → 32px */
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.banner-controls .swiper-button-next:hover,
+.banner-controls .swiper-button-prev:hover {
+    background-color: #fff;
+    border-color: #333;
+}
+
+/* 기본 화살표 아이콘 제거 */
+.banner-controls .swiper-button-next:after,
+.banner-controls .swiper-button-prev:after {
+    display: none;
+}
+
+/* 페이지네이션 숫자 스타일 */
+.banner-controls .swiper-pagination {
+    position: static;
+    bottom: auto;
+    width: auto;
+    text-align: center;
+}
+
+/* 기본 불렛 숨김 */
+.banner-controls .swiper-pagination-bullet {
+    display: none;
 }

@@ -54,41 +54,54 @@ jQuery11(function(){
 	});
 
 
-    jQuery11('#MainBnr300 .slider').on('init', function(event, slick, direction){
-        $(slick.$slides[0]).addClass('slick-selected');
-    }).slick({
-        centerMode: true,
-        variableWidth: true,
-        arrows: true,
-        autoplay: 1,
-        dots: true,
-        infinite: true,
-        draggable: true,
-        pauseOnDotsHover: true,
-        adaptiveHeight: true,
-        speed: 300,
-        autoplaySpeed: 4000,
-        slidesToShow: 1,
-    });
 
-    jQuery11('#MainBnr300 .slider').on('beforeChange', function(event, slick, prevSlide, nextSlide){
-        $('#MainBnr300 .slider li').removeClass('slick-selected');
-        if (prevSlide > nextSlide){
-        	$(slick.$slides[prevSlide]).next('li').addClass('slick-selected');
-        }else if((slick.$slides.length - 1) == nextSlide && prevSlide == 0){
-        	$(slick.$slides[prevSlide]).prev('li').addClass('slick-selected');
-        }else{
-        	$(slick.$slides[nextSlide]).addClass('slick-active');
-        }
-    });
+// Swiper 초기화 (네비게이션 없음)
+var eventSwiper = new Swiper('.event-swiper', {
+    slidesPerView: 3, // 데스크톱에서 3개씩 고정 표시
+    spaceBetween: 20, // 카드 간 간격
+    centeredSlides: false,
+    loop: true
+    // navigation, pagination 모두 제거
+});
+    // pagination 옵션 제거
+});
 
-    jQuery11('#MainBnr300 .slider').on('afterChange', function(event, slick, currentSlide){
-        $('#MainBnr300 .slider li').removeClass('slick-selected');
-    });
 
-    jQuery11('#MainBnr300 .slider').on('init', function(event, slick){
-        $(slick.$slides[0]).addClass('slick-selected');
-    });
+    // jQuery11('#MainBnr300 .slider').on('init', function(event, slick, direction){
+    //     $(slick.$slides[0]).addClass('slick-selected');
+    // }).slick({
+    //     centerMode: true,
+    //     variableWidth: true,
+    //     arrows: true,
+    //     autoplay: 1,
+    //     dots: true,
+    //     infinite: true,
+    //     draggable: true,
+    //     pauseOnDotsHover: true,
+    //     adaptiveHeight: true,
+    //     speed: 300,
+    //     autoplaySpeed: 4000,
+    //     slidesToShow: 1,
+    // });
+
+    // jQuery11('#MainBnr300 .slider').on('beforeChange', function(event, slick, prevSlide, nextSlide){
+    //     $('#MainBnr300 .slider li').removeClass('slick-selected');
+    //     if (prevSlide > nextSlide){
+    //     	$(slick.$slides[prevSlide]).next('li').addClass('slick-selected');
+    //     }else if((slick.$slides.length - 1) == nextSlide && prevSlide == 0){
+    //     	$(slick.$slides[prevSlide]).prev('li').addClass('slick-selected');
+    //     }else{
+    //     	$(slick.$slides[nextSlide]).addClass('slick-active');
+    //     }
+    // });
+
+    // jQuery11('#MainBnr300 .slider').on('afterChange', function(event, slick, currentSlide){
+    //     $('#MainBnr300 .slider li').removeClass('slick-selected');
+    // });
+
+    // jQuery11('#MainBnr300 .slider').on('init', function(event, slick){
+    //     $(slick.$slides[0]).addClass('slick-selected');
+    // });
 
     var review_swiper = new Swiper('.main-review .swiper-container', {
         on: {
@@ -136,6 +149,33 @@ jQuery11(function(){
 		mousewheel: true,
     });
 
+// 3개 배너 슬라이더 (기존 bxslider 대체)
+var bannerSwiper = new Swiper('.banner-swiper', {
+    on: {
+        init: function () {},
+    },
+    slidesPerView: 3,
+    spaceBetween: 15,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.banner-controls .swiper-pagination',
+        clickable: true,
+        type: 'fraction', // 숫자 형태로 변경
+        formatFractionCurrent: function (number) {
+            return number;
+        },
+        formatFractionTotal: function (number) {
+            return number;
+        },
+    },
+    navigation: {
+        nextEl: '.banner-controls .swiper-button-next',
+        prevEl: '.banner-controls .swiper-button-prev',
+    },
+});
 	// 할인율 표시
 	discountRate();
-});

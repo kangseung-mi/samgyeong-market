@@ -272,7 +272,8 @@
 	.main_bnr_300{
         margin:60px 0 150px;
 	}
-	#MainBnr300 {
+/*기존 기획전 레이아웃*/
+	/* #MainBnr300 {
         position:relative;
         height:414px;
         overflow:hidden;
@@ -296,7 +297,7 @@
         right:0;
         bottom:0;
         background:rgba(255, 255, 255, 0.65); /* 비활성 슬라이드에 흰색 오버레이 */
-        z-index:1;
+        /*z-index:1;
         transition: all .25s ease;
 	}
 	#MainBnr300 li.slick-slide.slick-active a:after,
@@ -384,7 +385,80 @@
 	}
 	#MainBnr300 .slick-dots > li.slick-active button{
         background:rgba(255,255,255,.9);
-	}
+	} */
+
+       /* 기존 카드 스타일 유지하면서 슬라이더 스타일 추가 */
+.event-swiper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 60px; /* 화살표 공간 확보 */
+        position: relative;
+    }
+    
+    .event-swiper .swiper-slide {
+        width: auto; /* 카드 크기에 맞게 자동 조정 */
+        padding: 0 10px; /* 카드 간격 */
+    }
+    
+    .event-card {
+        width: 320px; /* 고정 너비 */
+        height: 220px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .event-card a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        text-decoration: none;
+    }
+    
+    .event-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    
+    .event-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        padding: 30px 20px 20px;
+        color: white;
+    }
+    
+    .event-title {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+    
+    .event-desc {
+        display: block;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+    
+    /* 화살표 버튼 커스터마이징 */
+    .event-swiper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0; /* 화살표 공간 제거 */
+        position: relative;
+    }
+    
 
 /* 상품 진열 영역 - 베스트 상품 */
 	.prd-best{
