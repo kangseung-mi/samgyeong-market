@@ -228,7 +228,7 @@
 
 .banner-swiper .swiper-slide img {
     width: 100%;
-    height: 400px;
+    height: 480px;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
