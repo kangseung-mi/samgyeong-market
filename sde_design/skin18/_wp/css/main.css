@@ -295,50 +295,24 @@
         margin: 0;
 }
 
-/*네비게이션 영역*/
-.event-navigation {
+/* 브랜드 헤더 - 이벤트 헤더와 동일한 스타일 */
+.brand-header {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 16px;
+        margin-bottom: 24px;
 }
 
-.event-pagination {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 14pt;
-        color: #666;
+.brand-header .section-title {
+        margin: 0; /* 기존 마진 제거 */
+        text-align: left; /* 기존 center에서 변경 */
 }
 
-.pagination-current {
+.brand-header .section-title h3 {
+        font-size: 32px;
         color: #000;
-        font-weight: bold;
-}
-
-.nav-button {
-        width: 32px;
-        height: 32px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        color: #666;
-        font-size: 12px;
-}
-
-.nav-button:hover {
-        border-color: #333;
-        color: #333;
-        background: #f8f9fa;
-}
-
-.nav-button:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
+        font-weight: 700;
+        margin: 0;
 }
     
 /* Swiper 컨테이너 */
@@ -346,6 +320,7 @@
         width: 100%;
         position: relative;
         overflow: visible;
+        overflow: hidden;
 }
     
 .event-swiper .swiper-wrapper {
@@ -425,6 +400,174 @@
         display: none;
 }
 
+/* 이벤트 헤더 우측 컨트롤 */
+.event-controls {
+  display: flex;
+  align-items: center;       /* 세로 가운데 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 8px;
+  min-height: 32px;          /* 버튼 높이만큼 영역 확보 */
+}
+
+/* 브랜드 헤더 우측 컨트롤 - 이벤트 컨트롤과 동일한 스타일 */
+.brand-controls {
+  display: flex;
+  align-items: center;       /* 세로 가운데 */
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  gap: 8px;
+  min-height: 32px;          /* 버튼 높이만큼 영역 확보 */
+}
+
+/* Swiper 기본 absolute를 강제로 무효화 + 버튼 UI */
+.event-controls .swiper-button-prev,
+.event-controls .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: static !important;   /* Swiper 기본 absolute 무효화 */
+  top: auto !important;
+  margin-top: 0 !important;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;  /* 완전한 원형 강제 적용 */
+  border: 1px solid #e0e0e0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+
+  color: transparent;            /* 기본 텍스트 숨김 */
+  transition: all 0.3s ease;
+}
+
+/* 커스텀 아이콘 경로 연결 */
+.event-controls .swiper-button-prev { background-image: url(/icon/ico_pre.svg); }
+.event-controls .swiper-button-next { background-image: url(/icon/ico_next.svg); }
+
+/* hover 옵션(선택) */
+.event-controls .swiper-button-prev:hover,
+.event-controls .swiper-button-next:hover {
+  border-color: #333;
+  background-color: #fff;
+}
+
+/* 브랜드 컨트롤 버튼 스타일 - 이벤트 컨트롤과 동일 */
+.brand-controls .swiper-button-prev,
+.brand-controls .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: static !important;   /* Swiper 기본 absolute 무효화 */
+  top: auto !important;
+  margin-top: 0 !important;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;  /* 완전한 원형 강제 적용 */
+  border: 1px solid #e0e0e0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+
+  color: transparent;            /* 기본 텍스트 숨김 */
+  transition: all 0.3s ease;
+}
+
+/* 브랜드 컨트롤 아이콘 경로 연결 */
+.brand-controls .swiper-button-prev { background-image: url(/icon/ico_pre.svg); }
+.brand-controls .swiper-button-next { background-image: url(/icon/ico_next.svg); }
+
+/* 브랜드 컨트롤 hover 옵션 */
+.brand-controls .swiper-button-prev:hover,
+.brand-controls .swiper-button-next:hover {
+  border-color: #333;
+  background-color: #fff;
+}
+
+.event-controls .swiper-pagination {
+  position: static;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Fraction 페이지네이션 스타일 (6 / 6 형태) */
+.event-controls .swiper-pagination-fraction {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 브랜드 페이지네이션 스타일 - 이벤트와 동일 */
+.brand-controls .swiper-pagination {
+  position: static;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.brand-controls .swiper-pagination-fraction {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 숫자 페이지네이션 스타일 (index_bnr_100.html과 동일) */
+.event-controls .swiper-pagination-bullet {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 0;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+/* 브랜드 바로가기  */
+.main_brand_wrap {
+        margin: 60px 0 150px;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 16px;
+        overflow: hidden;
+}
+
+      .brand-card {
+        text-align: center;
+      }
+      
+      .brand-thumbnail img {
+        width: 100%;
+        height: 224px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 16px;
+      }
+      
+      .brand-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: left;
+      }
+      
 
 /* 상품 진열 영역 - 베스트 상품 */
 	.prd-best{
@@ -515,62 +658,74 @@
 
 /* 메인공지글 */
 	.main-notice{
-        border-top:1px solid #eee; 
-        background:#fff; 
-        padding:20px 0; 
-        font-size:0; 
-        position: relative; 
-        line-height:1.5;}
+                border-top:1px solid #eee; 
+                background:#fff; 
+                padding:20px 0; 
+                font-size:0; 
+                position: relative; 
+                line-height:1.5;
+        }
 	.main-notice .xans-board-title{ 
-        font-size: 24px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 24px; }
+                font-size: 24px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 24px;
+        }
 	.main-notice .board_list{
-        display:inline-block; 
-        vertical-align:middle; 
-        width: calc(100% - 330px); 
-        height:24px; 
-        overflow:hidden; 
-        line-height:1.4;}
+                display:inline-block; 
+                vertical-align:middle; 
+                width: calc(100% - 330px); 
+                height:24px; 
+                overflow:hidden; 
+                line-height:1.4;
+        }
 	.main-notice .board_list li{
-        display:inline-block; 
-        vertical-align:middle; }
+                display:inline-block; 
+                vertical-align:middle;
+        }
 	.main-notice .board_list li.subject{
-        font-size:16px; 
-        max-width:700px;}
+                font-size:16px; 
+                max-width:700px;
+        }
 	.main-notice .board_list li.date{
-        color:#999;
-        font-size:14px; 
-        margin-left:8px;}
+                color:#999;
+                font-size:14px; 
+                margin-left:8px;
+        }
 	.main-notice .board_list li a{
-        display:block;
-        overflow:hidden;
-        white-space:nowrap; 
-        text-overflow:ellipsis;
-        color:#191919;}
+                display:block;
+                overflow:hidden;
+                white-space:nowrap; 
+                text-overflow:ellipsis;
+                color:#191919;
+        }
 	.main-notice .bt_prev,
 	.main-notice .bt_next,
 	.main-notice .bt_more{ 
-        font-size:0; 
-        border:1px solid #ddd;
-        width: 32px;
-        height: 32px;
-        transition: all .25s ease; 
-        position: absolute;top: 50%;
-        transform: translateY(-50%); /* margin-top 대신 */
-        border-radius:50%;}
+                font-size:0; 
+                border:1px solid #ddd;
+                width: 32px;
+                height: 32px;
+                transition: all .25s ease; 
+                position: absolute;top: 50%;
+                transform: translateY(-50%); /* margin-top 대신 */
+                border-radius:50%;
+        }
 	.main-notice .bt_prev{
-        right:124px; }
+                right:124px;
+        }
 	.main-notice .bt_next{
-        right:82px }
+                right:82px
+        }
 	.main-notice .bt_more{
-        right: 0;}
+                right: 0;
+        }
 	.main-notice .bt_prev:hover,
 	.main-notice .bt_next:hover,
 	.main-notice .bt_more:hover{
-        border-color:#111; 
-        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);}
+                border-color:#111; 
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+        }
 	.main-notice .bt_prev:after{
         /* content: "";
         display: inline-block;
@@ -580,15 +735,16 @@
         background-size: contain;
         margin-left: 0 0 0 10px;
         vertical-align: middle;} */
-        content: "";
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
-    	width: 16px; /* 크기 줄임 */
-    	height: 16px;
-    	background: url('https://samkyoungmkt.cafe24.com/icon/ico_next.svg') no-repeat center;
-    	background-size: contain;}
+                content: "";
+    	        position: absolute;
+    	        top: 50%;
+    	        left: 50%;
+    	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
+    	        width: 16px; /* 크기 줄임 */
+    	        height: 16px;
+    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_next.svg') no-repeat center;
+    	        background-size: contain;
+        }
 	.main-notice .bt_next:after{
         /* content: ""; 
         display: block; 
@@ -599,15 +755,16 @@
         transform: rotate( 135deg ); 
         margin: 12px 0 0 10px;
         border-radius: 1px;} */
-        content: "";
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
-    	width: 16px; /* 크기 줄임 */
-    	height: 16px;
-    	background: url('https://samkyoungmkt.cafe24.com/icon/ico_pre.svg') no-repeat center;
-    	background-size: contain;}
+                content: "";
+    	        position: absolute;
+    	        top: 50%;
+    	        left: 50%;
+    	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
+    	        width: 16px; /* 크기 줄임 */
+    	        height: 16px;
+    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_pre.svg') no-repeat center;
+    	        background-size: contain;
+        }
 	.main-notice .bt_more:before{
         /* content:"";
         display:block; 
@@ -616,15 +773,16 @@
         background:#444;
         margin: 17px auto 0;
         border-radius: 1px;} */
-        content: "";
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
-    	width: 16px; /* 크기 줄임 */
-    	height: 16px;
-    	background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
-    	background-size: contain;}
+                content: "";
+    	        position: absolute;
+    	        top: 50%;
+    	        left: 50%;
+    	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
+    	        width: 16px; /* 크기 줄임 */
+    	        height: 16px;
+    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
+    	        background-size: contain;
+        }
 	.main-notice .bt_more:after{
         /* content:"";
         display:block; 
@@ -633,13 +791,16 @@
         background:#444;
         margin: -9px auto 0;
         border-radius: 1px;} */
-        content: "";
-    	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
-    	width: 16px; /* 크기 줄임 */
-    	height: 16px;
-    	background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
-    	background-size: contain;}
-	.main-notice a{text-decoration:none;}
+                content: "";
+    	        position: absolute;
+    	        top: 50%;
+    	        left: 50%;
+    	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
+    	        width: 16px; /* 크기 줄임 */
+    	        height: 16px;
+    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
+    	        background-size: contain;
+        }
+	.main-notice a{
+                text-decoration:none;
+        }

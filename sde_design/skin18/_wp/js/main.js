@@ -38,6 +38,27 @@ jQuery11(function(){
         loop: true,
     });
 
+    // 브랜드 카드 Swiper 초기화 (4개 레이아웃)
+    var brandSwiper = new Swiper('.brand-swiper', {
+        slidesPerView: 5,
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+            nextEl: '.brand-controls .swiper-button-next',
+            prevEl: '.brand-controls .swiper-button-prev',
+        },
+        pagination: {
+            el: '.brand-controls .swiper-pagination',
+            type: 'fraction',  // 숫자 페이지네이션
+            formatFractionCurrent: function (number) {
+                return number;
+            },
+            formatFractionTotal: function (number) {
+                return number;
+            },
+        },
+    });
+
 	var best_swiper = new Swiper('.prd-best .swiper-container', {
 		on: {
 			init: function () {
@@ -55,17 +76,30 @@ jQuery11(function(){
 
 
 
-// Swiper 초기화 (네비게이션 없음)
+// 이벤트 배너 Swiper 초기화 (메인 배너와 동일한 설정이지만 독립적)
 var eventSwiper = new Swiper('.event-swiper', {
-    slidesPerView: 3, // 데스크톱에서 3개씩 고정 표시
-    spaceBetween: 20, // 카드 간 간격
-    centeredSlides: false,
-    loop: true
-    // navigation, pagination 모두 제거
+    slidesPerView: 3,
+    spaceBetween: 15,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.event-controls .swiper-pagination',
+        type: 'fraction',  // ✅ 숫자 페이지네이션
+        formatFractionCurrent: function (number) {
+            return number; // 현재 페이지 숫자
+        },
+        formatFractionTotal: function (number) {
+            return number; // 전체 페이지 숫자
+        },
+    },
+    navigation: {
+        nextEl: '.event-controls .swiper-button-next',
+        prevEl: '.event-controls .swiper-button-prev',
+    },
 });
-    // pagination 옵션 제거
-});
-
 
     // jQuery11('#MainBnr300 .slider').on('init', function(event, slick, direction){
     //     $(slick.$slides[0]).addClass('slick-selected');
@@ -149,11 +183,8 @@ var eventSwiper = new Swiper('.event-swiper', {
 		mousewheel: true,
     });
 
-// 3개 배너 슬라이더 (기존 bxslider 대체)
+// 3개 배너 슬라이더 (기존 bxslider 대체) - 메인 배너만 제어
 var bannerSwiper = new Swiper('.banner-swiper', {
-    on: {
-        init: function () {},
-    },
     slidesPerView: 3,
     spaceBetween: 15,
     loop: true,
@@ -163,13 +194,12 @@ var bannerSwiper = new Swiper('.banner-swiper', {
     },
     pagination: {
         el: '.banner-controls .swiper-pagination',
-        clickable: true,
-        type: 'fraction', // 숫자 형태로 변경
+        type: 'fraction',  // ✅ 숫자 페이지네이션
         formatFractionCurrent: function (number) {
-            return number;
+            return number; // 현재 페이지 숫자
         },
         formatFractionTotal: function (number) {
-            return number;
+            return number; // 전체 페이지 숫자
         },
     },
     navigation: {
@@ -179,3 +209,5 @@ var bannerSwiper = new Swiper('.banner-swiper', {
 });
 	// 할인율 표시
 	discountRate();
+
+});

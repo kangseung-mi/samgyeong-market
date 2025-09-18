@@ -233,6 +233,7 @@
     display: block;
     transition: transform 0.3s ease;
 	margin-right: 16px;
+	border-radius: 16px;
 }
 /* 하단 컨트롤 영역 */
 .banner-controls {
@@ -285,13 +286,15 @@
 
 /* 페이지네이션 숫자 스타일 */
 .banner-controls .swiper-pagination {
-    position: static;
-    bottom: auto;
-    width: auto;
-    text-align: center;
+  position: static;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  width: auto;
+  text-align: center;
 }
 
 /* 기본 불렛 숨김 */
 .banner-controls .swiper-pagination-bullet {
-    display: none;
+    display: none !important; 
 }
