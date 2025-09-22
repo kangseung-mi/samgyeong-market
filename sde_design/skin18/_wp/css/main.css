@@ -288,7 +288,7 @@
         text-align: left; /* 기존 center에서 변경 */
 }
 
-.event-header .section-title h3 {
+.event-header .section-title h3{
         font-size: 32px;
         color: #000;
         font-weight: 700;
@@ -315,7 +315,7 @@
         margin: 0;
 }
     
-/* Swiper 컨테이너 */
+/* Swiper 컨테이너
 .event-swiper {
         width: 100%;
         position: relative;
@@ -331,46 +331,32 @@
         width: auto;
         margin-right: 16px;
         flex-shrink: 0;
-}    
+}     */
 
 /* 이벤트 카드 */
-.event-card {
-        width: 100%;
-        background: white;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        cursor: pointer;
+.event-list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 16px
 }
 
-/* 썸네일 영역 */
-.event-thumbnail {
-        width: 100%;
+.event-card {
+        background-color: #fff;
+        overflow: hidden;
+}
+
+.event-card .event-thumbnail {
+        border-radius: 16px;
         height: 224px;
         overflow: hidden;
-        position: relative;
-        border-radius: 12px;
 }
-    
-    .event-thumbnail a {
-        display: block;
-        width: 100%;
-        height: 100%;
-}
-    
-    .event-thumbnail img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-}
-
 /* 텍스트 영역 */
 .event-text {
         padding: 16px 0 0 0;
         background: white;
 }
     
-    .event-text .event-title {
+.event-text .event-title {
         font-size: 20px;
         font-weight: 700;
         color: #333;
@@ -382,7 +368,7 @@
         overflow: hidden;
 }
     
-    .event-text .event-desc {
+.event-text .event-desc {
         font-size: 14px;
         color: #666;
         margin: 0;
@@ -392,23 +378,6 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
 }
-    
-    /* Swiper 기본 버튼 숨기기 */
-    .event-swiper .swiper-button-next,
-    .event-swiper .swiper-button-prev,
-    .event-swiper .swiper-pagination {
-        display: none;
-}
-
-/* 이벤트 헤더 우측 컨트롤 */
-.event-controls {
-  display: flex;
-  align-items: center;       /* 세로 가운데 */
-  justify-content: flex-end; /* 오른쪽 정렬 */
-  gap: 8px;
-  min-height: 32px;          /* 버튼 높이만큼 영역 확보 */
-}
-
 /* 브랜드 헤더 우측 컨트롤 - 이벤트 컨트롤과 동일한 스타일 */
 .brand-controls {
   display: flex;
@@ -416,41 +385,6 @@
   justify-content: flex-end; /* 오른쪽 정렬 */
   gap: 8px;
   min-height: 32px;          /* 버튼 높이만큼 영역 확보 */
-}
-
-/* Swiper 기본 absolute를 강제로 무효화 + 버튼 UI */
-.event-controls .swiper-button-prev,
-.event-controls .swiper-button-next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: static !important;   /* Swiper 기본 absolute 무효화 */
-  top: auto !important;
-  margin-top: 0 !important;
-
-  width: 32px;
-  height: 32px;
-  border-radius: 50% !important;  /* 완전한 원형 강제 적용 */
-  border: 1px solid #e0e0e0;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
-
-  color: transparent;            /* 기본 텍스트 숨김 */
-  transition: all 0.3s ease;
-}
-
-/* 커스텀 아이콘 경로 연결 */
-.event-controls .swiper-button-prev { background-image: url(/icon/ico_pre.svg); }
-.event-controls .swiper-button-next { background-image: url(/icon/ico_next.svg); }
-
-/* hover 옵션(선택) */
-.event-controls .swiper-button-prev:hover,
-.event-controls .swiper-button-next:hover {
-  border-color: #333;
-  background-color: #fff;
 }
 
 /* 브랜드 컨트롤 버튼 스타일 - 이벤트 컨트롤과 동일 */

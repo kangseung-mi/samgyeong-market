@@ -2,31 +2,83 @@
 <!--@import(/main.css)-->
 
 <div class="main_bnr_300">
-    <!-- 타이틀과 네비게이션을 분리된 헤더로 구성 -->
+    <!-- 타이틀과 네비게이션을 분리된 헤더로 구성
     <div class="event-header">
         <div class="section-title">
             <h3>이벤트</h3>
         </div>
-       <!--헤더 우측 컨트롤 (이벤트 배너 전용)-->
+       헤더 우측 컨트롤 (이벤트 배너 전용)
        <div class="event-controls">
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
        </div>
+    </div> -->
+    
+    <!--20250922이후_타이틀-->
+    <div class="event-header">
+        <div class="section-title">
+            <h3>이벤트</h3>
+        </div>
     </div>
 
-    <!-- Swiper 컨테이너로 감싸기 -->
+    <!-- 3개 이벤트 카드 -->
+     <div class="event-list">
+        <div class="event-card">
+            <!--썸네일 영역-->
+            <div class="event-thumbnail">
+                <a href="https://skmrkt.com/product/list.html?cate_no=233">
+                    <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="리터 브랜드" />
+                </a>
+            </div>
+            <!-- 타이틀 영역 -->
+            <div class="event-text">
+                <h4 class="event-title">리터 브랜드</h4>
+                <p class="event-desc">2025-10-20 ~ 2025-12-31</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <!--썸네일 영역-->
+            <div class="event-thumbnail">
+                <a href="https://samkyoungmkt.cafe24.com/shop1/front/php/b/board_read.php?board_no=1&no=4389&is_pcver=T">
+                    <img src="/web/upload/subbanner/eventbanner_02.jpg" alt="사업자 회원가입 혜택" />
+                </a>
+            </div>
+            <!-- 타이틀 영역 -->
+            <div class="event-text">
+                <h4 class="event-title">사업자 회원가입 혜택</h4>
+                <p class="event-desc">2025-10-20 ~ 2025-12-31</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <!--썸네일 영역-->
+            <div class="event-thumbnail">
+                <a href="https://www.skmrkt.com/product/search.html?keyword=%ED%95%98%EB%A6%AC%EB%B3%B4&x=0&y=0&keyword_layer=&except_keyword=">
+                    <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="하리보 100주년 기념 이벤트" />
+                </a>
+            </div>
+            <!-- 타이틀 영역 -->
+            <div class="event-text">
+                <h4 class="event-title">하리보 100주년 기념 이벤트</h4>
+                <p class="event-desc">2025-10-20 ~ 2025-12-31</p>
+            </div>
+        </div>
+     </div>
+
+    <!-- Swiper 컨테이너로 감싸기
     <div class="swiper-container event-swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="event-card">
-                    <!-- 썸네일 영역 -->
+                    썸네일 영역
                     <div class="event-thumbnail">
                         <a href="https://skmrkt.com/product/list.html?cate_no=233">
                             <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="리터 브랜드" />
                         </a>
                     </div>
-                    <!-- 텍스트 영역 -->
+                    텍스트 영역
                     <div class="event-text">
                         <h4 class="event-title">리터 브랜드</h4>
                         <p class="event-desc">특별 할인</p>
@@ -36,13 +88,13 @@
             
             <div class="swiper-slide">
                 <div class="event-card">
-                    <!-- 썸네일 영역 -->
+                    썸네일 영역
                     <div class="event-thumbnail">
                         <a href="https://www.skmrkt.com/product/list.html?cate_no=226">
                             <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="카테고리 특가" />
                         </a>
                     </div>
-                    <!-- 텍스트 영역 -->
+                    텍스트 영역
                     <div class="event-text">
                         <h4 class="event-title">카테고리 특가</h4>
                         <p class="event-desc">~12/31까지</p>
@@ -52,37 +104,19 @@
             
             <div class="swiper-slide">
                 <div class="event-card">
-                    <!-- 썸네일 영역 -->
+                    썸네일 영역
                     <div class="event-thumbnail">
                         <a href="https://www.skmrkt.com/product/search.html?keyword=%ED%95%98%EB%A6%AC%EB%B3%B4&x=0&y=0&keyword_layer=&except_keyword=">
                             <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="하리보" />
                         </a>
                     </div>
-                    <!-- 텍스트 영역 -->
+                    텍스트 영역
                     <div class="event-text">
                         <h4 class="event-title">하리보</h4>
                         <p class="event-desc">100주년기념 젤리 모음전</p>
                     </div>
                 </div>
             </div>
-            
-            <!-- 추가 카드들 -->
-            <div class="swiper-slide">
-                <div class="event-card">
-                    <!-- 썸네일 영역 -->
-                    <div class="event-thumbnail">
-                        <a href="#">
-                            <img src="/web/upload/subbanner/eventbanner_01.jpg" alt="신규 이벤트" />
-                        </a>
-                    </div>
-                    <!-- 텍스트 영역 -->
-                    <div class="event-text">
-                        <h4 class="event-title">신규 이벤트</h4>
-                        <p class="event-desc">새로운 혜택</p>
-                    </div>
-                </div>
-            </div>
         </div>
-        
-    </div>
+    </div> -->
 </div>
