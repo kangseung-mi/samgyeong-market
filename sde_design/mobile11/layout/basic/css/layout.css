@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#contents {
+    position: relative;
+}
+
+#mobileQuickLink {
+    z-index: 301 !important;
+}
+
+#mobileBtnQuickLink {
+    z-index: 100 !important;
+}
+
+.dimmed {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#dimmedSlider {
+    display: none;
+    position: fixed;
+    left: -1px;
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.7);
+}

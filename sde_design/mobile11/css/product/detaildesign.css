@@ -1,0 +1,16 @@
+#prdInfo { display:none; }
+#prdInfo img{max-width:100%;}
+#prdInfo .xans-product-detaildesign { padding:14px ; background:#fff; }
+#prdInfo .xans-product-detaildesign *{font-size:12px !important; color:#888 !important;}
+#prdInfo .xans-product-detaildesign table th{text-align:left;}
+#prdInfo .xans-product-detaildesign table th,
+#prdInfo .xans-product-detaildesign table td{padding:5px 0;}
+#prdInfo .xans-product-detaildesign > .ec-base-table input#quantity,
+#prdInfo .xans-product-detaildesign > .ec-base-table img.QuantityUp,
+#prdInfo .xans-product-detaildesign > .ec-base-table img.QuantityDown { display:none; }
+#prdInfo .xans-product-detaildesign > .ec-base-table img#qrcode { width:70px; margin-right:-20px; margin-top:15px; }
+#prdInfo .xans-product-detaildesign > .ec-base-table .discount { display:block; font-size:11px; color:#1c1c1c; }
+#prdInfo .xans-product-detaildesign > .ec-base-table .period { display:block; }
+#prdInfo .xans-product-detaildesign > .ec-base-table #delivery_cost_prepaid { display:block; }
+#prdInfo .xans-product-detaildesign > .ec-base-table #btn_email_restock img { width:auto; height:26px; }
+#prdInfo  .xans-product-detaildesign #delivery_cost_prepaid{width: 100%; display: block; margin-bottom: 5px;}

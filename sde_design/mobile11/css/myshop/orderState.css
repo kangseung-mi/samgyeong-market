@@ -1,0 +1,23 @@
+.xans-myshop-orderstate { margin: 15px 21px;  }
+.xans-myshop-orderstate .title { padding:12px 0 13px; margin:0; position:relative;}
+.xans-myshop-orderstate .title a.more{content:""; width:20px; height:20px; position:absolute; top:50%; margin-top:-7px; right:0; background: url(/web/upload/wp/167417/shape1.svg) 50% 50% no-repeat;background-size: 10px auto;transform: rotate( 270deg );}
+.xans-myshop-orderstate .title h3 { padding:0; font-size:17px; }
+
+.xans-myshop-orderstate .desc { padding:0 0 0 4px; font-weight:normal; font-size:12px; color:#adadad; }
+.xans-myshop-orderstate .desc em { font-style:normal; }
+.xans-myshop-orderstate .state { overflow:hidden; border:1px solid #e9e9e9;}
+.xans-myshop-orderstate .order { overflow:hidden; padding:18px 0 20px; background:#fff; }
+.xans-myshop-orderstate .order li { float:left; width:25%;  text-align:center; position: relative;}
+.xans-myshop-orderstate .order li:after{ content: "";display: block;background: url(/web/upload/wp/167417/shape1.svg) no-repeat center center / 10px;width: 30px;height: 30px;position: absolute;top: -8px;right: -16px; transform: rotate( 270deg );}
+.xans-myshop-orderstate .order li:last-child:after{content:none;}
+.xans-myshop-orderstate .order li a { display:block; }
+.xans-myshop-orderstate .order li:first-child { border-left:0; }
+.xans-myshop-orderstate .order li strong { display:block;  font-weight:normal; font-size:13px; }
+.xans-myshop-orderstate .order .count { font-weight:normal; font-size:15px; padding:0 0 10px; display:block}
+
+.xans-myshop-orderstate .cs { overflow:hidden; background:#f7f7f7; text-align:center; }
+.xans-myshop-orderstate .cs li { overflow:hidden;  display:inline-block; vertical-align:middle; width:25%;  font-size:13px; text-align:center; }
+.xans-myshop-orderstate .cs li a { display:block; padding:14px 0; }
+.xans-myshop-orderstate .cs strong { font-weight:normal; color:#1b1b1b; padding-right:5px;}
+.xans-myshop-orderstate .cs .count {  }
+.xans-myshop-orderstate .cs .icoDot { display:inline-block; width:2px; height:2px; margin:6px 0 0 12px; background:#52596b; vertical-align:top; }

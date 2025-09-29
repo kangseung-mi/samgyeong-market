@@ -1,0 +1,18 @@
+.xans-member-login { margin:14px auto 29px; position: relative;}
+
+.xans-member-login .boxTitle{padding-bottom: 15px;}
+
+.xans-member-login .formBox { position:relative; margin:0px 21px 0; }
+.xans-member-login .formBox:after { content:""; display:block; clear:both; }
+
+.xans-member-login .formBox .ec-base-button.gFull{margin:0;}
+.xans-member-login .formBox .ec-base-button .bt_typeA{font-size:16px; height:45px; line-height:43px; margin:5px 0; }
+.xans-member-login .formBox .ec-base-button .bt_typeB{font-size:16px; height:45px; line-height:43px; margin:5px 0;}
+
+.xans-member-login .snsArea { padding:40px 0 0;position: relative; margin: 50px 0 0; }
+.xans-member-login .snsArea ul{font-size:0; }
+.xans-member-login .snsArea li{display:block; padding-bottom:10px; box-sizing: border-box;}
+.xans-member-login .snsArea li:before { content: "간편 회원가입"; display: block; text-align: center; font-size:19px; font-weight:bold; color:#222; position: absolute; top: 0; left: 0; right: 0;background: #fff;}
+.xans-member-login .snsArea a{text-decoration:none; font-size:14px; text-align:center; display:block; padding:10px 0 9px; background:#fff;  border: 1px solid #ddd; }
+.xans-member-login .snsArea .kakao a{background: #fae101; border-color:#fae101;}
+.xans-member-login .snsArea a img{vertical-align:middle; margin-right:5px;}

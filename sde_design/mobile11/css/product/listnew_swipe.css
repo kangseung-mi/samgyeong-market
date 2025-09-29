@@ -1,0 +1,7 @@
+.xans-product-listnew { margin:0; border-bottom:1px solid #eee; padding:0; }
+.xans-product-listnew:first-child h2 { border-top:0; }
+.xans-product-listnew.ec-base-product h2 { margin:0; padding:24px 14px 0; font-size:15px; line-height:15px; color:#111; background:none; text-align:center; }
+.xans-product-listnew.ec-base-product > .prdList { padding-top:14px; }
+.xans-product-listnew .ec-base-paginate { margin:0 0 14px; }
+
+.xans-product-listnew .ec-base-paginate.typeSwipe button.circle{width: 10px; height: 10px;}

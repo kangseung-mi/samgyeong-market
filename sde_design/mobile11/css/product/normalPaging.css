@@ -1,0 +1,7 @@
+.xans-product-normalpaging *{box-sizing:border-box;}
+.xans-product-normalpaging{text-align:center;margin:20px 0;font-size:0;}
+.xans-product-normalpaging p, .xans-product-normalpaging ol, .xans-product-normalpaging li{display:inline-block;vertical-align:top;}
+.xans-product-normalpaging ol{height:34px;border:1px solid #ddd;}
+.xans-product-normalpaging ol li{font-size:11px;vertical-align:middle;line-height:33px;width:30px;}
+.xans-product-normalpaging ol li a{display:block;}
+.xans-product-normalpaging ol li a.this{background:#555;color:#fff;}

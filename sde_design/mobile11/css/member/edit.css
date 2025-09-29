@@ -1,0 +1,116 @@
+.xans-member-edit .formBox{ margin:0px 21px 0;  }
+.xans-member-edit .formBox .section{}
+.xans-member-edit .formBox .section > ul{padding:0 0 24px;}
+.xans-member-edit .formBox .section > ul > li{font-size:14px;}
+.xans-member-edit .formBox .section > ul > li.tlt{padding:0 0 10px; color:#111; }
+.xans-member-edit .formBox .section > ul > li .txt_info{font-size:12px; color:#adadad; margin-top:7px;}
+.xans-member-edit .formBox .section > ul > li .lifetime li:first-child{margin-top:5px;}
+.xans-member-edit .formBox .section > ul > li .lifetime li{margin-top:10px; }
+.xans-member-edit .formBox .section > ul > li .lifetime li strong{color:#222; font-weight:bold; display:block; }
+.xans-member-edit .formBox .section > ul > li .lifetime li .txt{color:#2a2a2a; }
+
+.xans-member-edit .formBox .section > ul > li .interest label { width: calc(100% - 30px); margin:0 7px 14px 0; }
+.xans-member-edit .formBox .section > ul > li .interest input { margin:0 3px 14px 0; }
+.xans-member-edit .formBox .section > ul > li .interest span { display:inline-block; }
+
+.xans-member-edit .formBox .section > ul > li .btnBasic{background:#adadad; color:#fff; border:0; border-radius:0; height:40px; line-height:40px; font-size: 14px;width: 75px;margin:0;padding:0}
+.xans-member-edit #mobile3 + .btnBasic{width:95px;margin-top:5px;}
+
+.xans-member-edit .certifForm { margin:9px 0px 7px; }
+
+.xans-member-edit .formBox .ico_required{color: #2a2a2a; display: inline-block; vertical-align: middle; margin-top: 4px; line-height: 0;}
+
+.xans-member-edit .ec-address> li {height: 40px;margin-bottom: 7px;}
+
+.xans-member-edit .ec-base-table.typeWrite { margin:0 0 7px; }
+.xans-member-edit .ec-base-table.typeWrite .emailCheck td { font-size:11px; }
+.xans-member-edit .ec-base-table.typeWrite [id*="Msg"].error { color:#f00; }
+.xans-member-edit .ec-base-table.typeWrite td.thead .subject { display:block; padding:0 0 10px; font-weight:normal; color:#757575; }
+.xans-member-edit .ec-base-table.typeWrite .interest label { min-width:90px; margin:0 7px 14px 0; }
+.xans-member-edit .ec-base-table.typeWrite .interest { font-size:11px; line-height:1.2em; }
+.xans-member-edit .ec-base-table.typeWrite .interest input { margin:0 3px 0 0; }
+.xans-member-edit .ec-base-table.typeWrite .interest span { display:inline-block; }
+
+/* 회원인증 */
+.xans-member-edit .ec-base-table { margin:0 0 7px; }
+
+
+.xans-member-edit .boardList { border-bottom:1px solid #c0c0c0; color:#747474; font-size:11px; }
+.xans-member-edit .boardList th { width:90px; padding:0px 0px 0px 10px; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; font-weight:normal; vertical-align:middle; background:#f6f6f6; }
+.xans-member-edit .boardList td { padding:20px 5px 20px; border-top:1px dotted #e3e3e3; line-height:1.5; vertical-align:middle; }
+.xans-member-edit .boardList .center { text-align:center; }
+
+/* 인증번호 */
+.xans-member-edit .verify { position:relative; width:100%; height:29px; }
+.xans-member-edit .verify #verify_sms_number { width:100%; padding:0 35px 0 4px; }
+.xans-member-edit .verify .time { position:absolute; top:2px; right:6px; color:#ff5400; }
+
+/* INPUT SIZE */
+.xans-member-edit input[type=text],
+.xans-member-edit input[type=password],
+.xans-member-edit input[type=number],
+.xans-member-edit input[type=tel],
+.xans-member-edit select { width:100%; border-radius: 0; height: 40px; font-size: 14px; border-color:#dbdbdb;}
+.xans-member-edit input[type=tel] { padding:10px 4px; }
+.xans-member-edit select { padding:0 20px 0 14px; }
+
+.xans-member-edit #user_passwd_confirm,
+.xans-member-edit #hint,
+.xans-member-edit #hint_answer { margin-bottom:7px; }
+.xans-member-edit #member_id { width:100%; }
+.xans-member-edit #cssn { width:155px; }
+.xans-member-edit #postcode1 {width:40%}
+.xans-member-edit #phone1,
+.xans-member-edit #mobile1 { width: calc(33% - 4px); }
+.xans-member-edit #phone2,
+.xans-member-edit #phone3,
+.xans-member-edit #mobile2,
+.xans-member-edit #mobile3 { width: calc(33% - 13px);margin:0 4px;}
+.xans-member-edit #bssn1,
+.xans-member-edit #bssn2 { width:70px; }
+.xans-member-edit #email1 { width:100%;  }
+.xans-member-edit #email2 { max-width:45%; margin:0 4px 7px 4px; }
+.xans-member-edit #email3 { height:29px; margin:0 0 7px; }
+
+.xans-member-edit #birth_year{width:27%; margin:0 4px 0 0; }
+.xans-member-edit #marry_year,
+.xans-member-edit #partner_year { width:54px; margin:0 4px 0 0; }
+.xans-member-edit #birth_month{width:26%; margin:0 4px 0 0; }
+.xans-member-edit #marry_month,
+.xans-member-edit #partner_month { width:38px; margin:0 4px; }
+.xans-member-edit #birth_day{width:26%; margin:0 4px 0 0; }
+.xans-member-edit #marry_day,
+.xans-member-edit #partner_day { width:38px; margin:0 4px; }
+
+/* 약관 */
+.xans-member-edit .agreeArea { margin:0 0 7px; border:1px solid #ccc; background:#fff; }
+.xans-member-edit .agreeArea .title{display:flex;line-height: 1.5;align-items: center;justify-content: space-between;}
+.xans-member-edit .agreeArea .title h4{padding:8px 0 8px 14px}
+.xans-member-edit .agreeArea .title h4 input + label + label {margin-left: 4px;}
+.xans-member-edit .agreeArea .title a.btnMore{ position: relative;top:auto; right: auto; flex:none;padding:0 14px 0 7px; }
+.xans-member-edit .title { position:relative; line-height:36px; color:#333; border-bottom:1px solid #ccc; }
+.xans-member-edit .title h4 { padding:0 0 0 14px; font-size:13px; font-weight:normal; }
+.xans-member-edit .title h4 label { display:none; }
+.xans-member-edit .title h4 label.check { display:inline; }
+.xans-member-edit .title a.btnMore { position:absolute; top:0px; right:14px; font-size:11px; text-decoration:underline; }
+.xans-member-edit .contents { overflow:hidden; overflow-y:auto; height:90px; margin:14px; color:#757575; font-size:11px; }
+
+/* 툴팁 */
+.xans-member-edit .ec-base-tooltip-area { position:relative; width:100%; }
+.xans-member-edit .ec-base-tooltip-area .ec-base-tooltip { width:235px; word-break:keep-all; left: 0% !important;}
+
+.xans-member-edit .ec-base-button{ margin: 20px 21px;}
+.xans-member-edit .ec-base-button [class*="btn"]{height:45px;line-height:44px; font-size:17px; }
+
+/*탈퇴사유관리*/
+.xans-member-edit .ec-base-button .gRight > [class*="btn"]{font-size: 1rem;height: 37px;line-height: 37px;}
+
+.xans-member-edit .layerLeave { position:fixed; top:0; left:0; z-index:1000; width:100%; display:none; }
+.xans-member-edit .layerLeave .header{}
+.xans-member-edit .layerLeave .header h3 {padding: 14px 14px 0;}
+.xans-member-edit .layerLeave .content h4 { margin:20px 0 10px; padding:20px 14px 0; border-top:1px solid #e8e8e8; }
+.xans-member-edit .layerLeave .content .ec-base-table.typeWrite{margin:0 14px;}
+.xans-member-edit .layerLeave select,
+.xans-member-edit .layerLeave textarea { width:100%; box-sizing:border-box; }
+.xans-member-edit .layerLeave .ec-base-button{text-align: center; padding:14px 0 0;}
+.xans-member-edit .layerLeave .ec-base-button [class*="btn"]{vertical-align: middle;height: 38px;line-height: 38px;font-size: 1rem;}

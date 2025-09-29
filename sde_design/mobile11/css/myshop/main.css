@@ -1,0 +1,11 @@
+.xans-myshop-main { margin:0 21px;}
+.xans-myshop-main .boxTitle{padding:15px 0 15px}
+.xans-myshop-main .boxTitle h2{padding:0}
+.xans-myshop-main ul{margin:0 0 20px;}
+.xans-myshop-main li { border-top:1px solid #dbdbdb; }
+.xans-myshop-main li:first-child { border-top:0;  }
+.xans-myshop-main li a { display:block; position:relative; padding:14px 0 14px 0; font-size:14px; }
+.xans-myshop-main li a:after { display:block; position:absolute; top:12px; right:12px; content:""; width:20px; height:20px; background: url(/web/upload/wp/167417/shape1.svg) 50% 50% no-repeat;background-size: 10px auto;transform: rotate( 270deg ); }
+.xans-myshop-main li .count { color:#2a2a2a; }
+
+

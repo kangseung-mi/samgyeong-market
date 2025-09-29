@@ -1,0 +1,4 @@
+#footer{margin-top:0px !important;display:none;}
+body{overflow:hidden;}
+#fpFrame{border:0;height:calc(100vh - 186px);}
+.side_bnr_wrap{display:none !important;}

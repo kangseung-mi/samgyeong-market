@@ -1,0 +1,71 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ReadPackage_4">
+    <!--@css(/css/module/board/readPackage.css)-->
+    <!--@js(/js/module/board/readPackage.js)-->
+    <div id="titleArea" module="board_title_4">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div module="board_read_4">
+        <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /board/free/list.html
+        -->
+        <div class="boardRead">
+            <div class="title">
+                <strong class="label hide">제목</strong>
+                <h3>{$subject}</h3>
+            </div>
+            <div class="info">
+                <p class="writer">
+                    <strong class="label hide">작성자</strong>
+                    {$member_icon}
+                    {$writer}<span class="{$config.display_ip|display}">(ip:{$ip})</span>
+                </p>
+                <p class="regdate {$config.use_date|display}">
+                    <strong class="label hide">작성일</strong>
+                    {$write_date}
+                </p>
+                <p class="hit {$config.use_cnt|display}">
+                    <strong class="label">조회</strong>
+                    {$hit_count}
+                </p>
+            </div>
+            <div class="content">
+                <strong class="label hide">내용</strong>
+                <!-- {$content_image} -->
+                <p>{$content}</p>
+            </div>
+            <p class="attach {$config.use_attach|display}">
+                 <strong class="label">첨부파일</strong>
+                 <span>{$attach_file}</span>
+            </p>
+            <div class="password {$delete_button_auth|display}">
+                <strong class="label {$delete_button_auth|display} {$config.use_password|display}">비밀번호</strong>
+                <div class="form {$board_password_type}">
+                    <span class="passwordForm {$config.use_password|display}">{$form.password}</span>
+                    <span class="gRight">
+                        <a href="#none" onclick="{$action_modify}" class="btnBasic {$modify_button_auth|display}">수정</a>
+                        <button type="button" class="btnBasic {$delete_button_auth|display}" onclick="{$action_delete}">삭제</button>
+                    </span>
+                    <p class="{$config.use_password|display}">비밀번호 입력후 수정 혹은 삭제해주세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <div class="gLeft"><a href="/board/review/list.html?board_no=4" class="btnNormal">목록</a></div>
+        </div>
+    </div>
+</div>
+
+
+<div module="board_movement_4">
+    <!--@css(/css/module/board/movement.css)-->
+    <ul class="boardMovement">
+        <li class="next {$next_display|display}"><strong>다음글</strong><a href="/board/review/read_notice.html{$param_next}">{$next_subject}</a></li>
+        <li class="prev {$prev_display|display}"><strong>이전글</strong><a href="/board/review/read_notice.html{$param_prev}">{$prev_subject}</a></li>
+    </ul>
+</div>

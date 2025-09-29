@@ -1,0 +1,151 @@
+<!--@css(/_wp/css/sidebar.css)-->
+<!--@js(/_wp/js/sidebar.js)-->
+
+<!--
+	#사이드 Left
+	이 영역에 대한 스타일은 "/_wp/css/sidebar.css"에 정의되어 있습니다.
+-->
+<aside id="aside" module="layout_slidePackage">
+	<div class="toparea">
+		<div class="btnClose"><span class="line first"></span><span class="line second"></span></div>
+		<div class="btn_login">
+			<!-- 로그오프 -->
+			<ul module="Layout_stateLogoff">
+				<li><a href="/member/login.html">로그인</a></li>
+				<li><a href="/member/agreement.html">회원가입</a></li><!--
+				<li><a href="/myshop/order/list.html">주문조회</a></li> -->
+			</ul>
+			<!-- 로그인 -->
+			<ul module="Layout_stateLogon">
+				<li><a href="{$action_logout}" class="">로그아웃</a></li>
+				<li><a href="/myshop/index.html">마이페이지</a></li><!--
+				<li><a href="/myshop/order/list.html">주문조회</a></li> -->
+			</ul>
+		</div>
+	</div>
+
+    <div class="line_bx"></div>
+
+	<div class="user-menu-box">
+		<ul>
+			<li><a href="/myshop/wish_list.html"><img src="/web/upload/wp/167417/m__side_01.png" alt="" />관심상품</a></li>
+			<li><a href="/myshop/recent_list.html"><img src="/web/upload/wp/167417/m__side_03.png" alt="" />최근본상품</a></li>
+			<li><a href="/myshop/order/list.html"><img src="/web/upload/wp/167417/m__side_02.png" alt="" />주문조회</a></li>
+		</ul>
+	</div>
+
+	<div class="line_bx"></div>
+
+	<div class="all-menu-box">
+
+		<!-- 카테고리 -->
+        <div id="slideCateList" class="categoryCont">
+            <ul module="layout_category" class="categoryList">
+                <li id="cate{$cate_no}" class="tm">
+                    <a href="/product/list.html{$param}" class="cateView">{$name|cut 25}</a>
+                    <a href="#none" class="cate view toggle-cate" cate="{$param}"></a>
+                </li>
+                <li id="cate{$cate_no}" class="tm">
+                    <a href="/product/list.html{$param}" class="cateView">{$name|cut 25}</a>
+                    <a href="#none" class="cate view toggle-cate" cate="{$param}"></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--
+		<div class="tm">
+            <a href="/shopinfo/company.html">브랜드스토리</a>
+        </div>
+		<div class="tm">
+			<a href="/timesale/">타임세일</a>
+		</div>
+		<div class="tm">
+			<a href="/board/review/list.html?board_no=4">리뷰</a>
+		</div>
+
+		<div class="tm">
+			<a href="/board/gallery/list.html?board_no=8">이벤트</a>
+		</div>
+
+		<div class="tm">
+			<a href="/inquiry/">제휴문의</a>
+		</div>
+		-->
+		<!-- 기획전 -->
+		<div class="tm project" module="layout_project">
+			<a class="" href="javascript:;">기획전</a>
+			 <div id="slideProjectList"  class="categoryCont ">
+				<!-- <h2 class="selected">기획전<button type="button" class="icoCategory">펼침</button></h2> -->
+				<ul class="categoryList menuList">
+					<li id="cate{$cate_no}">
+						<a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+					</li>
+					<li id="cate{$cate_no}">
+						<a href="#none" class="cate" cate="{$param}">{$category_text|cut 25}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--//-->
+        
+        <!-- 브랜드 전체보기 -->
+        <div class="tm brand">
+			<a href="/">브랜드 전체보기 &#xE001;</a>
+		</div>
+
+		<!--//-->
+		<!-- 고객센터 -->
+		<div class="tm commu">
+			<a href="#">커뮤니티</a>
+			<div id="slideBoardList" class="categoryCont ">
+				<ul module="Layout_BoardInfo" class="boardList menuList">
+					<li><a href="{$board_list_url|replace:/product/list.html?board_no=4,/review/list.html?board_no=4}" class="cateView">{$board_name}</a></li>
+					<li><a href="{$board_list_url|replace:/product/list.html?board_no=4,/review/list.html?board_no=4}" class="cateView">{$board_name}</a></li>
+					<li><a href="{$board_list_url|replace:/product/list.html?board_no=4,/review/list.html?board_no=4}" class="cateView">{$board_name}</a></li>
+					<li><a href="{$board_list_url|replace:/product/list.html?board_no=4,/review/list.html?board_no=4}" class="cateView">{$board_name}</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//-->
+
+	</div>
+
+	<div class="multishop" module="Layout_multishopList" id="slideMultishopList">
+		<!-- <h3 class="slideTitle">멀티쇼핑몰</h3> -->
+		<!-- <h2 class="selected">{$translate_language}<button type="button" class="icoCategory">펼침</button></h2> -->
+		<ul module="multishop_listitem">
+			<li class="{$selected_class}">
+				<a href="//{$shop_domain}/">
+					<img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+				</a>
+			</li>
+			<li class="{$selected_class}">
+				<a href="//{$shop_domain}/">
+					<img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</aside>
+
+<!--@js(/_wp/js/all_brand_list.js)-->
+<div class="all-brand-wrap">
+    <div class="all-brand-list">
+        <a class="close">X</a>
+        <div class="menu-brand" module="board_listpackage_3001">
+            <div module="board_title_3001">브랜드 전체보기<!--{$board_title}--></div>
+            <div module="board_list_3001">
+                <!--
+                $count = 999
+                $main_list = yes
+                $main_list_reply_view = no
+                -->
+                <ul class="wp-brand-list">
+                    <li class="subject"><a href="{$content|StripTag}">{$subject}</a></li>
+                    <li class="subject"><a href="{$content|StripTag}">{$subject}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

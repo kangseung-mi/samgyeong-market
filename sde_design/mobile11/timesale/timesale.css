@@ -1,0 +1,120 @@
+.타임세일{
+	display:none;
+}
+
+.wp-timer {
+	text-align: center;
+	margin:0 0 10px;
+	position:relative;
+	color:#fff;
+	font-size:.8rem;
+	box-sizing: border-box;
+	height:2.6rem;
+}
+
+.wp-timer .ready--state,
+.wp-timer .end--state{
+
+	line-height:2.6rem;
+	box-sizing:border-box;
+	border-radius: 5px;
+}
+.wp-timer .ready--state {
+	color:#222;
+	background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.wp-timer .end--state{
+	color: #969696;
+    background: #f2f2f2;
+}
+
+.wp-timer.wp--wait{
+	background: #ffffff;
+    color: #000;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding-top: .9rem;
+}
+.wp-timer.wp--wait .state{
+	display: block;
+	padding-top:.2rem;
+	padding-bottom:.1rem;
+	font-size:.8rem;
+}
+.wp-timer.wp--wait .state{
+	display:block;
+	padding-top:.2rem;
+	padding-bottom:.1rem;
+	font-size:.75rem;
+	position:absolute;left:50%;top:-0.9rem;background:#fff;width:5rem;margin-left:-2.5rem;
+	color:#000;
+	border-radius:5px;
+	border:1px solid #e5e5e5;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.wp-timer.wp--wait .state:before{
+	content:"";
+	background:url(/timesale/img/ico_clock_000.png) no-repeat left center / 100% auto;
+	width:.9rem;
+	height:.9rem;
+	display:inline-block;
+	vertical-align:middle;
+	margin:-3px 5px 0 0;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.wp-timer.wp--wait .wp-time{
+	display: inline-block;
+	font-family: 'Noto Sans KR','arial';
+    font-weight: bold;
+	padding:0 3px;
+	border-radius:4px;
+	background: #f1f1f1;
+}
+.wp-timer.wp--wait .day.wp-time,
+.wp-timer.wp--wait .hour.wp-time {
+    margin-left: 5px;
+}
+.wp-timer.wp--running{
+	border:1px solid #4abdb5;
+    color: #111;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding-top: .9rem;
+}
+.wp-timer.wp--running .state{
+	display:block;
+	padding-top:.2rem;
+	padding-bottom:.1rem;
+	font-size:.75rem;
+	position:absolute;left:50%;top:-0.9rem;background:#fff;width:5rem;margin-left:-2.5rem;
+	color:#000;
+	border-radius:5px;
+	border:1px solid #e5e5e5;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.wp-timer.wp--running .state:before{
+	content:"";
+	background:url(/timesale/img/ico_clock_000.png) no-repeat left center / 100% auto;
+	width:.9rem;
+	height:.9rem;
+	display:inline-block;
+	vertical-align:middle;
+	margin:-3px 5px 0 0;
+}
+.wp-timer.wp--running .wp-time{
+	display: inline-block;
+	font-family: 'Noto Sans KR','arial';
+    font-weight: bold;
+	padding:0 3px;
+	border-radius:4px;
+	 color: #000;
+	 background: #f1f1f1
+}
+.wp-timer.wp--running .day.wp-time,
+.wp-timer.wp--running .hour.wp-time {
+    margin-left: 5px;
+}
+

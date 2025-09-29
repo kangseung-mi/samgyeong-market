@@ -1,0 +1,171 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/inquiry/js/formutil.js)-->
+<!--@js(/inquiry/js/postcode.js)-->
+<!--@js(/inquiry/js/write.js)-->
+
+<div >
+    <!--@css(//inquiry/css/writePackage.css)-->
+    <div id="titleArea" module="board_title_1002" class="displaynone">
+        <h2>{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+        </span>
+    </div>
+
+    <div class="wp-tlt-wrap">
+        <img src="img/top_img.jpg" alt="" />
+    </div>
+
+    <div module="board_write_1002">
+        <!--
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+
+        <div class="wp-form-wrap">
+        	<div class="wp-form-tlt">상담자 정보</div>
+            <div class="wp-form-box" id="wpFormWrap">
+                <ul>
+                    <li class="req-tit">이름</li>
+                    <li><input type="text" id="writer" name="writer" fname="이름" min="2" required /></li>
+                </ul>
+                <ul>
+                    <li class="req-tit">연락처</li>
+                    <li><input type="text" name="client_phone" value="" fname="연락처" phone required max="25" /></li>
+                </ul>
+                <ul>
+                    <li>이메일</li>
+                    <li><input type="text" name="client_email" value="" fname="이메일" /></li>
+                </ul>
+                <ul class="form-adress">
+                    <li>주소</li>
+                    <li id="addrBox">
+                        <input id="postcode1" name="postcode1" fw-filter="isLengthRange[1][14]" fw-label="우편번호1" fw-msg="" placeholder="" readonly="readonly" maxlength="14" value="" type="text" fname="주소">
+						<a href="javascript:;" class="btnNormal sizeS" onclick="execDaumPostcode()" id="postBtn">우편번호 찾기</a><br>
+                        <input id="addr1" name="addr1" fw-filter="" fw-label="주소" fw-msg="" placeholder="" readonly="readonly" value="" type="text" fname="주소"> <span>기본주소</span><br>
+                        <input id="addr2" name="addr2" fw-filter="" fw-label="주소" fw-msg="" placeholder="" value="" type="text"> <span>나머지주소 (선택입력가능)</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="">문의내용</li>
+                    <li><textarea name="" fname="문의내용" rows="3"></textarea></li>
+                </ul>
+			</div>
+
+            <div class="wp-form-box">
+                <ul class="captcha {$config.use_captcha_write|display}">
+                    <li>보안문자</li>
+                    <li>
+                        {$captcha_image} {$captcha_refresh}<br>{$form.captcha}
+                    </li>
+                </ul>
+                <ul class="agree ">
+                    <li>개인정보 수집 및 이용 동의</li>
+                    <li class="{$config.is_login|display}">
+                        <!--<div>{$form.privacy_agreement}</div>
+                        <div>{$form.privacy_agreement_radio}</div>-->
+
+                        <div>
+                            <textarea id="privacy_agreement" name="privacy_agreement" fw-filter="" fw-label="개인정보보호정책" fw-msg="">
+■ 개인정보의 수집·이용 목적
+원활한 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다.
+
+1. 개인정보의 수집 및 이용 목적
+상담 서비스 제공을 위한 본인 식별, 상담 내용 전달, 의사 소통 경로 확보 및 기타 원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+
+2. 수집하는 개인정보의 항목
+이름(한글/한문/영문), 연락처, 이메일
+
+3. 개인정보의 보유 및 이용시간
+개인정보의 수집목적 또는 제공받은 목적 달성 시 내규에 준하여 보관 및 파기합니다.
+
+※개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부하실 경우 접수에 제한이 있습니다.
+                            </textarea>
+                        </div>
+                        <div>
+                            <input id="privacy_agreement_radio0" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="T" type="radio" checked="checked"><label for="privacy_agreement_radio0">동의합니다</label>
+                            <input id="privacy_agreement_radio1" name="privacy_agreement_radio" fw-filter="isFill" fw-label="개인정보보호정책" fw-msg="" value="F" type="radio" ><label for="privacy_agreement_radio1">동의하지 않습니다</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="ec-base-table typeWrite displaynone">
+            <table border="1" summary="">
+            <caption>글쓰기 폼</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</td>
+                </tr>
+<!--                 <tr class="{$config.is_login|display}"> -->
+<!--                     <th scope="row">작성자</th> -->
+<!--                     <td>{$form.writer}</td> -->
+<!--                 </tr> -->
+                <tr class="{$config.use_write_email|display}">
+                    <th scope="row">이메일</th>
+                    <td>{$form.email}</td>
+                </tr>
+                <tr class="{$config.is_use_point|display}">
+                    <th scope="row">평점</th>
+                    <td>{$form.point}</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="clear">
+                        {$form.content}
+                    </td>
+                </tr>
+            </tbody>
+
+            <!--tbody class="{$config.use_attach|display}">
+                <tr>
+                    <th scope="row">첨부파일1</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일2</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일3</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일4</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+                <tr>
+                    <th scope="row">첨부파일5</th>
+                    <td>{$form.attach_file}</td>
+                </tr>
+            </tbody-->
+
+            <tbody>
+                <tr class="{$config.use_password|display}">
+                    <th scope="row">비밀번호</th>
+                    <td>{$form.password} <span class="{$password_rule_help_display|display}">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span></td>
+                </tr>
+                <tr class="{$config.use_secret|display}">
+                    <th scope="row">비밀글설정</th>
+                    <td>{$form.secure}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <div class="ec-base-button gColumn">
+			<a href="javascript:;" class="btnSubmit sizeS" id="wpFormWrite">등록</a>
+			<a href="javascript:;" onclick="history.back(-1)" class="btnBasic sizeS">취소</a>
+        </div>
+
+    </div>
+</div>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

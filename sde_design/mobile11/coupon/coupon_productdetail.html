@@ -1,0 +1,28 @@
+        <div module="coupon_productdetailajax" class="ec-base-fold theme1 selected eToggle">
+            <!--@css(/css/module/product/productDetailAjax.css)-->
+             <div class="title">
+                <h2>쿠폰 다운로드</h2>
+            </div>
+            <ul class="contents">
+                <li>
+                    <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                        <div class="detail" {$call_coupon_detail}>
+                            <strong class="title" style=" padding:10px 0; font-size:12px; font-weight:normal;">{$coupon_name|cut:13,...}</strong>
+                            <p class="discount" style=" font-size:18px;padding-top:2px;"><span style="">{$coupon_content}</span></p>
+                            <p class="period" style="font-size:11px; ">{$coupon_period}</p>
+                        </div>
+                        <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기"></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                        <div class="detail" {$call_coupon_detail}>
+                             <strong class="title" style=" padding:10px 0; font-size:12px; font-weight:normal;">{$coupon_name|cut:13,...}</strong>
+                            <p class="discount" style=" font-size:18px;padding-top:2px;"><span style="">{$coupon_content}</span></p>
+                            <p class="period" style="font-size:11px; ">{$coupon_period}</p>
+                        </div>
+                        <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기"></a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
