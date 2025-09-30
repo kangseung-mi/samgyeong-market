@@ -170,7 +170,7 @@ var eventSwiper = new Swiper('.event-swiper', {
 	var md_swiper = new Swiper('.prd-md .swiper-container', {
 		on: {
 			init: function () {
-				$('.prd-md .section-title').append($(this.$el).find('h3').removeClass('displaynone'));
+				// $('.prd-md .section-title').append($(this.$el).find('h3').removeClass('displaynone'));
 			},
 		},
 		direction: 'vertical',
