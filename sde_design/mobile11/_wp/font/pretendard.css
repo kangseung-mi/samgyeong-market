@@ -18,7 +18,7 @@ html,
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-pretendard) !important;
     font-weight: 600;
-    letter-spacing: -0.04em !important;  /* 자간 -2% */
+    letter-spacing: -0.04em !important;  /* 자간 -4% */
 }
 
 p, span, div, a, button, input, textarea, select {

@@ -738,3 +738,11 @@
 	.main-notice a{
                 text-decoration:none;
         }
+
+
+/* 섹션 숨기기 */
+.prd-md,
+.wp-timesale,
+.main_bnr_200 {
+    display: none !important;
+}

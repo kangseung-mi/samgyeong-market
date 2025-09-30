@@ -1,4 +1,11 @@
 /* ============================== 공통 CSS ============================== */
+/* Pretendard 폰트 적용 */
+html,
+body,
+* {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif !important;
+}
+
 .dp_sample {
 	display: none !important;
 }
@@ -483,42 +490,60 @@
 
 /* 사이드 버튼 */
 .side_bnr_wrap {
-	position: fixed;
-	opacity: 0.9;
-	bottom: 0;
-	right: 0;
-	z-index: 100;
-	background: rgba(34, 34, 34, 0.95);
-	width: 40px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
-.side_bnr_wrap a {
-	display: block;
-	text-align: center;
+/* 버튼 안의 a태그 */
+.side_bnr_wrap .bt a,
+.side_bnr_wrap .bt_scroll a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
 
-.side_bnr_wrap .bt {
-	width: 40px;
-	height: 40px;
-	box-sizing: border-box;
+/* 버튼 안 이미지 크기 */
+.side_bnr_wrap .bt a img,
+.side_bnr_wrap .bt_scroll a img {
+    max-width: 24px;
+    max-height: 24px;
+    margin: 0;
+    /* 기존 margin-top 제거 */
 }
 
-.side_bnr_wrap .bt img {
-	margin-top: 7px;
-	width: 23px;
+/* 버튼 라벨 */
+.side_bnr_wrap .bt-label {
+    margin-top: 4px;
+    font-size: 11px;
+    color: #222;
+    line-height: 1;
+    text-align: center;
 }
 
-.side_bnr_wrap .bt_top,
-.side_bnr_wrap .bt_btm {
-	width: 40px;
-	height: 40px;
-	box-sizing: border-box;
-	background: url(/web/upload/wp/167417/bt_side_arrow.png) no-repeat center / 17px;
+/* side-bnt_호버효과 */
+/* .side_bnr_wrap .bt a:hover,
+.side_bnr_wrap .bt_scroll a:hover {
+    border-color: #2e2e2e;
 }
 
-.side_bnr_wrap .bt_btm {
-	transform: rotate(180deg);
-}
+.side_bnr_wrap .bt a img:hover,
+.side_bnr_wrap .bt_scroll a img:hover {
+    color: #2e2e2e;
+} */
+
 
 /* 공통 */
 .boxTitle {
