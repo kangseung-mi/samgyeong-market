@@ -8,6 +8,11 @@ $(document).ready(function(){
 		pagination: {
 			el:'.mainslide .swiper-pagination',
 			clickable: true,
+			type: 'fraction', // 숫자 형태로 표시 (1/6)
+		},
+		navigation: {
+			nextEl: '.mainslide .swiper-button-next',
+			prevEl: '.mainslide .swiper-button-prev',
 		},
 		loop:true,
 		grabCursor: true,
