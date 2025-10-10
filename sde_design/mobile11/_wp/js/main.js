@@ -20,8 +20,8 @@ $(document).ready(function(){
 
 	// best
 	var addProductSwiper = new Swiper('.prd-best .ec-base-product', {
-	  slidesPerView: 2.5,
-	  spaceBetween: 10,
+	  slidesPerView: 2.3,
+	  spaceBetween: 8,
 	  freeMode: true,
 	});
     
