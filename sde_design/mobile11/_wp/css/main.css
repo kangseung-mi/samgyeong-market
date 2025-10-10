@@ -15,11 +15,11 @@
 }
 
 .section-title h3>span {
-	font-size: 1.1rem;
+	font-size: 16px;
 	color: #999;
 	font-weight: normal;
 	display: block;
-	margin-top: .3rem;
+	margin-top: 8px;
 }
 
 /* 메인 배너*/
@@ -551,6 +551,7 @@
 
 .main-review .border-fixed-list .section-title {
 	text-align: left;
+	margin: 0 16px 24px;
 }
 
 .main-review .border-fixed-list .section-title h3 {
