@@ -72,7 +72,7 @@ var brandSwiper = new Swiper('.main_category_wrap .swiper-container', {
         on: {
             init: function () {},
         },
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         //freemode : true,
         spaceBetween: 0,
         scrollbar: {

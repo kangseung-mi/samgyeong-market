@@ -534,8 +534,7 @@
 
 /* 메인 리뷰*/
 .main-review .board-review {
-	border-top: 1px solid #eee;
-	padding: 40px 0 0;
+	padding: 40px 0;
 }
 
 .main-review .swiper-container {
@@ -554,8 +553,16 @@
 	text-align: left;
 }
 
+.main-review .border-fixed-list .section-title h3 {
+	font-size: 2rem;
+	color: #000;
+	font-weight: 700;
+	margin: 0;
+}
+
 .main-review .border-fixed-list .review-list.gall {
 	padding: 0;
+	gap: 16px;
 }
 
 .main-review .border-fixed-list .review-list.gall li.item .best {
@@ -575,7 +582,6 @@
 	margin: 0 auto;
 	width: 4rem;
 	height: 4rem;
-	;
 	line-height: 4rem;
 	border-radius: 4rem;
 	font-size: 0;
