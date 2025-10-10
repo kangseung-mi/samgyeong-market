@@ -25,17 +25,34 @@ $(document).ready(function(){
 	  freeMode: true,
 	});
     
-    //
-    var main_cate_swiper = new Swiper('.main_category_wrap .swiper-container', {
-        slidesPerView: 3.5,
-        freeMode :true,
-        spaceBetween: 10,
-        pagination: {
-            el: '.main_category_wrap .swiper-pagination',
-        },
-        // 무한 루프 사용 시 활성화
-        //loop: true,
-    });
+   // 브랜드 바로가기: 한 줄에 2개, 배너 하단 컨트롤 UI 사용
+var brandSwiper = new Swiper('.main_category_wrap .swiper-container', {
+	slidesPerView: 2,          // ✅ 한 줄에 2개
+	spaceBetween: 16,
+	speed: 400,
+	loop: false,
+	navigation: {
+	  // HTML에서 컨트롤 래퍼가 .banner-controls 인 경우
+	  prevEl: '.main_category_wrap .banner-controls .swiper-button-prev',
+	  nextEl: '.main_category_wrap .banner-controls .swiper-button-next',
+	  // 만약 .brand-controls 를 쓰면 위 두 줄 대신 아래 두 줄 사용:
+	  // prevEl: '.main_category_wrap .brand-controls .swiper-button-prev',
+	  // nextEl: '.main_category_wrap .brand-controls .swiper-button-next',
+	},
+	pagination: {
+	  // 배너와 동일한 숫자형(2/6)
+	  el: '.main_category_wrap .banner-controls .swiper-pagination',
+	  // .brand-controls 를 쓰면 위 한 줄 대신:
+	  // el: '.main_category_wrap .brand-controls .swiper-pagination',
+	  type: 'fraction',
+	  renderFraction: function (currentClass, totalClass) {
+		return '<span class="' + currentClass + '"></span>' +
+			   ' / ' +
+			   '<span class="' + totalClass + '"></span>';
+	  }
+	}
+  });
+  
 
 	// md추천상품
 	var addProductSwiper = new Swiper('.prd-md .ec-base-product', {

@@ -84,7 +84,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 0;
+    padding: 8px 0 40px 0;
     background: #fff;
     visibility: visible !important;
     opacity: 1 !important;
@@ -151,21 +151,129 @@
 
 /*브랜드 바로가기 영역*/
 .main_category_wrap {
-	position: relative;
-	margin: 1rem 0;
+	margin: 40px 16px 0 16px;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* 타이틀 */
+.main_category_wrap .section-title {
+	margin: 0 0 24px 0;
+	width: 100%;
+	text-align: left;
+}
+
+.main_category_wrap .section-title h3{
+	font-size: 2rem;
+	color: #000;
+	font-weight: 700;
+	margin: 0;
 }
 
 .main_category_wrap .swiper-container {
-	padding: 1rem 1rem;
+	padding: 0;
 }
 
-.main_category_wrap img {
+/* ul 리셋 */
+.brand-swiper .swiper-wrapper {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.brand-swiper .swiper-slide {
+	display: block;
+}
+
+/* 브랜드 카드 공통 */
+.main_category_wrap .swiper-slide a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  /* 로고 이미지 */
+  .brand-thumbnail img {
 	width: 100%;
+	aspect-ratio: 1000 / 922;   /* == 1 / 0.922 */
+	object-fit: cover;           /* 이미지 채우기 */
+	border-radius: 12px;         /* 둥근 모서리 */
+	display: block;
+  }
+  
+  /* 브랜드명 (이미지 아래 왼쪽 정렬) */
+  .brand-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: #333;
+	margin: 0 0 8px 0;
+	line-height: 1.4;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-align: left;
+  }
+  
+  /* 페이지네이션 (하단 중앙) */
+.brand-controls {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 8px;
+	min-height: 32px;
 }
 
-.main_category_wrap .swiper-pagination {
-	display: none;
+/* 브랜드 컨트롤 버튼 스타일 - 이벤트 컨트롤과 동일 */
+.brand-controls .swiper-button-prev,
+.brand-controls .swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: static !important;   /* Swiper 기본 absolute 무효화 */
+  top: auto !important;
+  margin-top: 0 !important;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;  /* 완전한 원형 강제 적용 */
+  border: 1px solid #e0e0e0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+
+  color: transparent;            /* 기본 텍스트 숨김 */
+  transition: all 0.3s ease;
 }
+
+/* 브랜드 컨트롤 아이콘 경로 연결 */
+.brand-controls .swiper-button-prev { background-image: url(/icon/ico_pre.svg); }
+.brand-controls .swiper-button-next { background-image: url(/icon/ico_next.svg); }
+
+/* 브랜드 컨트롤 hover 옵션 */
+.brand-controls .swiper-button-prev:hover,
+.brand-controls .swiper-button-next:hover {
+  border-color: #333;
+  background-color: #fff;
+}
+
+/* 브랜드 페이지네이션 스타일 - 이벤트와 동일 */
+.brand-controls .swiper-pagination {
+	position: static;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-size: 13px;
+	color: #666;
+  }
+  
+  .brand-controls .swiper-pagination-fraction {
+	font-size: 14px;
+	color: #333;
+	font-weight: 500;
+  }
 
 /*
 	.main_bnr_200{margin:50px 0;}
