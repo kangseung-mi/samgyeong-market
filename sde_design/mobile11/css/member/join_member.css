@@ -1,18 +1,134 @@
-.xans-member-login { margin:14px auto 29px; position: relative;}
+.join_page .login_wrap {
+    padding: 24px 0;
+    text-align: center;
+}
 
-.xans-member-login .boxTitle{padding-bottom: 15px;}
+.join_page .login-align {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 16px 32px;
+    box-sizing: border-box;
+}
 
-.xans-member-login .formBox { position:relative; margin:0px 21px 0; }
-.xans-member-login .formBox:after { content:""; display:block; clear:both; }
+.join_page .boxtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    padding: 0 0 24px 0;
+    text-align: center;
+    margin: 0;
+}
 
-.xans-member-login .formBox .ec-base-button.gFull{margin:0;}
-.xans-member-login .formBox .ec-base-button .bt_typeA{font-size:16px; height:45px; line-height:43px; margin:5px 0; }
-.xans-member-login .formBox .ec-base-button .bt_typeB{font-size:16px; height:45px; line-height:43px; margin:5px 0;}
+.join_page .main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
 
-.xans-member-login .snsArea { padding:40px 0 0;position: relative; margin: 50px 0 0; }
-.xans-member-login .snsArea ul{font-size:0; }
-.xans-member-login .snsArea li{display:block; padding-bottom:10px; box-sizing: border-box;}
-.xans-member-login .snsArea li:before { content: "간편 회원가입"; display: block; text-align: center; font-size:19px; font-weight:bold; color:#222; position: absolute; top: 0; left: 0; right: 0;background: #fff;}
-.xans-member-login .snsArea a{text-decoration:none; font-size:14px; text-align:center; display:block; padding:10px 0 9px; background:#fff;  border: 1px solid #ddd; }
-.xans-member-login .snsArea .kakao a{background: #fae101; border-color:#fae101;}
-.xans-member-login .snsArea a img{vertical-align:middle; margin-right:5px;}
+.join_page .btn-main {
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.join_page .btn-business {
+    background: #222;
+    color: #fff;
+    border: 1px solid #222;
+}
+
+.join_page .btn-business:hover {
+    background: #333;
+}
+
+/* 구분선 */
+.join_page .divider {
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 24px 0;
+}
+
+/* SNS 섹션 */
+.join_page .sns-section {
+    text-align: center;
+}
+
+.join_page .sns-title {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 20px;
+    font-weight: 400;
+}
+
+.join_page .sns-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.join_page .sns-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.join_page .sns-item span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.join_page .btn-sns {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    /* gap: 8px; */
+    position: relative;
+}
+
+.join_page .btn-kakao {
+    background: #FAE101;
+    border: 1px solid #FFE204;
+}
+
+.join_page .btn-kakao:hover {
+    background: #F7D600;
+    transform: scale(1.05);
+}
+
+.join_page .btn-naver {
+    background: #03c75a;
+    border: 1px solid #03c75a;
+}
+
+.join_page .btn-naver:hover {
+    background: #02b351;
+    transform: scale(1.05);
+}
+
+.join_page .btn-sns img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
