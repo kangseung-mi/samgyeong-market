@@ -13,7 +13,7 @@
 	.section-title h3{
         font-size:33px;
         color:#000;
-        font-weight:500;
+        font-weight:700;
 		/* word-break: keep-all */;}
 	.section-title h3 > span *,
 	.section-title h3 + span{
@@ -437,7 +437,7 @@
 .brand-controls .swiper-pagination {
   position: static;
   display: flex;
-  gap: 10px;
+  gap: 4px;
   align-items: center;
   font-size: 13px;
   color: #666;
@@ -513,6 +513,7 @@
         text-align:left;
         float:left;
         width:270px;
+        font-weight: 700;
 	}
 	.prd-best .section-title h3 > span *{
         margin-top:10px;
@@ -641,10 +642,10 @@
                 border-radius:50%;
         }
 	.main-notice .bt_prev{
-                right:124px;
+                right:96px;
         }
 	.main-notice .bt_next{
-                right:82px
+                right:56px
         }
 	.main-notice .bt_more{
                 right: 0;
@@ -656,14 +657,6 @@
                 box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
         }
 	.main-notice .bt_prev:after{
-        /* content: "";
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background: url('https://samkyoungmkt.cafe24.com/icon/ico_pre.svg') no-repeat center;
-        background-size: contain;
-        margin-left: 0 0 0 10px;
-        vertical-align: middle;} */
                 content: "";
     	        position: absolute;
     	        top: 50%;
@@ -671,19 +664,10 @@
     	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
     	        width: 16px; /* 크기 줄임 */
     	        height: 16px;
-    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_next.svg') no-repeat center;
+    	        background: url('/icon/ico_pre.svg') no-repeat center;
     	        background-size: contain;
         }
 	.main-notice .bt_next:after{
-        /* content: ""; 
-        display: block; 
-        width: 10px; 
-        height: 10px; 
-        border-top: 2px solid #444; 
-        border-left: 2px solid #444;   
-        transform: rotate( 135deg ); 
-        margin: 12px 0 0 10px;
-        border-radius: 1px;} */
                 content: "";
     	        position: absolute;
     	        top: 50%;
@@ -691,17 +675,10 @@
     	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
     	        width: 16px; /* 크기 줄임 */
     	        height: 16px;
-    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_pre.svg') no-repeat center;
+    	        background: url('/icon/ico_next.svg') no-repeat center;
     	        background-size: contain;
         }
 	.main-notice .bt_more:before{
-        /* content:"";
-        display:block; 
-        width:17px;
-        height:2px;
-        background:#444;
-        margin: 17px auto 0;
-        border-radius: 1px;} */
                 content: "";
     	        position: absolute;
     	        top: 50%;
@@ -709,17 +686,10 @@
     	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
     	        width: 16px; /* 크기 줄임 */
     	        height: 16px;
-    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
+    	        background: url('/icon/ico_more.svg') no-repeat center;
     	        background-size: contain;
         }
 	.main-notice .bt_more:after{
-        /* content:"";
-        display:block; 
-        width:2px;
-        height:17px;
-        background:#444;
-        margin: -9px auto 0;
-        border-radius: 1px;} */
                 content: "";
     	        position: absolute;
     	        top: 50%;
@@ -727,7 +697,7 @@
     	        transform: translate(-50%, -50%); /* 완전한 가운데 정렬 */
     	        width: 16px; /* 크기 줄임 */
     	        height: 16px;
-    	        background: url('https://samkyoungmkt.cafe24.com/icon/ico_more.svg') no-repeat center;
+    	        background: url('/icon/ico_more.svg') no-repeat center;
     	        background-size: contain;
         }
 	.main-notice a{

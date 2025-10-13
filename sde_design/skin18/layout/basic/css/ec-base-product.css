@@ -88,7 +88,7 @@
 .ec-base-product .prdList .thumbnail a img {
     width: 100%;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 /* 위시리스트 버튼 (하트 등) */
